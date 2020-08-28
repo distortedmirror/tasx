@@ -55,7 +55,7 @@ public class vxdDragIcon extends JComponent
 	    if ((mt.statusAll(false) & MediaTracker.ERRORED) != 0) {
 		return;
 	    }
-	    ImageFilter transparency = new BlackToTransparentFilter();                                                            ImageProducer producer = new FilteredImageSource(img.getSource(),                                                             transparency);                                     Image transparentimg = Toolkit.getDefaultToolkit().createImage(                                                               producer);                                         Image smallimg = transparentimg.getScaledInstance(vxd.xiconsize,                                                                  vxd.yiconsize, Image.SCALE_SMOOTH);
+	    ImageFilter transparency = new BlackToTransparentFilter();                                                            ImageProducer producer = new FilteredImageSource(img.getSource(),                                                             transparency);                                     Image transparentimg = Toolkit.getDefaultToolkit().createImage(                                                               producer);                                         Image smallimg = transparentimg.getScaledInstance(vxd.xdragsize,                                                                  vxd.ydragsize, Image.SCALE_SMOOTH);
 	    this.overlay=smallimg;
 	} catch(Exception emt){;}	    
 	    }

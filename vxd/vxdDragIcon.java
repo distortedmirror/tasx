@@ -65,7 +65,7 @@ public class vxdDragIcon extends JComponent
     public void paint(Graphics g)
     {
 	g.drawImage(image,vxd.iconborder,vxd.iconborder,null);
-	if(overlay!=null)g.drawImage(overlay,vxd.iconborder,vxd.iconborder,null);
+	if(overlay!=null)g.drawImage(overlay,vxd.iconborder+getWidth()/4,vxd.iconborder+getWidth()/4,getWidth()/2,getWidth()/2,null);
 	String name=null;
 	if(element!=null)
 	    name=element.getAttribute("Name");

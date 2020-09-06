@@ -84,7 +84,7 @@ Name="VisualAltaBPM" StructureDTD="VisualAltaBPM.dtd">
 
 		<Icon Name="Product"  Image="Languages/VisualAltaBPM/Images/Product.jpg"/>
 
-		<Icon Name="Run-Rate"  Image="Languages/VisualAltaBPM/Images/Run-Rate.jpg"/>
+		<Icon Name="Run-Rate"  Image="Languages/VisualAltaBPM/Images/RunRate.jpg"/>
 
 		<Icon Name="Commit"  Image="Languages/VisualAltaBPM/Images/Commit.jpg"/>
 
@@ -117,7 +117,7 @@ Name="VisualAltaBPM" StructureDTD="VisualAltaBPM.dtd">
 
 		<Icon Name="Bookings"  Image="Languages/VisualAltaBPM/Images/Bookings.jpg"/>
 
-		<Icon Name="De-bookings"  Image="Languages/VisualAltaBPM/Images/De-bookings.jpg"/>
+		<Icon Name="De-bookings"  Image="Languages/VisualAltaBPM/Images/Debookings.jpg"/>
 
 
 

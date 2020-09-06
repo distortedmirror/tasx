@@ -47,7 +47,7 @@ public class vxdDragIcon extends JComponent
 	if(name!=null)
 	    {
 	Image img=Toolkit.getDefaultToolkit().
-	    getImage("Work/"+ vxd.controller.project.name + "/Images/"+name+".gif");
+	    getImage("Work/"+ vxd.controller.project.name + "/Images/"+name+".jpg");
 	try {
 	    MediaTracker mt=new MediaTracker(vxd.frame);
 	    mt.addImage(img,0);
@@ -55,7 +55,8 @@ public class vxdDragIcon extends JComponent
 	    if ((mt.statusAll(false) & MediaTracker.ERRORED) != 0) {
 		return;
 	    }
-	    ImageFilter transparency = new BlackToTransparentFilter();                                                            ImageProducer producer = new FilteredImageSource(img.getSource(),                                                             transparency);                                     Image transparentimg = Toolkit.getDefaultToolkit().createImage(                                                               producer);                                         Image smallimg = transparentimg.getScaledInstance(vxd.xdragsize,                                                                  vxd.ydragsize, Image.SCALE_SMOOTH);
+	    ImageFilter transparency = new BlackToTransparentFilter();                                                            ImageProducer producer = new FilteredImageSource(img.getSource(),                                                             transparency);                                     Image transparentimg = Toolkit.getDefaultToolkit().createImage(                                                               producer);                                         Image smallimg = img.getScaledInstance(vxd.xdragsize,                                                                  vxd.ydragsize, Image.SCALE_SMOOTH);
+	    //mage smallimg = transparentimg.getScaledInstance(vxd.xdragsize,                                                                  vxd.ydragsize, Image.SCALE_SMOOTH);
 	    this.overlay=smallimg;
 	} catch(Exception emt){;}	    
 	    }

@@ -117,7 +117,7 @@ Name="VisualAltaBPM" StructureDTD="VisualAltaBPM.dtd">
 
 		<Icon Name="Bookings"  Image="Languages/VisualAltaBPM/Images/Bookings.jpg"/>
 
-		<Icon Name="De-bookings"  Image="Languages/VisualAltaBPM/Images/Debookings.jpg"/>
+		<Icon Name="DeBookings"  Image="Languages/VisualAltaBPM/Images/DeBookings.jpg"/>
 
 
 

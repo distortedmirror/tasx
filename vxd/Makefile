@@ -1,6 +1,5 @@
 all:
-	javac -g -cp .. -nowarn -source 1.4 `find . -name '*.java'|grep -v bak` 2>&1 | head -20
-
+	javac -cp .. *.java
 
 clean:
 	find . -name '*.class'|xargs rm -f

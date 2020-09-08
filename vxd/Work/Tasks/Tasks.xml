@@ -394,41 +394,54 @@
     </FlowProcess>
     <FlowProcess ID="-121176113" Name="Legal" Order="0" Value="" Visible="TRUE" XPos="45" YPos="274">
       <FlowData ID="311274862" Name="DA" Order="0" Value="" Visible="TRUE" XPos="22" YPos="383">
-        <FlowData ID="22821530" Name="Attorney" Order="0" Value="" Visible="TRUE" XPos="12" YPos="478" />
+        <FlowData ID="22821530" Name="Attorney" Order="0" Value="" Visible="TRUE" XPos="12" YPos="478">
+          <FlowData ID="-741606852" Name="Call" Order="0" Value="" Visible="TRUE" XPos="6" YPos="562" />
+          <FlowData ID="-1869230267" Name="Email" Order="0" Value="" Visible="TRUE" XPos="57" YPos="636" />
+        </FlowData>
       </FlowData>
       <FlowData ID="473599468" Name="NMSP" Order="0" Value="" Visible="TRUE" XPos="89" YPos="381">
-        <FlowData ID="1568514660" Name="Captain" Order="0" Value="" Visible="TRUE" XPos="88" YPos="479" />
+        <FlowData ID="1568514660" Name="Captain" Order="0" Value="" Visible="TRUE" XPos="88" YPos="479">
+          <FlowData ID="823756721" Name="Call" Order="0" Value="" Visible="TRUE" XPos="70" YPos="562" />
+          <FlowData ID="-1492049962" Name="Lieutenant" Order="0" Value="" Visible="TRUE" XPos="138" YPos="560">
+            <FlowData ID="361859573" Name="Email" Order="0" Value="" Visible="TRUE" XPos="151" YPos="639" />
+          </FlowData>
+        </FlowData>
       </FlowData>
     </FlowProcess>
     <FlowProcess ID="1802202485" Name="MVD" Order="0" Value="" Visible="TRUE" XPos="167" YPos="380">
-      <FlowData ID="-576153270" Name="ID" Order="0" Value="" Visible="TRUE" XPos="138" YPos="556" />
+      <FlowData ID="-576153270" Name="ID" Order="0" Value="" Visible="TRUE" XPos="150" YPos="480" />
       <FlowData ID="-554885791" Name="DL" Order="0" Value="" Visible="TRUE" XPos="199" YPos="556" />
-      <FlowData ID="-857779387" Name="RVReg" Order="0" Value="" Visible="TRUE" XPos="257" YPos="558" />
+      <FlowData ID="-857779387" Name="RVReg" Order="0" Value="" Visible="TRUE" XPos="258" YPos="561" />
     </FlowProcess>
     <FlowProcess ID="835880369" Name="RV" Order="0" Value="" Visible="TRUE" XPos="243" YPos="385">
       <FlowData ID="1152016532" Name="Carb" Order="0" Value="" Visible="TRUE" XPos="263" YPos="483" />
       <FlowData ID="547765159" Name="Claim" Order="0" Value="" Visible="TRUE" XPos="208" YPos="484" />
+      <FlowData ID="1348598585" Name="Belts" Order="0" Value="" Visible="TRUE" XPos="223" YPos="633" />
+      <FlowData ID="-84893172" Name="Security" Order="0" Value="" Visible="TRUE" XPos="316" YPos="561" />
     </FlowProcess>
     <FlowProcess ID="-970492872" Name="Monthly" Order="0" Value="" Visible="TRUE" XPos="242" YPos="208">
-      <FlowData ID="1933277871" Name="Rent" Order="0" Value="" Visible="TRUE" XPos="442" YPos="194" />
-      <FlowDecision ID="-403655824" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="517" YPos="200" />
-      <FlowData ID="698616455" Name="Hair" Order="0" Value="" Visible="TRUE" XPos="357" YPos="190" />
+      <FlowData ID="1933277871" Name="Rent" Order="0" Value="" Visible="TRUE" XPos="507" YPos="194" />
+      <FlowDecision ID="-403655824" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="577" YPos="198" />
+      <FlowData ID="698616455" Name="Hair" Order="0" Value="" Visible="TRUE" XPos="383" YPos="185" />
+      <FlowData ID="2005883731" Name="Psychiratrist" Order="0" Value="" Visible="TRUE" XPos="354" YPos="191" />
     </FlowProcess>
     <FlowProcess ID="152833528" Name="Van" Order="0" Value="" Visible="TRUE" XPos="312" YPos="385">
       <FlowData ID="142306168" Name="Hor" Order="0" Value="" Visible="TRUE" XPos="322" YPos="484" />
-      <FlowData ID="-824117316" Name="CruiseCon" Order="0" Value="" Visible="TRUE" XPos="340" YPos="561" />
+      <FlowData ID="-824117316" Name="CruiseCon" Order="0" Value="" Visible="TRUE" XPos="375" YPos="563" />
       <FlowData ID="1246552849" Name="MVAC" Order="0" Value="" Visible="TRUE" XPos="317" YPos="637" />
       <FlowData ID="-1607758261" Name="Winshield" Order="0" Value="" Visible="TRUE" XPos="378" YPos="637" />
     </FlowProcess>
     <FlowData ID="1361748620" Name="Brush" Order="0" Value="" Visible="TRUE" XPos="191" YPos="23">
       <FlowData ID="-2066614902" Name="Shower" Order="0" Value="" Visible="TRUE" XPos="294" YPos="22">
         <FlowData ID="956414784" Name="Eat" Order="0" Value="" Visible="TRUE" XPos="394" YPos="22" />
-        <FlowData ID="1207113863" Name="Water" Order="0" Value="" Visible="TRUE" XPos="508" YPos="112" />
+        <FlowData ID="1207113863" Name="Water" Order="0" Value="" Visible="TRUE" XPos="487" YPos="26">
+          <FlowData ID="-1174796050" Name="Facebook" Order="0" Value="" Visible="TRUE" XPos="491" YPos="114" />
+        </FlowData>
       </FlowData>
     </FlowData>
     <FlowProcess ID="-2047896394" Name="Taxes" Order="0" Value="" Visible="TRUE" XPos="507" YPos="402">
       <FlowData ID="-282014301" Name="Utah" Order="0" Value="" Visible="TRUE" XPos="478" YPos="482">
-        <FlowData ID="871048080" Name="Audit" Order="0" Value="" Visible="TRUE" XPos="479" YPos="568" />
+        <FlowData ID="871048080" Name="Audit" Order="0" Value="" Visible="TRUE" XPos="488" YPos="566" />
       </FlowData>
       <FlowData ID="1881325886" Name="Federa" Order="0" Value="" Visible="TRUE" XPos="540" YPos="484">
         <FlowData ID="-1280501876" Name="Audit" Order="0" Value="" Visible="TRUE" XPos="555" YPos="567" />
@@ -454,10 +467,13 @@
     <FlowProcess ID="-687486639" Name="Mom" Order="0" Value="" Visible="TRUE" XPos="99" YPos="113">
       <FlowData ID="2118009395" Name="Calls" Order="0" Value="" Visible="TRUE" XPos="139" YPos="193" />
     </FlowProcess>
-    <FlowProcess ID="-1309145108" Name="Logistic" Order="0" Value="" Visible="TRUE" XPos="802" YPos="20">
-      <FlowData ID="-2109454864" Name="Bike" Order="0" Value="" Visible="TRUE" XPos="842" YPos="119" />
+    <FlowProcess ID="-1309145108" Name="Logistic" Order="0" Value="" Visible="TRUE" XPos="807" YPos="16">
+      <FlowData ID="-2109454864" Name="Bike" Order="0" Value="" Visible="TRUE" XPos="816" YPos="195" />
       <FlowData ID="1044150166" Name="PO Box" Order="0" Value="" Visible="TRUE" XPos="773" YPos="120" />
-      <FlowData ID="1224981282" Name="Generator" Order="0" Value="" Visible="TRUE" XPos="809" YPos="205" />
+      <FlowData ID="240634591" Name="Makita" Order="0" Value="" Visible="TRUE" XPos="847" YPos="120" />
+      <FlowData ID="1384974264" Name="Locks" Order="0" Value="" Visible="TRUE" XPos="875" YPos="193" />
+      <FlowData ID="608351754" Name="Underwear" Order="0" Value="" Visible="TRUE" XPos="886" YPos="276" />
+      <FlowData ID="277603870" Name="USBDC" Value="" YPos="277" Visible="TRUE" Order="0" XPos="815" />
     </FlowProcess>
     <FlowProcess ID="-1321992630" Name="Work" Order="0" Value="" Visible="TRUE" XPos="10" YPos="110">
       <FlowData ID="2017101368" Name="ResDisclaimer" Order="0" Value="" Visible="TRUE" XPos="62" YPos="194" />
@@ -474,11 +490,13 @@
     </FlowProcess>
     <FlowProcess ID="-1072698922" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="380" YPos="384">
       <FlowData ID="1110465415" Name="Tires" Order="0" Value="" Visible="TRUE" XPos="377" YPos="484" />
-      <FlowData ID="-523227556" Name="Start" Order="0" Value="" Visible="TRUE" XPos="406" YPos="562" />
+      <FlowData ID="-523227556" Name="Start" Order="0" Value="" Visible="TRUE" XPos="433" YPos="565" />
     </FlowProcess>
+    <FlowData ID="-1444428200" Name="Electricity" Order="0" Value="" Visible="TRUE" XPos="565" YPos="21" />
+    <FlowData ID="1047141425" Name="RVGenerator" Order="0" Value="" Visible="TRUE" XPos="879" YPos="403" />
   </Workflow>
   <FlowProcess ID="-473196105" Name="Legal" Order="0" Value="" Visible="FALSE" XPos="119" YPos="396" />
-  <Timer ID="-1506053937" Name="9-6-20" Order="0" Value="" Visible="TRUE" XPos="673" YPos="236">
+  <Timer ID="-1506053937" Name="9-7-20" Order="0" Value="" Visible="TRUE" XPos="687" YPos="258">
     <Connection DestID="-403655824" DestType="FlowDecision" ID="-913372247" Name="Connection" Order="0" SourceID="-1506053937" />
     <Connection DestID="-678387260" DestType="FlowData" ID="-895587016" Name="Connection" Order="0" SourceID="-1506053937" />
     <Connection DestID="1207113863" DestType="FlowData" ID="-1205022563" Name="Connection" Order="0" SourceID="-1506053937" />
@@ -490,9 +508,12 @@
     <Connection DestID="142306168" DestType="FlowData" ID="-1920727170" Name="Connection" Order="0" SourceID="-1506053937" />
     <Connection DestID="-824117316" DestType="FlowData" ID="511348628" Name="Connection" Order="0" SourceID="-1506053937" />
     <Connection DestID="547765159" DestType="FlowData" ID="-1428582325" Name="Connection" Order="0" SourceID="-1506053937" />
-    <Connection DestID="1224981282" DestType="FlowData" ID="-1012076963" Name="Connection" Order="0" SourceID="-1506053937" />
     <Connection DestID="-676982362" DestType="FlowProcess" ID="579622168" Name="Connection7" Order="0" SourceID="-1506053937" />
-    <Connection ID="883372746" Name="Connection" DestID="-1072698922" Order="0" SourceID="-1506053937" DestType="FlowProcess" />
+    <Connection DestID="-1072698922" DestType="FlowProcess" ID="883372746" Name="Connection" Order="0" SourceID="-1506053937" />
+    <Connection DestID="1348598585" DestType="FlowData" ID="981352081" Name="Connection" Order="0" SourceID="-1506053937" />
+    <Connection DestID="-1444428200" DestType="FlowData" ID="-1116877173" Name="Connection" Order="0" SourceID="-1506053937" />
+    <Connection DestID="-84893172" DestType="FlowData" ID="1036534457" Name="Connection" Order="0" SourceID="-1506053937" />
+    <Connection DestID="1047141425" DestType="FlowData" ID="1026975318" Name="Connection" Order="0" SourceID="-1506053937" />
   </Timer>
 </VisualAltaBPM>
 

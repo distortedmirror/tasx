@@ -1,6 +1,0 @@
-Design
-File
-Warning: validation was turned on but an org.xml.sax.ErrorHandler was not set, which is probably not what is desired.  Parser will use a default ErrorHandler to print the first 0  errors.  Please call the setErrorHandler method to fix this.
-Error: URI=file:/root/vxd/Languages/VisualAltaBPM/VisualAltaBPM.xml Line=4: Document root element "Language", must match DOCTYPE root "null".
-Error: URI=file:/root/vxd/Languages/VisualAltaBPM/VisualAltaBPM.xml Line=4: Document is invalid: no grammar found.
-Languages/VisualAltaBPM/VisualAltaBPM.dtd

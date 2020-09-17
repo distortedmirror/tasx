@@ -22,7 +22,7 @@ public class vxdPropertyChangeEventListener
 
     public void itemStateChanged(ItemEvent e)
     {
-	element.getAttributeNode(attribute).setValue((String)e.getItem());
+	element.setAttribute(attribute,(String)e.getItem());
 	SwingUtilities.invokeLater(new Runnable(){public void run()
 		{vxd.controller.refreshXMLViews();}});
     }
@@ -41,8 +41,8 @@ public class vxdPropertyChangeEventListener
     {
 	try
 	    {
-		element.getAttributeNode(attribute).
-		    setValue(e.getDocument().getText(0,e.getDocument().getLength()));
+		element.
+		    setAttribute(attribute,e.getDocument().getText(0,e.getDocument().getLength()));
 		vxd.controller.selectedNode=null;
 		SwingUtilities.invokeLater(new Runnable(){public void run()
 			{vxd.controller.refreshXMLViews();}});

@@ -140,8 +140,7 @@ public class vxdDragIcon extends JComponent
     {
                 vxd.controller.DEBUG_STACK_TRACE(e);
 
-	if(e.getButton()==MouseEvent.BUTTON2 ||
-	   e.getButton()==MouseEvent.BUTTON3)
+	if((e.getModifiers() & ActionEvent.CTRL_MASK) ==ActionEvent.CTRL_MASK)
 	    {
 		mouseReleasedButton2(e);
 		return;
@@ -180,8 +179,7 @@ public class vxdDragIcon extends JComponent
     {
                 vxd.controller.DEBUG_STACK_TRACE(e);
 
-	if(e.getButton()==MouseEvent.BUTTON2 ||
-	   e.getButton()==MouseEvent.BUTTON3)
+	if((e.getModifiers() & ActionEvent.CTRL_MASK) ==ActionEvent.CTRL_MASK)
 	    {
 		JPopupMenu popup=new JPopupMenu();
 		popup.setLightWeightPopupEnabled(true);
@@ -190,6 +188,10 @@ public class vxdDragIcon extends JComponent
 		del.setActionCommand("DELETE");
 		del.addActionListener(this);
 		popup.add(del);
+		JMenuItem open=new JMenuItem("Open Value as Command");
+		open.setActionCommand("OPEN");
+		open.addActionListener(this);
+		popup.add(open);
 		Vector v=vxd.controller.getAttributes(element.getTagName());
 		Enumeration en=v.elements();
 		while(en.hasMoreElements())
@@ -218,7 +220,13 @@ public class vxdDragIcon extends JComponent
     {
                 vxd.controller.DEBUG_STACK_TRACE(e);
 
-	if(e.getActionCommand().equals("DELETE"))
+	if(e.getActionCommand().equals("OPEN"))
+	{ 
+		try{
+		   java.lang.Runtime.getRuntime().exec( element.getAttributeNode("Value").getNodeValue());
+		}catch(Exception exc){exc.printStackTrace();}
+
+	} else if(e.getActionCommand().equals("DELETE"))
 	    {
 		element.getParentNode().removeChild(element);
 		vxd.controller.iconConnectionView.remove(this);

@@ -188,7 +188,7 @@ public class vxdDragIcon extends JComponent
 		del.setActionCommand("DELETE");
 		del.addActionListener(this);
 		popup.add(del);
-		JMenuItem open=new JMenuItem("Open Value as Command");
+		JMenuItem open=new JMenuItem("Open ShellCommand");
 		open.setActionCommand("OPEN");
 		open.addActionListener(this);
 		popup.add(open);
@@ -223,8 +223,10 @@ public class vxdDragIcon extends JComponent
 	if(e.getActionCommand().equals("OPEN"))
 	{ 
 		try{
-		   java.lang.Runtime.getRuntime().exec( element.getAttributeNode("Value").getNodeValue());
-		}catch(Exception exc){exc.printStackTrace();}
+		   java.lang.Runtime.getRuntime().exec( element.getAttributeNode("ShellCommand").getNodeValue());
+		}catch(Exception exc){
+                    JOptionPane.showMessageDialog(vxd.frame,"Error: "+exc.getMessage());
+			exc.printStackTrace();}
 
 	} else if(e.getActionCommand().equals("DELETE"))
 	    {

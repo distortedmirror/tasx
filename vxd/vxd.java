@@ -78,17 +78,26 @@ public class vxd {
     
     public static NodeList translators;
     
-    public static NodeList platforms;
+    public static NodeList platforms;
     
     public static vxdproject project;
     
     public static vxdcontroller controller;
     
+	public static ActionListener mainMenuOpenListener;
+			public static JMenuItem mainMenuItemOpen;
+	public static String mainLoadFile=null;
+
     public static void main(String[] args) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder builder = factory.newDocumentBuilder();
             config = builder.parse(new File(XMLCONFIGDIR + XMLCONFIGFILE));
+	    if(args.length>0){
+            vxd.mainLoadFile=args[0];
+
+	    System.out.println("File Argument:"+args[0]);
+	    }
             Element root = config.getDocumentElement();
             title = root.getAttribute("title");
             iconsperrow = Integer.parseInt(root.getAttribute("iconsperrow"));
@@ -134,10 +143,17 @@ public class vxd {
                             .getAttribute("exitstring"), vxd.config
                             .getDocumentElement().getAttribute("exittitle"),
                             JOptionPane.YES_NO_OPTION);
+
                     if (YorN == JOptionPane.YES_OPTION)
                         System.exit(0);
                 }
             });
+	    if(vxd.mainLoadFile!=null){
+		  SwingUtilities.invokeLater(new Runnable(){public void run()
+                       { ActionEvent ae=new ActionEvent(vxd.mainMenuItemOpen,0,"OPEN");
+            vxd.mainMenuOpenListener.actionPerformed(ae);
+			}});
+	    }
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(0);
@@ -194,6 +210,10 @@ public class vxd {
                         icon);
                 menuItem.setActionCommand(node.getAttribute("command"));
                 menuItem.addActionListener(listener);
+		if(node.getAttribute("text").equals("Open")){
+			vxd.mainMenuOpenListener=listener;
+			vxd.mainMenuItemOpen=menuItem;
+		}
                 if (node.getAttribute("enabled").equals("TRUE"))
                     menu.add(menuItem);
             }
@@ -451,11 +471,13 @@ public class vxd {
                 if (e.getActionCommand().equals("OPEN")) {
                 try {
                     JFileChooser fc=new JFileChooser();
-                    fc.setCurrentDirectory(new File(SAVEFILEDIR));
-                    fc.showOpenDialog(vxd.frame);
                     DocumentBuilderFactory factory =DocumentBuilderFactoryImpl.newInstance();
                     factory.setValidating(false);
                     factory.setNamespaceAware(true);
+		    if(mainLoadFile==null){
+                    fc.setCurrentDirectory(new File(SAVEFILEDIR));
+                    fc.showOpenDialog(vxd.frame);
+		    }
                     DocumentBuilder builder=(DocumentBuilder)factory.newDocumentBuilder();
                     builder.setErrorHandler(new DefaultHandler(){
                         public void error(SAXParseException exception)throws SAXParseException{throw exception;}
@@ -463,10 +485,15 @@ public class vxd {
                         public void warning(SAXParseException exception)throws SAXParseException{throw exception;}
                     });
                     Document tconfig=null;
-                    Document loadeddoc=(Document) builder.parse(fc.getSelectedFile());
+		    File file;
+		if(vxd.mainLoadFile==null){
+		   file=fc.getSelectedFile();
+		}else{
+			file=new File(vxd.mainLoadFile);
+		}
+                    Document loadeddoc=(Document) builder.parse(file);
                     Document xdoc=new XmlDocument();
                     Element root = loadeddoc.getDocumentElement();
-                    File file=fc.getSelectedFile();
                     FileInputStream rdr=new FileInputStream(file);
                     DataInputStream dta=new DataInputStream(rdr);
                     byte[] filedata=new byte[(int)file.length()];
@@ -623,8 +650,8 @@ public class vxd {
                 } catch(Exception re) {
                     JOptionPane.showMessageDialog(vxd.frame,"Error: "+re.getMessage());
                 }
-                        }
-        }
+        	}
+	}
     }
     
     public static class BlackToTransparentFilter extends RGBImageFilter {
@@ -639,5 +666,4 @@ public class vxd {
                 return rgb;
         }
     }
-    
-}
+} 

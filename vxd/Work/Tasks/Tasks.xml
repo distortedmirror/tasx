@@ -181,7 +181,7 @@
     </FlowData>
     <FlowData ID="137762068" Name="Cisco" Order="0" Value="" Visible="TRUE" XPos="197" YPos="248" />
     <FlowData ID="-1598640798" Name="Sheriff" Order="0" Value="" Visible="TRUE" XPos="23" YPos="389" />
-    <News Order="0" ExternalLinkURL="" Name="Journalist" YPos="260" Value="" ID="691469161" Visible="TRUE" XPos="118" ShellCommand="">
+    <News Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/jwm2164%40columbia.edu" Name="Journalist" YPos="266" Value="" ID="691469161" Visible="TRUE" XPos="126" ShellCommand="brpwser https://mail.google.com/mail/u/0/#search/jwm2164%40columbia.eduhttps://mail.google.com/mail/u/0/#search/jwm2164%40columbia.edu">
       <Dashboard Order="0" ExternalLinkURL="" Name="Report" YPos="345" Value="" ID="1864698142" Visible="TRUE" XPos="172" ShellCommand="">
         <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-1550830489" Visible="TRUE" DestID="-1586567692" DestType="Target" XPos="-1" SourceID="1864698142" ShellCommand="" />
       </Dashboard>
@@ -215,7 +215,7 @@
       <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="268" Value="500" ID="1189608506" Visible="TRUE" XPos="556" ShellCommand="" />
     </FlowDecision>
     <FlowData ID="698616455" Name="Hair" Order="0" Value="" Visible="TRUE" XPos="439" YPos="189" />
-    <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="363" YPos="151">
+    <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="349" YPos="173">
       <FlowData ID="-217541129" Name="Telemedicine" Order="0" Value="" Visible="TRUE" XPos="378" YPos="243" />
       <FlowData ID="-817793737" Name="Jasmine" Order="0" Value="" Visible="TRUE" XPos="300" YPos="240" />
     </FlowData>
@@ -261,12 +261,12 @@
   <FlowProcess ID="-687486639" Name="Mom" Order="0" Value="" Visible="TRUE" XPos="14" YPos="107">
     <FlowData ID="2118009395" Name="Calls" Order="0" Value="" Visible="TRUE" XPos="58" YPos="178" />
   </FlowProcess>
-  <FlowProcess ID="-1309145108" Name="Logistic" Order="0" Value="" Visible="TRUE" XPos="781" YPos="13">
+  <FlowProcess ID="-1309145108" Name="Logistics" Order="0" Value="" Visible="TRUE" XPos="791" YPos="12">
     <FlowData ID="-2109454864" Name="Bike" Order="0" Value="" Visible="TRUE" XPos="819" YPos="197" />
-    <FlowData ID="1044150166" Name="PO Box" Order="0" Value="" Visible="TRUE" XPos="761" YPos="111" />
+    <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="761" YPos="111" />
     <FlowData ID="-562504891" Name="OScope" Order="0" Value="" Visible="TRUE" XPos="746" YPos="195" />
     <FlowData ID="1467883470" Name="Hughes" Order="0" Value="" Visible="TRUE" XPos="877" YPos="191" ExternalLinkURL="https://www.hughesnetinternet.net/local/New-Mexico/" ShellCommand="browser https://www.hughesnetinternet.net/local/New-Mexico/" />
-    <FlowData ID="-1320874992" Name="protonmail.com" Order="0" Value="" Visible="TRUE" XPos="900" YPos="265" />
+    <FlowData ID="-1320874992" Name="protonmail.com" Order="0" Value="" Visible="TRUE" XPos="906" YPos="259" />
     <FlowData ID="835283602" Name="Insolation" Order="0" Value="" Visible="TRUE" XPos="842" YPos="264" />
     <FlowData Order="0" ExternalLinkURL="" Name="Propane" YPos="108" Value="" ID="-1227964218" Visible="TRUE" XPos="842" ShellCommand="" />
   </FlowProcess>
@@ -279,7 +279,7 @@
     <Connection Order="0" ExternalLinkURL="" Name="Connectione" YPos="-1" Value="" ID="-1748597310" Visible="TRUE" DestID="-1586567692" DestType="Target" XPos="-1" SourceID="-177200004" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="-676982362" Name="Social" Order="0" Value="" Visible="TRUE" XPos="643" YPos="11">
-    <FlowData ID="10350487" Name="Billy" Order="0" Value="" Visible="TRUE" XPos="635" YPos="114" />
+    <FlowData ID="10350487" Name="Billy" Order="0" Value="" Visible="TRUE" XPos="636" YPos="115" ExternalLinkURL="https://voice.google.com/u/0/search?from=%5B%7B%22i%22:%22c6922063368637778330%22,%22n%22:%22William%20Mora%22,%22p%22:%22%2B14154252897%22%7D%5D&amp;q=%5B%5D" ShellCommand="browser https://voice.google.com/u/0/search?from=%5B%7B%22i%22:%22c6922063368637778330%22,%22n%22:%22William%20Mora%22,%22p%22:%22%2B14154252897%22%7D%5D&amp;q=%5B%5D" />
     <FlowData ID="-588977415" Name="Jay" Order="0" Value="" Visible="TRUE" XPos="696" YPos="118" ShellCommand="browser https://mail.google.com/mail/u/0/#search/jay%40woidtke.com" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/jay%40woidtke.com" />
     <FlowData ID="1548300993" Name="Facebook" Order="0" Value="" Visible="TRUE" XPos="568" YPos="114" ShellCommand="browser https://www.facebook.com/" />
   </FlowProcess>
@@ -287,7 +287,7 @@
     <FlowData ID="1110465415" Name="Tires" Order="0" Value="" Visible="TRUE" XPos="379" YPos="534" />
     <FlowData ID="-523227556" Name="Start" Order="0" Value="" Visible="TRUE" XPos="394" YPos="466" />
   </FlowProcess>
-  <FlowData ID="-1444428200" Name="Electricity" Order="0" Value="" Visible="TRUE" XPos="519" YPos="12" ExternalLinkURL="https://www.morasanmiguel.coop/forms" ShellCommand="browser https://www.morasanmiguel.coop/forms">
+  <FlowData ID="-1444428200" Name="Electricity" Order="0" Value="" Visible="TRUE" XPos="454" YPos="11" ExternalLinkURL="https://www.morasanmiguel.coop/forms" ShellCommand="browser https://www.morasanmiguel.coop/forms">
     <Form Order="0" ExternalLinkURL="https://www.morasanmiguel.coop/sites/msmec/files/downloads/services/forms/Request-for-Electric-Service.pdf" Name="Form" YPos="106" Value="" ID="-878812959" Visible="TRUE" XPos="491" ShellCommand="browser https://www.morasanmiguel.coop/sites/msmec/files/downloads/services/forms/Request-for-Electric-Service.pdf" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="2006048858" Visible="TRUE" DestID="-1586567692" DestType="Target" XPos="-1" SourceID="-1444428200" ShellCommand="" />
   </FlowData>
@@ -308,8 +308,8 @@
     <FlowData ID="1726842373" Name="Benavidez" Order="0" Value="" Visible="TRUE" XPos="978" YPos="578" />
   </FlowProcess>
   <FlowProcess ID="668282404" Name="Systems" Order="0" Value="" Visible="TRUE" XPos="656" YPos="242">
-    <FlowData ID="-2130468282" Name="VXD" Order="0" Value="" Visible="TRUE" XPos="742" YPos="270">
-      <FlowData ID="1506769951" Name="NoteField" Order="0" Value="" Visible="TRUE" XPos="763" YPos="337" />
+    <FlowData ID="-2130468282" Name="VXD" Order="0" Value="" Visible="TRUE" XPos="741" YPos="261">
+      <FlowData ID="1506769951" Name="NoteField" Order="0" Value="" Visible="TRUE" XPos="766" YPos="336" />
       <FlowData Order="0" ExternalLinkURL="" Name="ImageView" YPos="334" Value="" ID="-1240567858" Visible="TRUE" XPos="828" ShellCommand="" />
       <Image Order="0" ExternalLinkURL="" Name="Icon" YPos="334" Value="" ID="-1944115722" Visible="TRUE" XPos="890" ShellCommand="" />
     </FlowData>
@@ -332,7 +332,7 @@
     <FlowData ID="-1536100201" Name="Email" Value="" YPos="459" Visible="TRUE" Order="0" XPos="1039" ShellCommand="" />
   </FlowProcess>
   <DealValue Order="0" ExternalLinkURL="" Name="AR" YPos="77" Value="" ID="-2110195450" Visible="TRUE" XPos="97" ShellCommand="">
-    <AR Order="0" ExternalLinkURL="" Name="ACH TechCU" YPos="160" Value="500" ID="875305022" Visible="TRUE" XPos="127" ShellCommand="">
+    <AR Order="0" ExternalLinkURL="https://www.techcu.com/" Name="ACH TechCU" YPos="167" Value="500" ID="875305022" Visible="TRUE" XPos="135" ShellCommand="browser https://www.techcu.com/">
       <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="381899934" Visible="TRUE" DestID="-1586567692" DestType="Target" XPos="-1" SourceID="875305022" ShellCommand="" />
     </AR>
   </DealValue>

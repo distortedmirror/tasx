@@ -1,5 +1,5 @@
 if [ ! -f /usr/bin/browser ]; then
-  ln /usr/bin/firefox-esr /usr/bin/browser
+  ln /usr/bin/chromium /usr/bin/browser
 fi
 cd vxd
 echo 'Load Tasks (y/n)?'

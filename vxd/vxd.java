@@ -150,10 +150,11 @@ public class vxd {
             });
 	    if(vxd.mainLoadFile!=null){
 		  SwingUtilities.invokeLater(new Runnable(){public void run()
-                       { ActionEvent ae=new ActionEvent(vxd.mainMenuItemOpen,0,"OPEN");
-            vxd.mainMenuOpenListener.actionPerformed(ae);
-			}});
+			  { ActionEvent ae=new ActionEvent(vxd.mainMenuItemOpen,0,"OPEN");
+			      vxd.mainMenuOpenListener.actionPerformed(ae);
+			  }});
 	    }
+
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(0);
@@ -655,11 +656,15 @@ public class vxd {
     }
     
     public static class BlackToTransparentFilter extends RGBImageFilter {
+	public static final boolean DISABLED=true;
         public BlackToTransparentFilter() {
             canFilterIndexColorModel = true;
         }
         
         public int filterRGB(int x, int y, int rgb) {
+            if(DISABLED){
+	        return rgb;
+	    }
             if ((rgb & 0x00ffffff) == 0x00)
                 return 0x00;
             else

@@ -1,9 +1,9 @@
 echo VXD ICON LIST VISUAL LANGUAGE XML AND DTD GENERATOR
 echo ===================================================
-export lang="VisualAltaBPM"
+export lang="Tasx"
 export imgdir="Languages/${lang}/"
 echo "(" >langlist.txt
-for i in `ls ../${imgdir}Images/*.[gGijb][pciIm][pjofF] |sed -e 's|^.*/||' | sort |uniq `; do echo $i|sed -e 's|\([^\.]*\..*\)|\1|g' |sed -e 's/\([^\.]*\)\.[^\.]*$/\1|/g';done >uniq.txt;cat uniq.txt|sort|uniq > uniqsorted.txt ; cat uniqsorted.txt |tail -1 > tail.txt; cat tail.txt >> uniqsorted.txt; cat tail.txt |tr '|' ' ' > tailtr.txt; cat uniqsorted.txt |sort |uniq -u >> langlist.txt; cat tailtr.txt >>langlist.txt; echo ")" >>langlist.txt
+for i in `ls ../${imgdir}Images/*.[gGijb][pciIm][pgjofF] |sed -e 's|^.*/||' | sort |uniq `; do echo $i|sed -e 's|\([^\.]*\..*\)|\1|g' |sed -e 's/\([^\.]*\)\.[^\.]*$/\1|/g';done >uniq.txt;cat uniq.txt|sort|uniq > uniqsorted.txt ; cat uniqsorted.txt |tail -1 > tail.txt; cat tail.txt >> uniqsorted.txt; cat tail.txt |tr '|' ' ' > tailtr.txt; cat uniqsorted.txt |sort |uniq -u >> langlist.txt; cat tailtr.txt >>langlist.txt; echo ")" >>langlist.txt
 echo
 echo -------------
 echo LANGUAGE LIST
@@ -56,7 +56,7 @@ echo EDITOR XML
 echo editorxml.txt
 echo ----------
 echo
-for i in `cat langlist.txt |grep -v ")" |grep -v "("|sed -e 's/|//g'`; do echo '<Editor Name="VariableSelector" Class="vxd.Languages.VisualHTML.Editors.VariableSelector" ElementName="ELEMENT" AttributeName="Variable" Type="PANEL"/>' |sed -e 's/ELEMENT/'$i'/'; done > editorxml.txt
+for i in `cat langlist.txt |grep -v ")" |grep -v "("|sed -e 's/|//g'`; do echo '<Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ELEMENT" AttributeName="Variable" Type="PANEL"/>' |sed -e 's/ELEMENT/'$i'/'; done > editorxml.txt
 #cat editorxml.txt
 echo
 echo ===============
@@ -64,7 +64,10 @@ echo ${lang}_NEW.xml
 echo ===============
 echo
 
-cat languagexmltemplate.txt | sed -e 's/\[name\]/'${lang}'/g' | sed -e 's|<Icon/>.*|'`cat langicons.txt | sed -e "s/\"/\\\"/g" |sed -e "s/\|/\\\|/g" |xargs echo`'|g' |sed -e 's|<Editor/>.*|'`cat editorxml.txt | sed -e "s/\"/\\\"/g"|sed -e "s/\|/\\\|/g" |xargs echo`'|g' > ${lang}_NEW.xml
+cat languagexmltemplate.txt | sed -e 's/\[name\]/'${lang}'/g' > ${lang}_NEW.xml
+#| sed -e 's|<Icon/>.*|'`cat langicons.txt | sed -e 's/\"/\\\"/g' |sed -e 's/\|/\\\|/g' |xargs echo`'|g' > ${lang}_NEW.xml
+
+#|sed -e 's|<Editor/>.*|'`cat editorxml.txt | sed -e 's/\"/\\\"/g'|sed -e 's/\|/\\\|/g' |xargs echo`'|g' > ${lang}_NEW.xml
 
 
 echo

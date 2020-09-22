@@ -1,6 +1,5 @@
 all:
 	javac -cp .. *.java
-
 clean:
 	find . -name '*.class'|xargs rm -f
 

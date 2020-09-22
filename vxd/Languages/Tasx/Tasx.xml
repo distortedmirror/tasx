@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Language xmlns="http://tempuri.org/Language.xsd"
-	  Name="Tasx" StructureDTD="Tasx.dtd">
+	  Name="Tasx" StructureDTD="Language.dtd">
  <Icons>
 <Icon Name="Accounting" Image="Languages/Tasx/Images/Accounting.gif"/>
 <Icon Name="Actor" Image="Languages/Tasx/Images/Actor.gif"/>

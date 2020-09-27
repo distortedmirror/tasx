@@ -1,3 +1,3 @@
 if [ ! -f /usr/bin/browser ]; then
-  ln /usr/bin/chromium /usr/bin/browser
+  ln /usr/bin/firefox-esr /usr/bin/browser
 fi

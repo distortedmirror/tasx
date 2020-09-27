@@ -34,20 +34,12 @@
     </menu>
   </menus>
   <languages>
-	  <language name="Visual ASP.NET" language="ASP.NET"
- 	 configfile="Languages/ASP.NET/ASP.NET.xml"
-	      enabled="TRUE"/>  <language name="Visual Web" language="VisualWeb" 
-				configfile="Languages/VisualWeb/VisualWeb.xml"
-			enabled="TRUE"/>
-   	<language name="Visual Tasx" language="Tasx"
+   	<language name="Tasx" language="Tasx"
  	 configfile="Languages/Tasx/Tasx.xml"
-	     enabled="TRUE"/>
-	<language name="Visual HTML" language="VisualHTML"
- 	 configfile="Languages/VisualHTML/VisualHTML.xml"
 	     enabled="TRUE"/>
   </languages>
   <translators>
-	<translator name="Tasx to HTML5" translator="TasxToHTML5"
+	<translator name="TasxToHTML5" translator="TasxToHTML5"
                 configfile="Translators/TasxToHTML5/TasxToHTML5.xml"
 	        definitionfile="Translators/TasxToHTML5/TasxToHTML5.xsl"
 	        supportedlanguages="Tasx" enabled="TRUE"/>

@@ -93,6 +93,7 @@
 <Icon Name="Person" Image="Languages/Tasx/Images/Person.gif"/>
 <Icon Name="Personnel" Image="Languages/Tasx/Images/Personnel.gif"/>
 <Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.gif"/>
+<Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
 <Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
 <Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
 <Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
@@ -231,6 +232,7 @@
 <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Person" AttributeName="Variable" Type="PANEL"/>
 <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Personnel" AttributeName="Variable" Type="PANEL"/>
 <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="PlaceHolder" AttributeName="Variable" Type="PANEL"/>
+<Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Phone" AttributeName="Variable" Type="PANEL"/>
 <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Product" AttributeName="Variable" Type="PANEL"/>
 <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ProductFamily" AttributeName="Variable" Type="PANEL"/>
 <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ProductLine" AttributeName="Variable" Type="PANEL"/>

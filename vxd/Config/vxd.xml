@@ -20,12 +20,12 @@
   <menus>
     <menu name="Design" letter="D">
       <menuitem image="Images/new.gif" text="New XML (Visual Program)" command="NEWXML" enabled="TRUE"/>
-      <menuitem image="Images/VXDIcon.jpg" text="VXD Configuration" command="..\XMLEditor\bin\Debug\XMLEditor.exe Config\vxd.xml" enabled="TRUE"/>
-      <menuitem image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List" command="..\XMLEditor\bin\Debug\XMLEditor.exe Config\vxd.xml" enabled="TRUE"/>
+      <menuitem image="Images/VXDIcon.jpg" text="VXD Configuration" command="..\XMLEditor\bin\Debug\XMLEditor.exe Config\vxd.xml" enabled="FALSE"/>
+      <menuitem image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List" command="..\XMLEditor\bin\Debug\XMLEditor.exe Config\vxd.xml" enabled="FALSE"/>
       <menuitem image="Images/newdtd.gif" text="New DTD (Language Structure)" command="NEWDTD" enabled="FALSE"/>
-      <menuitem image="Images/newlang.jpg" text="New XSL (Program Generator)" command="NEWXSL" enabled="TRUE"/>
-      <menuitem image="Images/newlang.jpg" text="New Deployer (Installer)" command="NEWDEPLOYER" enabled="TRUE"/>
-      <menuitem image="Images/newlang.jpg" text="New Designer (Menu Layout)" command="NEWDESIGNER" enabled="TRUE"/>
+      <menuitem image="Images/newlang.jpg" text="New XSL (Program Generator)" command="NEWXSL" enabled="FALSE"/>
+      <menuitem image="Images/newlang.jpg" text="New Deployer (Installer)" command="NEWDEPLOYER" enabled="FALSE"/>
+      <menuitem image="Images/newlang.jpg" text="New Designer (Menu Layout)" command="NEWDESIGNER" enabled="FALSE"/>
      </menu>
      <menu name="File" letter="F">
       <menuitem image="Images/open.gif" text="Open" command="OPEN" enabled="TRUE"/>

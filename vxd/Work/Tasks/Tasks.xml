@@ -157,7 +157,7 @@
 
 <Tasx Build="Debug" ID="352171275" Language="Tasx" Name="Tasx" Order="0" Package="Tasks" Platform="Tomcat403" Port="80" TextNote="" Title="Tasks" Translator="TasxToHTML5" URI="/Tasks" Value="" Visible="TRUE" XPos="-1" YPos="-1">
   <FlowProcess ID="1399269947" Name="Weekly" Order="0" Value="" Visible="TRUE" XPos="284" YPos="6">
-    <FlowData ID="-933610391" Name="Clean" Order="0" Value="" Visible="TRUE" XPos="266" YPos="82" />
+    <FlowData ID="-933610391" Name="Clean" Order="0" Value="" Visible="TRUE" XPos="219" YPos="92" />
     <FlowData ID="-1751037932" Name="Laundry" Order="0" Value="" Visible="TRUE" XPos="328" YPos="82" />
   </FlowProcess>
   <FlowProcess ID="-121176113" Name="Legal" Order="0" Value="" Visible="TRUE" XPos="54" YPos="256">
@@ -270,7 +270,7 @@
     <FlowData ID="2118009395" Name="Calls" Order="0" Value="" Visible="TRUE" XPos="11" YPos="190" />
   </FlowProcess>
   <FlowProcess ID="-1309145108" Name="Logistics" Order="0" Value="" Visible="TRUE" XPos="791" YPos="12">
-    <FlowData ID="-2109454864" Name="Bike" Order="0" Value="" Visible="TRUE" XPos="860" YPos="24" />
+    <FlowData ID="-2109454864" Name="Bike" Order="0" Value="" Visible="TRUE" XPos="860" YPos="22" />
     <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="762" YPos="100" />
     <FlowData ID="-562504891" Name="OScope" Order="0" Value="" Visible="TRUE" XPos="724" YPos="16" />
     <FlowData ID="1467883470" Name="Hughes" Order="0" Value="" Visible="TRUE" XPos="877" YPos="191" ExternalLinkURL="https://www.hughesnetinternet.net/local/New-Mexico/" ShellCommand="browser https://www.hughesnetinternet.net/local/New-Mexico/" />
@@ -323,8 +323,8 @@
     </FlowData>
   </FlowProcess>
   <FlowProcess ID="-473196105" Name="Legal" Order="0" Value="" Visible="FALSE" XPos="119" YPos="396" />
-  <Calendar ID="-156641754" Name="Jasmine" Value="" YPos="201" Visible="TRUE" Order="0" XPos="960" ShellCommand="browser https://calendar.google.com/calendar/u/0/r/eventedit/Mms1anUwaHY0OTFnMDZzbWk0bGxlYW9jcjkgbWFyay5icml0b0Bt?pli=1" ExternalLinkURL="https://calendar.google.com/calendar/u/0/r/eventedit/Mms1anUwaHY0OTFnMDZzbWk0bGxlYW9jcjkgbWFyay5icml0b0Bt?pli=1">
-    <Timer ID="-1290213592" Name="11-6-20" Value="" YPos="198" Visible="TRUE" Order="0" XPos="1044" ShellCommand="" />
+  <Calendar ID="-156641754" Name="Jasmine" Value="" YPos="73" Visible="TRUE" Order="0" XPos="952" ShellCommand="browser https://calendar.google.com/calendar/u/0/r/eventedit/Mms1anUwaHY0OTFnMDZzbWk0bGxlYW9jcjkgbWFyay5icml0b0Bt?pli=1" ExternalLinkURL="https://calendar.google.com/calendar/u/0/r/eventedit/Mms1anUwaHY0OTFnMDZzbWk0bGxlYW9jcjkgbWFyay5icml0b0Bt?pli=1">
+    <Timer ID="-1290213592" Name="10-6-20" Value="" YPos="76" Visible="TRUE" Order="0" XPos="1035" ShellCommand="" />
   </Calendar>
   <FlowProcess ID="1873595361" Name="VXDIcons" Value="" YPos="357" Visible="TRUE" Order="0" XPos="1049" ShellCommand="">
     <FlowData ID="-1616717996" Name="Phone" Value="" YPos="468" Visible="TRUE" Order="0" XPos="1094" ShellCommand="" />
@@ -335,11 +335,11 @@
   </DealValue>
   <Target Order="0" ExternalLinkURL="" Name="P1" YPos="19" Value="" ID="-1586567692" Visible="TRUE" XPos="14" ShellCommand="" />
   <Mail Order="0" ExternalLinkURL="" Name="Respond" YPos="19" Value="" ID="1075923904" Visible="TRUE" XPos="1043" ShellCommand="" />
-  <Calendar Order="0" ExternalLinkURL="" Name="MVD" YPos="122" Value="" ID="-1275489985" Visible="TRUE" XPos="955" ShellCommand="">
-    <Timer Order="0" ExternalLinkURL="" Name="10-22-20" YPos="149" Value="" ID="1609706519" Visible="TRUE" XPos="1039" ShellCommand="" />
+  <Calendar Order="0" ExternalLinkURL="" Name="MVD" YPos="152" Value="" ID="-1275489985" Visible="TRUE" XPos="956" ShellCommand="">
+    <Timer Order="0" ExternalLinkURL="" Name="10-22-20" YPos="137" Value="" ID="1609706519" Visible="TRUE" XPos="1035" ShellCommand="" />
   </Calendar>
-  <Calendar Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxtGQJDqjvRWjzkhvczPQPlW" Name="LawersInTheLibrary" YPos="37" Value="" ID="661823223" Visible="TRUE" XPos="951" ShellCommand="browser https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxtGQJDqjvRWjzkhvczPQPlW">
-    <Timer Order="0" ExternalLinkURL="" Name="10-26-20" YPos="98" Value="" ID="-26558137" Visible="TRUE" XPos="1040" ShellCommand="" />
+  <Calendar Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxtGQJDqjvRWjzkhvczPQPlW" Name="LawersInTheLibrary" YPos="216" Value="" ID="661823223" Visible="TRUE" XPos="956" ShellCommand="browser https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxtGQJDqjvRWjzkhvczPQPlW">
+    <Timer Order="0" ExternalLinkURL="" Name="10-26-20" YPos="187" Value="" ID="-26558137" Visible="TRUE" XPos="1033" ShellCommand="" />
   </Calendar>
   <FlowProcess Order="0" ExternalLinkURL="https://www.ftccomplaintassistant.gov/#crnt&amp;panel1-1" Name="FTC" YPos="560" Value="" ID="2119150759" Visible="TRUE" XPos="1076" ShellCommand="browser https://www.ftccomplaintassistant.gov/#crnt&amp;panel1-1">
     <FlowData Order="0" ExternalLinkURL="" Name="BigO" YPos="660" Value="" ID="-546626556" Visible="TRUE" XPos="1134" ShellCommand="" />

@@ -34,11 +34,18 @@
     </menu>
   </menus>
   <languages>
+   	<language name="VisualWeb" language="VisualWeb"
+ 	 configfile="Languages/VisualWeb/VisualWeb.xml"
+	     enabled="TRUE"/>
    	<language name="Tasx" language="Tasx"
  	 configfile="Languages/Tasx/Tasx.xml"
 	     enabled="TRUE"/>
   </languages>
   <translators>
+	<translator name="VisualWebJavaServlet" translator="VisualWebJavaServlet"
+                configfile="Translators/VisualWebJavaServlet/VisualWebJavaServlet.xml"
+	        definitionfile="Translators/VisualWebJavaServlet/VisualWebJavaServlet.xsl"
+	        supportedlanguages="VisualWeb" enabled="TRUE"/>
 	<translator name="TasxToHTML5" translator="TasxToHTML5"
                 configfile="Translators/TasxToHTML5/TasxToHTML5.xml"
 	        definitionfile="Translators/TasxToHTML5/TasxToHTML5.xsl"
@@ -49,7 +56,7 @@
               configfile="Platforms/WindowsTomcat/Tomcat403.xml" supportedtranslators="TasxToHTML5"
 	      defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="linux" enabled="TRUE"/>
    <platform name="Linux Filesystem"
-              configfile="Platforms/WindowsTomcat/Tomcat403.xml" supportedtranslators="TasxToHTML5"
+              configfile="Platforms/WindowsTomcat/Tomcat403.xml" supportedtranslators="TasxToHTML5,VisualWebJavaServlet"
 	   defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="linux" enabled="TRUE"/> 
    <platform name="Windows Filesystem"
               configfile="Platforms/WindowsTomcat/Tomcat403.xml" supportedtranslators="TasxToHTML5"

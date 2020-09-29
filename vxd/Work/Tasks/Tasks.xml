@@ -175,7 +175,7 @@
       <FlowData Order="0" ExternalLinkURL="https://www.muckrock.com/foi/united-states-of-america-10/request-for-simple-police-reports-expungements-and-proper-local-government-services-and-to-cease-threats-department-of-justice-office-of-the-attorney-general-102066/?" Name="DOJ" YPos="646" Value="" ID="537519976" Visible="TRUE" XPos="6" ShellCommand="browser https://www.muckrock.com/foi/united-states-of-america-10/request-for-simple-police-reports-expungements-and-proper-local-government-services-and-to-cease-threats-department-of-justice-office-of-the-attorney-general-102066/?" />
     </FlowData>
     <FlowData ID="473599468" Name="NMSP" Order="0" Value="" Visible="TRUE" XPos="120" YPos="370">
-      <FlowData Order="0" ExternalLinkURL="" Name="Lieutenant" YPos="414" Value="" ID="324105085" Visible="TRUE" XPos="179" ShellCommand="" />
+      <FlowData Order="0" ExternalLinkURL="" Name="Captain" YPos="414" Value="" ID="324105085" Visible="TRUE" XPos="179" ShellCommand="" />
       <Report Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXpQtMLGSLvHzfsXBXWCddtMM" Name="Report" YPos="483" Value="" ID="360547530" Visible="TRUE" XPos="166" ShellCommand="browser https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXpQtMLGSLvHzfsXBXWCddtMM" />
     </FlowData>
     <FlowData ID="137762068" Name="Cisco" Order="0" Value="" Visible="TRUE" XPos="193" YPos="259" />
@@ -186,6 +186,7 @@
       </Dashboard>
     </News>
     <FlowData Order="0" ExternalLinkURL="" Name="Civil" YPos="328" Value="" ID="1067300369" Visible="TRUE" XPos="5" ShellCommand="" />
+    <FlowData Order="0" ExternalLinkURL="" Name="Whistleblower" YPos="258" Value="" ID="-1073521237" Visible="TRUE" XPos="3" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="1802202485" Name="MVD" Order="0" Value="" Visible="TRUE" XPos="450" YPos="388">
     <FlowData ID="-554885791" Name="DL" Order="0" Value="" Visible="TRUE" XPos="445" YPos="469">
@@ -271,29 +272,19 @@
   <FlowProcess ID="-687486639" Name="Mom" Order="0" Value="" Visible="TRUE" XPos="14" YPos="107">
     <FlowData ID="2118009395" Name="Calls" Order="0" Value="" Visible="TRUE" XPos="11" YPos="190" />
   </FlowProcess>
-  <FlowProcess ID="-1309145108" Name="Logistics" Order="0" Value="" Visible="TRUE" XPos="791" YPos="12">
-    <FlowData ID="-2109454864" Name="Bike" Order="0" Value="" Visible="TRUE" XPos="860" YPos="22" />
-    <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="762" YPos="100" />
-    <FlowData ID="-562504891" Name="OScope" Order="0" Value="" Visible="TRUE" XPos="724" YPos="16" />
-    <FlowData ID="1467883470" Name="Hughes" Order="0" Value="" Visible="TRUE" XPos="877" YPos="191" ExternalLinkURL="https://www.hughesnetinternet.net/local/New-Mexico/" ShellCommand="browser https://www.hughesnetinternet.net/local/New-Mexico/" />
-    <FlowData ID="-1320874992" Name="ProtonMail" Order="0" Value="" Visible="TRUE" XPos="889" YPos="106" ShellCommand="browser https://protonmail.com/" ExternalLinkURL="https://protonmail.com/" />
-    <FlowData ID="835283602" Name="Insolation" Order="0" Value="" Visible="TRUE" XPos="816" YPos="198" />
-    <FlowData Order="0" ExternalLinkURL="" Name="Propane" YPos="107" Value="" ID="-1227964218" Visible="TRUE" XPos="828" ShellCommand="" />
+  <FlowProcess ID="-1309145108" Name="Logistics" Order="0" Value="" Visible="TRUE" XPos="605" YPos="8">
+    <FlowData ID="-2109454864" Name="Bike" Order="0" Value="" Visible="TRUE" XPos="693" YPos="11" />
+    <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="654" YPos="90" />
+    <FlowData ID="-562504891" Name="OScope" Order="0" Value="" Visible="TRUE" XPos="588" YPos="87" />
+    <FlowData ID="1467883470" Name="Hughes" Order="0" Value="" Visible="TRUE" XPos="735" YPos="97" ExternalLinkURL="https://www.hughesnetinternet.net/local/New-Mexico/" ShellCommand="browser https://www.hughesnetinternet.net/local/New-Mexico/" />
+    <FlowData ID="-1320874992" Name="ProtonMail" Order="0" Value="" Visible="TRUE" XPos="756" YPos="16" ShellCommand="browser https://protonmail.com/" ExternalLinkURL="https://protonmail.com/" />
+    <FlowData ID="835283602" Name="Insolation" Order="0" Value="" Visible="TRUE" XPos="674" YPos="162" />
   </FlowProcess>
   <FlowProcess ID="-177200004" Name="BBB" Order="0" Value="" Visible="TRUE" XPos="809" YPos="401" ShellCommand="browser https://www.bbb.com/" ExternalLinkURL="https://www.bbb.com/">
     <FlowData ID="-2099536365" Name="Responses" Value="" YPos="485" Visible="TRUE" Order="0" XPos="808" ShellCommand="browser https://mail.google.com/mail/u/0/#search/bbb" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/bbb">
       <Mail Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxnSQFnBpsLrSSCTPpLbkgKj" Name="BBBSpoof" YPos="580" Value="" ID="-1178978045" Visible="TRUE" XPos="784" ShellCommand="browser https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxnSQFnBpsLrSSCTPpLbkgKj" />
     </FlowData>
     <FlowData Order="0" ExternalLinkURL="" Name="BigO" YPos="663" Value="" ID="-807250048" Visible="TRUE" XPos="827" ShellCommand="" />
-  </FlowProcess>
-  <FlowProcess ID="-676982362" Name="Social" Order="0" Value="" Visible="TRUE" XPos="649" YPos="15">
-    <FlowData ID="10350487" Name="Billy" Order="0" Value="" Visible="TRUE" XPos="638" YPos="98" ExternalLinkURL="https://voice.google.com/u/0/search?from=%5B%7B%22i%22:%22c6922063368637778330%22,%22n%22:%22William%20Mora%22,%22p%22:%22%2B14154252897%22%7D%5D&amp;q=%5B%5D" ShellCommand="browser https://voice.google.com/u/0/search?from=%5B%7B%22i%22:%22c6922063368637778330%22,%22n%22:%22William%20Mora%22,%22p%22:%22%2B14154252897%22%7D%5D&amp;q=%5B%5D">
-      <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="976899008" Visible="TRUE" DestID="-1586567692" DestType="Target" XPos="-1" SourceID="10350487" ShellCommand="" />
-    </FlowData>
-    <FlowData ID="-588977415" Name="Jay" Order="0" Value="" Visible="TRUE" XPos="697" YPos="101" ShellCommand="browser https://mail.google.com/mail/u/0/#search/jay%40woidtke.com" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/jay%40woidtke.com">
-      <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-884683680" Visible="TRUE" DestID="-1586567692" DestType="Target" XPos="-1" SourceID="-588977415" ShellCommand="" />
-    </FlowData>
-    <FlowData ID="1548300993" Name="Facebook" Order="0" Value="" Visible="TRUE" XPos="577" YPos="102" ShellCommand="browser https://www.facebook.com/" />
   </FlowProcess>
   <FlowProcess ID="-1072698922" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="380" YPos="384">
     <FlowData ID="1110465415" Name="Tires" Order="0" Value="" Visible="TRUE" XPos="379" YPos="550" />

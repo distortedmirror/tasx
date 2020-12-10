@@ -293,7 +293,6 @@
     <FlowData ID="-2130468282" Name="VXD" Order="0" Value="" Visible="TRUE" XPos="689" YPos="327">
       <FlowData ID="1506769951" Name="NoteField" Order="0" Value="" Visible="TRUE" XPos="766" YPos="336" />
       <FlowData Order="0" ExternalLinkURL="" Name="ImageView" YPos="334" Value="" ID="-1240567858" Visible="TRUE" XPos="828" ShellCommand="" />
-      <Image Order="0" ExternalLinkURL="" Name="Icon" YPos="333" Value="" ID="-1944115722" Visible="TRUE" XPos="893" ShellCommand="" />
       <FlowData Order="0" ExternalLinkURL="" Name="StartupBug" YPos="265" Value="" ID="945951962" Visible="TRUE" XPos="766" ShellCommand="" />
     </FlowData>
     <FlowData ID="-68242960" Name="Chromebook" Order="0" Value="" Visible="TRUE" XPos="631" YPos="326">
@@ -301,9 +300,7 @@
     </FlowData>
   </FlowProcess>
   <FlowProcess ID="-473196105" Name="Legal" Order="0" Value="" Visible="FALSE" XPos="119" YPos="396" />
-  <DealValue Order="0" ExternalLinkURL="" Name="AR" YPos="78" Value="" ID="-2110195450" Visible="TRUE" XPos="101" ShellCommand="">
-    <AR Order="0" ExternalLinkURL="https://www.techcu.com/" Name="ACH TechCU" YPos="170" Value="500" ID="875305022" Visible="TRUE" XPos="117" ShellCommand="browser https://www.techcu.com/" />
-  </DealValue>
+  <DealValue Order="0" ExternalLinkURL="" Name="AR" YPos="78" Value="" ID="-2110195450" Visible="TRUE" XPos="101" ShellCommand="" />
   <Target Order="0" ExternalLinkURL="" Name="P1" YPos="19" Value="" ID="-1586567692" Visible="TRUE" XPos="14" ShellCommand="" />
   <Mail Order="0" ExternalLinkURL="" Name="Respond" YPos="19" Value="" ID="1075923904" Visible="TRUE" XPos="1043" ShellCommand="" />
   <DealValue Order="0" ExternalLinkURL="" Name="AP" YPos="79" Value="" ID="566707686" Visible="TRUE" XPos="160" ShellCommand="" />

@@ -251,6 +251,7 @@
     <Interface Order="0" ExternalLinkURL="" Name="KeyBenson" YPos="81" Value="" ID="131868448" Visible="TRUE" XPos="609" ShellCommand="" />
     <Distributor Order="0" ExternalLinkURL="" Name="HiredDriver" YPos="79" Value="" ID="2070111999" Visible="TRUE" XPos="738" ShellCommand="" />
     <DocumentBook Order="0" ExternalLinkURL="" Name="Printer" YPos="6" Value="" ID="-930911655" Visible="TRUE" XPos="686" ShellCommand="" />
+    <Supplier Order="0" ExternalLinkURL="" Name="AAA" YPos="207" Value="" ID="-693976620" Visible="TRUE" XPos="630" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="-177200004" Name="BBB" Order="0" Value="" Visible="TRUE" XPos="809" YPos="401" ShellCommand="browser https://www.bbb.com/" ExternalLinkURL="https://www.bbb.com/">
     <FlowData ID="-2099536365" Name="Responses" Value="" YPos="485" Visible="TRUE" Order="0" XPos="808" ShellCommand="browser https://mail.google.com/mail/u/0/#search/bbb" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/bbb">
@@ -297,6 +298,7 @@
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1480489680" Visible="TRUE" DestID="-1751037932" DestType="FlowData" XPos="-1" SourceID="1477460013" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-13729854" Visible="TRUE" DestID="-930911655" DestType="DocumentBook" XPos="-1" SourceID="1477460013" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-69707068" Visible="TRUE" DestID="-391568307" DestType="Timer" XPos="-1" SourceID="1477460013" ShellCommand="" />
+    <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1565416431" Visible="TRUE" DestID="-693976620" DestType="Supplier" XPos="-1" SourceID="1477460013" ShellCommand="" />
   </Target>
 </Tasx>
 

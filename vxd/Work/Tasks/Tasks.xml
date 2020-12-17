@@ -157,8 +157,8 @@
 
 <Tasx Build="Debug" ID="352171275" Language="Tasx" Name="Tasx" Order="0" Package="Tasks" Platform="Tomcat403" Port="80" TextNote="" Title="Tasks" Translator="TasxToHTML5" URI="/Tasks" Value="" Visible="TRUE" XPos="-1" YPos="-1">
   <FlowProcess ID="1399269947" Name="Weekly" Order="0" Value="" Visible="TRUE" XPos="284" YPos="6">
-    <FlowData ID="-933610391" Name="Clean" Order="0" Value="" Visible="TRUE" XPos="219" YPos="92" />
-    <FlowData ID="-1751037932" Name="Laundry" Order="0" Value="" Visible="TRUE" XPos="328" YPos="82" />
+    <FlowData ID="-933610391" Name="Clean" Order="0" Value="" Visible="TRUE" XPos="226" YPos="85" />
+    <FlowData ID="-1751037932" Name="Laundry" Order="0" Value="" Visible="TRUE" XPos="319" YPos="86" />
   </FlowProcess>
   <FlowProcess ID="-121176113" Name="Legal" Order="0" Value="" Visible="TRUE" XPos="54" YPos="256">
     <FlowData ID="311274862" Name="DA" Order="0" Value="" Visible="TRUE" XPos="73" YPos="351">
@@ -209,10 +209,10 @@
   </FlowProcess>
   <FlowProcess ID="-970492872" Name="Monthly" Order="0" Value="" Visible="TRUE" XPos="377" YPos="8">
     <FlowData ID="1933277871" Name="Rent" Order="0" Value="" Visible="TRUE" XPos="448" YPos="13">
-      <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="265" Value="200" ID="362334036" Visible="TRUE" XPos="471" ShellCommand="" />
+      <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="157" Value="200" ID="362334036" Visible="TRUE" XPos="495" ShellCommand="" />
     </FlowData>
-    <FlowDecision ID="-403655824" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="582" YPos="192">
-      <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="265" Value="500" ID="1189608506" Visible="TRUE" XPos="552" ShellCommand="" />
+    <FlowDecision ID="-403655824" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="516" YPos="63">
+      <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="156" Value="500" ID="1189608506" Visible="TRUE" XPos="570" ShellCommand="" />
     </FlowDecision>
     <FlowData ID="698616455" Name="Hair" Order="0" Value="" Visible="TRUE" XPos="433" YPos="86" />
     <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="382" YPos="85">
@@ -252,7 +252,7 @@
     <FlowData ID="-1258861713" Name="Address" Order="0" Value="" Visible="TRUE" XPos="656" YPos="639" />
     <FlowData ID="-486323638" Name="ACHVerify" Order="0" Value="" Visible="TRUE" XPos="721" YPos="637" />
   </FlowProcess>
-  <FlowProcess ID="-161933666" Name="Quarterly" Order="0" Value="" Visible="TRUE" XPos="263" YPos="167">
+  <FlowProcess ID="-161933666" Name="Quarterly" Order="0" Value="" Visible="TRUE" XPos="257" YPos="159">
     <FlowData ID="-347359483" Name="Dentist" Order="0" Value="" Visible="TRUE" XPos="274" YPos="244">
       <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-2021136337" Visible="TRUE" DestID="-1586567692" DestType="Target" XPos="-1" SourceID="-347359483" ShellCommand="" />
     </FlowData>
@@ -264,8 +264,7 @@
     <FlowData ID="2118009395" Name="Calls" Order="0" Value="" Visible="TRUE" XPos="11" YPos="190" />
   </FlowProcess>
   <FlowProcess ID="-1309145108" Name="Logistics" Order="0" Value="" Visible="TRUE" XPos="605" YPos="8">
-    <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="654" YPos="90" />
-    <FlowData ID="-562504891" Name="OScope" Order="0" Value="" Visible="TRUE" XPos="588" YPos="87" />
+    <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="678" YPos="74" />
     <FlowData ID="-1320874992" Name="ProtonMail" Order="0" Value="" Visible="TRUE" XPos="756" YPos="16" ShellCommand="browser https://protonmail.com/" ExternalLinkURL="https://protonmail.com/" />
   </FlowProcess>
   <FlowProcess ID="-177200004" Name="BBB" Order="0" Value="" Visible="TRUE" XPos="809" YPos="401" ShellCommand="browser https://www.bbb.com/" ExternalLinkURL="https://www.bbb.com/">
@@ -289,14 +288,11 @@
     <FlowData ID="-1468222019" Name="CraigsList" Order="0" Value="" Visible="TRUE" XPos="958" YPos="484" />
     <FlowData ID="1726842373" Name="Benavidez" Order="0" Value="" Visible="TRUE" XPos="978" YPos="578" />
   </FlowProcess>
-  <FlowProcess ID="668282404" Name="Systems" Order="0" Value="" Visible="TRUE" XPos="656" YPos="242">
-    <FlowData ID="-2130468282" Name="VXD" Order="0" Value="" Visible="TRUE" XPos="689" YPos="327">
-      <FlowData ID="1506769951" Name="NoteField" Order="0" Value="" Visible="TRUE" XPos="766" YPos="336" />
-      <FlowData Order="0" ExternalLinkURL="" Name="ImageView" YPos="334" Value="" ID="-1240567858" Visible="TRUE" XPos="828" ShellCommand="" />
-      <FlowData Order="0" ExternalLinkURL="" Name="StartupBug" YPos="265" Value="" ID="945951962" Visible="TRUE" XPos="766" ShellCommand="" />
-    </FlowData>
-    <FlowData ID="-68242960" Name="Chromebook" Order="0" Value="" Visible="TRUE" XPos="631" YPos="326">
-      <FileUpload Order="0" ExternalLinkURL="" Name="OS" YPos="330" Value="" ID="-2095510996" Visible="TRUE" XPos="544" ShellCommand="" />
+  <FlowProcess ID="668282404" Name="Systems" Order="0" Value="" Visible="TRUE" XPos="671" YPos="153">
+    <FlowData ID="-2130468282" Name="VXD" Order="0" Value="" Visible="TRUE" XPos="763" YPos="145">
+      <FlowData ID="1506769951" Name="NoteField" Order="0" Value="" Visible="TRUE" XPos="769" YPos="234" />
+      <FlowData Order="0" ExternalLinkURL="" Name="ImageView" YPos="234" Value="" ID="-1240567858" Visible="TRUE" XPos="834" ShellCommand="" />
+      <FlowData Order="0" ExternalLinkURL="" Name="StartupBug" YPos="154" Value="" ID="945951962" Visible="TRUE" XPos="830" ShellCommand="" />
     </FlowData>
   </FlowProcess>
   <FlowProcess ID="-473196105" Name="Legal" Order="0" Value="" Visible="FALSE" XPos="119" YPos="396" />

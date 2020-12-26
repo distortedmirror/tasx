@@ -210,6 +210,8 @@
     <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="182" YPos="165">
       <FlowData ID="-217541129" Name="Telemedicine" Order="0" Value="" Visible="TRUE" XPos="267" YPos="195" />
     </FlowData>
+    <FlowProcess Order="0" ExternalLinkURL="" Name="Rent" YPos="153" Value="" ID="-1847805042" Visible="TRUE" XPos="331" ShellCommand="" />
+    <FlowProcess Order="0" ExternalLinkURL="" Name="Geico" YPos="226" Value="" ID="387887806" Visible="TRUE" XPos="332" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="152833528" Name="Van" Order="0" Value="" Visible="TRUE" XPos="312" YPos="385">
     <FlowData ID="-824117316" Name="CruiseCon" Order="0" Value="" Visible="TRUE" XPos="254" YPos="652" />
@@ -283,12 +285,13 @@
   </DealValue>
   <Mail Order="0" ExternalLinkURL="" Name="Respond" YPos="319" Value="" ID="1075923904" Visible="TRUE" XPos="924" ShellCommand="" />
   <DealValue Order="0" ExternalLinkURL="" Name="AP" YPos="94" Value="" ID="566707686" Visible="TRUE" XPos="932" ShellCommand="">
-    <FlowProcess Order="0" ExternalLinkURL="" Name="Rent" YPos="158" Value="" ID="-1556129061" Visible="TRUE" XPos="855" ShellCommand="" />
-    <AP Order="0" ExternalLinkURL="" Name="AcadiaPayment" YPos="118" Value="" ID="1743979954" Visible="TRUE" XPos="1007" ShellCommand="" />
-    <AP Order="0" ExternalLinkURL="" Name="GeicoPayment" YPos="173" Value="" ID="-1043258905" Visible="TRUE" XPos="929" ShellCommand="" />
-    <AP Order="0" ExternalLinkURL="" Name="VanPay" YPos="181" Value="" ID="1156983652" Visible="TRUE" XPos="1012" ShellCommand="" />
+    <AP Order="0" ExternalLinkURL="" Name="AcadiaPayment" YPos="100" Value="" ID="1743979954" Visible="TRUE" XPos="1002" ShellCommand="">
+      <DealValue Order="0" ExternalLinkURL="" Name="$505" YPos="125" Value="" ID="1915313415" Visible="TRUE" XPos="1081" ShellCommand="" />
+    </AP>
+    <AP Order="0" ExternalLinkURL="" Name="VanPay" YPos="166" Value="" ID="1156983652" Visible="TRUE" XPos="1002" ShellCommand="" />
+    <AP Order="0" ExternalLinkURL="" Name="MVDFees" YPos="186" Value="" ID="413894695" Visible="TRUE" XPos="918" ShellCommand="" />
   </DealValue>
-  <Target Order="0" ExternalLinkURL="" Name="Priority" YPos="86" Value="" ID="1477460013" Visible="TRUE" XPos="382" ShellCommand="">
+  <Target Order="0" ExternalLinkURL="" Name="Priority" YPos="136" Value="" ID="1477460013" Visible="TRUE" XPos="425" ShellCommand="">
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="54442493" Visible="TRUE" DestID="131868448" DestType="Interface" XPos="-1" SourceID="1477460013" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-104522295" Visible="TRUE" DestID="-554885791" DestType="FlowData" XPos="-1" SourceID="1477460013" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1480489680" Visible="TRUE" DestID="-1751037932" DestType="FlowData" XPos="-1" SourceID="1477460013" ShellCommand="" />
@@ -310,8 +313,8 @@
     <FlowData Order="0" ExternalLinkURL="" Name="Shower" YPos="17" Value="" ID="1641100910" Visible="TRUE" XPos="160" ShellCommand="" />
     <FlowData Order="0" ExternalLinkURL="" Name="Eat" YPos="20" Value="" ID="900820060" Visible="TRUE" XPos="230" ShellCommand="" />
   </FlowProcess>
-  <Mail Order="0" ExternalLinkURL="" Name="Receive" YPos="242" Value="" ID="-270067465" Visible="TRUE" XPos="930" ShellCommand="">
-    <Finance Order="0" ExternalLinkURL="" Name="TitleSUV" YPos="252" Value="" ID="1581092948" Visible="TRUE" XPos="1016" ShellCommand="" />
+  <Mail Order="0" ExternalLinkURL="" Name="Receive" YPos="255" Value="" ID="-270067465" Visible="TRUE" XPos="923" ShellCommand="">
+    <Finance Order="0" ExternalLinkURL="" Name="TitleSUV" YPos="257" Value="" ID="1581092948" Visible="TRUE" XPos="1000" ShellCommand="" />
   </Mail>
 </Tasx>
 

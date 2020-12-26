@@ -158,23 +158,23 @@
 <Tasx Build="Debug" ID="352171275" Language="Tasx" Name="Tasx" Order="0" Package="Tasks" Platform="Tomcat403" Port="80" TextNote="" Title="Tasks" Translator="TasxToHTML5" URI="/Tasks" Value="" Visible="TRUE" XPos="-1" YPos="-1">
   <FlowProcess ID="1399269947" Name="Weekly" Order="0" Value="" Visible="TRUE" XPos="284" YPos="6">
     <FlowData ID="-933610391" Name="Clean" Order="0" Value="" Visible="TRUE" XPos="226" YPos="85" />
-    <FlowData ID="-1751037932" Name="Laundry" Order="0" Value="" Visible="TRUE" XPos="952" YPos="132" />
+    <FlowData ID="-1751037932" Name="Laundry" Order="0" Value="" Visible="TRUE" XPos="736" YPos="94" />
   </FlowProcess>
   <FlowProcess ID="-121176113" Name="Legal" Order="0" Value="" Visible="TRUE" XPos="69" YPos="208">
     <FlowData ID="311274862" Name="DA" Order="0" Value="" Visible="TRUE" XPos="73" YPos="351">
       <FlowData ID="22821530" Name="Attorney" Order="0" Value="" Visible="TRUE" XPos="9" YPos="470" />
-      <DataList ID="754924952" Name="ExpungementForm" Order="0" Value="" Visible="TRUE" XPos="129" YPos="433" ShellCommand="browser https://www.nmcourts.gov/expungement-forms.aspx" ExternalLinkURL="https://www.nmcourts.gov/expungement-forms.aspx">
+      <DataList ID="754924952" Name="ExpungementForm" Order="0" Value="" Visible="TRUE" XPos="133" YPos="416" ShellCommand="browser https://www.nmcourts.gov/expungement-forms.aspx" ExternalLinkURL="https://www.nmcourts.gov/expungement-forms.aspx">
         <Dashboard ID="526191773" ShellCommand="https://www.nmcourts.gov/forms.aspx" Name="FormURLs" Order="0" Value="https://www.nmcourts.gov/forms.aspx" Visible="TRUE" XPos="65" YPos="650" />
         <Document ID="1344648076" ShellCommand="https://www.dps.nm.gov/top-links-for-nm-residents/fingerprinting-and-background-checks" Name="Records" Order="0" Value="" Visible="TRUE" XPos="121" YPos="564" />
         <Dashboard ID="128650612" ShellCommand="https://s3.amazonaws.com/realfile3016b036-bbd3-4ec4-ba17-7539841f4d19/27609612-6019-4b4d-bd83-362956d8bb61?response-content-disposition=filename%3D%22STEPS+TO+FILING+YOUR+PETITION+FOR+EXPUNGEMENT+-identity+theft.pdf%22&amp;response-content-type=application%2Fpdf&amp;AWSAccessKeyId=AKIAIMZX6TNBAOLKC6MQ&amp;Signature=DVPe41a61SCSKfXkGoZTqyqDteE%3D&amp;Expires=1600189157" Name="Filing" Order="0" Value="" Visible="TRUE" XPos="169" YPos="484" />
       </DataList>
-      <FlowData ID="1477347245" Name="DisabledHelp" Order="0" Value="" Visible="TRUE" XPos="64" YPos="442" ExternalLinkURL="https://libguides.law.unm.edu/c.php?g=244026&amp;p=1625798" ShellCommand="browser https://libguides.law.unm.edu/c.php?g=244026&amp;p=1625798" />
+      <FlowData ID="1477347245" Name="DisabledHelp" Order="0" Value="" Visible="TRUE" XPos="71" YPos="430" ExternalLinkURL="https://libguides.law.unm.edu/c.php?g=244026&amp;p=1625798" ShellCommand="browser https://libguides.law.unm.edu/c.php?g=244026&amp;p=1625798" />
       <FlowData Order="0" ExternalLinkURL="https://www.muckrock.com/foi/united-states-of-america-10/request-for-simple-police-reports-expungements-and-proper-local-government-services-and-to-cease-threats-department-of-justice-office-of-the-attorney-general-102066/?" Name="DOJ" YPos="533" Value="" ID="537519976" Visible="TRUE" XPos="42" ShellCommand="browser https://www.muckrock.com/foi/united-states-of-america-10/request-for-simple-police-reports-expungements-and-proper-local-government-services-and-to-cease-threats-department-of-justice-office-of-the-attorney-general-102066/?" />
     </FlowData>
     <FlowData ID="137762068" Name="Cisco" Order="0" Value="" Visible="TRUE" XPos="193" YPos="259" />
     <FlowData ID="-1598640798" Name="Sheriff" Order="0" Value="" Visible="TRUE" XPos="23" YPos="389" />
     <News Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/jwm2164%40columbia.edu" Name="Journalist" YPos="266" Value="" ID="691469161" Visible="TRUE" XPos="126" ShellCommand="browser https://mail.google.com/mail/u/0/#search/jwm2164%40columbia.edu">
-      <Dashboard Order="0" ExternalLinkURL="" Name="Report" YPos="345" Value="" ID="1864698142" Visible="TRUE" XPos="172" ShellCommand="" />
+      <Dashboard Order="0" ExternalLinkURL="" Name="Report" YPos="345" Value="" ID="1864698142" Visible="TRUE" XPos="171" ShellCommand="" />
     </News>
     <FlowData Order="0" ExternalLinkURL="" Name="Civil" YPos="328" Value="" ID="1067300369" Visible="TRUE" XPos="5" ShellCommand="" />
     <FlowData Order="0" ExternalLinkURL="" Name="Whistleblower" YPos="258" Value="" ID="-1073521237" Visible="TRUE" XPos="3" ShellCommand="" />
@@ -182,7 +182,13 @@
   <FlowProcess ID="1802202485" Name="MVD" Order="0" Value="" Visible="TRUE" XPos="450" YPos="388">
     <FlowData ID="-554885791" Name="DL" Order="0" Value="" Visible="TRUE" XPos="445" YPos="471">
       <Mail Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxrwNmHHDSKTZJgmgQbmCVrN" Name="Compliance" YPos="598" Value="" ID="1439267624" Visible="TRUE" XPos="429" ShellCommand="browser https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXxrwNmHHDSKTZJgmgQbmCVrN" />
-      <Timer Order="0" ExternalLinkURL="" Name="MVDExpress" YPos="283" Value="" ID="-391568307" Visible="TRUE" XPos="1089" ShellCommand="" />
+      <Timer Order="0" ExternalLinkURL="" Name="MVDExpress" YPos="204" Value="" ID="-391568307" Visible="TRUE" XPos="637" ShellCommand="">
+        <Mail Order="0" ExternalLinkURL="" Name="Email" YPos="288" Value="" ID="605472723" Visible="TRUE" XPos="599" ShellCommand="" />
+        <Phone Order="0" ExternalLinkURL="" Name="Call" YPos="297" Value="" ID="339400673" Visible="TRUE" XPos="665" ShellCommand="" />
+        <Supplier Order="0" ExternalLinkURL="" Name="DriveTest" YPos="241" Value="" ID="203362621" Visible="TRUE" XPos="734" ShellCommand="">
+          <Timer Order="0" ExternalLinkURL="" Name="Schedule" YPos="319" Value="" ID="2036506876" Visible="TRUE" XPos="741" ShellCommand="" />
+        </Supplier>
+      </Timer>
     </FlowData>
     <FlowData ID="-857779387" Name="RVReg" Order="0" Value="" Visible="TRUE" XPos="365" YPos="651" />
     <Mail Order="0" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/mvd/FMfcgxwJXxpctzxQmsSnkxRCkLLdNFFB" Name="Contact" YPos="669" Value="" ID="-1806957293" Visible="TRUE" XPos="427" ShellCommand="browser https://mail.google.com/mail/u/0/#search/mvd/FMfcgxwJXxpctzxQmsSnkxRCkLLdNFFB" />
@@ -199,11 +205,8 @@
     <FlowData Order="0" ExternalLinkURL="" Name="Adjuster" YPos="649" Value="" ID="144476368" Visible="TRUE" XPos="135" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="-970492872" Name="Monthly" Order="0" Value="" Visible="TRUE" XPos="377" YPos="8">
-    <FlowData ID="1933277871" Name="Rent" Order="0" Value="" Visible="TRUE" XPos="448" YPos="13">
-      <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="17" Value="200" ID="362334036" Visible="TRUE" XPos="520" ShellCommand="" />
-    </FlowData>
-    <FlowDecision ID="-403655824" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="516" YPos="63">
-      <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="247" Value="500" ID="1189608506" Visible="TRUE" XPos="341" ShellCommand="" />
+    <FlowDecision ID="-403655824" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="443" YPos="3">
+      <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="10" Value="500" ID="1189608506" Visible="TRUE" XPos="506" ShellCommand="" />
     </FlowDecision>
     <FlowData ID="698616455" Name="Hair" Order="0" Value="" Visible="TRUE" XPos="433" YPos="86" />
     <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="382" YPos="85">
@@ -216,11 +219,6 @@
     <FlowData ID="-1607758261" Name="Winshield" Order="0" Value="" Visible="TRUE" XPos="331" YPos="470" />
     <FlowData ID="959203585" Name="Horn" Value="" YPos="650" Visible="TRUE" Order="0" XPos="309" ShellCommand="" />
   </FlowProcess>
-  <FlowData ID="1361748620" Name="Brush" Order="0" Value="" Visible="TRUE" XPos="97" YPos="4">
-    <FlowData ID="-2066614902" Name="Shower" Order="0" Value="" Visible="TRUE" XPos="165" YPos="8">
-      <FlowData ID="956414784" Name="Eat" Order="0" Value="" Visible="TRUE" XPos="224" YPos="3" />
-    </FlowData>
-  </FlowData>
   <FlowProcess ID="-2047896394" Name="Taxes" Order="0" Value="" Visible="TRUE" XPos="521" YPos="398">
     <FlowData ID="-282014301" Name="Utah" Order="0" Value="" Visible="TRUE" XPos="493" YPos="482" />
     <FlowData ID="1881325886" Name="Federa" Order="0" Value="" Visible="TRUE" XPos="540" YPos="484" />
@@ -247,14 +245,9 @@
     <FlowData ID="-1113753434" Name="Order" Order="0" Value="" Visible="TRUE" XPos="749" YPos="490" />
   </FlowProcess>
   <FlowProcess ID="-1309145108" Name="Logistics" Order="0" Value="" Visible="TRUE" XPos="605" YPos="8">
-    <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="563" YPos="89" />
+    <FlowData ID="1044150166" Name="POBox" Order="0" Value="" Visible="TRUE" XPos="572" YPos="126" />
     <FlowData ID="-1320874992" Name="ProtonMail" Order="0" Value="" Visible="TRUE" XPos="631" YPos="88" ShellCommand="browser https://protonmail.com/" ExternalLinkURL="https://protonmail.com/" />
-    <Interface Order="0" ExternalLinkURL="" Name="KeyBenson" YPos="200" Value="" ID="131868448" Visible="TRUE" XPos="955" ShellCommand="" />
-    <Distributor Order="0" ExternalLinkURL="" Name="HiredDriver" YPos="63" Value="" ID="2070111999" Visible="TRUE" XPos="955" ShellCommand="" />
-    <DocumentBook Order="0" ExternalLinkURL="" Name="Printer" YPos="343" Value="" ID="-930911655" Visible="TRUE" XPos="970" ShellCommand="" />
-    <Supplier Order="0" ExternalLinkURL="" Name="AAA" YPos="273" Value="" ID="-693976620" Visible="TRUE" XPos="966" ShellCommand="" />
-    <Supplier Order="0" ExternalLinkURL="" Name="UHAUL" YPos="207" Value="" ID="324713558" Visible="TRUE" XPos="1098" ShellCommand="" />
-    <Distributor Order="0" ExternalLinkURL="" Name="RVParking" YPos="4" Value="" ID="232129995" Visible="TRUE" XPos="956" ShellCommand="" />
+    <Interface Order="0" ExternalLinkURL="" Name="KeyBenson" YPos="20" Value="" ID="131868448" Visible="TRUE" XPos="718" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="-177200004" Name="BBB" Order="0" Value="" Visible="TRUE" XPos="809" YPos="401" ShellCommand="browser https://www.bbb.com/" ExternalLinkURL="https://www.bbb.com/">
     <FlowData ID="-2099536365" Name="Responses" Value="" YPos="485" Visible="TRUE" Order="0" XPos="808" ShellCommand="browser https://mail.google.com/mail/u/0/#search/bbb" ExternalLinkURL="https://mail.google.com/mail/u/0/#search/bbb">
@@ -285,22 +278,29 @@
     </FlowData>
   </FlowProcess>
   <FlowProcess ID="-473196105" Name="Legal" Order="0" Value="" Visible="FALSE" XPos="119" YPos="396" />
-  <DealValue Order="0" ExternalLinkURL="" Name="AR" YPos="78" Value="" ID="-2110195450" Visible="TRUE" XPos="101" ShellCommand="">
-    <AR Order="0" ExternalLinkURL="" Name="GeicoVan" YPos="140" Value="" ID="-1057419326" Visible="TRUE" XPos="49" ShellCommand="" />
+  <DealValue Order="0" ExternalLinkURL="" Name="AR" YPos="13" Value="" ID="-2110195450" Visible="TRUE" XPos="936" ShellCommand="">
+    <AR Order="0" ExternalLinkURL="" Name="GeicoClaim" YPos="46" Value="" ID="-1057419326" Visible="TRUE" XPos="845" ShellCommand="" />
   </DealValue>
-  <Mail Order="0" ExternalLinkURL="" Name="Respond" YPos="406" Value="" ID="1075923904" Visible="TRUE" XPos="1154" ShellCommand="" />
-  <DealValue Order="0" ExternalLinkURL="" Name="AP" YPos="79" Value="" ID="566707686" Visible="TRUE" XPos="160" ShellCommand="" />
-  <Target Order="0" ExternalLinkURL="" Name="Priority" YPos="109" Value="" ID="1477460013" Visible="TRUE" XPos="1071" ShellCommand="">
+  <Mail Order="0" ExternalLinkURL="" Name="Respond" YPos="326" Value="" ID="1075923904" Visible="TRUE" XPos="954" ShellCommand="" />
+  <DealValue Order="0" ExternalLinkURL="" Name="AP" YPos="242" Value="" ID="566707686" Visible="TRUE" XPos="949" ShellCommand="">
+    <FlowProcess Order="0" ExternalLinkURL="" Name="Rent" YPos="244" Value="" ID="-1556129061" Visible="TRUE" XPos="855" ShellCommand="" />
+  </DealValue>
+  <Target Order="0" ExternalLinkURL="" Name="Priority" YPos="148" Value="" ID="1477460013" Visible="TRUE" XPos="830" ShellCommand="">
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="54442493" Visible="TRUE" DestID="131868448" DestType="Interface" XPos="-1" SourceID="1477460013" ShellCommand="" />
-    <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-1011811014" Visible="TRUE" DestID="2070111999" DestType="Distributor" XPos="-1" SourceID="1477460013" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-104522295" Visible="TRUE" DestID="-554885791" DestType="FlowData" XPos="-1" SourceID="1477460013" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1480489680" Visible="TRUE" DestID="-1751037932" DestType="FlowData" XPos="-1" SourceID="1477460013" ShellCommand="" />
-    <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-13729854" Visible="TRUE" DestID="-930911655" DestType="DocumentBook" XPos="-1" SourceID="1477460013" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-69707068" Visible="TRUE" DestID="-391568307" DestType="Timer" XPos="-1" SourceID="1477460013" ShellCommand="" />
-    <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1565416431" Visible="TRUE" DestID="-693976620" DestType="Supplier" XPos="-1" SourceID="1477460013" ShellCommand="" />
+    <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="940009550" Visible="TRUE" DestID="1044150166" DestType="FlowData" XPos="-1" SourceID="1477460013" ShellCommand="" />
+    <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-815089926" Visible="TRUE" DestID="-865086090" DestType="FlowData" XPos="-1" SourceID="1477460013" ShellCommand="" />
   </Target>
-  <FlowData Order="0" ExternalLinkURL="" Name="ElCentro" YPos="228" Value="" ID="-865086090" Visible="TRUE" XPos="477" ShellCommand="">
-    <Phone Order="0" ExternalLinkURL="" Name="Invega" YPos="297" Value="" ID="780354853" Visible="TRUE" XPos="532" ShellCommand="" />
+  <FlowData Order="0" ExternalLinkURL="" Name="ElCentro" YPos="234" Value="" ID="-865086090" Visible="TRUE" XPos="439" ShellCommand="">
+    <Phone Order="0" ExternalLinkURL="" Name="Invega" YPos="313" Value="" ID="780354853" Visible="TRUE" XPos="491" ShellCommand="" />
+    <Actor Order="0" ExternalLinkURL="" Name="Xarelto" YPos="303" Value="" ID="-627115460" Visible="TRUE" XPos="379" ShellCommand="" />
   </FlowData>
+  <FlowProcess Order="0" ExternalLinkURL="" Name="Daily" YPos="17" Value="" ID="1739124319" Visible="TRUE" XPos="25" ShellCommand="">
+    <FlowData Order="0" ExternalLinkURL="" Name="Brush" YPos="8" Value="" ID="-1384518374" Visible="TRUE" XPos="95" ShellCommand="" />
+    <FlowData Order="0" ExternalLinkURL="" Name="Shower" YPos="10" Value="" ID="1641100910" Visible="TRUE" XPos="163" ShellCommand="" />
+    <FlowData Order="0" ExternalLinkURL="" Name="Eat" YPos="9" Value="" ID="900820060" Visible="TRUE" XPos="222" ShellCommand="" />
+  </FlowProcess>
 </Tasx>
 

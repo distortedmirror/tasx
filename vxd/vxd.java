@@ -124,10 +124,13 @@ public class vxd {
             toolBarPanel.add(toolBar, "West");
             Image viewimg = Toolkit.getDefaultToolkit().getImage(
                     root.getAttribute("splashimage"));
+            Image iconimg = Toolkit.getDefaultToolkit().getImage(
+                    root.getAttribute("iconimage"));
             vxd.viewPanel = new JLabel(new ImageIcon(viewimg));
             
             frame = new JFrame(title);
             frame.setJMenuBar(menuBar);
+            frame.setIconImage(iconimg);
             frame.getContentPane().setLayout(new BorderLayout());
             frame.getContentPane().add(toolBarPanel, "North");
             frame.getContentPane().add(viewPanel, "Center");

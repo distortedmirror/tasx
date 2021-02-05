@@ -164,7 +164,7 @@
     <FlowData ID="137762068" Name="Cisco" Order="0" Value="" Visible="TRUE" XPos="13" YPos="270" />
     <FlowData Order="0" ExternalLinkURL="" Name="Civil" YPos="344" Value="" ID="1067300369" Visible="TRUE" XPos="7" ShellCommand="" />
     <FlowData Order="0" ExternalLinkURL="" Name="Expungement" YPos="370" Value="" ID="-1562230659" Visible="TRUE" XPos="81" ShellCommand="">
-      <Mail Order="0" ExternalLinkURL="" Name="DPS" YPos="454" Value="" ID="607842126" Visible="TRUE" XPos="43" ShellCommand="" />
+      <Mail Order="0" ExternalLinkURL="" Name="DPS" YPos="454" Value="" ID="607842126" Visible="TRUE" XPos="43" ShellCommand="../browser.bat https://www.dps.nm.gov/" />
       <Mail Order="0" ExternalLinkURL="" Name="FBI" YPos="466" Value="" ID="63694587" Visible="TRUE" XPos="104" ShellCommand="" />
     </FlowData>
   </FlowProcess>

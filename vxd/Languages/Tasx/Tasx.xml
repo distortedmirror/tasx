@@ -4,49 +4,75 @@
  <Icons>
 <Icon Name="Accounting" Image="Languages/Tasx/Images/Accounting.gif"/>
 <Icon Name="Actor" Image="Languages/Tasx/Images/Actor.gif"/>
-<Icon Name="AdRotator" Image="Languages/Tasx/Images/AdRotator.gif"/>
+
+<Icon Name="BusinessUnit" Image="Languages/Tasx/Images/BusinessUnit.jpg"/>
+
+<Icon Name="Commit" Image="Languages/Tasx/Images/Commit.jpg"/>
+<Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
 <Icon Name="AP" Image="Languages/Tasx/Images/AP.gif"/>
 <Icon Name="AR" Image="Languages/Tasx/Images/AR.gif"/>
 <Icon Name="Bookings" Image="Languages/Tasx/Images/Bookings.jpg"/>
-<Icon Name="BusinessUnit" Image="Languages/Tasx/Images/BusinessUnit.jpg"/>
-<Icon Name="Button" Image="Languages/Tasx/Images/Button.gif"/>
-<Icon Name="Calendar" Image="Languages/Tasx/Images/Calendar.gif"/>
-<Icon Name="Chart" Image="Languages/Tasx/Images/Chart.jpg"/>
-<Icon Name="CheckBox" Image="Languages/Tasx/Images/CheckBox.gif"/>
-<Icon Name="CheckBoxList" Image="Languages/Tasx/Images/CheckBoxList.gif"/>
-<Icon Name="ComboBox" Image="Languages/Tasx/Images/ComboBox.gif"/>
-<Icon Name="Commit" Image="Languages/Tasx/Images/Commit.jpg"/>
-<Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
-<Icon Name="CompareValidator" Image="Languages/Tasx/Images/CompareValidator.gif"/>
-<Icon Name="Component" Image="Languages/Tasx/Images/Component.gif"/>
-<Icon Name="Control" Image="Languages/Tasx/Images/Control.gif"/>
-<Icon Name="CustomerService" Image="Languages/Tasx/Images/CustomerService.gif"/>
-<Icon Name="CustomValidator" Image="Languages/Tasx/Images/CustomValidator.gif"/>
-<Icon Name="Dashboard" Image="Languages/Tasx/Images/Dashboard.jpg"/>
-<Icon Name="Database" Image="Languages/Tasx/Images/Database.gif"/>
-<Icon Name="Datacolumn" Image="Languages/Tasx/Images/Datacolumn.gif"/>
-<Icon Name="Datacommand" Image="Languages/Tasx/Images/Datacommand.gif"/>
-<Icon Name="DataGrid" Image="Languages/Tasx/Images/DataGrid.gif"/>
-<Icon Name="DataList" Image="Languages/Tasx/Images/DataList.gif"/>
-<Icon Name="Dataset" Image="Languages/Tasx/Images/Dataset.gif"/>
-<Icon Name="Datatable" Image="Languages/Tasx/Images/Datatable.gif"/>
-<Icon Name="Dataview" Image="Languages/Tasx/Images/Dataview.gif"/>
-<Icon Name="Deal" Image="Languages/Tasx/Images/Deal.jpg"/>
-<Icon Name="DealProbability" Image="Languages/Tasx/Images/DealProbability.jpg"/>
-<Icon Name="DealStatus" Image="Languages/Tasx/Images/DealStatus.jpg"/>
-<Icon Name="DealValue" Image="Languages/Tasx/Images/DealValue.jpg"/>
-<Icon Name="De-bookings" Image="Languages/Tasx/Images/De-bookings.jpg"/>
-<Icon Name="DeBookings" Image="Languages/Tasx/Images/DeBookings.jpg"/>
-<Icon Name="Delivery" Image="Languages/Tasx/Images/Delivery.gif"/>
-<Icon Name="DiskStorage" Image="Languages/Tasx/Images/DiskStorage.gif"/>
+
 <Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.gif"/>
 <Icon Name="Document" Image="Languages/Tasx/Images/Document.gif"/>
 <Icon Name="DocumentBook" Image="Languages/Tasx/Images/DocumentBook.gif"/>
 <Icon Name="DocumentCollection" Image="Languages/Tasx/Images/DocumentCollection.gif"/>
-<Icon Name="DropDownList" Image="Languages/Tasx/Images/DropDownList.gif"/>
-<Icon Name="Else" Image="Languages/Tasx/Images/Else.gif"/>
-<Icon Name="EndIf" Image="Languages/Tasx/Images/EndIf.gif"/>
-<Icon Name="FileUpload" Image="Languages/Tasx/Images/FileUpload.gif"/>
+
+<Icon Name="CustomerService" Image="Languages/Tasx/Images/CustomerService.gif"/>
+
+<Icon Name="Delivery" Image="Languages/Tasx/Images/Delivery.gif"/>
+<Icon Name="Deal" Image="Languages/Tasx/Images/Deal.jpg"/>
+<Icon Name="DealProbability" Image="Languages/Tasx/Images/DealProbability.jpg"/>
+<Icon Name="DealStatus" Image="Languages/Tasx/Images/DealStatus.jpg"/>
+<Icon Name="DealValue" Image="Languages/Tasx/Images/DealValue.jpg"/>
+
+<Icon Name="Forecast" Image="Languages/Tasx/Images/Forecast.jpg"/>
+<Icon Name="De-bookings" Image="Languages/Tasx/Images/De-bookings.jpg"/>
+<Icon Name="DeBookings" Image="Languages/Tasx/Images/DeBookings.jpg"/>
+
+<Icon Name="Management" Image="Languages/Tasx/Images/Management.gif"/>
+<Icon Name="Manufacturing" Image="Languages/Tasx/Images/Manufacturing.gif"/>
+<Icon Name="Marketing" Image="Languages/Tasx/Images/Marketing.gif"/>
+<Icon Name="News" Image="Languages/Tasx/Images/News.gif"/>
+<Icon Name="Packaging" Image="Languages/Tasx/Images/Packaging.gif"/>
+<Icon Name="Panel" Image="Languages/Tasx/Images/Panel.gif"/>
+<Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.gif"/>
+<Icon Name="Person" Image="Languages/Tasx/Images/Person.gif"/>
+<Icon Name="Personnel" Image="Languages/Tasx/Images/Personnel.gif"/>
+<Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.gif"/>
+<Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
+<Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
+<Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
+<Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
+<Icon Name="Projection" Image="Languages/Tasx/Images/Projection.jpg"/>
+<Icon Name="Purchasing" Image="Languages/Tasx/Images/Purchasing.gif"/>
+<Icon Name="QA" Image="Languages/Tasx/Images/QA.gif"/>
+<Icon Name="Queue" Image="Languages/Tasx/Images/Queue.gif"/>
+<Icon Name="RandD" Image="Languages/Tasx/Images/RandD.gif"/>
+<Icon Name="Receiving" Image="Languages/Tasx/Images/Receiving.gif"/>
+<Icon Name="RunRate" Image="Languages/Tasx/Images/RunRate.jpg"/>
+<Icon Name="Sales" Image="Languages/Tasx/Images/Sales.gif"/>
+<Icon Name="Shipping" Image="Languages/Tasx/Images/Shipping.gif"/>
+
+<Icon Name="Theater" Image="Languages/Tasx/Images/Theater.jpg"/>
+<Icon Name="Warehouse" Image="Languages/Tasx/Images/Warehouse.gif"/>
+<Icon Name="Target" Image="Languages/Tasx/Images/Target.gif"/>
+<Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.gif"/>
+<Icon Name="Treasurer" Image="Languages/Tasx/Images/Treasurer.gif"/>
+<Icon Name="No" Image="Languages/Tasx/Images/No.gif"/>
+<Icon Name="YesCheckMark" Image="Languages/Tasx/Images/YesCheckMark.gif"/>
+
+<Icon Name="DiskStorage" Image="Languages/Tasx/Images/DiskStorage.gif"/>
+
+<Icon Name="InformationSystems" Image="Languages/Tasx/Images/InformationSystems.gif"/>
+<Icon Name="Interface" Image="Languages/Tasx/Images/Interface.gif"/>
+<Icon Name="Inventory" Image="Languages/Tasx/Images/Inventory.gif"/>
+<Icon Name="Mail" Image="Languages/Tasx/Images/Mail.gif"/>
+<Icon Name="Status" Image="Languages/Tasx/Images/Status.jpg"/>
+<Icon Name="Stop" Image="Languages/Tasx/Images/Stop.gif"/>
+<Icon Name="Supplier" Image="Languages/Tasx/Images/Supplier.gif"/>
+<Icon Name="Globe" Image="Languages/Tasx/Images/Globe.gif"/>
+<Icon Name="Group" Image="Languages/Tasx/Images/Group.jpg"/>
 <Icon Name="Finance" Image="Languages/Tasx/Images/Finance.gif"/>
 <Icon Name="FiscalPeriod" Image="Languages/Tasx/Images/FiscalPeriod.jpg"/>
 <Icon Name="FlowData" Image="Languages/Tasx/Images/FlowData.gif"/>
@@ -60,81 +86,74 @@
 <Icon Name="FlowStoredData" Image="Languages/Tasx/Images/FlowStoredData.gif"/>
 <Icon Name="FlowTerminator" Image="Languages/Tasx/Images/FlowTerminator.gif"/>
 <Icon Name="FlowTransport" Image="Languages/Tasx/Images/FlowTransport.gif"/>
-<Icon Name="Forecast" Image="Languages/Tasx/Images/Forecast.jpg"/>
+
+<Icon Name="If" Image="Languages/Tasx/Images/If.gif"/>
+
+<Icon Name="Else" Image="Languages/Tasx/Images/Else.gif"/>
+<Icon Name="EndIf" Image="Languages/Tasx/Images/EndIf.gif"/>
+<Icon Name="Timer" Image="Languages/Tasx/Images/Timer.gif"/>
+<Icon Name="View" Image="Languages/Tasx/Images/View.gif"/>
+<Icon Name="Workflow" Image="Languages/Tasx/Images/Workflow.gif"/>
+<Icon Name="Dashboard" Image="Languages/Tasx/Images/Dashboard.jpg"/>
+
 <Icon Name="Form" Image="Languages/Tasx/Images/Form.gif"/>
-<Icon Name="Globe" Image="Languages/Tasx/Images/Globe.gif"/>
-<Icon Name="Group" Image="Languages/Tasx/Images/Group.jpg"/>
+
+<Icon Name="Database" Image="Languages/Tasx/Images/Database.gif"/>
+<Icon Name="Datacolumn" Image="Languages/Tasx/Images/Datacolumn.gif"/>
+<Icon Name="Datacommand" Image="Languages/Tasx/Images/Datacommand.gif"/>
+<Icon Name="DataGrid" Image="Languages/Tasx/Images/DataGrid.gif"/>
+<Icon Name="DataList" Image="Languages/Tasx/Images/DataList.gif"/>
+<Icon Name="Dataset" Image="Languages/Tasx/Images/Dataset.gif"/>
+<Icon Name="Datatable" Image="Languages/Tasx/Images/Datatable.gif"/>
+<Icon Name="Dataview" Image="Languages/Tasx/Images/Dataview.gif"/>
+
+<Icon Name="SQL" Image="Languages/Tasx/Images/SQL.gif"/>
+<Icon Name="AdRotator" Image="Languages/Tasx/Images/AdRotator.gif"/>
+<Icon Name="Button" Image="Languages/Tasx/Images/Button.gif"/>
+<Icon Name="Calendar" Image="Languages/Tasx/Images/Calendar.gif"/>
+<Icon Name="Chart" Image="Languages/Tasx/Images/Chart.jpg"/>
+<Icon Name="CheckBox" Image="Languages/Tasx/Images/CheckBox.gif"/>
+<Icon Name="CheckBoxList" Image="Languages/Tasx/Images/CheckBoxList.gif"/>
+<Icon Name="ComboBox" Image="Languages/Tasx/Images/ComboBox.gif"/>
+
+<Icon Name="CustomValidator" Image="Languages/Tasx/Images/CustomValidator.gif"/>
+<Icon Name="RegularExpressionValidator" Image="Languages/Tasx/Images/RegularExpressionValidator.gif"/>
+<Icon Name="Repeater" Image="Languages/Tasx/Images/Repeater.gif"/>
+<Icon Name="Report" Image="Languages/Tasx/Images/Report.jpg"/>
+<Icon Name="RequiredFieldValidator" Image="Languages/Tasx/Images/RequiredFieldValidator.gif"/>
+
+<Icon Name="Component" Image="Languages/Tasx/Images/Component.gif"/>
+<Icon Name="FileUpload" Image="Languages/Tasx/Images/FileUpload.gif"/>
+<Icon Name="DropDownList" Image="Languages/Tasx/Images/DropDownList.gif"/>
+<Icon Name="CompareValidator" Image="Languages/Tasx/Images/CompareValidator.gif"/>
+<Icon Name="Control" Image="Languages/Tasx/Images/Control.gif"/>
 <Icon Name="Hidden" Image="Languages/Tasx/Images/Hidden.gif"/>
 <Icon Name="Href" Image="Languages/Tasx/Images/Href.gif"/>
 <Icon Name="HTML" Image="Languages/Tasx/Images/HTML.gif"/>
 <Icon Name="HTTP" Image="Languages/Tasx/Images/HTTP.jpg"/>
 <Icon Name="HyperLink" Image="Languages/Tasx/Images/HyperLink.gif"/>
-<Icon Name="If" Image="Languages/Tasx/Images/If.gif"/>
 <Icon Name="Image" Image="Languages/Tasx/Images/Image.gif"/>
 <Icon Name="ImageButton" Image="Languages/Tasx/Images/ImageButton.gif"/>
 <Icon Name="images" Image="Languages/Tasx/Images/images.gif"/>
-<Icon Name="InformationSystems" Image="Languages/Tasx/Images/InformationSystems.gif"/>
-<Icon Name="Interface" Image="Languages/Tasx/Images/Interface.gif"/>
-<Icon Name="Inventory" Image="Languages/Tasx/Images/Inventory.gif"/>
 <Icon Name="Label" Image="Languages/Tasx/Images/Label.gif"/>
 <Icon Name="LinkButton" Image="Languages/Tasx/Images/LinkButton.gif"/>
 <Icon Name="ListBox" Image="Languages/Tasx/Images/ListBox.gif"/>
 <Icon Name="Literal" Image="Languages/Tasx/Images/Literal.gif"/>
-<Icon Name="Mail" Image="Languages/Tasx/Images/Mail.gif"/>
-<Icon Name="Management" Image="Languages/Tasx/Images/Management.gif"/>
-<Icon Name="Manufacturing" Image="Languages/Tasx/Images/Manufacturing.gif"/>
-<Icon Name="Marketing" Image="Languages/Tasx/Images/Marketing.gif"/>
-<Icon Name="News" Image="Languages/Tasx/Images/News.gif"/>
-<Icon Name="No" Image="Languages/Tasx/Images/No.gif"/>
-<Icon Name="Packaging" Image="Languages/Tasx/Images/Packaging.gif"/>
-<Icon Name="Panel" Image="Languages/Tasx/Images/Panel.gif"/>
-<Icon Name="Passowrd" Image="Languages/Tasx/Images/Passowrd.gif"/>
-<Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.gif"/>
-<Icon Name="Person" Image="Languages/Tasx/Images/Person.gif"/>
-<Icon Name="Personnel" Image="Languages/Tasx/Images/Personnel.gif"/>
-<Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.gif"/>
-<Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
-<Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
-<Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
-<Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
-<Icon Name="Projection" Image="Languages/Tasx/Images/Projection.jpg"/>
-<Icon Name="Purchasing" Image="Languages/Tasx/Images/Purchasing.gif"/>
-<Icon Name="QA" Image="Languages/Tasx/Images/QA.gif"/>
-<Icon Name="Queue" Image="Languages/Tasx/Images/Queue.gif"/>
 <Icon Name="RadioButton" Image="Languages/Tasx/Images/RadioButton.gif"/>
 <Icon Name="RadioButtonList" Image="Languages/Tasx/Images/RadioButtonList.gif"/>
-<Icon Name="RandD" Image="Languages/Tasx/Images/RandD.gif"/>
 <Icon Name="RangeValidator" Image="Languages/Tasx/Images/RangeValidator.gif"/>
-<Icon Name="Receiving" Image="Languages/Tasx/Images/Receiving.gif"/>
-<Icon Name="RegularExpressionValidator" Image="Languages/Tasx/Images/RegularExpressionValidator.gif"/>
-<Icon Name="Repeater" Image="Languages/Tasx/Images/Repeater.gif"/>
-<Icon Name="Report" Image="Languages/Tasx/Images/Report.jpg"/>
-<Icon Name="RequiredFieldValidator" Image="Languages/Tasx/Images/RequiredFieldValidator.gif"/>
-<Icon Name="RunRate" Image="Languages/Tasx/Images/RunRate.jpg"/>
-<Icon Name="Sales" Image="Languages/Tasx/Images/Sales.gif"/>
-<Icon Name="Shipping" Image="Languages/Tasx/Images/Shipping.gif"/>
-<Icon Name="SQL" Image="Languages/Tasx/Images/SQL.gif"/>
-<Icon Name="Status" Image="Languages/Tasx/Images/Status.jpg"/>
-<Icon Name="Stop" Image="Languages/Tasx/Images/Stop.gif"/>
+
+<Icon Name="Passowrd" Image="Languages/Tasx/Images/Passowrd.gif"/>
 <Icon Name="Submit" Image="Languages/Tasx/Images/Submit.gif"/>
-<Icon Name="Supplier" Image="Languages/Tasx/Images/Supplier.gif"/>
 <Icon Name="Table" Image="Languages/Tasx/Images/Table.gif"/>
-<Icon Name="Target" Image="Languages/Tasx/Images/Target.gif"/>
-<Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.gif"/>
 <Icon Name="Text" Image="Languages/Tasx/Images/Text.gif"/>
 <Icon Name="TextArea" Image="Languages/Tasx/Images/TextArea.gif"/>
 <Icon Name="TextBox" Image="Languages/Tasx/Images/TextBox.gif"/>
-<Icon Name="Theater" Image="Languages/Tasx/Images/Theater.jpg"/>
-<Icon Name="Timer" Image="Languages/Tasx/Images/Timer.gif"/>
-<Icon Name="Treasurer" Image="Languages/Tasx/Images/Treasurer.gif"/>
 <Icon Name="ValidationSummary" Image="Languages/Tasx/Images/ValidationSummary.gif"/>
-<Icon Name="View" Image="Languages/Tasx/Images/View.gif"/>
-<Icon Name="Warehouse" Image="Languages/Tasx/Images/Warehouse.gif"/>
 <Icon Name="WebService" Image="Languages/Tasx/Images/WebService.gif"/>
-<Icon Name="Workflow" Image="Languages/Tasx/Images/Workflow.gif"/>
 <Icon Name="Xml" Image="Languages/Tasx/Images/Xml.gif"/>
 <Icon Name="XmlElement" Image="Languages/Tasx/Images/XmlElement.gif"/>
-<Icon Name="YesCheckMark" Image="Languages/Tasx/Images/YesCheckMark.gif"/>
+
  </Icons>
  <Connectors>
    <Connector Name="Connection" Image="Languages/Tasx/Images/Connection.gif" Type="CONNECTION"/>

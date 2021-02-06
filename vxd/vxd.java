@@ -636,7 +636,8 @@ public class vxd {
                     vxd.passwdtextField= passwdtextfield;
                     passwdtextfield.setColumns(15);
                     JPanel passwdpanel = new JPanel();
-                    passwdpanel.setLayout(new FlowLayout());
+                    passwdpanel.setLayout(new GridLayout(2,1));
+                    passwdpanel.add(passwdlabel);
                     passwdpanel.add(passwdtextfield);
                     JPanel btnpanel = new JPanel();
                     btnpanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -671,7 +672,7 @@ public class vxd {
                             + vxd.controller.project.name + ".xml Failed");
                             ex.printStackTrace();
                            }
-			}  
+                          }
 		      }
 		  });
                      JButton cancelbtn = new JButton("Cancel");
@@ -689,6 +690,7 @@ public class vxd {
                              topDialog = null;
                          }
                      });
+		     passwd.getContentPane().setLayout(new GridLayout(4,1));
                      passwd.getContentPane().add(passwdpanel);
                      passwd.getContentPane().add(new JPanel());
                      btnpanel.add(okbtn);

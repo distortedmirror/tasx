@@ -161,7 +161,9 @@
       <AP Order="0" ExternalLinkURL="" Name="($275)" YPos="196" Value="" ID="-2144310619" Visible="TRUE" XPos="149" ShellCommand="" />
     </Calendar>
     <DealValue Order="0" ExternalLinkURL="" Name="$925" YPos="105" Value="" ID="605483029" Visible="TRUE" XPos="292" ShellCommand="">
-      <Calendar Order="0" ExternalLinkURL="" Name="8-15" YPos="191" Value="" ID="1179775031" Visible="TRUE" XPos="300" ShellCommand="" />
+      <Calendar Order="0" ExternalLinkURL="" Name="8-15" YPos="191" Value="" ID="1179775031" Visible="TRUE" XPos="300" ShellCommand="">
+        <AP Order="0" ExternalLinkURL="" Name="($275)" YPos="286" Value="" ID="2001703455" Visible="TRUE" XPos="352" ShellCommand="" />
+      </Calendar>
     </DealValue>
   </DealValue>
 </Tasx>

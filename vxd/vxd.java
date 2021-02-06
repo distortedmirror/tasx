@@ -63,6 +63,8 @@ public class vxd {
     public static JDialog topDialog;
     
     public static JTextField textField;
+
+    public static JTextField passwdtextField;
     
     public static JComboBox languageCombo;
     
@@ -461,7 +463,7 @@ public class vxd {
                 btnpanel.add(cancelbtn);
                 newproj.getContentPane().setLayout(new GridLayout(10, 1));
                 newproj.getContentPane().add(namelabel);
-                newproj.getContentPane().add(projnamepanel);
+                newproj.getContentPane().add(projname);
                 newproj.getContentPane().add(langlabel);
                 newproj.getContentPane().add(langspanel);
                 newproj.getContentPane().add(translabel);
@@ -620,27 +622,82 @@ public class vxd {
                             "No Project Loaded to Save");
                     return;
                 }
-                try {
-                    File d = new File(SAVEFILEDIR + vxd.controller.project.name
+		    JDialog passwd = new JDialog(vxd.frame, "Enter Password", true);
+                    passwd.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+                    passwd.setSize(325, 175);
+                    topDialog = passwd;
+                    passwd.setLocationRelativeTo(null);
+                    JLabel passwdlabel = new JLabel("Enter Password");
+                    passwdlabel.setHorizontalAlignment(JLabel.CENTER);
+                    passwdlabel.setVerticalAlignment(JLabel.CENTER);
+                    JPasswordField passwdtextfield= new JPasswordField();
+                    passwdtextfield.setText("");
+                    passwdtextfield.setEchoChar('*');
+                    vxd.passwdtextField= passwdtextfield;
+                    passwdtextfield.setColumns(15);
+                    JPanel passwdpanel = new JPanel();
+                    passwdpanel.setLayout(new FlowLayout());
+                    passwdpanel.add(passwdtextfield);
+                    JPanel btnpanel = new JPanel();
+                    btnpanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+                    btnpanel.setLayout(new FlowLayout());
+                    JButton okbtn = new JButton("OK");
+                    okbtn.addActionListener(new ActionListener() {
+                      public void actionPerformed(ActionEvent e) {
+                        if (vxd.passwdtextField.getText() == null
+                                || vxd.passwdtextField.getText().length() == 0) {
+                            JOptionPane.showMessageDialog(vxd.frame,
+                                    "The Password Cannot Be Blank");
+                        } else {
+                            String passwdString = vxd.passwdtextField.getText();
+                            topDialog.setVisible(false);
+                            topDialog.dispose();
+                            topDialog = null;
+                	    try {
+                      File d = new File(SAVEFILEDIR + vxd.controller.project.name
                             + "/");
-                    d.mkdir();
-                    File f = new File(SAVEFILEDIR + vxd.controller.project.name
+                      d.mkdir();
+                      File f = new File(SAVEFILEDIR + vxd.controller.project.name
                             + "/" + vxd.controller.project.name + ".xml");
-                    PrintWriter out = new PrintWriter(new FileWriter(f));
-                    XmlDocument xdoc = (XmlDocument) vxd.controller.project.programXML;
-                    StringWriter stwr = new StringWriter();
-                    xdoc.write(stwr);
-                    out.print(stwr.toString());
-                    out.close();
-                    JOptionPane.showMessageDialog(vxd.frame, SAVEFILEDIR
-                            + vxd.controller.project.name + "/"
-                            + vxd.controller.project.name + ".xml Saved");
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(vxd.frame, "Saving "
+                      PrintWriter out = new PrintWriter(new FileWriter(f));
+                      XmlDocument xdoc = (XmlDocument) vxd.controller.project.programXML;
+                      StringWriter stwr = new StringWriter();
+                      xdoc.write(stwr);
+                      out.print(stwr.toString());
+                      out.close();
+                           } catch (Exception ex) {
+                            JOptionPane.showMessageDialog(vxd.frame, "Saving "
                             + SAVEFILEDIR + vxd.controller.project.name + "/"
                             + vxd.controller.project.name + ".xml Failed");
-                    ex.printStackTrace();
-                }
+                            ex.printStackTrace();
+                           }
+			}  
+		      }
+		  });
+                     JButton cancelbtn = new JButton("Cancel");
+                     cancelbtn.addActionListener(new ActionListener() {
+                         public void actionPerformed(ActionEvent e) {
+                             topDialog.setVisible(false);
+                             topDialog.dispose();
+                             topDialog = null;
+                         }
+                     });
+                     passwd.addWindowListener(new WindowAdapter() {
+                         public void windowClosing(WindowEvent e) {
+                             topDialog.setVisible(false);
+                             topDialog.dispose();
+                             topDialog = null;
+                         }
+                     });
+                     passwd.getContentPane().add(passwdpanel);
+                     passwd.getContentPane().add(new JPanel());
+                     btnpanel.add(okbtn);
+                     btnpanel.add(cancelbtn);
+                     passwd.getContentPane().add(btnpanel);
+                     passwd.setVisible(true);
+                     JOptionPane.showMessageDialog(vxd.frame, SAVEFILEDIR
+                            + vxd.controller.project.name + "/"
+                            + vxd.controller.project.name + ".xml Saved");
                     } else
                         if (e.getActionCommand().equals("EXIT")) {
                 int YorN = JOptionPane.showConfirmDialog(vxd.frame

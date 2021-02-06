@@ -733,7 +733,12 @@ public class vxd {
 							+ "/");
 					  d.mkdir();
 					  File f = new File(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml");
+							+ "/" + vxd.controller.project.name + ".xml.unencrypted");
+					  if(f.exists()){
+						f.delete();
+						 f = new File(SAVEFILEDIR + vxd.controller.project.name
+							+ "/" + vxd.controller.project.name + ".xml.unencrypted");
+							}
 					  PrintWriter out = new PrintWriter(new FileWriter(f));
 					  XmlDocument xdoc = (XmlDocument) vxd.controller.project.programXML;
 					  StringWriter stwr = new StringWriter();
@@ -755,14 +760,19 @@ public class vxd {
 						   filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
 						   ++iter;
 						}
-						f.delete();
 					  FileOutputStream fcrypt = new FileOutputStream(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml",false);
+							+ "/" + vxd.controller.project.name + ".xml.encrypted",false);
 					  ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
 					  outcrypt.write(filedata,0,(int)f.length());
 					  outcrypt.writeTo(fcrypt);
 					  outcrypt.flush();
 					  outcrypt.close();
+					  (new File(SAVEFILEDIR + vxd.controller.project.name
+							+ "/" + vxd.controller.project.name + ".xml")).delete();
+					  ( new File(SAVEFILEDIR + vxd.controller.project.name
+							+ "/" + vxd.controller.project.name + ".xml.encrypted") ).renameTo(
+							 new File(SAVEFILEDIR + vxd.controller.project.name
+							+ "/" + vxd.controller.project.name + ".xml"));
 					  JOptionPane.showMessageDialog(vxd.frame, SAVEFILEDIR
 							+ vxd.controller.project.name + "/"
 							+ vxd.controller.project.name + ".xml Saved");

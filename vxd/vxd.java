@@ -500,7 +500,7 @@ public class vxd {
 						passwd.setSize(325, 175);
 						topDialog = passwd;
 						passwd.setLocationRelativeTo(null);
-						JLabel passwdlabel = new JLabel("Enter Password");
+						JLabel passwdlabel = new JLabel("Enter Password (Blank for Unencrypted)");
 						passwdlabel.setHorizontalAlignment(JLabel.CENTER);
 						passwdlabel.setVerticalAlignment(JLabel.CENTER);
 						JPasswordField passwdtextfield= new JPasswordField();
@@ -519,11 +519,14 @@ public class vxd {
 
 						okbtn.addActionListener(new ActionListener() {
 							public void actionPerformed(ActionEvent e) {
-								if ( vxd.passwdtextField.getText() == null
-										|| vxd.passwdtextField.getText().length() == 0) {
-									JOptionPane.showMessageDialog(vxd.frame,
-											"The Password Cannot Be Blank");
-								} else {
+									boolean loadUnencrypted=true;
+									if ( vxd.passwdtextField.getText() == null
+											|| vxd.passwdtextField.getText().length() == 0) {
+										JOptionPane.showMessageDialog(vxd.frame,
+												"Loading Unencrypted");
+									} else {
+										loadUnencrypted=false;
+									}
 									String passwdString = vxd.passwdtextField.getText();
 									topDialog.setVisible(false);
 									topDialog.dispose();
@@ -543,24 +546,28 @@ public class vxd {
 										String serverxml=new String(filedata);
 										rdr.close();
 										dta.close();
-										int iter=0;
-										int accum=0;
-										for(int di=0;di<file.length();++di){
-												   accum+=(int)passwdString.charAt(iter++ % passwdString.length());
-										   filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
-										   filedata[di]-=accum;
-										   ++iter;
+										if(!loadUnencrypted){
+											int iter=0;
+											int accum=0;
+											for(int di=0;di<file.length();++di){
+											   accum+=(int)passwdString.charAt(iter++ % passwdString.length());
+											   filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
+											   filedata[di]-=accum;
+											   ++iter;
+											}
 										}
+										File fdel= new File(file.getAbsolutePath()+".decrypted");
+										if(fdel.exists()){fdel.delete();}
 										FileOutputStream fcrypt = new FileOutputStream(file.getAbsolutePath()+".decrypted");
 										ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
 										outcrypt.write(filedata,0,(int)file.length());
 										outcrypt.writeTo(fcrypt);
 										outcrypt.flush();
 										outcrypt.close();
+
 										File f= new File(file.getAbsolutePath()+".decrypted");
 										file=f;
 										Document loadeddoc=(Document) builder.parse(f);
-										f.delete();
 										Document xdoc=new XmlDocument();
 										Element root = loadeddoc.getDocumentElement();
 										Document programDoc=xdoc;
@@ -656,7 +663,6 @@ public class vxd {
 					
 									}
 									catch(Exception okex){okex.printStackTrace();}
-								}
 							}
 						});
 						JButton cancelbtn = new JButton("Cancel");
@@ -734,23 +740,24 @@ public class vxd {
 					  xdoc.write(stwr);
 					  out.print(stwr.toString());
 					  out.close();
-					FileInputStream rdr=new FileInputStream(f);
-					DataInputStream dta=new DataInputStream(rdr);
-					byte[] filedata=new byte[(int)f.length()];
-					dta.readFully(filedata);
-					String readxml=new String(filedata);
-					rdr.close();
-					int iter=0;
-					int accum=0;
-					for(int di=0;di<f.length();++di){
-							   accum+=(int)passwdString.charAt(iter++ % passwdString.length());
-					   filedata[di]+=accum;
-					   filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
-					   ++iter;
-					}
-					f.delete();
+						FileInputStream rdr=new FileInputStream(f);
+						DataInputStream dta=new DataInputStream(rdr);
+						byte[] filedata=new byte[(int)f.length()];
+						dta.readFully(filedata);
+						String readxml=new String(filedata);
+						rdr.close();
+						dta.close();
+						int iter=0;
+						int accum=0;
+						for(int di=0;di<f.length();++di){
+								   accum+=(int)passwdString.charAt(iter++ % passwdString.length());
+						   filedata[di]+=accum;
+						   filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
+						   ++iter;
+						}
+						f.delete();
 					  FileOutputStream fcrypt = new FileOutputStream(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml");
+							+ "/" + vxd.controller.project.name + ".xml",false);
 					  ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
 					  outcrypt.write(filedata,0,(int)f.length());
 					  outcrypt.writeTo(fcrypt);

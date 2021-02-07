@@ -343,7 +343,5 @@
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-63862387" Visible="TRUE" DestID="-1847805042" DestType="FlowProcess" XPos="-1" SourceID="-947933398" ShellCommand="" />
   </CheckBoxList>
   <DealValue Order="0" ExternalLinkURL="" Name="Woidke" YPos="87" Value="" ID="-34434621" Visible="TRUE" XPos="921" ShellCommand="java -cp C:\Users\mark\Downloads\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri\lib\tools.jar;.. vxd.vxd .\Work\PaulaVsYvonne\PaulaVsYvonne.xml" />
-  <YesCheckMark Order="0" ExternalLinkURL="" Name="YesCheckMark" YPos="278" Value="" ID="1937104981" Visible="TRUE" XPos="156" ShellCommand="" />
-  <Stop Order="0" ExternalLinkURL="" Name="Stop" YPos="363" Value="" ID="1934917953" Visible="TRUE" XPos="150" ShellCommand="" />
 </Tasx>
 

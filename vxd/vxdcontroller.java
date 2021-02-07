@@ -383,11 +383,20 @@ public class vxdcontroller {
                 attrpanel.add(fixedpanel);
                 htcomps.put(a.name,fixed);
             } else {
-                JTextField field=new JTextField(8);
-                javax.swing.text.Document fielddoc=field.getDocument();
-                field.setDocument(fielddoc);
-                field.setText(element.getAttribute(a.name));
-                field.setHorizontalAlignment(JTextField.LEFT);
+                JComponent field= new JTextField(8);
+                javax.swing.text.Document fielddoc;
+	//	if(!a.name.equals("Notes")){
+                      fielddoc=((JTextField)field).getDocument();
+                      ((JTextField)field).setDocument(fielddoc);
+          	      ((JTextField)field).setText(element.getAttribute(a.name));
+               	      ((JTextField)field).setHorizontalAlignment(JTextField.LEFT);
+/*		}else{
+		      field=new JTextArea(45,3);
+		      fielddoc=((JTextArea)field).getDocument();
+                      ((JTextArea)field).setDocument(fielddoc);
+          	      ((JTextArea)field).setText(element.getAttribute(a.name));
+	        }
+		*/
                 fielddoc.addDocumentListener(new vxdPropertyChangeEventListener(element,a.name,field));
                 JPanel fieldpanel=new JPanel(new FlowLayout(FlowLayout.LEFT));
                 fieldpanel.add(field);

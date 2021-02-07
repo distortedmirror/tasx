@@ -35,7 +35,6 @@
 <Icon Name="Marketing" Image="Languages/Tasx/Images/Marketing.gif"/>
 <Icon Name="News" Image="Languages/Tasx/Images/News.gif"/>
 <Icon Name="Packaging" Image="Languages/Tasx/Images/Packaging.gif"/>
-<Icon Name="Panel" Image="Languages/Tasx/Images/Panel.gif"/>
 <Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.gif"/>
 <Icon Name="Person" Image="Languages/Tasx/Images/Person.gif"/>
 <Icon Name="Personnel" Image="Languages/Tasx/Images/Personnel.gif"/>
@@ -87,6 +86,7 @@
 <Icon Name="FlowTerminator" Image="Languages/Tasx/Images/FlowTerminator.gif"/>
 <Icon Name="FlowTransport" Image="Languages/Tasx/Images/FlowTransport.gif"/>
 
+<Icon Name="Component" Image="Languages/Tasx/Images/Component.gif"/>
 <Icon Name="If" Image="Languages/Tasx/Images/If.gif"/>
 
 <Icon Name="Else" Image="Languages/Tasx/Images/Else.gif"/>
@@ -122,7 +122,6 @@
 <Icon Name="Report" Image="Languages/Tasx/Images/Report.jpg"/>
 <Icon Name="RequiredFieldValidator" Image="Languages/Tasx/Images/RequiredFieldValidator.gif"/>
 
-<Icon Name="Component" Image="Languages/Tasx/Images/Component.gif"/>
 <Icon Name="FileUpload" Image="Languages/Tasx/Images/FileUpload.gif"/>
 <Icon Name="DropDownList" Image="Languages/Tasx/Images/DropDownList.gif"/>
 <Icon Name="CompareValidator" Image="Languages/Tasx/Images/CompareValidator.gif"/>
@@ -139,6 +138,7 @@
 <Icon Name="LinkButton" Image="Languages/Tasx/Images/LinkButton.gif"/>
 <Icon Name="ListBox" Image="Languages/Tasx/Images/ListBox.gif"/>
 <Icon Name="Literal" Image="Languages/Tasx/Images/Literal.gif"/>
+<Icon Name="Panel" Image="Languages/Tasx/Images/Panel.gif"/>
 <Icon Name="RadioButton" Image="Languages/Tasx/Images/RadioButton.gif"/>
 <Icon Name="RadioButtonList" Image="Languages/Tasx/Images/RadioButtonList.gif"/>
 <Icon Name="RangeValidator" Image="Languages/Tasx/Images/RangeValidator.gif"/>

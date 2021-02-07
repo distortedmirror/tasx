@@ -807,7 +807,7 @@ public class vxdcontroller {
             attrlabelpanel.add(attrlabel);
             attrpanel.add(attrlabelpanel);
             if(a.name.equals("ID")) {
-                a.value=Integer.toString((new java.util.Random()).nextInt());
+                a.value=Integer.toString(Math.abs((new java.util.Random()).nextInt()));
                 JLabel fixed=new JLabel(a.value,JLabel.LEFT);
                 JPanel fixedpanel=new JPanel(new FlowLayout(FlowLayout.LEFT));
                 fixedpanel.add(fixed);

@@ -185,7 +185,7 @@
     <FlowData ID="1152016532" Name="Carburator" Order="0" Value="" Visible="TRUE" XPos="276" YPos="473" />
     <FlowData ID="547765159" Name="Claim" Order="0" Value="" Visible="TRUE" XPos="298" YPos="235">
       <Phone Order="0" ExternalLinkURL="" Name="Call" YPos="316" Value="" ID="1463543423" Visible="TRUE" XPos="215" ShellCommand="">
-        <DealProbability Order="0" ExternalLinkURL="" Name="VacationReimbersment" YPos="391" Value="" ID="201008616" Visible="TRUE" XPos="148" ShellCommand="" />
+        <DealProbability Order="0" ExternalLinkURL="" Name="VacationReimbersment" YPos="454" Value="" ID="201008616" Visible="TRUE" XPos="172" ShellCommand="" />
         <DealProbability Order="0" ExternalLinkURL="" Name="Housing" YPos="401" Value="" ID="372942528" Visible="TRUE" XPos="229" ShellCommand="" />
       </Phone>
     </FlowData>
@@ -344,5 +344,6 @@
   </CheckBoxList>
   <DealValue Order="0" ExternalLinkURL="" Name="Woidke" YPos="87" Value="" ID="-34434621" Visible="TRUE" XPos="921" ShellCommand="java -cp C:\Users\mark\Downloads\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri\lib\tools.jar;.. vxd.vxd .\Work\PaulaVsYvonne\PaulaVsYvonne.xml" />
   <YesCheckMark Order="0" ExternalLinkURL="" Name="YesCheckMark" YPos="278" Value="" ID="1937104981" Visible="TRUE" XPos="156" ShellCommand="" />
+  <Stop Order="0" ExternalLinkURL="" Name="Stop" YPos="363" Value="" ID="1934917953" Visible="TRUE" XPos="150" ShellCommand="" />
 </Tasx>
 

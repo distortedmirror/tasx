@@ -27,79 +27,48 @@ public class vxd {
 	public static final boolean DEBUG=false;
 	public static final boolean DEBUG2=false;
 	public static final String XMLCONFIGFILE = "vxd.xml";
-	
 	public static final String XMLCONFIGDIR = "Config/";
-	
 	public static String SAVEFILEDIR = null;
-	
 	public static String DEPLOYMENTDIR = null;
-	
 	public static Document config;
-	
 	public static String title;
-	
 	public static int XSIZE;
-	
 	public static int YSIZE;
-	
 	public static int iconsperrow;
-	
 	public static int xiconsize;
-	
 	public static int yiconsize;
-	
 	public static int iconborder;
-	
 	public static int xdragsize;
-	
 	public static int ydragsize;
-	
 	public static JFrame frame;
-	
 	public static JPanel toolBarPanel;
-	
 	public static JComponent viewPanel;
-	
 	public static JDialog topDialog;
-	
 	public static JTextField textField;
-
 	public static JTextField passwdtextField;
-	
 	public static JComboBox languageCombo;
-	
 	public static JComboBox translatorCombo;
-	
 	public static JComboBox deployerCombo;
-	
 	public static JMenuBar menuBar;
-	
 	public static JToolBar toolBar;
-	
 	public static NodeList languages;
-	
 	public static NodeList translators;
-	
 	public static NodeList platforms;
-	
 	public static vxdproject project;
-	
 	public static vxdcontroller controller;
-	
 	public static ActionListener mainMenuOpenListener;
-			public static JMenuItem mainMenuItemOpen;
+	public static JMenuItem mainMenuItemOpen;
 	public static String mainLoadFile=null;
-
 	public static void main(String[] args) {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		try {
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			config = builder.parse(new File(XMLCONFIGDIR + XMLCONFIGFILE));
-		if(args.length>0){
-			vxd.mainLoadFile=args[0];
-
-		System.out.println("File Argument:"+args[0]);
-		}
+			if(args.length>0){
+				vxd.mainLoadFile=args[0];
+				
+				System.out.println("File Argument:"+args[0]);
+			}
 			Element root = config.getDocumentElement();
 			title = root.getAttribute("title");
 			iconsperrow = Integer.parseInt(root.getAttribute("iconsperrow"));
@@ -125,9 +94,9 @@ public class vxd {
 			vxd.toolBarPanel = new JPanel(new BorderLayout());
 			toolBarPanel.add(toolBar, "West");
 			Image viewimg = Toolkit.getDefaultToolkit().getImage(
-					root.getAttribute("splashimage"));
+			root.getAttribute("splashimage"));
 			Image iconimg = Toolkit.getDefaultToolkit().getImage(
-					root.getAttribute("iconimage"));
+			root.getAttribute("iconimage"));
 			vxd.viewPanel = new JLabel(new ImageIcon(viewimg));
 			
 			frame = new JFrame(title);
@@ -137,29 +106,29 @@ public class vxd {
 			frame.getContentPane().add(toolBarPanel, "North");
 			frame.getContentPane().add(viewPanel, "Center");
 			frame.setSize(XSIZE = Integer.parseInt(root.getAttribute("xsize")),
-					YSIZE = Integer.parseInt(root.getAttribute("ysize")));
+			YSIZE = Integer.parseInt(root.getAttribute("ysize")));
 			frame.setLocationRelativeTo(null);
 			frame.setDefaultCloseOperation(frame.DO_NOTHING_ON_CLOSE);
 			frame.setVisible(true);
 			frame.addWindowListener(new WindowAdapter() {
 				public void windowClosing(WindowEvent e) {
 					int YorN = JOptionPane.showConfirmDialog(vxd.frame
-							.getContentPane(), vxd.config.getDocumentElement()
-							.getAttribute("exitstring"), vxd.config
-							.getDocumentElement().getAttribute("exittitle"),
-							JOptionPane.YES_NO_OPTION);
-
+					.getContentPane(), vxd.config.getDocumentElement()
+					.getAttribute("exitstring"), vxd.config
+					.getDocumentElement().getAttribute("exittitle"),
+					JOptionPane.YES_NO_OPTION);
+					
 					if (YorN == JOptionPane.YES_OPTION)
-						System.exit(0);
+					System.exit(0);
 				}
 			});
-		if(vxd.mainLoadFile!=null){
-		  SwingUtilities.invokeLater(new Runnable(){public void run()
-			  { ActionEvent ae=new ActionEvent(vxd.mainMenuItemOpen,0,"OPEN");
-				  vxd.mainMenuOpenListener.actionPerformed(ae);
-			  }});
-		}
-
+			if(vxd.mainLoadFile!=null){
+				SwingUtilities.invokeLater(new Runnable(){public void run()
+					{ ActionEvent ae=new ActionEvent(vxd.mainMenuItemOpen,0,"OPEN");
+					vxd.mainMenuOpenListener.actionPerformed(ae);
+				}});
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);
@@ -167,18 +136,18 @@ public class vxd {
 	}
 	
 	public static void addToolButtons(JToolBar toolBar, NodeList images,
-			ActionListener listener) {
+	ActionListener listener) {
 		for (int i = 0; i < images.getLength(); ++i) {
 			Element node = (Element) images.item(i);
 			Image img = Toolkit.getDefaultToolkit().getImage(
-					node.getAttribute("image"));
+			node.getAttribute("image"));
 			ImageFilter transparency = new BlackToTransparentFilter();
 			ImageProducer producer = new FilteredImageSource(img.getSource(),
-					transparency);
+			transparency);
 			Image transparentimg = Toolkit.getDefaultToolkit().createImage(
-					producer);
+			producer);
 			Image smallimg = transparentimg.getScaledInstance(xiconsize,
-					yiconsize, Image.SCALE_SMOOTH);
+			yiconsize, Image.SCALE_SMOOTH);
 			ImageIcon icon = new ImageIcon(smallimg);
 			JButton toolbutton = new JButton(icon);
 			toolbutton.setToolTipText(node.getAttribute("text"));
@@ -186,14 +155,14 @@ public class vxd {
 			toolbutton.addActionListener(listener);
 			toolbutton.setBorderPainted(false);
 			toolbutton.setMargin(new Insets(iconborder, iconborder, iconborder,
-					iconborder));
+			iconborder));
 			if (node.getAttribute("enabled").equals("TRUE"))
-				toolBar.add(toolbutton);
+			toolBar.add(toolbutton);
 		}
 	}
 	
 	public static void addMenus(JMenuBar menuBar, NodeList menus,
-			ActionListener listener) {
+	ActionListener listener) {
 		for (int i = 0; i < menus.getLength(); ++i) {
 			Element menuel = (Element) menus.item(i);
 			JMenu menu = new JMenu(menuel.getAttribute("name"));
@@ -203,25 +172,25 @@ public class vxd {
 			for (int j = 0; j < menuitms.getLength(); ++j) {
 				Element node = (Element) menuitms.item(j);
 				Image img = Toolkit.getDefaultToolkit().getImage(
-						node.getAttribute("image"));
+				node.getAttribute("image"));
 				ImageFilter transparency = new BlackToTransparentFilter();
 				ImageProducer producer = new FilteredImageSource(img
-						.getSource(), transparency);
+				.getSource(), transparency);
 				Image transparentimg = Toolkit.getDefaultToolkit().createImage(
-						producer);
+				producer);
 				Image smallimg = transparentimg.getScaledInstance(xiconsize,
-						yiconsize, Image.SCALE_SMOOTH);
+				yiconsize, Image.SCALE_SMOOTH);
 				ImageIcon icon = new ImageIcon(smallimg);
 				JMenuItem menuItem = new JMenuItem(node.getAttribute("text"),
-						icon);
+				icon);
 				menuItem.setActionCommand(node.getAttribute("command"));
 				menuItem.addActionListener(listener);
-		if(node.getAttribute("text").equals("Open")){
-			vxd.mainMenuOpenListener=listener;
-			vxd.mainMenuItemOpen=menuItem;
-		}
+				if(node.getAttribute("text").equals("Open")){
+					vxd.mainMenuOpenListener=listener;
+					vxd.mainMenuItemOpen=menuItem;
+				}
 				if (node.getAttribute("enabled").equals("TRUE"))
-					menu.add(menuItem);
+				menu.add(menuItem);
 			}
 			menuBar.add(menu);
 		}
@@ -234,7 +203,7 @@ public class vxd {
 				Element anode = (Element) languages.item(m);
 				String txt = anode.getAttribute("name");
 				if (txt.equals((String) vxd.languageCombo.getSelectedItem()))
-					lang = anode.getAttribute("language");
+				lang = anode.getAttribute("language");
 			}
 			translatorCombo.removeAllItems();
 			for (int i = 0; i < vxd.translators.getLength(); ++i) {
@@ -256,15 +225,15 @@ public class vxd {
 				Element anode = (Element) translators.item(m);
 				String txt = anode.getAttribute("name");
 				if (txt.equals((String) vxd.translatorCombo.getSelectedItem()))
-					transl = anode.getAttribute("translator");
+				transl = anode.getAttribute("translator");
 			}
 			deployerCombo.removeAllItems();
 			for (int i = 0; i < vxd.platforms.getLength(); ++i) {
 				Element node = (Element) platforms.item(i);
 				if (node.getAttribute("enabled").equals("TRUE")
 				&& node.getAttribute("supportedtranslators").indexOf(
-						transl) > -1)
-					deployerCombo.addItem(node.getAttribute("name"));
+				transl) > -1)
+				deployerCombo.addItem(node.getAttribute("name"));
 			}
 		}
 	}
@@ -273,16 +242,16 @@ public class vxd {
 		public static  DocumentBuilderFactory  factory =DocumentBuilderFactoryImpl.newInstance();;
 		public static  DocumentBuilder builder;
 		static {
-				try{
-					builder=(DocumentBuilder)factory.newDocumentBuilder();
-				}	catch(Exception e){;}
-				factory.setValidating(false);
-				factory.setNamespaceAware(true);
-					builder.setErrorHandler(new DefaultHandler(){
-						public void error(SAXParseException exception)throws SAXParseException{throw exception;}
-							public void fatalError(SAXParseException exception)throws SAXParseException{throw exception;}
-							public void warning(SAXParseException exception)throws SAXParseException{throw exception;}
-						});		
+			try{
+				builder=(DocumentBuilder)factory.newDocumentBuilder();
+			}	catch(Exception e){;}
+			factory.setValidating(false);
+			factory.setNamespaceAware(true);
+			builder.setErrorHandler(new DefaultHandler(){
+				public void error(SAXParseException exception)throws SAXParseException{throw exception;}
+				public void fatalError(SAXParseException exception)throws SAXParseException{throw exception;}
+				public void warning(SAXParseException exception)throws SAXParseException{throw exception;}
+			});		
 		}
 		public void actionPerformed(ActionEvent e) {			
 			if (e.getActionCommand().equals("NEWXML")) {
@@ -310,7 +279,7 @@ public class vxd {
 				for (int i = 0; i < vxd.languages.getLength(); ++i) {
 					Element node = (Element) languages.item(i);
 					if (node.getAttribute("enabled").equals("TRUE"))
-						langs.addItem(node.getAttribute("name"));
+					langs.addItem(node.getAttribute("name"));
 				}
 				JPanel langspanel = new JPanel();
 				langspanel.setLayout(new FlowLayout());
@@ -324,10 +293,10 @@ public class vxd {
 					Element node = (Element) translators.item(i);
 					if (node.getAttribute("enabled").equals("TRUE")
 					&& node.getAttribute("supportedlanguages").indexOf(
-							((Element) languages.item(0))
-							.getAttribute("language")) > -1) {
+					((Element) languages.item(0))
+					.getAttribute("language")) > -1) {
 						if (firstTransl == null)
-							firstTransl = node.getAttribute("translator");
+						firstTransl = node.getAttribute("translator");
 						trans.addItem(node.getAttribute("name"));
 					}
 				}
@@ -336,11 +305,11 @@ public class vxd {
 				transpanel.add(trans);
 				vxd.translatorCombo = trans;
 				vxd.languageCombo
-						.addActionListener(new LanguageActionListener());
+				.addActionListener(new LanguageActionListener());
 				vxd.translatorCombo
-						.addActionListener(new TranslatorActionListener());
+				.addActionListener(new TranslatorActionListener());
 				JLabel deploylabel = new JLabel(
-						"Choose the Deployment Platform");
+				"Choose the Deployment Platform");
 				deploylabel.setHorizontalAlignment(JLabel.CENTER);
 				deploylabel.setVerticalAlignment(JLabel.CENTER);
 				JComboBox deploy = new JComboBox();
@@ -363,49 +332,49 @@ public class vxd {
 				okbtn.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						if (vxd.textField.getText() == null
-								|| vxd.textField.getText().length() == 0) {
+						|| vxd.textField.getText().length() == 0) {
 							JOptionPane.showMessageDialog(vxd.frame,
-									"The Project Name Cannot Be Blank");
+							"The Project Name Cannot Be Blank");
 						} else {
 							String lang = "";
 							for (int i = 0; i < vxd.languages.getLength(); ++i) {
 								Element node = (Element) languages.item(i);
 								String txt = node.getAttribute("name");
 								if (txt.equals((String) vxd.languageCombo
-										.getSelectedItem()))
-									lang = node.getAttribute("language");
+								.getSelectedItem()))
+								lang = node.getAttribute("language");
 							}
 							String trans = "";
 							for (int i = 0; i < vxd.translators.getLength(); ++i) {
 								Element node = (Element) translators.item(i);
 								String txt = node.getAttribute("name");
 								if (txt.equals((String) vxd.translatorCombo
-										.getSelectedItem())) {
+								.getSelectedItem())) {
 									try {
 										String conf = node
-												.getAttribute("configfile");
+										.getAttribute("configfile");
 										DocumentBuilderFactory factory = DocumentBuilderFactory
-												.newInstance();
+										.newInstance();
 										DocumentBuilder builder = factory
-												.newDocumentBuilder();
+										.newDocumentBuilder();
 										Document tconfig = builder
-												.parse(new File(conf));
+										.parse(new File(conf));
 										Element root = tconfig
-												.getDocumentElement();
+										.getDocumentElement();
 										Class cls = Class
-												.forName(((Element) (root
-												.getElementsByTagName("eventhandler")
-												.item(0)))
-												.getAttribute("class"));
+										.forName(((Element) (root
+										.getElementsByTagName("eventhandler")
+										.item(0)))
+										.getAttribute("class"));
 										ActionListener listener = (ActionListener) cls
-												.newInstance();
+										.newInstance();
 										NodeList menus = root
-												.getElementsByTagName("menu");
+										.getElementsByTagName("menu");
 										addMenus(vxd.menuBar, menus, listener);
 										NodeList images = root
-												.getElementsByTagName("toolbarbutton");
+										.getElementsByTagName("toolbarbutton");
 										addToolButtons(vxd.toolBar, images,
-												listener);
+										listener);
 										trans = node.getAttribute("translator");
 									} catch (Exception exx) {
 										exx.printStackTrace();
@@ -417,32 +386,32 @@ public class vxd {
 								Element node = (Element) platforms.item(i);
 								String txt = node.getAttribute("name");
 								if (txt.equals((String) vxd.deployerCombo
-										.getSelectedItem())) {
+								.getSelectedItem())) {
 									try {
 										String conf = node
-												.getAttribute("configfile");
+										.getAttribute("configfile");
 										DocumentBuilderFactory factory = DocumentBuilderFactory
-												.newInstance();
+										.newInstance();
 										DocumentBuilder builder = factory
-												.newDocumentBuilder();
+										.newDocumentBuilder();
 										Document tconfig = builder
-												.parse(new File(conf));
+										.parse(new File(conf));
 										Element root = tconfig
-												.getDocumentElement();
+										.getDocumentElement();
 										Class cls = Class
-												.forName(((Element) (root
-												.getElementsByTagName("eventhandler")
-												.item(0)))
-												.getAttribute("class"));
+										.forName(((Element) (root
+										.getElementsByTagName("eventhandler")
+										.item(0)))
+										.getAttribute("class"));
 										ActionListener listener = (ActionListener) cls
-												.newInstance();
+										.newInstance();
 										NodeList menus = root
-												.getElementsByTagName("menu");
+										.getElementsByTagName("menu");
 										addMenus(vxd.menuBar, menus, listener);
 										NodeList images = root
-												.getElementsByTagName("toolbarbutton");
+										.getElementsByTagName("toolbarbutton");
 										addToolButtons(vxd.toolBar, images,
-												listener);
+										listener);
 										deploy = node.getAttribute("platform");
 									} catch (Exception exx) {
 										exx.printStackTrace();
@@ -453,7 +422,7 @@ public class vxd {
 							topDialog.dispose();
 							topDialog = null;
 							vxd.project = new vxdproject(vxd.textField
-									.getText(), lang, trans, deploy);
+							.getText(), lang, trans, deploy);
 							vxd.controller = new vxdcontroller(vxd.project);
 						}
 					}
@@ -488,220 +457,19 @@ public class vxd {
 				newproj.getContentPane().add(btnpanel);
 				newproj.setVisible(true);
 			} else
-				if (e.getActionCommand().equals("OPEN")) {
-					try {
-						JFileChooser fc=new JFileChooser();
-						if(mainLoadFile==null){
-								fc.setCurrentDirectory(new File(SAVEFILEDIR));
-								fc.showOpenDialog(vxd.frame);
-						}
-						JDialog passwd = new JDialog(vxd.frame, "Enter Password", true);
-						passwd.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
-						passwd.setSize(325, 175);
-						topDialog = passwd;
-						passwd.setLocationRelativeTo(null);
-						JLabel passwdlabel = new JLabel("Enter Password (Blank for Unencrypted)");
-						passwdlabel.setHorizontalAlignment(JLabel.CENTER);
-						passwdlabel.setVerticalAlignment(JLabel.CENTER);
-						JPasswordField passwdtextfield= new JPasswordField();
-						passwdtextfield.setText("");
-						passwdtextfield.setEchoChar('*');
-						vxd.passwdtextField= passwdtextfield;
-						passwdtextfield.setColumns(15);
-						JPanel passwdpanel = new JPanel();
-						passwdpanel.setLayout(new GridLayout(2,1));
-						passwdpanel.add(passwdlabel);
-						passwdpanel.add(passwdtextfield);
-						JPanel btnpanel = new JPanel();
-						btnpanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
-						btnpanel.setLayout(new FlowLayout());
-						JButton okbtn = new JButton("OK");
-
-						okbtn.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-									boolean loadUnencrypted=true;
-									if ( vxd.passwdtextField.getText() == null
-											|| vxd.passwdtextField.getText().length() == 0) {
-										JOptionPane.showMessageDialog(vxd.frame,
-												"Loading Unencrypted");
-									} else {
-										loadUnencrypted=false;
-									}
-									String passwdString = vxd.passwdtextField.getText();
-									topDialog.setVisible(false);
-									topDialog.dispose();
-									topDialog = null;
-									try{
-										Document tconfig=null;
-										File file;
-										if(vxd.mainLoadFile==null){
-											file=fc.getSelectedFile();
-										}else{
-											file=new File(vxd.mainLoadFile);
-										}
-										FileInputStream rdr=new FileInputStream(file);
-										DataInputStream dta=new DataInputStream(rdr);
-										byte[] filedata=new byte[(int)file.length()];
-										dta.readFully(filedata);
-										String serverxml=new String(filedata);
-										rdr.close();
-										dta.close();
-										if(!loadUnencrypted){
-											int iter=0;
-											int accum=0;
-											for(int di=0;di<file.length();++di){
-											   accum+=(int)passwdString.charAt(iter++ % passwdString.length());
-											   filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
-											   filedata[di]-=accum;
-											   ++iter;
-											}
-										}
-										File fdel= new File(file.getAbsolutePath()+".decrypted");
-										if(fdel.exists()){fdel.delete();}
-										FileOutputStream fcrypt = new FileOutputStream(file.getAbsolutePath()+".decrypted");
-										ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
-										outcrypt.write(filedata,0,(int)file.length());
-										outcrypt.writeTo(fcrypt);
-										outcrypt.flush();
-										outcrypt.close();
-
-										File f= new File(file.getAbsolutePath()+".decrypted");
-										file=f;
-										Document loadeddoc=(Document) builder.parse(f);
-										Document xdoc=new XmlDocument();
-										Element root = loadeddoc.getDocumentElement();
-										Document programDoc=xdoc;
-										Element newroot=xdoc.createElement(root.getTagName());
-										for(int xi=0;xi<root.getAttributes().getLength();++xi) {
-											String attrn=root.getAttributes().item(xi).getNodeName();
-											newroot.setAttribute(attrn,root.getAttribute(attrn));
-										}
-										programDoc.appendChild(newroot);
-										root=newroot;
-										String name=root.getAttribute("Title");
-										String lang=root.getAttribute("Language");
-										String deploy=root.getAttribute("Platform");
-										String trans = root.getAttribute("Translator");
-					
-										for (int i = 0; i < vxd.translators.getLength(); ++i) {
-											Element node = (Element) translators.item(i);
-											String txt = node.getAttribute("name");
-											if (txt.equals(name)) {
-												try {
-													String conf = node
-															.getAttribute("configfile");
-								
-								
-													tconfig = builder
-															.parse(new File(conf));
-								
-													root = tconfig
-															.getDocumentElement();
-													Class cls = Class
-															.forName(((Element) (root
-															.getElementsByTagName("eventhandler")
-															.item(0)))
-															.getAttribute("class"));
-													ActionListener listener = (ActionListener) cls
-															.newInstance();
-													NodeList menus = root
-															.getElementsByTagName("menu");
-													addMenus(vxd.menuBar, menus, listener);
-													NodeList images = root
-															.getElementsByTagName("toolbarbutton");
-													addToolButtons(vxd.toolBar, images,
-															listener);
-													trans = node.getAttribute("translator");
-												} catch (Exception exx) {
-													exx.printStackTrace();
-												}
-											}
-										}
-					
-										for (int i = 0; i < vxd.platforms.getLength(); ++i) {
-											Element node = (Element) platforms.item(i);
-											String txt = node.getAttribute("name");
-											if (txt.equals(deploy)) {
-												try {
-													String conf = node
-															.getAttribute("configfile");
-								
-													factory = DocumentBuilderFactory
-															.newInstance();
-								
-													builder = factory
-															.newDocumentBuilder();
-								
-													tconfig = builder
-															.parse(new File(conf));
-								
-													root = tconfig
-															.getDocumentElement();
-													Class cls = Class
-															.forName(((Element) (root
-															.getElementsByTagName("eventhandler")
-															.item(0)))
-															.getAttribute("class"));
-													ActionListener listener = (ActionListener) cls
-															.newInstance();
-													NodeList menus = root
-															.getElementsByTagName("menu");
-													addMenus(vxd.menuBar, menus, listener);
-													NodeList images = root
-															.getElementsByTagName("toolbarbutton");
-													addToolButtons(vxd.toolBar, images,
-															listener);
-													deploy = node.getAttribute("platform");
-												} catch (Exception exx) {
-													exx.printStackTrace();
-												}
-											}
-										}
-										vxd.project = new vxdproject(name,
-												lang, trans, deploy);
-										vxd.controller = new vxdcontroller(vxd.project,false,root,loadeddoc);
-					
-									}
-									catch(Exception okex){okex.printStackTrace();}
-							}
-						});
-						JButton cancelbtn = new JButton("Cancel");
-						 cancelbtn.addActionListener(new ActionListener() {
-							 public void actionPerformed(ActionEvent e) {
-								 topDialog.setVisible(false);
-								 topDialog.dispose();
-								 topDialog = null;
-							 }
-						 });
-						 passwd.addWindowListener(new WindowAdapter() {
-							 public void windowClosing(WindowEvent e) {
-								 topDialog.setVisible(false);
-								 topDialog.dispose();
-								 topDialog = null;
-							 }
-						 });
-						 passwd.getContentPane().setLayout(new GridLayout(4,1));
-						 passwd.getContentPane().add(passwdpanel);
-						 passwd.getContentPane().add(new JPanel());
-						 btnpanel.add(okbtn);
-						 btnpanel.add(cancelbtn);
-						 passwd.getContentPane().add(btnpanel);
-						 passwd.setVisible(true);
-					}
-					catch(Exception iie){iie.printStackTrace();}
-				} else
-					if (e.getActionCommand().equals("SAVE")) {
-					if (vxd.controller == null || vxd.controller.project == null) {
-						JOptionPane.showMessageDialog(vxd.frame,
-								"No Project Loaded to Save");
-						return;
+			if (e.getActionCommand().equals("OPEN")) {
+				try {
+					JFileChooser fc=new JFileChooser();
+					if(mainLoadFile==null){
+						fc.setCurrentDirectory(new File(SAVEFILEDIR));
+						fc.showOpenDialog(vxd.frame);
 					}
 					JDialog passwd = new JDialog(vxd.frame, "Enter Password", true);
 					passwd.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 					passwd.setSize(325, 175);
 					topDialog = passwd;
 					passwd.setLocationRelativeTo(null);
-					JLabel passwdlabel = new JLabel("Enter Password");
+					JLabel passwdlabel = new JLabel("Enter Password (Blank for Unencrypted)");
 					passwdlabel.setHorizontalAlignment(JLabel.CENTER);
 					passwdlabel.setVerticalAlignment(JLabel.CENTER);
 					JPasswordField passwdtextfield= new JPasswordField();
@@ -717,127 +485,350 @@ public class vxd {
 					btnpanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 					btnpanel.setLayout(new FlowLayout());
 					JButton okbtn = new JButton("OK");
+					
 					okbtn.addActionListener(new ActionListener() {
-					  public void actionPerformed(ActionEvent e) {
+						public void actionPerformed(ActionEvent e) {
+							boolean loadUnencrypted=true;
+							if ( vxd.passwdtextField.getText() == null
+							|| vxd.passwdtextField.getText().length() == 0) {
+								JOptionPane.showMessageDialog(vxd.frame,
+								"Loading Unencrypted");
+							} else {
+								loadUnencrypted=false;
+							}
+							String passwdString = vxd.passwdtextField.getText();
+							topDialog.setVisible(false);
+							topDialog.dispose();
+							topDialog = null;
+							try{
+								Document tconfig=null;
+								File file;
+								if(vxd.mainLoadFile==null){
+									file=fc.getSelectedFile();
+								}else{
+									file=new File(vxd.mainLoadFile);
+								}
+								FileInputStream rdr=new FileInputStream(file);
+								DataInputStream dta=new DataInputStream(rdr);
+								byte[] filedata=new byte[(int)file.length()];
+								dta.readFully(filedata);
+								String serverxml=new String(filedata);
+								rdr.close();
+								dta.close();
+								if(!loadUnencrypted){
+									int iter=0;
+									int accum=0;
+									for(int di=0;di<file.length();++di){
+										accum+=(int)passwdString.charAt(iter++ % passwdString.length());
+										filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
+										filedata[di]-=accum;
+										++iter;
+									}
+								}
+								File fdel= new File(file.getAbsolutePath()+".decrypted");
+								if(fdel.exists()){fdel.delete();}
+								FileOutputStream fcrypt = new FileOutputStream(file.getAbsolutePath()+".decrypted");
+								ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
+								outcrypt.write(filedata,0,(int)file.length());
+								outcrypt.writeTo(fcrypt);
+								outcrypt.flush();
+								outcrypt.close();
+								
+								File f= new File(file.getAbsolutePath()+".decrypted");
+								file=f;
+								Document loadeddoc=(Document) builder.parse(f);
+								Document xdoc=new XmlDocument();
+								Element root = loadeddoc.getDocumentElement();
+								Document programDoc=xdoc;
+								Element newroot=xdoc.createElement(root.getTagName());
+								for(int xi=0;xi<root.getAttributes().getLength();++xi) {
+									String attrn=root.getAttributes().item(xi).getNodeName();
+									newroot.setAttribute(attrn,root.getAttribute(attrn));
+								}
+								programDoc.appendChild(newroot);
+								root=newroot;
+								String name=root.getAttribute("Title");
+								String lang=root.getAttribute("Language");
+								String deploy=root.getAttribute("Platform");
+								String trans = root.getAttribute("Translator");
+								
+								for (int i = 0; i < vxd.translators.getLength(); ++i) {
+									Element node = (Element) translators.item(i);
+									String txt = node.getAttribute("name");
+									if (txt.equals(name)) {
+										try {
+											String conf = node
+											.getAttribute("configfile");
+											
+											
+											tconfig = builder
+											.parse(new File(conf));
+											
+											root = tconfig
+											.getDocumentElement();
+											Class cls = Class
+											.forName(((Element) (root
+											.getElementsByTagName("eventhandler")
+											.item(0)))
+											.getAttribute("class"));
+											ActionListener listener = (ActionListener) cls
+											.newInstance();
+											NodeList menus = root
+											.getElementsByTagName("menu");
+											addMenus(vxd.menuBar, menus, listener);
+											NodeList images = root
+											.getElementsByTagName("toolbarbutton");
+											addToolButtons(vxd.toolBar, images,
+											listener);
+											trans = node.getAttribute("translator");
+										} catch (Exception exx) {
+											exx.printStackTrace();
+										}
+									}
+								}
+								
+								for (int i = 0; i < vxd.platforms.getLength(); ++i) {
+									Element node = (Element) platforms.item(i);
+									String txt = node.getAttribute("name");
+									if (txt.equals(deploy)) {
+										try {
+											String conf = node
+											.getAttribute("configfile");
+											
+											factory = DocumentBuilderFactory
+											.newInstance();
+											
+											builder = factory
+											.newDocumentBuilder();
+											
+											tconfig = builder
+											.parse(new File(conf));
+											
+											root = tconfig
+											.getDocumentElement();
+											Class cls = Class
+											.forName(((Element) (root
+											.getElementsByTagName("eventhandler")
+											.item(0)))
+											.getAttribute("class"));
+											ActionListener listener = (ActionListener) cls
+											.newInstance();
+											NodeList menus = root
+											.getElementsByTagName("menu");
+											addMenus(vxd.menuBar, menus, listener);
+											NodeList images = root
+											.getElementsByTagName("toolbarbutton");
+											addToolButtons(vxd.toolBar, images,
+											listener);
+											deploy = node.getAttribute("platform");
+										} catch (Exception exx) {
+											exx.printStackTrace();
+										}
+									}
+								}
+								vxd.project = new vxdproject(name,
+								lang, trans, deploy);
+								vxd.controller = new vxdcontroller(vxd.project,false,root,loadeddoc);
+								
+							}
+							catch(Exception okex){okex.printStackTrace();}
+						}
+					});
+					JButton cancelbtn = new JButton("Cancel");
+					cancelbtn.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) {
+							topDialog.setVisible(false);
+							topDialog.dispose();
+							topDialog = null;
+						}
+					});
+					passwd.addWindowListener(new WindowAdapter() {
+						public void windowClosing(WindowEvent e) {
+							topDialog.setVisible(false);
+							topDialog.dispose();
+							topDialog = null;
+						}
+					});
+					passwd.getContentPane().setLayout(new GridLayout(4,1));
+					passwd.getContentPane().add(passwdpanel);
+					passwd.getContentPane().add(new JPanel());
+					btnpanel.add(okbtn);
+					btnpanel.add(cancelbtn);
+					passwd.getContentPane().add(btnpanel);
+					passwd.setVisible(true);
+				}
+				catch(Exception iie){iie.printStackTrace();}
+			} else
+			if (e.getActionCommand().equals("SAVE")) {
+				if (vxd.controller == null || vxd.controller.project == null) {
+					JOptionPane.showMessageDialog(vxd.frame,
+					"No Project Loaded to Save");
+					return;
+				}
+				JDialog passwd = new JDialog(vxd.frame, "Enter Password", true);
+				passwd.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+				passwd.setSize(325, 175);
+				topDialog = passwd;
+				passwd.setLocationRelativeTo(null);
+				JLabel passwdlabel = new JLabel("Enter Password");
+				passwdlabel.setHorizontalAlignment(JLabel.CENTER);
+				passwdlabel.setVerticalAlignment(JLabel.CENTER);
+				JPasswordField passwdtextfield= new JPasswordField();
+				passwdtextfield.setText("");
+				passwdtextfield.setEchoChar('*');
+				vxd.passwdtextField= passwdtextfield;
+				passwdtextfield.setColumns(15);
+				JPanel passwdpanel = new JPanel();
+				passwdpanel.setLayout(new GridLayout(2,1));
+				passwdpanel.add(passwdlabel);
+				passwdpanel.add(passwdtextfield);
+				JPanel btnpanel = new JPanel();
+				btnpanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+				btnpanel.setLayout(new FlowLayout());
+				JButton okbtn = new JButton("OK");
+				okbtn.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
 						if (vxd.passwdtextField.getText() == null
-								|| vxd.passwdtextField.getText().length() == 0) {
+						|| vxd.passwdtextField.getText().length() == 0) {
 							JOptionPane.showMessageDialog(vxd.frame,
-									"The Password Cannot Be Blank");
+							"The Password Cannot Be Blank");
 						} else {
 							String passwdString = vxd.passwdtextField.getText();
 							topDialog.setVisible(false);
 							topDialog.dispose();
 							topDialog = null;
-						try {
-					  File d = new File(SAVEFILEDIR + vxd.controller.project.name
-							+ "/");
-					  d.mkdir();
-					  File f = new File(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml.unencrypted");
-					  if(f.exists()){
-						f.delete();
-						 f = new File(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml.unencrypted");
+							SwingUtilities.invokeLater(new Runnable(){public void run()
+								{
+									PrintWriter out;
+									ByteArrayOutputStream outcrypt;
+									File f;
+									File d;
+									FileInputStream rdr;
+									byte[] filedata=new byte[0];
+									try {
+										d = new File(SAVEFILEDIR + vxd.controller.project.name
+										+ "/");
+										d.mkdir();
+										f = new File(SAVEFILEDIR + vxd.controller.project.name
+										+ "/" + vxd.controller.project.name + ".xml.unencrypted");
+										if(f.exists()){
+											f.delete();
+											f = new File(SAVEFILEDIR + vxd.controller.project.name
+											+ "/" + vxd.controller.project.name + ".xml.unencrypted");
+										}
+										try{
+											out = new PrintWriter(new FileWriter(f));
+											XmlDocument xdoc = (XmlDocument) vxd.controller.project.programXML;
+											StringWriter stwr = new StringWriter();
+											xdoc.write(stwr);
+											out.print(stwr.toString());
+											out.flush();
+											out.close();
+											rdr=new FileInputStream(f);
+											DataInputStream dta=new DataInputStream(rdr);
+											filedata=new byte[(int)f.length()];
+											dta.readFully(filedata);
+											String readxml=new String(filedata);
+											rdr.close();
+											dta.close();
+										}catch(Exception oi){oi.printStackTrace();}
+										int iter=0;
+										int accum=0;
+										for(int di=0;di<f.length();++di){
+											accum+=(int)passwdString.charAt(iter++ % passwdString.length());
+											filedata[di]+=accum;
+											filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
+											++iter;
+										}
+										FileOutputStream fcrypt = new FileOutputStream(SAVEFILEDIR + vxd.controller.project.name
+										+ "/" + vxd.controller.project.name + ".xml.encrypted",false);
+										outcrypt = new ByteArrayOutputStream();
+										outcrypt.write(filedata,0,(int)f.length());
+										outcrypt.writeTo(fcrypt);
+										outcrypt.flush();
+										outcrypt.close();
+										File encryptfile=(new File(SAVEFILEDIR + vxd.controller.project.name
+										+ "/" + vxd.controller.project.name + ".xml"));
+										try{
+											encryptfile=(new File(SAVEFILEDIR + vxd.controller.project.name
+											+ "/" + vxd.controller.project.name + ".xml"));
+											encryptfile.setWritable(true);
+											encryptfile.delete();
+											encryptfile.renameTo(
+												new File(SAVEFILEDIR + vxd.controller.project.name
+													+ "/" + vxd.controller.project.name + ".xml"));
+										}catch(Exception saveence){saveence.printStackTrace();}
+										finally{
+											encryptfile.setWritable(true);
+										}
+										JOptionPane.showMessageDialog(vxd.frame, SAVEFILEDIR
+										+ vxd.controller.project.name + "/"
+										+ vxd.controller.project.name + ".xml Saved");
+									} catch (Exception ex) {
+										JOptionPane.showMessageDialog(vxd.frame, "Saving "
+										+ SAVEFILEDIR + vxd.controller.project.name + "/"
+										+ vxd.controller.project.name + ".xml Failed");
+										ex.printStackTrace();
+									} finally {
+									
+									}
+								}});
 							}
-					  PrintWriter out = new PrintWriter(new FileWriter(f));
-					  XmlDocument xdoc = (XmlDocument) vxd.controller.project.programXML;
-					  StringWriter stwr = new StringWriter();
-					  xdoc.write(stwr);
-					  out.print(stwr.toString());
-					  out.close();
-						FileInputStream rdr=new FileInputStream(f);
-						DataInputStream dta=new DataInputStream(rdr);
-						byte[] filedata=new byte[(int)f.length()];
-						dta.readFully(filedata);
-						String readxml=new String(filedata);
-						rdr.close();
-						dta.close();
-						int iter=0;
-						int accum=0;
-						for(int di=0;di<f.length();++di){
-								   accum+=(int)passwdString.charAt(iter++ % passwdString.length());
-						   filedata[di]+=accum;
-						   filedata[di]^=(int)passwdString.charAt(iter % passwdString.length());
-						   ++iter;
 						}
-					  FileOutputStream fcrypt = new FileOutputStream(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml.encrypted",false);
-					  ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
-					  outcrypt.write(filedata,0,(int)f.length());
-					  outcrypt.writeTo(fcrypt);
-					  outcrypt.flush();
-					  outcrypt.close();
-					  (new File(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml")).delete();
-					  ( new File(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml.encrypted") ).renameTo(
-							 new File(SAVEFILEDIR + vxd.controller.project.name
-							+ "/" + vxd.controller.project.name + ".xml"));
-					  JOptionPane.showMessageDialog(vxd.frame, SAVEFILEDIR
-							+ vxd.controller.project.name + "/"
-							+ vxd.controller.project.name + ".xml Saved");
-						   } catch (Exception ex) {
-							JOptionPane.showMessageDialog(vxd.frame, "Saving "
-							+ SAVEFILEDIR + vxd.controller.project.name + "/"
-							+ vxd.controller.project.name + ".xml Failed");
-							ex.printStackTrace();
-						   }
-						  }
-				}
 				});
-					 JButton cancelbtn = new JButton("Cancel");
-					 cancelbtn.addActionListener(new ActionListener() {
-						 public void actionPerformed(ActionEvent e) {
-							 topDialog.setVisible(false);
-							 topDialog.dispose();
-							 topDialog = null;
-						 }
-					 });
-					 passwd.addWindowListener(new WindowAdapter() {
-						 public void windowClosing(WindowEvent e) {
-							 topDialog.setVisible(false);
-							 topDialog.dispose();
-							 topDialog = null;
-						 }
-					 });
-					passwd.getContentPane().setLayout(new GridLayout(4,1));
-					 passwd.getContentPane().add(passwdpanel);
-					 passwd.getContentPane().add(new JPanel());
-					 btnpanel.add(okbtn);
-					 btnpanel.add(cancelbtn);
-					 passwd.getContentPane().add(btnpanel);
-					 passwd.setVisible(true);
-					} else
-						if (e.getActionCommand().equals("EXIT")) {
+				JButton cancelbtn = new JButton("Cancel");
+				cancelbtn.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						topDialog.setVisible(false);
+						topDialog.dispose();
+						topDialog = null;
+					}
+				});
+				passwd.addWindowListener(new WindowAdapter() {
+					public void windowClosing(WindowEvent e) {
+						topDialog.setVisible(false);
+						topDialog.dispose();
+						topDialog = null;
+					}
+				});
+				passwd.getContentPane().setLayout(new GridLayout(4,1));
+				passwd.getContentPane().add(passwdpanel);
+				passwd.getContentPane().add(new JPanel());
+				btnpanel.add(okbtn);
+				btnpanel.add(cancelbtn);
+				passwd.getContentPane().add(btnpanel);
+				passwd.setVisible(true);
+			} else
+			if (e.getActionCommand().equals("EXIT")) {
 				int YorN = JOptionPane.showConfirmDialog(vxd.frame
-						.getContentPane(), "Are You Sure You Want to Exit?",
-						"Exit Program", JOptionPane.YES_NO_OPTION);
+				.getContentPane(), "Are You Sure You Want to Exit?",
+				"Exit Program", JOptionPane.YES_NO_OPTION);
 				if (YorN == JOptionPane.YES_OPTION)
-					System.exit(0);
-						} else {
+				System.exit(0);
+			} else {
 				try {
 					java.lang.Runtime.getRuntime().exec(e.getActionCommand());
 				} catch(Exception re) {
 					JOptionPane.showMessageDialog(vxd.frame,"Error: "+re.getMessage());
 				}
 			}
-	}
+		}
 	}
 	
 	public static class BlackToTransparentFilter extends RGBImageFilter {
-	public static final boolean DISABLED=true;
+		public static final boolean DISABLED=true;
 		public BlackToTransparentFilter() {
 			canFilterIndexColorModel = true;
 		}
 		
 		public int filterRGB(int x, int y, int rgb) {
 			if(DISABLED){
-			return rgb;
-		}
-			if ((rgb & 0x00ffffff) == 0x00)
-				return 0x00;
-			else
 				return rgb;
+			}
+			if ((rgb & 0x00ffffff) == 0x00)
+			return 0x00;
+			else
+			return rgb;
 		}
 	}
 } 

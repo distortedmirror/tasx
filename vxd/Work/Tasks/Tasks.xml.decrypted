@@ -184,7 +184,7 @@
   <FlowProcess ID="835880369" Name="RV" Order="0" Value="" Visible="TRUE" XPos="452" YPos="315">
     <FlowData ID="1152016532" Name="Carburator" Order="0" Value="" Visible="TRUE" XPos="276" YPos="473" />
     <FlowData ID="547765159" Name="Claim" Order="0" Value="" Visible="TRUE" XPos="298" YPos="235">
-      <Phone Order="0" ExternalLinkURL="" Name="Call" YPos="316" Value="" ID="1463543423" Visible="TRUE" XPos="215" ShellCommand="">
+      <Phone Order="0" ExternalLinkURL="" Name="Call" YPos="327" Value="" ID="1463543423" Visible="TRUE" XPos="198" ShellCommand="">
         <DealProbability Order="0" ExternalLinkURL="" Name="VacationReimbersment" YPos="454" Value="" ID="201008616" Visible="TRUE" XPos="172" ShellCommand="" />
         <DealProbability Order="0" ExternalLinkURL="" Name="Housing" YPos="401" Value="" ID="372942528" Visible="TRUE" XPos="229" ShellCommand="" />
         <Connection Order="0" Notes="" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="2084717722" Visible="TRUE" DestID="119118549" DestType="FlowProcess" XPos="-1" SourceID="1463543423" ShellCommand="" />
@@ -223,7 +223,7 @@
     <FlowData ID="1246552849" Name="MVAC" Order="0" Value="" Visible="TRUE" XPos="330" YPos="553" />
     <FlowData ID="-1607758261" Name="Windshield" Order="0" Value="" Visible="TRUE" XPos="333" YPos="472" />
     <FlowData ID="959203585" Name="Horn" Value="" YPos="650" Visible="TRUE" Order="0" XPos="309" ShellCommand="" />
-    <Finance Order="0" ExternalLinkURL="" Name="Title" YPos="311" Value="" ID="-764192461" Visible="TRUE" XPos="300" ShellCommand="">
+    <Finance Order="0" ExternalLinkURL="" Name="Title" YPos="327" Value="" ID="-764192461" Visible="TRUE" XPos="325" ShellCommand="">
       <Mail Order="0" ExternalLinkURL="" Name="Geico" YPos="230" Value="" ID="1760457251" Visible="TRUE" XPos="369" ShellCommand="" />
       <Phone Order="0" ExternalLinkURL="" Name="MVD" YPos="305" Value="" ID="1006776071" Visible="TRUE" XPos="381" ShellCommand="" />
     </Finance>
@@ -342,14 +342,14 @@
     <Phone Order="0" ExternalLinkURL="" Name="Octane" YPos="224" Value="" ID="-1615599281" Visible="TRUE" XPos="701" ShellCommand="" />
     <Product Order="0" ExternalLinkURL="" Name="Belonings" YPos="230" Value="" ID="-1238275507" Visible="TRUE" XPos="895" ShellCommand="" />
   </Supplier>
-  <DealValue Order="0" ExternalLinkURL="" Name="Stimulus" YPos="10" Value="" ID="1692837453" Visible="TRUE" XPos="1006" ShellCommand="" />
+  <DealValue Order="0" ExternalLinkURL="" Name="Stimulus" YPos="10" Value="" ID="1692837453" Visible="TRUE" XPos="1006" ShellCommand="" Notes="01/04/2021 $58.40" />
   <AP Order="0" ExternalLinkURL="" Name="SUV" YPos="83" Value="" ID="-952401270" Visible="TRUE" XPos="998" ShellCommand="" />
   <Finance Order="0" ExternalLinkURL="" Name="Omaha" YPos="18" Value="" ID="1736697919" Visible="TRUE" XPos="1067" ShellCommand="" />
   <FlowProcess Order="0" ExternalLinkURL="" Name="NMDOH" YPos="406" Value="" ID="119118549" Visible="TRUE" XPos="738" ShellCommand="">
     <Finance Order="0" ExternalLinkURL="" Name="BirthCert" YPos="325" Value="" ID="562289827" Visible="TRUE" XPos="673" ShellCommand="" />
     <Form Order="0" Notes="" ExternalLinkURL="" Name="Form" YPos="340" Value="" ID="531067330" Visible="TRUE" XPos="777" ShellCommand="" />
   </FlowProcess>
-  <CheckBoxList Order="0" ExternalLinkURL="" Name="Tasks" YPos="292" Value="" ID="-947933398" Visible="TRUE" XPos="297" ShellCommand="">
+  <CheckBoxList Order="0" ExternalLinkURL="" Name="Tasks" YPos="304" Value="" ID="-947933398" Visible="TRUE" XPos="261" ShellCommand="">
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="951241942" Visible="TRUE" DestID="-1393648937" DestType="Mail" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="-28865213" Visible="TRUE" DestID="1371786586" DestType="Calendar" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1194702510" Visible="TRUE" DestID="-2070563895" DestType="DocumentCollection" XPos="-1" SourceID="-947933398" ShellCommand="" />
@@ -378,7 +378,7 @@
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1081689904" Visible="TRUE" DestID="-1615599281" DestType="Phone" XPos="-1" SourceID="-947933398" ShellCommand="" />
   </CheckBoxList>
   <DealValue Order="0" ExternalLinkURL="" Name="Woidke" YPos="85" Value="" ID="-34434621" Visible="TRUE" XPos="939" ShellCommand="java -cp C:\Users\mark\Downloads\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri\lib\tools.jar;.. vxd.vxd .\Work\PaulaVsYvonne\PaulaVsYvonne.xml" />
-  <Accounting Order="0" Notes="" ExternalLinkURL="" Name="Experian" YPos="286" Value="" ID="976692911" Visible="TRUE" XPos="154" ShellCommand="">
+  <Accounting Order="0" Notes="" ExternalLinkURL="" Name="Experian" YPos="286" Value="" ID="976692911" Visible="TRUE" XPos="146" ShellCommand="">
     <No Order="0" Notes="" ExternalLinkURL="" Name="Disputes" YPos="368" Value="" ID="1837192406" Visible="TRUE" XPos="152" ShellCommand="">
       <Phone Order="0" Notes="" ExternalLinkURL="" Name="Call" YPos="464" Value="" ID="332873162" Visible="TRUE" XPos="102" ShellCommand="" />
     </No>

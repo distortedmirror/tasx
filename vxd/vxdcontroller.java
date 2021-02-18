@@ -360,7 +360,7 @@ public class vxdcontroller {
             JPanel attrlabelpanel=new JPanel(new FlowLayout(FlowLayout.CENTER));
             attrlabelpanel.add(attrlabel);
             attrpanel.add(attrlabelpanel);
-            if(a.name.equals("ID") || a.name.equals("XPos") || a.name.equals("YPos") ||
+            if(a.name.equals("ID") /*|| a.name.equals("XPos") || a.name.equals("YPos") */||
                     ((a.name.equals("SourceID") || a.name.equals("DestID")) &&
                     name.equals("Connection"))) {
                 JLabel fixed=new JLabel(element.getAttribute(a.name),JLabel.LEFT);
@@ -385,18 +385,20 @@ public class vxdcontroller {
             } else {
                 JComponent field= new JTextField(8);
                 javax.swing.text.Document fielddoc;
-	//	if(!a.name.equals("Notes")){
+		       // if(!a.name.equals("Notes")){
                       fielddoc=((JTextField)field).getDocument();
                       ((JTextField)field).setDocument(fielddoc);
           	      ((JTextField)field).setText(element.getAttribute(a.name));
                	      ((JTextField)field).setHorizontalAlignment(JTextField.LEFT);
-/*		}else{
-		      field=new JTextArea(45,3);
-		      fielddoc=((JTextArea)field).getDocument();
-                      ((JTextArea)field).setDocument(fielddoc);
-          	      ((JTextArea)field).setText(element.getAttribute(a.name));
-	        }
-		*/
+		       /*}else{
+                    field=new JTextArea(45,3);
+                    ((JTextArea)field).setSize(150,75);
+                    ((JTextArea)field).setLineWrap(true);
+                    ((JTextArea)field).setEditable(true);
+                    fielddoc=((JTextArea)field).getDocument();
+                    ((JTextArea)field).setDocument(fielddoc);
+          	        ((JTextArea)field).setText(element.getAttribute(a.name));
+	            }  */
                 fielddoc.addDocumentListener(new vxdPropertyChangeEventListener(element,a.name,field));
                 JPanel fieldpanel=new JPanel(new FlowLayout(FlowLayout.LEFT));
                 fieldpanel.add(field);

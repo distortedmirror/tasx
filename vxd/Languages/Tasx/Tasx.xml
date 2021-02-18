@@ -4,60 +4,56 @@
  <Icons>
 <Icon Name="Accounting" Image="Languages/Tasx/Images/Accounting.gif"/>
 <Icon Name="Actor" Image="Languages/Tasx/Images/Actor.gif"/>
-
 <Icon Name="BusinessUnit" Image="Languages/Tasx/Images/BusinessUnit.jpg"/>
-
 <Icon Name="Commit" Image="Languages/Tasx/Images/Commit.jpg"/>
-<Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
-<Icon Name="AP" Image="Languages/Tasx/Images/AP.gif"/>
-<Icon Name="AR" Image="Languages/Tasx/Images/AR.gif"/>
-<Icon Name="Bookings" Image="Languages/Tasx/Images/Bookings.jpg"/>
-
-<Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.gif"/>
-<Icon Name="Document" Image="Languages/Tasx/Images/Document.gif"/>
-<Icon Name="DocumentBook" Image="Languages/Tasx/Images/DocumentBook.gif"/>
-<Icon Name="DocumentCollection" Image="Languages/Tasx/Images/DocumentCollection.gif"/>
-
 <Icon Name="CustomerService" Image="Languages/Tasx/Images/CustomerService.gif"/>
-
 <Icon Name="Delivery" Image="Languages/Tasx/Images/Delivery.gif"/>
 <Icon Name="Deal" Image="Languages/Tasx/Images/Deal.jpg"/>
-<Icon Name="DealProbability" Image="Languages/Tasx/Images/DealProbability.jpg"/>
-<Icon Name="DealStatus" Image="Languages/Tasx/Images/DealStatus.jpg"/>
-<Icon Name="DealValue" Image="Languages/Tasx/Images/DealValue.jpg"/>
-
-<Icon Name="Forecast" Image="Languages/Tasx/Images/Forecast.jpg"/>
-<Icon Name="De-bookings" Image="Languages/Tasx/Images/De-bookings.jpg"/>
-<Icon Name="DeBookings" Image="Languages/Tasx/Images/DeBookings.jpg"/>
-
 <Icon Name="Management" Image="Languages/Tasx/Images/Management.gif"/>
 <Icon Name="Manufacturing" Image="Languages/Tasx/Images/Manufacturing.gif"/>
 <Icon Name="Marketing" Image="Languages/Tasx/Images/Marketing.gif"/>
-<Icon Name="News" Image="Languages/Tasx/Images/News.gif"/>
 <Icon Name="Packaging" Image="Languages/Tasx/Images/Packaging.gif"/>
+<Icon Name="Group" Image="Languages/Tasx/Images/Group.jpg"/>
+<Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
+<Icon Name="Address" Image="Languages/Tasx/Images/Address.jpg"/>
+<Icon Name="Car" Image="Languages/Tasx/Images/Car.jpg"/>
+<Icon Name="Bus" Image="Languages/Tasx/Images/Bus.jpg"/>
+<Icon Name="Mail" Image="Languages/Tasx/Images/Mail.gif"/>
 <Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.gif"/>
+<Icon Name="Finance" Image="Languages/Tasx/Images/Finance.gif"/>
 <Icon Name="Person" Image="Languages/Tasx/Images/Person.gif"/>
 <Icon Name="Personnel" Image="Languages/Tasx/Images/Personnel.gif"/>
-<Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.gif"/>
-<Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
-<Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
-<Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
-<Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
 <Icon Name="Projection" Image="Languages/Tasx/Images/Projection.jpg"/>
 <Icon Name="Purchasing" Image="Languages/Tasx/Images/Purchasing.gif"/>
 <Icon Name="QA" Image="Languages/Tasx/Images/QA.gif"/>
-<Icon Name="Queue" Image="Languages/Tasx/Images/Queue.gif"/>
 <Icon Name="RandD" Image="Languages/Tasx/Images/RandD.gif"/>
 <Icon Name="Receiving" Image="Languages/Tasx/Images/Receiving.gif"/>
 <Icon Name="RunRate" Image="Languages/Tasx/Images/RunRate.jpg"/>
 <Icon Name="Sales" Image="Languages/Tasx/Images/Sales.gif"/>
 <Icon Name="Shipping" Image="Languages/Tasx/Images/Shipping.gif"/>
+<Icon Name="Treasurer" Image="Languages/Tasx/Images/Treasurer.gif"/>
+<Icon Name="AP" Image="Languages/Tasx/Images/AP.gif"/>
+<Icon Name="AR" Image="Languages/Tasx/Images/AR.gif"/>
+<Icon Name="Forecast" Image="Languages/Tasx/Images/Forecast.jpg"/>
+<Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.gif"/>
+<Icon Name="Document" Image="Languages/Tasx/Images/Document.gif"/>
+<Icon Name="DocumentBook" Image="Languages/Tasx/Images/DocumentBook.gif"/>
+<Icon Name="DocumentCollection" Image="Languages/Tasx/Images/DocumentCollection.gif"/>
+<Icon Name="DealProbability" Image="Languages/Tasx/Images/DealProbability.jpg"/>
+<Icon Name="DealStatus" Image="Languages/Tasx/Images/DealStatus.jpg"/>
+<Icon Name="DealValue" Image="Languages/Tasx/Images/DealValue.jpg"/>
+<Icon Name="News" Image="Languages/Tasx/Images/News.gif"/>
+<Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.gif"/>
+<Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
+<Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
+<Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
+<Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
 
+<Icon Name="Queue" Image="Languages/Tasx/Images/Queue.gif"/>
 <Icon Name="Theater" Image="Languages/Tasx/Images/Theater.jpg"/>
 <Icon Name="Warehouse" Image="Languages/Tasx/Images/Warehouse.gif"/>
 <Icon Name="Target" Image="Languages/Tasx/Images/Target.gif"/>
 <Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.gif"/>
-<Icon Name="Treasurer" Image="Languages/Tasx/Images/Treasurer.gif"/>
 <Icon Name="No" Image="Languages/Tasx/Images/No.gif"/>
 <Icon Name="YesCheckMark" Image="Languages/Tasx/Images/YesCheckMark.gif"/>
 
@@ -66,13 +62,10 @@
 <Icon Name="InformationSystems" Image="Languages/Tasx/Images/InformationSystems.gif"/>
 <Icon Name="Interface" Image="Languages/Tasx/Images/Interface.gif"/>
 <Icon Name="Inventory" Image="Languages/Tasx/Images/Inventory.gif"/>
-<Icon Name="Mail" Image="Languages/Tasx/Images/Mail.gif"/>
 <Icon Name="Status" Image="Languages/Tasx/Images/Status.jpg"/>
 <Icon Name="Stop" Image="Languages/Tasx/Images/Stop.gif"/>
 <Icon Name="Supplier" Image="Languages/Tasx/Images/Supplier.gif"/>
 <Icon Name="Globe" Image="Languages/Tasx/Images/Globe.gif"/>
-<Icon Name="Group" Image="Languages/Tasx/Images/Group.jpg"/>
-<Icon Name="Finance" Image="Languages/Tasx/Images/Finance.gif"/>
 <Icon Name="FiscalPeriod" Image="Languages/Tasx/Images/FiscalPeriod.jpg"/>
 <Icon Name="FlowData" Image="Languages/Tasx/Images/FlowData.gif"/>
 <Icon Name="FlowDecision" Image="Languages/Tasx/Images/FlowDecision.gif"/>

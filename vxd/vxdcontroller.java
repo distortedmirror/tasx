@@ -1139,7 +1139,14 @@ public class vxdcontroller {
                     mt.waitForAll();
                 } catch(Exception e){;}
                 vxdJButton toolbutton=new vxdJButton(name,icon,img,dragimage);
-                toolbutton.setToolTipText(name);
+                String ttip=name;
+                if(node!=null){
+                    String tttip=node.getAttribute("Notes");
+                    if(tttip!=null && tttip.length()>0){
+                        ttip=tttip;
+                    }
+                }
+                toolbutton.setToolTipText(ttip);
                 toolBar.add(toolbutton);
             }
             toolBar.setLayout(new GridLayout((int)(icons.getLength()/vxd.iconsperrow)+1,vxd.iconsperrow));
@@ -1162,7 +1169,14 @@ public class vxdcontroller {
                     mt.waitForAll();
                 } catch(Exception e){;}
                 vxdJConnectorButton toolbutton=new vxdJConnectorButton(name,icon,img,dragimage);
-                toolbutton.setToolTipText(name);
+                String ttip=name;
+                if(node!=null){
+                    String tttip=node.getAttribute("Notes");
+                    if(tttip!=null && tttip.length()>0){
+                        ttip=tttip;
+                    }
+                }
+                toolbutton.setToolTipText(ttip);
                 toolBar.add(toolbutton);
             }
             vxd.toolBarPanel.add(toolBar,"South");

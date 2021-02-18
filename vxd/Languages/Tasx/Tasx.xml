@@ -14,13 +14,6 @@
 <Icon Name="Marketing" Image="Languages/Tasx/Images/Marketing.gif"/>
 <Icon Name="Packaging" Image="Languages/Tasx/Images/Packaging.gif"/>
 <Icon Name="Group" Image="Languages/Tasx/Images/Group.jpg"/>
-<Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
-<Icon Name="Address" Image="Languages/Tasx/Images/Address.jpg"/>
-<Icon Name="Car" Image="Languages/Tasx/Images/Car.jpg"/>
-<Icon Name="Bus" Image="Languages/Tasx/Images/Bus.jpg"/>
-<Icon Name="Mail" Image="Languages/Tasx/Images/Mail.gif"/>
-<Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.gif"/>
-<Icon Name="Finance" Image="Languages/Tasx/Images/Finance.gif"/>
 <Icon Name="Person" Image="Languages/Tasx/Images/Person.gif"/>
 <Icon Name="Personnel" Image="Languages/Tasx/Images/Personnel.gif"/>
 <Icon Name="Projection" Image="Languages/Tasx/Images/Projection.jpg"/>
@@ -32,6 +25,13 @@
 <Icon Name="Sales" Image="Languages/Tasx/Images/Sales.gif"/>
 <Icon Name="Shipping" Image="Languages/Tasx/Images/Shipping.gif"/>
 <Icon Name="Treasurer" Image="Languages/Tasx/Images/Treasurer.gif"/>
+<Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
+<Icon Name="Address" Image="Languages/Tasx/Images/Address.jpg"/>
+<Icon Name="Car" Image="Languages/Tasx/Images/Car.jpg"/>
+<Icon Name="Bus" Image="Languages/Tasx/Images/Bus.jpg"/>
+<Icon Name="Mail" Image="Languages/Tasx/Images/Mail.gif"/>
+<Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.gif"/>
+<Icon Name="Finance" Image="Languages/Tasx/Images/Finance.gif"/>
 <Icon Name="AP" Image="Languages/Tasx/Images/AP.gif"/>
 <Icon Name="AR" Image="Languages/Tasx/Images/AR.gif"/>
 <Icon Name="Forecast" Image="Languages/Tasx/Images/Forecast.jpg"/>

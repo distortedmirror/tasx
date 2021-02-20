@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE Translator SYSTEM "../Translator.dtd">
-<Translator name="VisualHTMLtoHTML" 
-            TranslatorXSL="VisualHTMLtoHTML.xsl">
+<Translator name="TasxToHTML5" 
+            TranslatorXSL="TasxToHTML5.xsl">
 <toolbar>
    <toolbarbutton image="Translators/VisualHTMLtoHTML/Images/savecode.gif" text="Save Generated Code" command="SAVECODE"/>
    <toolbarbutton image="Translators/VisualHTMLtoHTML/Images/savexsl.gif" text="Save XSL" command="SAVEXSL"/>
@@ -10,5 +10,5 @@
    <menuitem image="Translators/VisualHTMLtoHTML/Images/savecode.gif" text="Save Generated Code" command="SAVECODE"/>
    <menuitem image="Translators/VisualHTMLtoHTML/Images/savexsl.gif" text="Save XSL" command="SAVEXSL"/>
 </menu>
-<eventhandler class="vxd.Translators.VisualHTMLtoHTML.ExternalTranslators.TranslationActionEventHandler"/>
+<eventhandler class="vxd.Translators.TasxToHTML5.ExternalTranslators.TranslationActionEventHandler"/>
 </Translator>

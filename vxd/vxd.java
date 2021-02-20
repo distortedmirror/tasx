@@ -807,7 +807,7 @@ public class vxd {
 				System.exit(0);
 			} else {
 				try {
-					java.lang.Runtime.getRuntime().exec(e.getActionCommand());
+					java.lang.Runtime.getRuntime().exec(e.getActionCommand().replace("[LANGUAGE]",vxd.project.language).replace("[LANGUAGE]",vxd.project.language).replace("[TRANSLATOR]",vxd.project.translator).replace("[TRANSLATOR]",vxd.project.translator));
 				} catch(Exception re) {
 					JOptionPane.showMessageDialog(vxd.frame,"Error: "+re.getMessage());
 				}

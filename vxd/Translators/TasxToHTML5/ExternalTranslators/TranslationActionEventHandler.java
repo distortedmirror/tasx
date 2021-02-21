@@ -60,7 +60,7 @@ public class TranslationActionEventHandler implements ActionListener
 					    vxd.controller.project.name+"/");
 			    d.mkdir();
 			    String code=new String(vxd.controller.project.programXSLT);
-			    int idx=code.indexOf("package");
+			  /*  int idx=code.indexOf("package");
 			    int idx2=code.indexOf("package",idx+1)-1;
 			    if(idx2<0)
 				idx2=code.length();
@@ -87,9 +87,16 @@ public class TranslationActionEventHandler implements ActionListener
 				    filecode=code.substring(idx,idx2);
 				    m=p.matcher(filecode);
 				}
-			    JOptionPane.showMessageDialog(vxd.frame,"Files Saved in "+vxd.SAVEFILEDIR+
-							  vxd.controller.project.name+"/");
-
+			   */
+				String filename;
+				filename=vxd.SAVEFILEDIR+
+						vxd.controller.project.name+"/"+
+						vxd.controller.project.name+".xslt";
+				File codefile=new File(filename);
+				PrintWriter filewr=new PrintWriter(new FileWriter(codefile));
+				filewr.print(code);
+				filewr.close();
+			    JOptionPane.showMessageDialog(vxd.frame,"Files Saved in "+filename);
 			}
 		    catch(Exception ex)
 			{

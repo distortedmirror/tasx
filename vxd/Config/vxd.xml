@@ -25,13 +25,13 @@
   </toolbar>
   <menus>
    <menu name="File" letter="F">
+      <menuitem image="Images/new.gif" text="New" command="NEWXML" enabled="TRUE"/>
       <menuitem image="Images/open.gif" text="Open" command="OPEN" enabled="TRUE"/>
       <menuitem image="Images/save.gif" text="Save" command="SAVE" enabled="TRUE"/>
       <menuitem image="Images/exit.gif" text="Exit Program" command="EXIT" enabled="TRUE"/>
       <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
     </menu>
     <menu name="Design" letter="D">
-      <menuitem image="Images/new.gif" text="New" command="NEWXML" enabled="TRUE"/>
       <menuitem image="Images/VXD.jpg" text="Configuration" command="notepad Config\vxd.xml" enabled="TRUE"/>
       <menuitem image="Images/image.gif" text="Images" command="c:\Windows\explorer.exe Images\" enabled="TRUE"/>
       <menuitem image="Images/ImageButton.gif" text="Visual Language Elements" command="notepad Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
@@ -66,13 +66,13 @@
   <platforms>
    <platform name="Linux Apache HTML"
               configfile="Platforms/WindowsTomcat/Tomcat403.xml" supportedtranslators="TasxToHTML5"
-	      defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="linux" enabled="TRUE"/>
+	      defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="Apache" enabled="TRUE"/>
    <platform name="Linux Filesystem"
               configfile="Platforms/WindowsTomcat/Tomcat403.xml" supportedtranslators="TasxToHTML5,VisualWebJavaServlet"
-	   defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="linux" enabled="TRUE"/> 
+	   defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="Linux" enabled="TRUE"/> 
    <platform name="Windows Filesystem"
               configfile="Platforms/WindowsTomcat/Tomcat403.xml" supportedtranslators="TasxToHTML5"
-	      defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="linux" enabled="TRUE"/>
+	      defintionfile="Platforms/WindowsTomcat/Tomcat403.dtd" platform="Tomcat403" enabled="TRUE"/>
 	 
   </platforms>
 </vxd>

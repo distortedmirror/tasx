@@ -26,6 +26,9 @@ import org.apache.crimson.jaxp.*;
 import org.apache.crimson.parser.*;
 import org.apache.crimson.util.*;
 
+import vxd.vxdcontroller;
+import vxd.vxdproject;
+
 public class vxd {
     public static final boolean DEBUG = false;
     public static final boolean DEBUG2 = false;

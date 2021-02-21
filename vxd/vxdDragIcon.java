@@ -13,6 +13,10 @@ import org.w3c.dom.*;
 import java.util.*;
 import javax.swing.tree.*;
 
+import vxd.vxd;
+import vxd.vxdDropTarget;
+import vxd.vxdJButton;
+import vxd.vxdAttribute;
 public class vxdDragIcon extends JComponent
         implements MouseListener, MouseMotionListener, vxdDropTarget,
         ActionListener {
@@ -153,7 +157,7 @@ public class vxdDragIcon extends JComponent
 
     public void mouseReleased(MouseEvent e) {
         vxd.controller.DEBUG_STACK_TRACE(e);
-        if ((e.getModifiers() & ActionEvent.CTRL_MASK) == ActionEvent.CTRL_MASK) {
+        if (((e.getModifiers() & ActionEvent.CTRL_MASK) == ActionEvent.CTRL_MASK) || SwingUtilities.isRightMouseButton ( e )) {
             mouseReleasedButton2(e);
             return;
         }
@@ -188,7 +192,7 @@ public class vxdDragIcon extends JComponent
 
     public void mouseReleasedButton2(MouseEvent e) {
         vxd.controller.DEBUG_STACK_TRACE(e);
-        if ((e.getModifiers() & ActionEvent.CTRL_MASK) == ActionEvent.CTRL_MASK) {
+        if (((e.getModifiers() & ActionEvent.CTRL_MASK) == ActionEvent.CTRL_MASK) || SwingUtilities.isRightMouseButton ( e )) {
             JPopupMenu popup = new JPopupMenu();
             popup.setLightWeightPopupEnabled(true);
             popup.setBorderPainted(true);

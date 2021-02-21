@@ -27,6 +27,11 @@ import org.apache.crimson.util.*;
 import javax.swing.event.*;
 import javax.swing.tree.*;
 
+import vxd.vxd;
+import vxd.vxdcontroller;
+import vxd.vxdDragIcon;
+import vxd.vxdIconConnectionView;
+
 public class vxdcontroller {
     public static final boolean DEBUG = vxd.DEBUG;
     public static final String LANGUAGEDIR = "Languages/";
@@ -566,6 +571,69 @@ public class vxdcontroller {
         tree = new JTree();
         tree.setModel(model);
         tree.addTreeSelectionListener(model);
+        tree.addMouseListener ( new MouseAdapter ()
+        {
+            public void mousePressed ( MouseEvent e )
+            {
+                TreePath path = tree.getPathForLocation(e.getX(), e.getY());
+                vxd.controller.selectedNode = path;
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        if(vxd.controller.selectedNode==null)
+                            return;
+                        vxd.controller.refreshXMLViews();
+                        Element element = (Element) vxd.controller.selectedNode.getLastPathComponent();
+                        ActionListener selectedIcon=null;
+                        if (element != null) {
+                            selectedIcon=(ActionListener)vxd.controller.iconConnectionView.getDragIconByID(element.getAttribute("ID"));
+                            if (selectedIcon == null) {
+                                selectedIcon=(ActionListener)vxd.controller.iconConnectionView.getIconConnectorByID(element.getAttribute("ID"));
+                            }
+                        }
+                        Rectangle pathBounds = tree.getUI().getPathBounds(tree, path);
+                        if (pathBounds != null && pathBounds.contains(e.getX(), e.getY())) {
+                            vxd.controller.DEBUG_STACK_TRACE(e);
+                            if (((e.getModifiers() & ActionEvent.CTRL_MASK) == ActionEvent.CTRL_MASK) || SwingUtilities.isRightMouseButton ( e )) {
+                                JPopupMenu popup = new JPopupMenu();
+                                popup.setLightWeightPopupEnabled(true);
+                                popup.setBorderPainted(true);
+                                JMenuItem del = new JMenuItem("Delete");
+                                del.setActionCommand("DELETE");
+                                del.addActionListener(selectedIcon);
+                                popup.add(del);
+                                JMenuItem open = new JMenuItem("Open ShellCommand");
+                                open.setActionCommand("OPEN");
+                                open.addActionListener(selectedIcon);
+                                popup.add(open);
+                                JMenuItem externalurl = new JMenuItem("Open External Link URL");
+                                externalurl.setActionCommand("EXTERNALURL");
+                                externalurl.addActionListener(selectedIcon);
+                                popup.add(externalurl);
+                                Vector v = vxd.controller.getAttributes(element.getTagName());
+                                Enumeration en = v.elements();
+                                while (en.hasMoreElements()) {
+                                    vxdAttribute a = (vxdAttribute) en.nextElement();
+                                    if (a.combo != null &&
+                                            a.combo.size() == 2 &&
+                                            a.combo.contains("TRUE") &&
+                                            a.combo.contains("FALSE")) {
+                                        JCheckBoxMenuItem cb = new JCheckBoxMenuItem(a.name);
+                                        cb.setActionCommand(a.name);
+                                        cb.addActionListener(selectedIcon);
+                                        if (element.getAttribute(a.name).equals("TRUE"))
+                                            cb.setState(true);
+                                        else
+                                            cb.setState(false);
+                                        popup.add(cb);
+                                    }
+                                }
+                                popup.show(tree, pathBounds.x, pathBounds.y + pathBounds.height);
+                            }
+                        }
+                    }
+                });
+            }
+        } );
         DefaultTreeCellRenderer rend = (DefaultTreeCellRenderer) tree.getCellRenderer();
         JScrollPane scroll = new JScrollPane(tree);
         treeView.add(scroll, BorderLayout.CENTER);

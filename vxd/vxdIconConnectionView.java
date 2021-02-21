@@ -10,6 +10,9 @@ import org.w3c.dom.*;
 import java.util.*;
 import javax.swing.tree.*;
 
+import vxd.vxdIconConnector;
+import vxd.vxdDropTarget;
+import vxd.vxdDragIcon;
 public class vxdIconConnectionView extends JComponent
         implements vxdDropTarget, LayoutManager, MouseListener {
     public String name;
@@ -108,6 +111,17 @@ public class vxdIconConnectionView extends JComponent
 
     public void addLayoutComponent(String n, Component c) {
         ;
+    }
+
+    public vxdIconConnector getIconConnectorByID(String id) {
+        Object[] iconnects = connectors.toArray();
+        for(int i=0; i < iconnects.length; ++i) {
+            if(iconnects[i]!=null && (iconnects[i] instanceof vxdIconConnector) &&
+                    ((vxdIconConnector)iconnects[i]).element!=null && ((vxdIconConnector)iconnects[i]).element.getAttribute("ID")==id) {
+                return (vxdIconConnector)iconnects[i];
+            }
+        }
+        return null;
     }
 
     public vxdDragIcon getDragIconByID(String id) {
@@ -215,7 +229,6 @@ public class vxdIconConnectionView extends JComponent
     public void mouseReleased(MouseEvent e) {
         ;
     }
-
 
     public void mouseEntered(MouseEvent e) {
         ;

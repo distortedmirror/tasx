@@ -117,6 +117,7 @@ public class vxd {
             frame.setLocationRelativeTo(null);
             frame.setDefaultCloseOperation(frame.DO_NOTHING_ON_CLOSE);
             frame.setVisible(true);
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
             frame.addWindowListener(new WindowAdapter() {
                 public void windowClosing(WindowEvent e) {
                     int YorN = JOptionPane.showConfirmDialog(vxd.frame

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE Translator SYSTEM "../Translator.dtd">
+<Translator name="TasxToHTML5"
+            TranslatorXSL="TasxToHTML5.xsl">
+    <toolbar>
+        <toolbarbutton image="Translators/TasxToHTML5/Images/savecode.gif" text="Save Generated Code" command="SAVECODE" enabled="TRUE"/>
+        <toolbarbutton image="Translators/TasxToHTML5/Images/savexsl.gif" text="Save XSL" command="SAVEXSL" enabled="TRUE"/>
+    </toolbar>
+    <menu name="XSL" letter="S">
+        <menuitem image="Translators/TasxToHTML5/Images/savecode.gif" text="Save Generated Code" command="SAVECODE" enabled="TRUE"/>
+        <menuitem image="Translators/TasxToHTML5/Images/savexsl.gif" text="Save XSL" command="SAVEXSL" enabled="TRUE"/>
+    </menu>
+    <eventhandler class="vxd.Translators.TasxToHTML5.ExternalTranslators.TranslationActionEventHandler"/>
+</Translator>

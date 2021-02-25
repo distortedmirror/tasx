@@ -19,12 +19,12 @@
         <toolbarbutton image="Images/new.gif" text="New" command="NEWXML" enabled="TRUE"/>
         <toolbarbutton image="Images/open.gif" text="Open" command="OPEN" enabled="TRUE"/>
         <toolbarbutton image="Images/save.gif" text="Save" command="SAVE" enabled="TRUE"/>
-        <toolbarbutton image="Images/VXD.jpg" text="Configuration" command="notepad Config\vxd.xml" enabled="TRUE"/>
+        <toolbarbutton image="Images/VXD.jpg" text="Configuration (XML)" command="notepad Config\vxd.xml" enabled="TRUE"/>
         <toolbarbutton image="Images/image.gif" text="Global Images" command="c:\Windows\explorer.exe Images\"
                        enabled="TRUE"/>
-        <toolbarbutton image="Images/ImageButton.gif" text="Visual Language Elements"
+        <toolbarbutton image="Images/ImageButton.gif" text="Visual Language Elements (XML)"
                        command="notepad Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
-        <toolbarbutton image="Images/Workflow.jpg" text="Visual Language Structure"
+        <toolbarbutton image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
                        command="notepad Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
         <toolbarbutton image="Images/images.gif" text="Visual Language Images"
                        command="c:\Windows\explorer.exe Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
@@ -36,6 +36,8 @@
                        command="notepad Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
 	<toolbarbutton image="Images/VisualProgramFiles.gif" text="Visual Program Files (XML,XSL,XSLT,Images,etc.)"
                       command="c:\Windows\explorer.exe Work\[PROJECT]\" enabled="TRUE"/>
+        <toolbarbutton image="Images/images.gif" text="Visual Program Images"
+                      command="c:\Windows\explorer.exe Work\[PROJECT]\Images\" enabled="TRUE"/>
         <toolbarbutton image="Images/exit.gif" text="Exit Program" command="EXIT" enabled="TRUE"/>
         <toolbarbutton image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
     </toolbar>
@@ -48,11 +50,11 @@
             <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
         </menu>
         <menu name="Design" letter="D">
-            <menuitem image="Images/VXD.jpg" text="Configuration" command="notepad Config\vxd.xml" enabled="TRUE"/>
+            <menuitem image="Images/VXD.jpg" text="Configuration (XML)" command="notepad Config\vxd.xml" enabled="TRUE"/>
             <menuitem image="Images/image.gif" text="Images" command="c:\Windows\explorer.exe Images\" enabled="TRUE"/>
-            <menuitem image="Images/ImageButton.gif" text="Visual Language Elements"
+            <menuitem image="Images/ImageButton.gif" text="Visual Language Elements (XML)"
                       command="notepad Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
-            <menuitem image="Images/Workflow.jpg" text="Visual Language Structure"
+            <menuitem image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
                       command="notepad Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
             <menuitem image="Images/images.gif" text="Visual Language Images"
                       command="c:\Windows\explorer.exe Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
@@ -64,6 +66,8 @@
                       command="notepad Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
 	    <menuitem image="Images/VisualProgramFiles.gif" text="Visual Program Files (XML,XSL,XSLT,Images,etc.)"
                       command="c:\Windows\explorer.exe Work\[PROJECT]\" enabled="TRUE"/>
+            <menuitem image="Images/images.gif" text="Visual Program Images"
+                      command="c:\Windows\explorer.exe Work\[PROJECT]\Images\" enabled="TRUE"/>
             <menuitem image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List"
                       command="..\XMLEditor\bin\Debug\XMLEditor.exe Config\vxd.xml" enabled="FALSE"/>
             <menuitem image="Images/newdtd.gif" text="New DTD (Language Structure)" command="NEWDTD" enabled="FALSE"/>

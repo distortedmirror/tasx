@@ -508,157 +508,7 @@ public class vxd {
                     btnpanel.setLayout(new FlowLayout());
                     JButton okbtn = new JButton("OK");
 
-                    okbtn.addActionListener(new ActionListener() {
-                        public void actionPerformed(ActionEvent e) {
-                            boolean loadUnencrypted = true;
-                            if (vxd.passwdtextField.getText() == null
-                                    || vxd.passwdtextField.getText().length() == 0) {
-                                JOptionPane.showMessageDialog(vxd.frame,
-                                        "Loading Unencrypted");
-                            } else {
-                                loadUnencrypted = false;
-                            }
-                            String passwdString = vxd.passwdtextField.getText();
-                            topDialog.setVisible(false);
-                            topDialog.dispose();
-                            topDialog = null;
-                            try {
-                                Document tconfig = null;
-                                File file;
-                                if (vxd.mainLoadFile == null) {
-                                    file = fc.getSelectedFile();
-                                } else {
-                                    file = new File(vxd.mainLoadFile);
-                                }
-                                FileInputStream rdr = new FileInputStream(file);
-                                DataInputStream dta = new DataInputStream(rdr);
-                                byte[] filedata = new byte[(int) file.length()];
-                                dta.readFully(filedata);
-                                String serverxml = new String(filedata);
-                                rdr.close();
-                                dta.close();
-                                if (!loadUnencrypted) {
-                                    int iter = 0;
-                                    int accum = 0;
-                                    for (int di = 0; di < file.length(); ++di) {
-                                        accum += (int) passwdString.charAt(iter++ % passwdString.length());
-                                        filedata[di] ^= (int) passwdString.charAt(iter % passwdString.length());
-                                        filedata[di] -= accum;
-                                        ++iter;
-                                    }
-                                }
-                                File fdel = new File(file.getAbsolutePath() + ".decrypted");
-                                if (fdel.exists()) {
-                                    fdel.delete();
-                                }
-                                FileOutputStream fcrypt = new FileOutputStream(file.getAbsolutePath() + ".decrypted");
-                                ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
-                                outcrypt.write(filedata, 0, (int) file.length());
-                                outcrypt.writeTo(fcrypt);
-                                outcrypt.flush();
-                                outcrypt.close();
-
-                                File f = new File(file.getAbsolutePath() + ".decrypted");
-                                file = f;
-                                Document loadeddoc = (Document) builder.parse(f);
-                                Document xdoc = new XmlDocument();
-                                Element root = loadeddoc.getDocumentElement();
-                                Document programDoc = xdoc;
-                                Element newroot = xdoc.createElement(root.getTagName());
-                                for (int xi = 0; xi < root.getAttributes().getLength(); ++xi) {
-                                    String attrn = root.getAttributes().item(xi).getNodeName();
-                                    newroot.setAttribute(attrn, root.getAttribute(attrn));
-                                }
-                                programDoc.appendChild(newroot);
-                                root = newroot;
-                                String name = root.getAttribute("Title");
-                                String lang = root.getAttribute("Language");
-                                String deploy = root.getAttribute("Platform");
-                                String trans = root.getAttribute("Translator");
-
-                                for (int i = 0; i < vxd.translators.getLength(); ++i) {
-                                    Element node = (Element) translators.item(i);
-                                    String txt = node.getAttribute("name");
-                                    if (txt.equals(trans)) {
-                                        try {
-                                            String conf = node
-                                                    .getAttribute("configfile");
-
-
-                                            tconfig = builder
-                                                    .parse(new File(conf));
-
-                                            Element root1 = tconfig
-                                                    .getDocumentElement();
-                                            Class cls = Class
-                                                    .forName(((Element) (root1
-                                                            .getElementsByTagName("eventhandler")
-                                                            .item(0)))
-                                                            .getAttribute("class"));
-                                            ActionListener listener = (ActionListener) cls
-                                                    .newInstance();
-                                            NodeList menus = root1
-                                                    .getElementsByTagName("menu");
-                                            addMenus(vxd.menuBar, menus, listener);
-                                            NodeList images = root1
-                                                    .getElementsByTagName("toolbarbutton");
-                                            addToolButtons(vxd.toolBar, images,
-                                                    listener);
-                                            trans = node.getAttribute("translator");
-                                        } catch (Exception exx) {
-                                            exx.printStackTrace();
-                                        }
-                                    }
-                                }
-
-                                for (int i = 0; i < vxd.platforms.getLength(); ++i) {
-                                    Element node = (Element) platforms.item(i);
-                                    String txt = node.getAttribute("platform");
-                                    if (txt.equals(deploy)) {
-                                        try {
-                                            String conf = node
-                                                    .getAttribute("configfile");
-
-                                            factory = DocumentBuilderFactory
-                                                    .newInstance();
-
-                                            builder = factory
-                                                    .newDocumentBuilder();
-
-                                            tconfig = builder
-                                                    .parse(new File(conf));
-
-                                            Element root2 = tconfig
-                                                    .getDocumentElement();
-                                            Class cls = Class
-                                                    .forName(((Element) (root2
-                                                            .getElementsByTagName("eventhandler")
-                                                            .item(0)))
-                                                            .getAttribute("class"));
-                                            ActionListener listener = (ActionListener) cls
-                                                    .newInstance();
-                                            NodeList menus = root2
-                                                    .getElementsByTagName("menu");
-                                            addMenus(vxd.menuBar, menus, listener);
-                                            NodeList images = root2
-                                                    .getElementsByTagName("toolbarbutton");
-                                            addToolButtons(vxd.toolBar, images,
-                                                    listener);
-                                            deploy = node.getAttribute("platform");
-                                        } catch (Exception exx) {
-                                            exx.printStackTrace();
-                                        }
-                                    }
-                                }
-                                vxd.project = new vxdproject(name,
-                                        lang, trans, deploy);
-                                vxd.controller = new vxdcontroller(vxd.project, false, root, loadeddoc);
-
-                            } catch (Exception okex) {
-                                okex.printStackTrace();
-                            }
-                        }
-                    });
+                    okbtn.addActionListener(new vxdOpenFileActionListener(fc.getSelectedFile(),builder));
                     JButton cancelbtn = new JButton("Cancel");
                     cancelbtn.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
@@ -711,125 +561,22 @@ public class vxd {
                 btnpanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
                 btnpanel.setLayout(new FlowLayout());
                 JButton okbtn = new JButton("OK");
-                okbtn.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        if (vxd.passwdtextField.getText() == null
-                                || vxd.passwdtextField.getText().length() == 0) {
-                            JOptionPane.showMessageDialog(vxd.frame,
-                                    "The Password Cannot Be Blank");
-                        } else {
-                            String passwdString = vxd.passwdtextField.getText();
-                            topDialog.setVisible(false);
-                            topDialog.dispose();
-                            topDialog = null;
-                            SwingUtilities.invokeLater(new Runnable() {
-                                public void run() {
-                                    PrintWriter out;
-                                    ByteArrayOutputStream outcrypt;
-                                    File f;
-                                    File d;
-                                    FileInputStream rdr;
-                                    byte[] filedata = new byte[0];
-                                    try {
-                                        d = new File(SAVEFILEDIR + vxd.controller.project.name
-                                                + "/");
-                                        d.mkdir();
-                                        f = new File(SAVEFILEDIR + vxd.controller.project.name
-                                                + "/" + vxd.controller.project.name + ".xml.unencrypted");
-                                        if (f.exists()) {
-                                            f.delete();
-                                            f = new File(SAVEFILEDIR + vxd.controller.project.name
-                                                    + "/" + vxd.controller.project.name + ".xml.unencrypted");
-                                        }
-                                        try {
-                                            out = new PrintWriter(new FileWriter(f));
-                                            XmlDocument xdoc = (XmlDocument) vxd.controller.project.programXML;
-                                            StringWriter stwr = new StringWriter();
-                                            xdoc.write(stwr);
-                                            out.print(stwr.toString());
-                                            out.flush();
-                                            out.close();
-                                            rdr = new FileInputStream(f);
-                                            DataInputStream dta = new DataInputStream(rdr);
-                                            filedata = new byte[(int) f.length()];
-                                            dta.readFully(filedata);
-                                            String readxml = new String(filedata);
-                                            rdr.close();
-                                            dta.close();
-                                            f.delete();
-                                        } catch (Exception oi) {
-                                            oi.printStackTrace();
-                                        }
-                                        int iter = 0;
-                                        int accum = 0;
-                                        for (int di = 0; di < f.length(); ++di) {
-                                            accum += (int) passwdString.charAt(iter++ % passwdString.length());
-                                            filedata[di] += accum;
-                                            filedata[di] ^= (int) passwdString.charAt(iter % passwdString.length());
-                                            ++iter;
-                                        }
-                                        FileOutputStream fcrypt = new FileOutputStream(SAVEFILEDIR + vxd.controller.project.name
-                                                + "/" + vxd.controller.project.name + ".xml.encrypted", false);
-                                        try {
-                                            outcrypt = new ByteArrayOutputStream();
-                                            outcrypt.write(filedata, 0, (int) f.length());
-                                            outcrypt.writeTo(fcrypt);
-                                            outcrypt.flush();
-                                            outcrypt.close();
-                                            fcrypt.flush();
-                                            fcrypt.close();
-                                        }catch (Exception fcrypte){
-                                            fcrypte.printStackTrace();
-                                        }
-                                        File encryptfile = (new File(SAVEFILEDIR + vxd.controller.project.name
-                                                + "/" + vxd.controller.project.name + ".xml"));
-                                        try {
-                                            encryptfile = (new File(SAVEFILEDIR + vxd.controller.project.name
-                                                    + "/" + vxd.controller.project.name + ".xml.encrypted"));
-                                            encryptfile.setWritable(true);
-                                            encryptfile.delete();
-                                            encryptfile.renameTo(
-                                                    new File(SAVEFILEDIR + vxd.controller.project.name
-                                                            + "/" + vxd.controller.project.name + ".xml"));
-                                            File decryptedfile = (new File(SAVEFILEDIR + vxd.controller.project.name
-                                                    + "/" + vxd.controller.project.name + ".xml.decrypted"));
-                                            decryptedfile.delete();
-                                        } catch (Exception saveence) {
-                                            saveence.printStackTrace();
-                                        } finally {
-                                            encryptfile.setWritable(true);
-                                        }
-                                        JOptionPane.showMessageDialog(vxd.frame, SAVEFILEDIR
-                                                + vxd.controller.project.name + "/"
-                                                + vxd.controller.project.name + ".xml Saved");
-                                    } catch (Exception ex) {
-                                        JOptionPane.showMessageDialog(vxd.frame, "Saving "
-                                                + SAVEFILEDIR + vxd.controller.project.name + "/"
-                                                + vxd.controller.project.name + ".xml Failed");
-                                        ex.printStackTrace();
-                                    } finally {
-
-                                    }
-                                }
-                            });
-                        }
-                    }
-                });
-                JButton cancelbtn = new JButton("Cancel");
-                cancelbtn.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        topDialog.setVisible(false);
-                        topDialog.dispose();
-                        topDialog = null;
-                    }
-                });
+                okbtn.addActionListener(new vxdSaveFileActionListener());
+		JButton cancelbtn = new JButton("Cancel");
+		cancelbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			    topDialog.setVisible(false);
+			    topDialog.dispose();
+			    topDialog = null;
+			}
+		    });
                 passwd.addWindowListener(new WindowAdapter() {
-                    public void windowClosing(WindowEvent e) {
-                        topDialog.setVisible(false);
-                        topDialog.dispose();
-                        topDialog = null;
-                    }
-                });
+			public void windowClosing(WindowEvent e) {
+			    topDialog.setVisible(false);
+			    topDialog.dispose();
+			    topDialog = null;
+			}
+		    });
                 passwd.getContentPane().setLayout(new GridLayout(4, 1));
                 passwd.getContentPane().add(passwdpanel);
                 passwd.getContentPane().add(new JPanel());

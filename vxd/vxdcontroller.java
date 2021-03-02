@@ -49,7 +49,7 @@ public class vxdcontroller {
     public JPanel xslTabView;
     public JPanel xsltTabView;
     public JPanel treeView;
-    public JTree tree;
+    public JVXDTree tree;
     public JTextArea xmlTextArea;
     public JTextArea xslTextArea;
     public JTextArea xsltTextArea;
@@ -568,7 +568,8 @@ public class vxdcontroller {
     public void initTreeView() {
         Element root = project.programXML.getDocumentElement();
         XMLTreeModel model = new XMLTreeModel(root);
-        tree = new JTree();
+        tree = new JVXDTree();
+	ToolTipManager.sharedInstance().registerComponent(tree);
         tree.setModel(model);
         tree.addTreeSelectionListener(model);
         tree.addMouseListener ( new MouseAdapter ()

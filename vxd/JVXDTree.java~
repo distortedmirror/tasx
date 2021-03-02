@@ -1,0 +1,16 @@
+package vxd;
+
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class JVXDTree extends JTree {
+    public JVXDTree(){
+	super();
+    }
+
+    public String getTooltipText( MouseEvent e ) {
+	TreePath path = tree.getPathForLocation(e.getX(), e.getY());
+	Element element = (Element) path.getLastPathComponent();
+	return element.getAttribute("Notes");
+    }
+}

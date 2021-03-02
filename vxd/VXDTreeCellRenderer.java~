@@ -1,0 +1,16 @@
+package vxd;
+
+import javax.swing.*;
+import javax.swing.event.*;
+import javax.swing.tree.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.*;
+
+import org.w3c.dom.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.*;
+
+public static class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
+
+}

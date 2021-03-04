@@ -232,9 +232,25 @@ public class vxdDragIcon extends JComponent
 
     public void actionPerformed(ActionEvent e) {
         vxd.controller.DEBUG_STACK_TRACE(e);
+	String os=System.getProperty("os.name").startsWith("Windows")?"Windows":"Linux";
+	String separator=System.getProperty("os.name").startsWith("Windows")?"\\":"/";
+	String browser=vxd.config.getDocumentElement().getAttribute("browser"+os);
+	String editor=vxd.config.getDocumentElement().getAttribute("editor"+os);
+	String fileManager=vxd.config.getDocumentElement().getAttribute("fileManager"+os);
         if (e.getActionCommand().equals("OPEN")) {
             try {
-                java.lang.Runtime.getRuntime().exec(element.getAttributeNode("ShellCommand").getNodeValue());
+                java.lang.Runtime.getRuntime().exec(element.getAttributeNode("ShellCommand").getNodeValue().
+						    replace("\\",separator).
+						    replace("\\",separator).
+						    replace("[LANGUAGE]", vxd.project.language).
+						    replace("[LANGUAGE]", vxd.project.language).
+						    replace("[TRANSLATOR]", vxd.project.translator).
+						    replace("[TRANSLATOR]", vxd.project.translator).
+						    replace("[PROJECT]",vxd.project.name).
+						    replace("[PROJECT]",vxd.project.name).
+						    replace("[BROWSER]",browser).
+						    replace("[EDITOR]",editor).
+						    replace("[FILEMANAGER]",fileManager));
             } catch (Exception exc) {
                 JOptionPane.showMessageDialog(vxd.frame, "Error: " + exc.getMessage());
                 exc.printStackTrace();
@@ -242,7 +258,18 @@ public class vxdDragIcon extends JComponent
         } else if (e.getActionCommand().equals("EXTERNALURL")) {
             try {
                 java.lang.Runtime.getRuntime().exec(vxd.config.getDocumentElement()
-                        .getAttribute("browserpath") + " " + element.getAttributeNode("ExternalLinkURL").getNodeValue());
+						    .getAttribute("browserpath" + os) + " " + element.getAttributeNode("ExternalLinkURL").getNodeValue().
+						    replace("\\",separator).
+						    replace("\\",separator).
+						    replace("[LANGUAGE]", vxd.project.language).
+						    replace("[LANGUAGE]", vxd.project.language).
+						    replace("[TRANSLATOR]", vxd.project.translator).
+						    replace("[TRANSLATOR]", vxd.project.translator).
+						    replace("[PROJECT]",vxd.project.name).
+						    replace("[PROJECT]",vxd.project.name).
+						    replace("[BROWSER]",browser).
+						    replace("[EDITOR]",editor).
+						    replace("[FILEMANAGER]",fileManager));
             } catch (Exception exc) {
                 JOptionPane.showMessageDialog(vxd.frame, "Error: " + exc.getMessage());
                 exc.printStackTrace();

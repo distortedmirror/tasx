@@ -592,12 +592,23 @@ public class vxd {
                     System.exit(0);
             } else {
                 try {
-                    java.lang.Runtime.getRuntime().exec(e.getActionCommand().replace("[LANGUAGE]", vxd.project.language).
-                            replace("[LANGUAGE]", vxd.project.language).
-                            replace("[TRANSLATOR]", vxd.project.translator).
-                            replace("[TRANSLATOR]", vxd.project.translator).
-                            replace("[PROJECT]",vxd.project.name).
-                            replace("[PROJECT]",vxd.project.name));
+		    String os=System.getProperty("os.name").startsWith("Windows")?"Windows":"Linux";
+		    String separator=System.getProperty("os.name").startsWith("Windows")?"\\":"/";
+		    String browser=vxd.config.getDocumentElement().getAttribute("browser"+os);
+		    String editor=vxd.config.getDocumentElement().getAttribute("editor"+os);
+		    String fileManager=vxd.config.getDocumentElement().getAttribute("fileManager"+os);
+                    java.lang.Runtime.getRuntime().exec(e.getActionCommand().
+							replace("\\",separator).
+							replace("\\",separator).
+							replace("[LANGUAGE]", vxd.project.language).
+							replace("[LANGUAGE]", vxd.project.language).
+							replace("[TRANSLATOR]", vxd.project.translator).
+							replace("[TRANSLATOR]", vxd.project.translator).
+							replace("[PROJECT]",vxd.project.name).
+							replace("[PROJECT]",vxd.project.name).
+							replace("[BROWSER]",browser).
+							replace("[EDITOR]",editor).
+							replace("[FILEMANAGER]",fileManager));
                 } catch (Exception re) {
                     JOptionPane.showMessageDialog(vxd.frame, "Error: " + re.getMessage());
                 }

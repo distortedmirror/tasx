@@ -4,7 +4,12 @@
      ydragsize="60" savefiledir="Work/" deploymentdir="Deployments/"
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
-     browserpath='"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"'>
+     browserpathWindows='"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"'
+     browserpathLinux="/usr/bin/firefox"
+     editorWindows="notepad"
+     editorLinux="/usr/bin/xemacs"
+     fileManagerWindows="c:\Windows\explorer.exe"
+     fileManagerLinux="/usr/bin/xfe">
     <toolbar>
         <toolbarbutton image="Images/VXDIcon.gif" text="Auto Generate Language from Image List (XML,DTD,XSL)"
                        command="NEWDTD" enabled="FALSE"/>
@@ -19,25 +24,25 @@
         <toolbarbutton image="Images/new.gif" text="New" command="NEWXML" enabled="TRUE"/>
         <toolbarbutton image="Images/open.gif" text="Open" command="OPEN" enabled="TRUE"/>
         <toolbarbutton image="Images/save.gif" text="Save" command="SAVE" enabled="TRUE"/>
-        <toolbarbutton image="Images/VXD.jpg" text="Configuration (XML)" command="notepad Config\vxd.xml" enabled="TRUE"/>
-        <toolbarbutton image="Images/image.gif" text="Global Images" command="c:\Windows\explorer.exe Images\"
+        <toolbarbutton image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+        <toolbarbutton image="Images/image.gif" text="Global Images" command="[FILEMANAGER] Images\"
                        enabled="TRUE"/>
         <toolbarbutton image="Images/ImageButton.gif" text="Visual Language Elements (XML)"
-                       command="notepad Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
+                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
         <toolbarbutton image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
-                       command="notepad Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
+                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
         <toolbarbutton image="Images/images.gif" text="Visual Language Images"
-                       command="c:\Windows\explorer.exe Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
+                       command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
         <toolbarbutton image="Images/Translator.gif" text="Visual Language Translator (XSL)"
-                       command="notepad Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
+                       command="[EDITOR] Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
         <toolbarbutton image="Images/ProgramXSL.gif" text="Visual Program Translator (XSL)"
-                       command="notepad Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
+                       command="[EDITOR] Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
         <toolbarbutton image="Images/ProgramXSLT.gif" text="Visual Program Translation Output (XSLT)"
-                       command="notepad Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
+                       command="[EDITOR] Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
 	<toolbarbutton image="Images/VisualProgramFiles.gif" text="Visual Program Files (XML,XSL,XSLT,Images,etc.)"
-                      command="c:\Windows\explorer.exe Work\[PROJECT]\" enabled="TRUE"/>
+                      command="[FILEMANAGER] Work\[PROJECT]\" enabled="TRUE"/>
         <toolbarbutton image="Images/images.gif" text="Visual Program Images"
-                      command="c:\Windows\explorer.exe Work\[PROJECT]\Images\" enabled="TRUE"/>
+                      command="[FILEMANAGER] Work\[PROJECT]\Images\" enabled="TRUE"/>
         <toolbarbutton image="Images/exit.gif" text="Exit Program" command="EXIT" enabled="TRUE"/>
         <toolbarbutton image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
     </toolbar>
@@ -50,24 +55,24 @@
             <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
         </menu>
         <menu name="Design" letter="D">
-            <menuitem image="Images/VXD.jpg" text="Configuration (XML)" command="notepad Config\vxd.xml" enabled="TRUE"/>
-            <menuitem image="Images/image.gif" text="Images" command="c:\Windows\explorer.exe Images\" enabled="TRUE"/>
+            <menuitem image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+            <menuitem image="Images/image.gif" text="Images" command="[FILEMANAGER] Images\" enabled="TRUE"/>
             <menuitem image="Images/ImageButton.gif" text="Visual Language Elements (XML)"
-                      command="notepad Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
+                      command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
             <menuitem image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
-                      command="notepad Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
+                      command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
             <menuitem image="Images/images.gif" text="Visual Language Images"
-                      command="c:\Windows\explorer.exe Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
+                      command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
             <menuitem image="Images/Translator.gif" text="Visual Language Translator (XSL)"
-                      command="notepad Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
+                      command="[EDITOR] Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
             <menuitem image="Images/ProgramXSL.gif" text="Visual Program Translator (XSL)"
-                      command="notepad Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
+                      command="[EDITOR] Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
             <menuitem image="Images/ProgramXSLT.gif" text="Visual Program Translation Output (XSLT)"
-                      command="notepad Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
+                      command="[EDITOR] Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
 	    <menuitem image="Images/VisualProgramFiles.gif" text="Visual Program Files (XML,XSL,XSLT,Images,etc.)"
-                      command="c:\Windows\explorer.exe Work\[PROJECT]\" enabled="TRUE"/>
+                      command="[FILEMANAGER] Work\[PROJECT]\" enabled="TRUE"/>
             <menuitem image="Images/images.gif" text="Visual Program Images"
-                      command="c:\Windows\explorer.exe Work\[PROJECT]\Images\" enabled="TRUE"/>
+                      command="[FILEMANAGER] Work\[PROJECT]\Images\" enabled="TRUE"/>
             <menuitem image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List"
                       command="..\XMLEditor\bin\Debug\XMLEditor.exe Config\vxd.xml" enabled="FALSE"/>
             <menuitem image="Images/newdtd.gif" text="New DTD (Language Structure)" command="NEWDTD" enabled="FALSE"/>

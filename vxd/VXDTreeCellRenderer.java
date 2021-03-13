@@ -22,7 +22,35 @@ public class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
 	try{
 	    DefaultTreeCellRenderer rcomp=(DefaultTreeCellRenderer)this;
 	    rcomp.setText(((Element)value).getAttribute("Name"));
-	    rcomp.setIcon(vxd.controller.GetIconButton(((Element)value).getAttribute("Name")).icon);
+	    Element element = (Element) value;
+	    ActionListener selectedIcon=null;
+	    boolean iconSet=false;
+	    try {
+		if (element != null) {
+		    selectedIcon=(ActionListener)vxd.controller.iconConnectionView.getDragIconByID(element.getAttribute("ID"));
+		    if (selectedIcon == null) {
+			selectedIcon=(ActionListener)vxd.controller.iconConnectionView.getIconConnectorByID(element.getAttribute("ID"));
+		    }
+		    if(selectedIcon!=null){
+			if(selectedIcon instanceof vxdIconConnector){
+			    ImageIcon icon=((vxdIconConnector)selectedIcon).iconb.icon;
+			    if(icon!=null){
+				rcomp.setIcon(icon);
+				iconSet=true;
+			    }
+			}else if(selectedIcon instanceof vxdDragIcon){
+			    ImageIcon icon=((vxdDragIcon)selectedIcon).icon;
+			    if(icon!=null){
+				rcomp.setIcon(icon);
+				iconSet=true;
+			    }
+			}
+		    }
+		}
+	    }catch(Exception iiex){;}
+	    if(!iconSet){
+		rcomp.setIcon(vxd.controller.GetIconButton(((Element)value).getTagName()).icon);
+	    }
 	}catch(Exception rex){}
 	if(sel)
 	    vxd.controller.statusText.setText(value.toString());

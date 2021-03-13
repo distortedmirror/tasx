@@ -22,7 +22,6 @@ public class vxdDragIcon extends JComponent
         ActionListener {
     public vxdJButton button;
     public Image image;
-    public ImageIcon icon;
     public Image overlay = null;
     public Element element;
     public Point dragStart = null;
@@ -31,13 +30,6 @@ public class vxdDragIcon extends JComponent
         this.setElement(e);
         this.button = button;
         this.image = button.dragimage;
-	Image smallimg = image.getScaledInstance(vxd.xiconsize, vxd.yiconsize, Image.SCALE_SMOOTH);
-	this.icon = new ImageIcon(smallimg);
-	try {
-	    MediaTracker mt = new MediaTracker(vxd.frame);
-	    mt.addImage(smallimg, 0);
-	    mt.waitForAll();
-	} catch (Exception exw) { ; }
         String ttip = button.name;
         if (e != null) {
             String tttip = e.getAttribute("Notes");

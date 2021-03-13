@@ -204,7 +204,6 @@
       </Phone>
       <Phone Order="0" Notes="Call NMSP at 505-425-6771 to Resolve Items Requested by Geico (Geico call and email from Patty enclosed detailing requirements) " ExternalLinkURL="https://mail.google.com/mail/u/0/#inbox/FMfcgxwLsczZsrwQTZfRkpDNHSPzJVzg" Name="NMSP" YPos="232" Value="" ID="632509893" Visible="TRUE" XPos="325" ShellCommand="&quot;C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe&quot; https://voice.google.com/u/0/voicemail?itemId=c.CihVS09LVElOVFlHSVJWSEdVUFVJUEtNT1lOSEdIWU9QVE5HWk5ZV0paEAE">
         <FlowData Order="0" Notes="Look for a place to put my RV" ExternalLinkURL="" Name="ParkingRV" YPos="161" Value="" ID="176416474" Visible="TRUE" XPos="226" ShellCommand="" />
-        <FlowData Order="0" Notes="Reedit and resend Declaration" ExternalLinkURL="" Name="Declaration" YPos="320" Value="" ID="1706307388" Visible="TRUE" XPos="433" ShellCommand="" />
       </Phone>
       <Supplier Order="0" Notes="Make arraingements for Towing my RV (ask geico if they will pay for the tow and authorize them to tow it)" ExternalLinkURL="" Name="TowRV" YPos="304" Value="" ID="941576998" Visible="TRUE" XPos="170" ShellCommand="" />
       <FlowData Order="0" Notes="Secure Auto Storage. Geico will only pay 3 days." ExternalLinkURL="" Name="AutoStorage" YPos="229" Value="" ID="657861104" Visible="TRUE" XPos="255" ShellCommand="" />
@@ -221,7 +220,6 @@
     <FlowDecision ID="-403655824" Name="Truck" Order="0" Value="" Visible="TRUE" XPos="92" YPos="164" Notes="Truck at Bensons Ranch">
       <AP Order="0" ExternalLinkURL="" Name="Payment" YPos="234" Value="500" ID="1189608506" Visible="TRUE" XPos="164" ShellCommand="" Notes="Finish Paying Off Truck" />
     </FlowDecision>
-    <FlowData ID="698616455" Name="Hair" Order="0" Value="" Visible="TRUE" XPos="466" YPos="165" Notes="Get a haircut." />
     <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="201" YPos="93" Notes="Psychairatry / Psychology / Consuling">
       <FlowData ID="-217541129" Name="Telemedicine" Order="0" Value="" Visible="TRUE" XPos="261" YPos="13" Notes="Get a Telemedicine Doctor" />
     </FlowData>
@@ -259,7 +257,6 @@
       <Mail Order="0" Notes="Acquire online PO Box" ExternalLinkURL="" Name="PoBxOnline" YPos="10" Value="" ID="2072777905" Visible="TRUE" XPos="386" ShellCommand="" />
     </ProductLine>
     <Packaging Order="0" Notes="Retrive Belongings from Van in Las Vegas, NM." ExternalLinkURL="" Name="VanItems" YPos="89" Value="" ID="1814352075" Visible="TRUE" XPos="459" ShellCommand="" />
-    <Car Order="0" Notes="Pickup Rental on Monday" ExternalLinkURL="https://www.google.com/maps/place/Enterprise+Rent-A-Car/@35.0799815,-106.6607149,12z/data=!4m8!1m2!2m1!1senterprise+rent+a+car+albuquerque!3m4!1s0x0:0xdba0fab767131cd7!8m2!3d35.0902064!4d-106.6448665" Name="Rental" YPos="169" Value="" ID="1701714430" Visible="TRUE" XPos="596" ShellCommand="" />
     <Mail Order="0" Notes="Get USPS PO Box in Albuquerque" ExternalLinkURL="" Name="UspsPOBox" YPos="90" Value="" ID="2029987749" Visible="TRUE" XPos="531" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="-177200004" Name="BBB" Order="0" Value="" Visible="TRUE" XPos="797" YPos="402" ShellCommand="browser https://www.bbb.com/" ExternalLinkURL="https://www.bbb.com/" Notes="Better Business Buereu">
@@ -364,12 +361,10 @@
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Pickup Van Items" YPos="-1" Value="" ID="1118635843" Visible="TRUE" DestID="1814352075" DestType="Packaging" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="Pickup SUV Belongings" ExternalLinkURL="" Name="PickupSUVBelongings" YPos="-1" Value="" ID="1637545619" Visible="TRUE" DestID="-1238275507" DestType="Product" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="Tow SUV" ExternalLinkURL="" Name="TowSUV" YPos="-1" Value="" ID="184981705" Visible="TRUE" DestID="734411905" DestType="Supplier" XPos="-1" SourceID="-947933398" ShellCommand="" />
-    <Connection Order="0" Notes="Get A Hair Cut" ExternalLinkURL="" Name="GetAHairCut" YPos="-1" Value="" ID="1074657677" Visible="TRUE" DestID="698616455" DestType="FlowData" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="Call Rays Auto Sales and Record Phone Call" ExternalLinkURL="" Name="CallRaysAndRecord" YPos="-1" Value="" ID="515921456" Visible="TRUE" DestID="805276070" DestType="Telcom" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Find Attorney" YPos="-1" Value="" ID="593158793" Visible="TRUE" DestID="1617175824" DestType="Phone" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Pay DPS" YPos="-1" Value="" ID="540115645" Visible="TRUE" DestID="1264910707" DestType="Payroll" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Follow RV Claim Steps" YPos="-1" Value="" ID="2051629763" Visible="TRUE" DestID="547765159" DestType="FlowData" XPos="-1" SourceID="-947933398" ShellCommand="" />
-    <Connection Order="0" Notes="" ExternalLinkURL="" Name="Pickup Rental" YPos="-1" Value="" ID="747727056" Visible="TRUE" DestID="1701714430" DestType="Car" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Fax File San Miguel Magistrate" YPos="-1" Value="" ID="394708608" Visible="TRUE" DestID="1425265970" DestType="FlowData" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Follow Identity Theft Plan" YPos="-1" Value="" ID="860339263" Visible="TRUE" DestID="99077215" DestType="FlowData" XPos="-1" SourceID="-947933398" ShellCommand="" />
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Ask Geico about Rental Reimbersement" YPos="-1" Value="" ID="146645240" Visible="TRUE" DestID="372942528" DestType="DealProbability" XPos="-1" SourceID="-947933398" ShellCommand="" />

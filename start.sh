@@ -1,4 +1,4 @@
-export DISPLAY=:0
+export DISPLAY=:1
 cd vxd
 echo 'Load Tasks (y/n)?'
 read load

@@ -19,6 +19,13 @@ public class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
 						  boolean sel, boolean expanded, boolean leaf, int row,
 						  boolean hasFocus) {
 	Component comp=super.getTreeCellRendererComponent(tree,value,sel,expanded,leaf,row,hasFocus);
-	return comp;
+	try{
+	    DefaultTreeCellRenderer rcomp=(DefaultTreeCellRenderer)this;
+	    rcomp.setText(((Element)value).getAttribute("Name"));
+	    rcomp.setIcon(vxd.controller.GetIconButton(((Element)value).getAttribute("Name")).icon);
+	}catch(Exception rex){}
+	if(sel)
+	    vxd.controller.statusText.setText(value.toString());
+	return this;
     }    
 }

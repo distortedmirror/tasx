@@ -1,2 +1,0 @@
-
-javac -g -cp .. *.java

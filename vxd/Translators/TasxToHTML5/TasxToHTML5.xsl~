@@ -15,5 +15,5 @@
 </xsl:template>
 <xsl:template match="*">
 &lt;img ID=&quot;<xsl:value-of select="@Name"/><xsl:value-of select="@ID"/>&quot; style=&quot;z-index:1;position:fixed;left:<xsl:value-of select="@XPos"/>px;width:50px;height:60px;top:<xsl:value-of select="@YPos"/>px;&quot; src=&quot;../../Languages/Tasx/Images/<xsl:value-of select="name(.)"/>.jpg&quot;/&gt;
-    &lt;img ID=&quot;<xsl:value-of select="@Name"/><xsl:value-of select="@ID"/>Inner&quot; style=&quot;z-index:10;position:fixed;left:<xsl:value-of select="@XPos"/>px;margin-left:12.5px;margin-top:15px;width:25px;height:30px;top:<xsl:value-of select="@YPos"/>px;&quot; src='./Images/<xsl:value-of select="@Name"/>.jpg' onerror='this.style.display="none";'/&gt;<xsl:apply-templates select="*"/></xsl:template>
+    &lt;img ID=&quot;<xsl:value-of select="@Name"/><xsl:value-of select="@ID"/>Inner&quot; style=&quot;z-index:10;position:fixed;left:<xsl:value-of select="@XPos"/>px;margin-left:12.5px;margin-top:15px;width:25px;height:30px;top:<xsl:value-of select="@YPos"/>px;&quot; src='./Images/<xsl:value-of select="@Name"/>.jpg'/&gt;<xsl:apply-templates select="*"/></xsl:template>
 </xsl:stylesheet>

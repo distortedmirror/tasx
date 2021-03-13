@@ -1,2 +1,0 @@
-Add any custom languages in this directory
-and edit ../vxd.xml to add the language.

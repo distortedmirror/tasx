@@ -33,13 +33,15 @@ public class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
 		    }
 		    if(selectedIcon!=null){
 			if(selectedIcon instanceof vxdIconConnector){
-			    ImageIcon icon=((vxdIconConnector)selectedIcon).iconb.icon;
+			    vxdDragIcon dragicon=((vxdIconConnector)selectedIcon).iconb;
+			    ImageIcon icon=dragicon.overlayicon==null?dragicon.icon:dragicon.overlayicon;
 			    if(icon!=null){
 				rcomp.setIcon(icon);
 				iconSet=true;
 			    }
 			}else if(selectedIcon instanceof vxdDragIcon){
-			    ImageIcon icon=((vxdDragIcon)selectedIcon).icon;
+			    vxdDragIcon dragicon=((vxdDragIcon)selectedIcon);
+			    ImageIcon icon=dragicon.overlayicon==null?dragicon.icon:dragicon.overlayicon;
 			    if(icon!=null){
 				rcomp.setIcon(icon);
 				iconSet=true;

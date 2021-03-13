@@ -23,6 +23,7 @@ public class vxdDragIcon extends JComponent
     public vxdJButton button;
     public Image image;
     public ImageIcon icon;
+    public ImageIcon overlayicon;
     public Image overlay = null;
     public Element element;
     public Point dragStart = null;
@@ -33,6 +34,7 @@ public class vxdDragIcon extends JComponent
         this.image = button.dragimage;
 	Image smallimg = image.getScaledInstance(vxd.xiconsize, vxd.yiconsize, Image.SCALE_SMOOTH);
 	this.icon = new ImageIcon(smallimg);
+	this.overlayicon = null;
 	try {
 	    MediaTracker mt = new MediaTracker(vxd.frame);
 	    mt.addImage(smallimg, 0);
@@ -78,7 +80,21 @@ public class vxdDragIcon extends JComponent
                 Image transparentimg = Toolkit.getDefaultToolkit().createImage(producer);
                 // Image smallimg = img.getScaledInstance(vxd.xdragsize,vxd.ydragsize, Image.SCALE_SMOOTH);
                 Image smallimg = transparentimg.getScaledInstance(vxd.xdragsize, vxd.ydragsize, Image.SCALE_SMOOTH);
+                MediaTracker mta = new MediaTracker(vxd.frame);
+                mta.addImage(smallimg, 0);
+                mta.waitForAll();
+                if ((mta.statusAll(false) & MediaTracker.ERRORED) != 0) {
+                    return;
+                }
                 this.overlay = smallimg;
+		Image overlayiconimg = smallimg.getScaledInstance(vxd.xiconsize, vxd.yiconsize, Image.SCALE_SMOOTH);
+                MediaTracker mtb = new MediaTracker(vxd.frame);
+                mtb.addImage(overlayiconimg, 0);
+                mtb.waitForAll();
+                if ((mtb.statusAll(false) & MediaTracker.ERRORED) != 0) {
+                    return;
+                }
+		this.overlayicon=new ImageIcon(overlayiconimg);
                 this.repaint();
             } catch (Exception emt) {
                 ;

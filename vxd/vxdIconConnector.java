@@ -80,7 +80,15 @@ public class vxdIconConnector implements ActionListener {
                 JOptionPane.showMessageDialog(vxd.frame, "Error: " + exc.getMessage());
                 exc.printStackTrace();
             }
-        } else if (e.getActionCommand().equals("DELETE")) {
+        } else if(e.getActionCommand().equals("SELECTCONNECTED")) {
+	    String destID=element.getAttribute("DestID");
+	    if(destID!=null){
+		vxdDragIcon selectedDragIcon = vxd.controller.iconConnectionView.getDragIconByID(destID);
+		Element connectedNode = selectedDragIcon.element;
+		vxd.controller.selectedNode = new TreePath(connectedNode);
+		vxd.controller.tree.setSelectionPath(new TreePath(connectedNode));
+	    }
+	} else if (e.getActionCommand().equals("DELETE")) {
             element.getParentNode().removeChild(element);
             vxd.controller.iconConnectionView.connectors.remove(this);
             vxd.controller.selectedNode = new TreePath(vxd.controller.project.programXML.getDocumentElement());

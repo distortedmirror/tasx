@@ -19,6 +19,7 @@ public class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
 						  boolean sel, boolean expanded, boolean leaf, int row,
 						  boolean hasFocus) {
 	Component comp=super.getTreeCellRendererComponent(tree,value,sel,expanded,leaf,row,hasFocus);
+	Element destelement=null;
 	try{
 	    DefaultTreeCellRenderer rcomp=(DefaultTreeCellRenderer)this;
 	    rcomp.setText(((Element)value).getAttribute("Name"));
@@ -32,16 +33,30 @@ public class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
 			selectedIcon=(ActionListener)vxd.controller.iconConnectionView.getIconConnectorByID(element.getAttribute("ID"));
 		    }
 		    if(selectedIcon!=null){
+			ImageIcon icon=null;
+			ImageIcon destImageIcon=null;
 			if(selectedIcon instanceof vxdIconConnector){
 			    vxdDragIcon dragicon=((vxdIconConnector)selectedIcon).iconb;
-			    ImageIcon icon=dragicon.overlayicon==null?dragicon.icon:dragicon.overlayicon;
-			    if(icon!=null){
+			    
+			    ActionListener destIcon=(ActionListener)((vxdIconConnector)selectedIcon).iconb;
+			    icon=dragicon.overlayicon==null?dragicon.icon:dragicon.overlayicon;
+			    if(destIcon!=null && destIcon instanceof vxdDragIcon){
+				destImageIcon=((vxdDragIcon)destIcon).overlayicon==null?((vxdDragIcon)destIcon).icon:((vxdDragIcon)destIcon).overlayicon;
+				destelement=((vxdDragIcon)destIcon).element;
+				rcomp.setText(((Element)value).getAttribute("Name")+" : "+((Element)((vxdDragIcon)destIcon).element).getAttribute("Name"));
+			    }else{
+								rcomp.setText(((Element)value).getAttribute("Name"));
+			    }
+			    if(destImageIcon!=null){
+				rcomp.setIcon(destImageIcon);
+				iconSet=true;
+			    }else if(icon!=null){
 				rcomp.setIcon(icon);
 				iconSet=true;
 			    }
 			}else if(selectedIcon instanceof vxdDragIcon){
 			    vxdDragIcon dragicon=((vxdDragIcon)selectedIcon);
-			    ImageIcon icon=dragicon.overlayicon==null?dragicon.icon:dragicon.overlayicon;
+			    icon=dragicon.overlayicon==null?dragicon.icon:dragicon.overlayicon;
 			    if(icon!=null){
 				rcomp.setIcon(icon);
 				iconSet=true;
@@ -54,8 +69,10 @@ public class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
 		rcomp.setIcon(vxd.controller.GetIconButton(((Element)value).getTagName()).icon);
 	    }
 	}catch(Exception rex){}
-	if(sel)
-	    vxd.controller.statusText.setText(value.toString());
+	if(sel){
+	    String desttext=destelement==null?"":destelement.toString();
+	    vxd.controller.statusText.setText(value.toString()+" : "+desttext);
+	}
 	return this;
     }    
 }

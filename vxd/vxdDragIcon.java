@@ -313,7 +313,9 @@ public class vxdDragIcon extends JComponent
                     vxd.controller.refreshXMLViews();
                 }
             });
-        } else {
+        } else if(e.getActionCommand().equals("SELECTCONNECTED")) {
+	    ;
+	} else {
             if (element.getAttribute(e.getActionCommand()).equals("TRUE"))
                 element.getAttributeNode(e.getActionCommand()).
                         setValue("FALSE");

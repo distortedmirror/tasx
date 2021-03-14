@@ -4,8 +4,8 @@
      ydragsize="60" savefiledir="Work/" deploymentdir="Deployments/"
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
-     browserpathWindows='"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"'
-     browserpathLinux="/usr/bin/firefox"
+     browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"'
+     browserLinux="/usr/bin/firefox"
      editorWindows="notepad"
      editorLinux="/usr/bin/xemacs"
      fileManagerWindows="c:\Windows\explorer.exe"

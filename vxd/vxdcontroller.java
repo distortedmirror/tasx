@@ -605,6 +605,10 @@ public class vxdcontroller {
                                 del.setActionCommand("DELETE");
                                 del.addActionListener(selectedIcon);
                                 popup.add(del);
+                                JMenuItem selectconnected = new JMenuItem("Select Connected Item");
+                                selectconnected.setActionCommand("SELECTCONNECTED");
+                                selectconnected.addActionListener(selectedIcon);
+                                popup.add(selectconnected);
                                 JMenuItem open = new JMenuItem("Open ShellCommand");
                                 open.setActionCommand("OPEN");
                                 open.addActionListener(selectedIcon);

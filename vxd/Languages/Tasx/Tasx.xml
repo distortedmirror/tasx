@@ -25,40 +25,36 @@
         <Icon Name="Sales" Image="Languages/Tasx/Images/Sales.jpg"/>
         <Icon Name="Shipping" Image="Languages/Tasx/Images/Shipping.jpg"/>
         <Icon Name="Treasurer" Image="Languages/Tasx/Images/Treasurer.jpg"/>
+	<Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
         <Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
+        <Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
+        <Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
+        <Icon Name="Warehouse" Image="Languages/Tasx/Images/Warehouse.jpg"/>
+        <Icon Name="Theater" Image="Languages/Tasx/Images/Theater.jpg"/>
         <Icon Name="Address" Image="Languages/Tasx/Images/Address.jpg"/>
+        <Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
+        <Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.jpg"/>
+        <Icon Name="Queue" Image="Languages/Tasx/Images/Queue.jpg"/>
         <Icon Name="Car" Image="Languages/Tasx/Images/Car.jpg"/>
         <Icon Name="Bus" Image="Languages/Tasx/Images/Bus.jpg"/>
+	<Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.jpg"/>
+        <Icon Name="Document" Image="Languages/Tasx/Images/Document.jpg"/>
+        <Icon Name="DocumentBook" Image="Languages/Tasx/Images/DocumentBook.jpg"/>
+        <Icon Name="DocumentCollection" Image="Languages/Tasx/Images/DocumentCollection.jpg"/>
+        <Icon Name="News" Image="Languages/Tasx/Images/News.jpg"/>
         <Icon Name="Mail" Image="Languages/Tasx/Images/Mail.jpg"/>
         <Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.jpg"/>
         <Icon Name="Finance" Image="Languages/Tasx/Images/Finance.jpg"/>
         <Icon Name="AP" Image="Languages/Tasx/Images/AP.jpg"/>
         <Icon Name="AR" Image="Languages/Tasx/Images/AR.jpg"/>
         <Icon Name="Forecast" Image="Languages/Tasx/Images/Forecast.jpg"/>
-        <Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.jpg"/>
-        <Icon Name="Document" Image="Languages/Tasx/Images/Document.jpg"/>
-        <Icon Name="DocumentBook" Image="Languages/Tasx/Images/DocumentBook.jpg"/>
-        <Icon Name="DocumentCollection" Image="Languages/Tasx/Images/DocumentCollection.jpg"/>
         <Icon Name="DealProbability" Image="Languages/Tasx/Images/DealProbability.jpg"/>
         <Icon Name="DealStatus" Image="Languages/Tasx/Images/DealStatus.jpg"/>
         <Icon Name="DealValue" Image="Languages/Tasx/Images/DealValue.jpg"/>
-        <Icon Name="News" Image="Languages/Tasx/Images/News.jpg"/>
-        <Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.jpg"/>
-        <Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
-        <Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
-        <Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
-        <Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
-
-        <Icon Name="Queue" Image="Languages/Tasx/Images/Queue.jpg"/>
-        <Icon Name="Theater" Image="Languages/Tasx/Images/Theater.jpg"/>
-        <Icon Name="Warehouse" Image="Languages/Tasx/Images/Warehouse.jpg"/>
         <Icon Name="Target" Image="Languages/Tasx/Images/Target.jpg"/>
-        <Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.jpg"/>
         <Icon Name="No" Image="Languages/Tasx/Images/No.jpg"/>
         <Icon Name="YesCheckMark" Image="Languages/Tasx/Images/YesCheckMark.jpg"/>
-
         <Icon Name="DiskStorage" Image="Languages/Tasx/Images/DiskStorage.jpg"/>
-
         <Icon Name="InformationSystems" Image="Languages/Tasx/Images/InformationSystems.jpg"/>
         <Icon Name="Interface" Image="Languages/Tasx/Images/Interface.jpg"/>
         <Icon Name="Inventory" Image="Languages/Tasx/Images/Inventory.jpg"/>
@@ -78,19 +74,11 @@
         <Icon Name="FlowStoredData" Image="Languages/Tasx/Images/FlowStoredData.jpg"/>
         <Icon Name="FlowTerminator" Image="Languages/Tasx/Images/FlowTerminator.jpg"/>
         <Icon Name="FlowTransport" Image="Languages/Tasx/Images/FlowTransport.jpg"/>
-
         <Icon Name="Component" Image="Languages/Tasx/Images/Component.jpg"/>
         <Icon Name="If" Image="Languages/Tasx/Images/If.jpg"/>
-
         <Icon Name="Else" Image="Languages/Tasx/Images/Else.jpg"/>
         <Icon Name="EndIf" Image="Languages/Tasx/Images/EndIf.jpg"/>
         <Icon Name="Timer" Image="Languages/Tasx/Images/Timer.jpg"/>
-        <Icon Name="View" Image="Languages/Tasx/Images/View.jpg"/>
-        <Icon Name="Workflow" Image="Languages/Tasx/Images/Workflow.jpg"/>
-        <Icon Name="Dashboard" Image="Languages/Tasx/Images/Dashboard.jpg"/>
-
-        <Icon Name="Form" Image="Languages/Tasx/Images/Form.jpg"/>
-
         <Icon Name="Database" Image="Languages/Tasx/Images/Database.jpg"/>
         <Icon Name="Datacolumn" Image="Languages/Tasx/Images/Datacolumn.jpg"/>
         <Icon Name="Datacommand" Image="Languages/Tasx/Images/Datacommand.jpg"/>
@@ -99,8 +87,12 @@
         <Icon Name="Dataset" Image="Languages/Tasx/Images/Dataset.jpg"/>
         <Icon Name="Datatable" Image="Languages/Tasx/Images/Datatable.jpg"/>
         <Icon Name="Dataview" Image="Languages/Tasx/Images/Dataview.jpg"/>
-
         <Icon Name="SQL" Image="Languages/Tasx/Images/SQL.jpg"/>
+        <Icon Name="Workflow" Image="Languages/Tasx/Images/Workflow.jpg"/>
+        <Icon Name="Dashboard" Image="Languages/Tasx/Images/Dashboard.jpg"/>
+        <Icon Name="Form" Image="Languages/Tasx/Images/Form.jpg"/>
+	<Icon Name="View" Image="Languages/Tasx/Images/View.jpg"/>
+        <Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.jpg"/>
         <Icon Name="AdRotator" Image="Languages/Tasx/Images/AdRotator.jpg"/>
         <Icon Name="Button" Image="Languages/Tasx/Images/Button.jpg"/>
         <Icon Name="Calendar" Image="Languages/Tasx/Images/Calendar.jpg"/>
@@ -108,13 +100,11 @@
         <Icon Name="CheckBox" Image="Languages/Tasx/Images/CheckBox.jpg"/>
         <Icon Name="CheckBoxList" Image="Languages/Tasx/Images/CheckBoxList.jpg"/>
         <Icon Name="ComboBox" Image="Languages/Tasx/Images/ComboBox.jpg"/>
-
         <Icon Name="CustomValidator" Image="Languages/Tasx/Images/CustomValidator.jpg"/>
         <Icon Name="RegularExpressionValidator" Image="Languages/Tasx/Images/RegularExpressionValidator.jpg"/>
         <Icon Name="Repeater" Image="Languages/Tasx/Images/Repeater.jpg"/>
         <Icon Name="Report" Image="Languages/Tasx/Images/Report.jpg"/>
         <Icon Name="RequiredFieldValidator" Image="Languages/Tasx/Images/RequiredFieldValidator.jpg"/>
-
         <Icon Name="FileUpload" Image="Languages/Tasx/Images/FileUpload.jpg"/>
         <Icon Name="DropDownList" Image="Languages/Tasx/Images/DropDownList.jpg"/>
         <Icon Name="CompareValidator" Image="Languages/Tasx/Images/CompareValidator.jpg"/>
@@ -135,7 +125,6 @@
         <Icon Name="RadioButton" Image="Languages/Tasx/Images/RadioButton.jpg"/>
         <Icon Name="RadioButtonList" Image="Languages/Tasx/Images/RadioButtonList.jpg"/>
         <Icon Name="RangeValidator" Image="Languages/Tasx/Images/RangeValidator.jpg"/>
-
         <Icon Name="Passowrd" Image="Languages/Tasx/Images/Passowrd.jpg"/>
         <Icon Name="Submit" Image="Languages/Tasx/Images/Submit.jpg"/>
         <Icon Name="Table" Image="Languages/Tasx/Images/Table.jpg"/>
@@ -146,7 +135,6 @@
         <Icon Name="WebService" Image="Languages/Tasx/Images/WebService.jpg"/>
         <Icon Name="Xml" Image="Languages/Tasx/Images/Xml.jpg"/>
         <Icon Name="XmlElement" Image="Languages/Tasx/Images/XmlElement.jpg"/>
-
     </Icons>
     <Connectors>
         <Connector Name="Connection" Image="Languages/Tasx/Images/Connection.jpg" Type="CONNECTION"/>

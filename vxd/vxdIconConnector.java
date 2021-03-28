@@ -75,7 +75,7 @@ public class vxdIconConnector implements ActionListener {
             try {
 		String os=System.getProperty("os.name").startsWith("Windows")?"Windows":"Linux";
                 java.lang.Runtime.getRuntime().exec(vxd.config.getDocumentElement()
-						    .getAttribute("browserpath" + os) + " " + element.getAttributeNode("ExternalLinkURL").getNodeValue());
+						    .getAttribute("browser" + os) + " " + element.getAttributeNode("ExternalLinkURL").getNodeValue());
             } catch (Exception exc) {
                 JOptionPane.showMessageDialog(vxd.frame, "Error: " + exc.getMessage());
                 exc.printStackTrace();

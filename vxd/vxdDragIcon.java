@@ -282,7 +282,7 @@ public class vxdDragIcon extends JComponent
         } else if (e.getActionCommand().equals("EXTERNALURL")) {
             try {
                 java.lang.Runtime.getRuntime().exec(vxd.config.getDocumentElement()
-						    .getAttribute("browserpath" + os) + " " + element.getAttributeNode("ExternalLinkURL").getNodeValue().
+						    .getAttribute("browser" + os) + " " + element.getAttributeNode("ExternalLinkURL").getNodeValue().
 						    replace("\\",separator).
 						    replace("\\",separator).
 						    replace("[LANGUAGE]", vxd.project.language).

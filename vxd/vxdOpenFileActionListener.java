@@ -75,10 +75,15 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    outcrypt.writeTo(fcrypt);
 	    outcrypt.flush();
 	    outcrypt.close();
-BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));   
-   String str;   
-   System.out.println("Decrypted Press Enter...");
-    str = obj.readLine();   
+	    BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));   
+	    String str;   
+	    if(!vxd.config.getDocumentElement().getAttribute("debugdecryption")
+	       .equals("false")){
+		System.out.println("Decrypted Press Enter...");
+		str = obj.readLine();
+	    }else{
+		System.out.println("Decrypted");
+	    }
 	    File f = new File(file.getAbsolutePath() + ".decrypted");
 	    file = f;
 	    Document loadeddoc = (Document) this.builder.parse(f);

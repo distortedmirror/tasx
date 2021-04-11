@@ -1,8 +1,32 @@
 package vxd;
 
+import org.w3c.dom.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.*;
+
+import javax.swing.*;
+import javax.swing.event.*;
+import javax.xml.parsers.*;
 import java.awt.event.*;
+import java.util.*;
+import java.io.*;
+
+import org.apache.crimson.tree.*;
+import org.apache.crimson.jaxp.*;
+import org.apache.crimson.parser.*;
+import org.apache.crimson.util.*;
+
+import vxd.*;
 
 public class vxdOpenFileActionListener implements ActionListener {
+    protected File selectedFile=null;
+    protected DocumentBuilder builder=null;
+    
+    public vxdOpenFileActionListener(File selectedFile,DocumentBuilder builder){
+	this.selectedFile=selectedFile;
+	this.builder=builder;
+    }
+    
     public void actionPerformed(ActionEvent e) {
 	boolean loadUnencrypted = true;
 	if (vxd.passwdtextField.getText() == null
@@ -13,14 +37,14 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    loadUnencrypted = false;
 	}
 	String passwdString = vxd.passwdtextField.getText();
-	topDialog.setVisible(false);
-	topDialog.dispose();
-	topDialog = null;
+	vxd.topDialog.setVisible(false);
+	vxd.topDialog.dispose();
+	vxd.topDialog = null;
 	try {
 	    Document tconfig = null;
 	    File file;
 	    if (vxd.mainLoadFile == null) {
-		file = fc.getSelectedFile();
+		file = this.selectedFile;
 	    } else {
 		file = new File(vxd.mainLoadFile);
 	    }
@@ -51,10 +75,13 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    outcrypt.writeTo(fcrypt);
 	    outcrypt.flush();
 	    outcrypt.close();
-
+BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));   
+   String str;   
+   System.out.println("Decrypted Press Enter...");
+    str = obj.readLine();   
 	    File f = new File(file.getAbsolutePath() + ".decrypted");
 	    file = f;
-	    Document loadeddoc = (Document) builder.parse(f);
+	    Document loadeddoc = (Document) this.builder.parse(f);
 	    Document xdoc = new XmlDocument();
 	    Element root = loadeddoc.getDocumentElement();
 	    Document programDoc = xdoc;
@@ -71,7 +98,7 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    String trans = root.getAttribute("Translator");
 
 	    for (int i = 0; i < vxd.translators.getLength(); ++i) {
-		Element node = (Element) translators.item(i);
+		Element node = (Element) vxd.translators.item(i);
 		String txt = node.getAttribute("name");
 		if (txt.equals(trans)) {
 		    try {
@@ -79,7 +106,7 @@ public class vxdOpenFileActionListener implements ActionListener {
 			    .getAttribute("configfile");
 
 
-			tconfig = builder
+			tconfig = this.builder
 			    .parse(new File(conf));
 
 			Element root1 = tconfig
@@ -93,10 +120,10 @@ public class vxdOpenFileActionListener implements ActionListener {
 			    .newInstance();
 			NodeList menus = root1
 			    .getElementsByTagName("menu");
-			addMenus(vxd.menuBar, menus, listener);
+			vxd.addMenus(vxd.menuBar, menus, listener);
 			NodeList images = root1
 			    .getElementsByTagName("toolbarbutton");
-			addToolButtons(vxd.toolBar, images,
+			vxd.addToolButtons(vxd.toolBar, images,
 				       listener);
 			trans = node.getAttribute("translator");
 		    } catch (Exception exx) {
@@ -106,14 +133,14 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    }
 
 	    for (int i = 0; i < vxd.platforms.getLength(); ++i) {
-		Element node = (Element) platforms.item(i);
+		Element node = (Element) vxd.platforms.item(i);
 		String txt = node.getAttribute("platform");
 		if (txt.equals(deploy)) {
 		    try {
 			String conf = node
 			    .getAttribute("configfile");
-
-			factory = DocumentBuilderFactory
+			// TODO: this recreation of a factory and builder inside a loop looks wasteful, fix later
+			DocumentBuilderFactory factory = DocumentBuilderFactory
 			    .newInstance();
 
 			builder = factory
@@ -133,10 +160,10 @@ public class vxdOpenFileActionListener implements ActionListener {
 			    .newInstance();
 			NodeList menus = root2
 			    .getElementsByTagName("menu");
-			addMenus(vxd.menuBar, menus, listener);
+			vxd.addMenus(vxd.menuBar, menus, listener);
 			NodeList images = root2
 			    .getElementsByTagName("toolbarbutton");
-			addToolButtons(vxd.toolBar, images,
+			vxd.addToolButtons(vxd.toolBar, images,
 				       listener);
 			deploy = node.getAttribute("platform");
 		    } catch (Exception exx) {

@@ -266,6 +266,9 @@ public class vxdDragIcon extends JComponent
                 java.lang.Runtime.getRuntime().exec(element.getAttributeNode("ShellCommand").getNodeValue().
 						    replace("\\",separator).
 						    replace("\\",separator).
+						    replace("\\",separator).
+						    replace("\\",separator).
+						    replace("\\",separator).
 						    replace("[LANGUAGE]", vxd.project.language).
 						    replace("[LANGUAGE]", vxd.project.language).
 						    replace("[TRANSLATOR]", vxd.project.translator).

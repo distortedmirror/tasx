@@ -43,6 +43,12 @@ public class vxdSaveFileActionListener implements ActionListener, Runnable {
 	}
     }
     public void run() {
+	File d;
+	try {
+ d = new File(vxd.SAVEFILEDIR + vxd.controller.project.name
+			 + "/");
+	    d.mkdir();
+	} catch(Exception mkdirex){;}
 	Component component=vxd.controller.iconConnectionView;
 	BufferedImage image = new BufferedImage(component.getWidth(), component.getHeight(), BufferedImage.TYPE_INT_ARGB);
 	Graphics g = image.getGraphics();
@@ -57,13 +63,9 @@ public class vxdSaveFileActionListener implements ActionListener, Runnable {
 	PrintWriter out;
 	ByteArrayOutputStream outcrypt;
 	File f;
-	File d;
 	FileInputStream rdr;
 	byte[] filedata = new byte[0];
 	try {
-	    d = new File(vxd.SAVEFILEDIR + vxd.controller.project.name
-			 + "/");
-	    d.mkdir();
 	    f = new File(vxd.SAVEFILEDIR + vxd.controller.project.name
 			 + "/" + vxd.controller.project.name + ".xml.unencrypted");
 	    if (f.exists()) {

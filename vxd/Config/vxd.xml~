@@ -9,7 +9,8 @@
      editorWindows="notepad"
      editorLinux="/usr/bin/xemacs"
      fileManagerWindows="c:\Windows\explorer.exe"
-     fileManagerLinux="/usr/bin/xfe">
+     fileManagerLinux="/usr/bin/xfe"
+  debugdecryption="false">
     <toolbar>
         <toolbarbutton image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List (XML,DTD,XSL)"
                        command="NEWDTD" enabled="FALSE"/>

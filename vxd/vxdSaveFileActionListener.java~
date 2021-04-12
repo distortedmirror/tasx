@@ -8,6 +8,12 @@ import javax.swing.*;
 import javax.swing.event.*;
 import javax.xml.parsers.*;
 import java.awt.event.*;
+import java.awt.*;
+import java.awt.image.*;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
 import java.util.*;
 import java.io.*;
 import java.text.*;
@@ -37,6 +43,17 @@ public class vxdSaveFileActionListener implements ActionListener, Runnable {
 	}
     }
     public void run() {
+	Component component=vxd.controller.iconConnectionView;
+	BufferedImage image = new BufferedImage(component.getWidth(), component.getHeight(), BufferedImage.TYPE_INT_ARGB);
+	Graphics g = image.getGraphics();
+	component.paint(g);
+	try {
+	    String filename=vxd.SAVEFILEDIR + vxd.controller.project.name +"/"+
+		vxd.controller.project.name+".png";
+	    ImageIO.write(image, "png", new File(filename));
+	} catch (IOException ex) {
+	    ;
+	}
 	PrintWriter out;
 	ByteArrayOutputStream outcrypt;
 	File f;

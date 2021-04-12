@@ -55,7 +55,7 @@ public class vxdIconConnector implements ActionListener {
 		String editor=vxd.config.getDocumentElement().getAttribute("editor"+os);
 		String fileManager=vxd.config.getDocumentElement().getAttribute("fileManager"+os);
                 java.lang.Runtime.getRuntime().exec(element.getAttributeNode("ShellCommand").getNodeValue().
-							replace("\\",separator).							replace("\\",separator).							replace("\\",separator).							replace("\\",separator).
+							replace("\\",separator).
 							replace("\\",separator).
 							replace("[LANGUAGE]", vxd.project.language).
 							replace("[LANGUAGE]", vxd.project.language).

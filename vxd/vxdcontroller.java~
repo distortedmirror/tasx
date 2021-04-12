@@ -66,6 +66,8 @@ public class vxdcontroller {
     }
 
     public void initvxdcontroller(vxdproject project, boolean initproj, Element rootElement, Document loadedDoc) {
+	vxd.controller=this;
+	vxd.project = project;
         this.project = project;
         this.selectedNode = null;
         this.loadedDoc = loadedDoc;
@@ -569,6 +571,7 @@ public class vxdcontroller {
         Element root = project.programXML.getDocumentElement();
         XMLTreeModel model = new XMLTreeModel(root);
         tree = new JVXDTree();
+	tree.setCellRenderer(new VXDTreeCellRenderer());
 	ToolTipManager.sharedInstance().registerComponent(tree);
         tree.setModel(model);
         tree.addTreeSelectionListener(model);
@@ -602,6 +605,10 @@ public class vxdcontroller {
                                 del.setActionCommand("DELETE");
                                 del.addActionListener(selectedIcon);
                                 popup.add(del);
+                                JMenuItem selectconnected = new JMenuItem("Select Connected Item");
+                                selectconnected.setActionCommand("SELECTCONNECTED");
+                                selectconnected.addActionListener(selectedIcon);
+                                popup.add(selectconnected);
                                 JMenuItem open = new JMenuItem("Open ShellCommand");
                                 open.setActionCommand("OPEN");
                                 open.addActionListener(selectedIcon);
@@ -634,8 +641,7 @@ public class vxdcontroller {
                     }
                 });
             }
-        } );
-        DefaultTreeCellRenderer rend = (DefaultTreeCellRenderer) tree.getCellRenderer();
+        } );    
         JScrollPane scroll = new JScrollPane(tree);
         treeView.add(scroll, BorderLayout.CENTER);
         vxd.frame.validate();
@@ -1206,8 +1212,6 @@ public class vxdcontroller {
         statusText.setLineWrap(true);
         statusText.setEditable(false);
         msgpan.setSize(vxd.XSIZE, statusText.getHeight());
-        JLabel statusBar = new JLabel("  Messages:  ");
-        msgpan.add(statusBar, BorderLayout.WEST);
         msgpan.add(new JScrollPane(statusText), BorderLayout.CENTER);
         vxd.frame.getContentPane().add(msgpan, "South");
         vxd.frame.getContentPane().validate();

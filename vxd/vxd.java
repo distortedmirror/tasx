@@ -38,6 +38,7 @@ public class vxd {
     public static String DEPLOYMENTDIR = null;
     public static Document config;
     public static String title;
+    public static String connectedIconsViewPNGBASE64HTMLDATAURL="";
     public static int XSIZE;
     public static int YSIZE;
     public static int iconsperrow;

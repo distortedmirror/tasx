@@ -962,7 +962,7 @@ public class vxdcontroller {
             StreamResult result = new StreamResult(stwr);
             trans.transform(source, result);
             stwr.flush();
-            project.setProgramXSLT(new String(stwr.getBuffer()));
+            project.setProgramXSLT((new String(stwr.getBuffer())).replace("Tasks.png",vxd.connectedIconsViewPNGBASE64HTMLDATAURL));
             xsltTextArea.setText(project.programXSLT);
             if (selectedNode != null) {
                 tree.removeTreeSelectionListener((TreeSelectionListener) tree.getModel());

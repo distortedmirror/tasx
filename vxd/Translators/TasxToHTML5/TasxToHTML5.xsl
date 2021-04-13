@@ -15,6 +15,7 @@
 &lt;/html&gt;
 </xsl:template>
 <xsl:template match="*">
-&lt;DIV ID=&quot;<xsl:value-of select="@Name"/><xsl:value-of select="@ID"/>&quot; style=&quot;z-index:1;position:fixed;left:<xsl:value-of select="@XPos"/>px;width:50px;height:60px;top:<xsl:value-of select="@YPos"/>px;<xsl:if test="@ExternalLinkURL!=''">cursor:pointer;</xsl:if>&quot; title=&quot;<xsl:value-of select="@Notes"/>&quot;<xsl:if test="@ExternalLinkURL!=''"> onclick=&quot;window.open('<xsl:value-of select="@ExternalLinkURL"/>', '_blank');&quot;</xsl:if>&gt;&lt;/DIV&gt;
+&lt;a <xsl:if test="@ExternalLinkURL!=''"> target=&quot;_blank&quot; href=&quot;<xsl:value-of select="@ExternalLinkURL"/>&quot;</xsl:if>&gt;
+&lt;DIV ID=&quot;<xsl:value-of select="@Name"/><xsl:value-of select="@ID"/>&quot; style=&quot;z-index:1;position:fixed;left:<xsl:value-of select="@XPos"/>px;width:50px;height:60px;top:<xsl:value-of select="@YPos"/>px;<xsl:if test="@ExternalLinkURL!=''">cursor:pointer;</xsl:if>&quot; title=&quot;<xsl:value-of select="@Notes"/>&quot;&gt;&lt;/DIV&gt;&lt;/a&gt;
  <xsl:apply-templates select="*"/></xsl:template>
 </xsl:stylesheet>

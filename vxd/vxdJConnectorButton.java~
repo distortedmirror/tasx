@@ -80,12 +80,8 @@ public class vxdJConnectorButton extends JComponent
                 !(droptarget instanceof vxdIconConnectionView) &&
                 droptarget instanceof vxdDragIcon) {
             Point pt = SwingUtilities.convertPoint(this, e.getPoint(), droptarget);
-	    this.addConnectorStart(pt, (vxdDragIcon) droptarget);
+            vxd.controller.addConnectorStart(this, pt.x, pt.y, (vxdDragIcon) droptarget);
         }
-    }
-
-    public void addConnectorStart(Point pt,vxdDragIcon droptarget){
-	vxd.controller.addConnectorStart(this, pt.x, pt.y, (vxdDragIcon) droptarget);
     }
 
     public void mouseMoved(MouseEvent e) {

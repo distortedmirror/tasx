@@ -99,7 +99,7 @@
         <translator name="TasxToHTML5" translator="TasxToHTML5"
                     configfile="Translators/TasxToHTML5/TasxToHTML5.xml"
                     definitionfile="Translators/TasxToHTML5/TasxToHTML5.xsl"
-                    supportedlanguages="Tasx" enabled="TRUE"/>
+                    supportedlanguages="Tasx,VisualWeb" enabled="TRUE"/>
     </translators>
     <platforms>
         <platform name="Linux Apache HTML"

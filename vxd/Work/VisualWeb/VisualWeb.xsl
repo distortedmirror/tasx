@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" indent="yes"/>
-<xsl:template match="/">&lt;!DOCTYPE html&gt;
+<xsl:template match="VisualWeb|Tasx">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
       &lt;style type=&quot;text/css&quot;&gt;

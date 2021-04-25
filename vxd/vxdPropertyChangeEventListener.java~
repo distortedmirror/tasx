@@ -21,14 +21,6 @@ public class vxdPropertyChangeEventListener
 
     public void itemStateChanged(ItemEvent e) {
         element.setAttribute(attribute, (String) e.getItem());
-	if(attribute.equals("Translator")){
-	    vxd.controller.project.translator = (String) e.getItem();	    
-	    SwingUtilities.invokeLater(new Runnable() {
-		    public void run() {
-			vxd.controller.initXSL();
-		    }
-		});
-	}
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 vxd.controller.refreshXMLViews();

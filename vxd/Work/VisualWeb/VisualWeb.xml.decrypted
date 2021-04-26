@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE VisualWeb
+[<!ELEMENT VisualWeb (HTML)*>
+<!ATTLIST VisualWeb Title CDATA "ProjectName"
+		    Package CDATA #REQUIRED
+		    URI CDATA #REQUIRED
+		    Port CDATA "80"
+		    Language CDATA #FIXED "VisualWeb"
+		    Translator (TasxToHTML5|VisualWebJavaServlet) "VisualWebJavaServlet"
+		    Platform CDATA #FIXED "Tomcat403"
+                    TextNote CDATA #IMPLIED
+                    Build (Debug|Release|Optimized) "Debug">
+<!ELEMENT HTML (Form|Text|Href|Image)*>
+<!ATTLIST HTML Name CDATA "HTML"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+               BeforeHtml CDATA "&lt;HTML&gt;&lt;BODY&gt;"
+	       AfterHtml CDATA "&lt;/BODY&gt;&lt;/HTML&gt;"
+	       HtmlEditor CDATA #IMPLIED>
+<!ELEMENT Form (Textbox|Text|Submit|Href|Connection|
+                ComboBox|CheckBox|TextArea|FileUpload|PasswordField|
+                RadioButton|Hidden|Image|ImageButton|Button|ListBox)*>
+<!ATTLIST Form Name CDATA "Form"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       Method (POST|GET) "POST" 
+               BeforeHtml CDATA "&lt;FORM Action=&quot;&quot; Method=&quot;@Method@&quot;&gt;" 
+	       AfterHtml CDATA "&lt;/FORM&gt;">
+<!ELEMENT Textbox (#PCDATA)>
+<!ATTLIST Textbox Name CDATA "Textbox"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;TEXT&quot; Value=&quot;@Value@&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT Text (#PCDATA)>
+<!ATTLIST Text Name CDATA "Text"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+               BeforeHtml CDATA "&lt;SPAN ID=&quot;@ID@&quot; &gt;@Value@" 
+	       AfterHtml CDATA "&lt;/SPAN&gt;"
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT Submit (#PCDATA)>
+<!ATTLIST Submit Name CDATA "Submit"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;SUBMIT&quot; Value=&quot;@Value@&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT Href (Connection|Text|Image)*>
+<!ATTLIST Href Name CDATA "Href"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+               BeforeHtml CDATA "&lt;A Href=&quot;&quot;&gt;@Value@"
+	       AfterHtml CDATA "&lt;/A&gt;"
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED
+	       QueryString CDATA #IMPLIED>
+<!ELEMENT Button (#PCDATA)>
+<!ATTLIST Button Name CDATA "Button"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;BUTTON&quot; Value=&quot;@Value@&quot;&gt;" 
+               AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT ListBox (#PCDATA)>
+<!ATTLIST ListBox Name CDATA "ListBox"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+               BeforeHtml CDATA "&lt;SELECT&gt;"
+	       AfterHtml CDATA "&lt;/SELECT&gt;"
+	       DisplayValues CDATA #IMPLIED
+               Values CDATA #IMPLIED
+	       DisplayVariable CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT ImageButton (#PCDATA)>
+<!ATTLIST ImageButton Name CDATA "ImageButton"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;IMAGE&quot; Value=&quot;@Value@&quot; Src=&quot;@Src@&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED
+               Src CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT Image (#PCDATA)>
+<!ATTLIST Image Name CDATA "Image"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+               BeforeHtml CDATA "&lt;IMG Src=&quot;@Src@&quot;&gt;"
+	       AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+               Src CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT Hidden (#PCDATA)>
+<!ATTLIST Hidden Name CDATA "Hidden"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;HIDDEN&quot; Value=&quot;@Value@&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT RadioButton (#PCDATA)>
+<!ATTLIST RadioButton Name CDATA "RadioButton"
+               ID CDATA #IMPLIED
+               Group CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;HIDDEN&quot; Value=&quot;@Value@&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT PasswordField (#PCDATA)>
+<!ATTLIST PasswordField Name CDATA "PasswordField"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;PASSWORD&quot; Value=&quot;@Value@&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+	       Visible (TRUE|FALSE) "TRUE"
+	       Variable CDATA #IMPLIED>
+<!ELEMENT FileUpload (#PCDATA)>
+<!ATTLIST FileUpload Name CDATA "FileUpload"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;FILE&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED>
+<!ELEMENT TextArea (#PCDATA)>
+<!ATTLIST TextArea Name CDATA "TextArea"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;TEXTAREA Name=&quot;@Name@&quot;&gt;@Value@"
+	       AfterHtml CDATA "&lt;/TEXTAREA&gt;"
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT CheckBox (#PCDATA)>
+<!ATTLIST CheckBox Name CDATA "CheckBox"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+	       BeforeHtml CDATA "&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;CHECKBOX&quot;&gt;" 
+	       AfterHtml CDATA #IMPLIED
+               Value CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT ComboBox (#PCDATA)>
+<!ATTLIST ComboBox Name CDATA "ComboBox"
+               ID CDATA #IMPLIED
+               XPos CDATA #IMPLIED
+               YPos CDATA #IMPLIED
+	       Order CDATA "0"
+	       Visible (TRUE|FALSE) "TRUE"
+               BeforeHtml CDATA "&lt;SELECT&gt;"
+	       AfterHtml CDATA "&lt;/SELECT&gt;"
+               Values CDATA #IMPLIED
+	       Variable CDATA #IMPLIED>
+<!ELEMENT Connection (#PCDATA)>
+<!ATTLIST Connection Name CDATA "Connection"
+                     ID CDATA #IMPLIED
+		     Order CDATA "0"
+		     SourceID CDATA #IMPLIED
+                     DestID CDATA #IMPLIED
+		     DestType (HTML) "HTML">
+]>
+
+<VisualWeb Language="VisualWeb" Translator="TasxToHTML5" TextNote="" Package="VisualWeb" Port="80" Title="VisualWeb" Build="Debug" URI="/VisualWeb" Platform="Tomcat403">
+  <HTML Order="0" HtmlEditor="" Name="HTML" YPos="32" AfterHtml="&lt;/BODY&gt;&lt;/HTML&gt;" ID="1926835828" Visible="TRUE" BeforeHtml="&lt;HTML&gt;&lt;BODY&gt;" XPos="33">
+    <Form Order="0" Method="POST" Name="Form" YPos="106" AfterHtml="&lt;/FORM&gt;" ID="1722747678" Visible="TRUE" BeforeHtml="&lt;FORM Action=&quot;&quot; Method=&quot;@Method@&quot;&gt;" XPos="138">
+      <Textbox Order="0" Variable="" Name="Textbox" YPos="180" Value="" AfterHtml="" ID="1040088321" Visible="TRUE" BeforeHtml="&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;TEXT&quot; Value=&quot;@Value@&quot;&gt;" XPos="224" />
+      <Textbox Order="0" Variable="" Name="Textbox" YPos="260" Value="" AfterHtml="" ID="705539366" Visible="TRUE" BeforeHtml="&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;TEXT&quot; Value=&quot;@Value@&quot;&gt;" XPos="227" />
+      <Submit Order="0" Variable="" Name="Submit" YPos="345" Value="" AfterHtml="" ID="1859647765" Visible="TRUE" BeforeHtml="&lt;INPUT Name=&quot;@Name@&quot; Type=&quot;SUBMIT&quot; Value=&quot;@Value@&quot;&gt;" XPos="250" />
+      <Connection ID="469576430" Name="Connection" DestID="1143349833" Order="0" SourceID="1722747678" DestType="HTML" />
+    </Form>
+  </HTML>
+  <HTML Order="0" HtmlEditor="" Name="HTML" YPos="32" AfterHtml="&lt;/BODY&gt;&lt;/HTML&gt;" ID="1143349833" Visible="TRUE" BeforeHtml="&lt;HTML&gt;&lt;BODY&gt;" XPos="351">
+    <Text Order="0" Variable="" Name="Text" YPos="104" Value="" AfterHtml="&lt;/SPAN&gt;" ID="1959281207" Visible="TRUE" BeforeHtml="&lt;SPAN ID=&quot;@ID@&quot; &gt;@Value@" XPos="420" />
+    <Image Order="0" Variable="" Src="" Name="Image" YPos="185" Value="" AfterHtml="" ID="1845627692" Visible="TRUE" BeforeHtml="&lt;IMG Src=&quot;@Src@&quot;&gt;" XPos="425" />
+    <Href Order="0" Variable="" Name="Href" QueryString="" YPos="103" Value="" AfterHtml="&lt;/A&gt;" ID="1140235341" Visible="TRUE" BeforeHtml="&lt;A Href=&quot;&quot;&gt;@Value@" XPos="419">
+      <Connection ID="1845471265" Name="Connection" DestID="1962130557" Order="0" SourceID="1140235341" DestType="HTML" />
+    </Href>
+  </HTML>
+  <HTML Order="0" HtmlEditor="" Name="Help" YPos="33" AfterHtml="&lt;/BODY&gt;&lt;/HTML&gt;" ID="1962130557" Visible="TRUE" BeforeHtml="&lt;HTML&gt;&lt;BODY&gt;" XPos="603" />
+</VisualWeb>
+

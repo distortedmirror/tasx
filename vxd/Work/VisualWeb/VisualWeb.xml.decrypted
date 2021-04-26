@@ -219,7 +219,7 @@
       <Connection ID="469576430" Name="Connection" DestID="1143349833" Order="0" SourceID="1722747678" DestType="HTML" />
     </Form>
   </HTML>
-  <HTML Order="0" HtmlEditor="" Name="HTML" YPos="32" AfterHtml="&lt;/BODY&gt;&lt;/HTML&gt;" ID="1143349833" Visible="TRUE" BeforeHtml="&lt;HTML&gt;&lt;BODY&gt;" XPos="351">
+  <HTML Order="0" HtmlEditor="" Name="HTML" YPos="32" AfterHtml="&lt;/BODY&gt;&lt;/HTML&gt;" ID="1143349833" Visible="TRUE" BeforeHtml="&lt;HTML&gt;&lt;BODY&gt;" XPos="343">
     <Text Order="0" Variable="" Name="Text" YPos="104" Value="" AfterHtml="&lt;/SPAN&gt;" ID="1959281207" Visible="TRUE" BeforeHtml="&lt;SPAN ID=&quot;@ID@&quot; &gt;@Value@" XPos="420" />
     <Image Order="0" Variable="" Src="" Name="Image" YPos="185" Value="" AfterHtml="" ID="1845627692" Visible="TRUE" BeforeHtml="&lt;IMG Src=&quot;@Src@&quot;&gt;" XPos="425" />
     <Href Order="0" Variable="" Name="Href" QueryString="" YPos="103" Value="" AfterHtml="&lt;/A&gt;" ID="1140235341" Visible="TRUE" BeforeHtml="&lt;A Href=&quot;&quot;&gt;@Value@" XPos="419">

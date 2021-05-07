@@ -138,7 +138,7 @@
     </Icons>
     <Connectors>
         <Connector Name="Connection" Image="Languages/Tasx/Images/Connection.jpg" Type="CONNECTION"/>
-        <Connector Name="Connections" Image="Languages/Tasx/Images/Connections.jpg" Type="REPARENT"/>
+        <Connector Name="Connections" Image="Languages/Tasx/Images/Connections.jpg" Type="AGGREGATION"/>
     </Connectors>
     <Editors>
         <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Accounting"

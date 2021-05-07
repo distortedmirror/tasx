@@ -63,7 +63,7 @@ public class DragConnectorGlassPane extends JComponent
 
                 public void run() {
                     vxd.controller.addConnectorDrop(source, (vxdDragIcon) droptarget,
-						    source.element.getAttribute("Type").equals("CONNECTION")?vxdIconConnector.CONNECTION:vxdIconConnector.AGGREGATION);
+                            vxdIconConnector.CONNECTION);
                 }
             };
             try {

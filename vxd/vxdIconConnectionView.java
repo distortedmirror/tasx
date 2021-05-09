@@ -124,6 +124,19 @@ public class vxdIconConnectionView extends JComponent
         return null;
     }
 
+  public vxdIconConnector getIconConnectorByDestIDAndType(String id,int type) {
+        Object[] iconnects = connectors.toArray();
+        for(int i=0; i < iconnects.length; ++i) {
+            if(iconnects[i]!=null && (iconnects[i] instanceof vxdIconConnector) &&
+                    ((vxdIconConnector)iconnects[i]).type==type && 
+                    ((vxdIconConnector)iconnects[i]).iconb.element!=null && ((vxdIconConnector)iconnects[i]).iconb.element.getAttribute("ID")==id) {
+                return (vxdIconConnector)iconnects[i];
+            }
+        }
+        return null;
+    }
+
+
     public vxdDragIcon getDragIconByID(String id) {
         Component[] cpts = new Component[getComponentCount()];
         cpts = getComponents();

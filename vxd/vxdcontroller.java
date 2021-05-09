@@ -814,7 +814,12 @@ public class vxdcontroller {
                 iconConnectionView.addConnector(new vxdIconConnector(source, target, type, el));
             }
         } else if (type == vxdIconConnector.AGGREGATION) {
-            iconConnectionView.addConnector(new vxdIconConnector(source, target, type));
+		vxdIconConnector conn=iconConnectionView.getIconConnectorByDestIDAndType(target.element.getAttribute("ID"),vxdIconConnector.AGGREGATION);
+           	if(conn!=null)
+			iconConnectionView.removeConnector(conn);
+		 iconConnectionView.addConnector(new vxdIconConnector(source, target, type));
+		target.element.getParentNode().removeChild(target.element);
+		source.element.appendChild(target.element);
         }
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

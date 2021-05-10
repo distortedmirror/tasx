@@ -11,6 +11,22 @@ public class DragConnectorGlassPane extends JComponent
     public int xendpos = 0;
     public int yendpos = 0;
     public vxdDragIcon source;
+     public vxdJConnectorButton connectorButton=null;
+
+    public DragConnectorGlassPane(vxdJConnectorButton button,vxdDragIcon source) {
+	this.source = source;
+        Point p = new Point(0, 0);
+        Dimension d = source.getSize();
+        p.x += d.width / 2;
+        p.y += d.height / 2;
+        Point fp = SwingUtilities.convertPoint(source, p, vxd.frame.getGlassPane());
+        xendpos = xstartpos = fp.x;
+        yendpos = ystartpos = fp.y;
+        setSize(vxd.XSIZE, vxd.YSIZE);
+        addMouseMotionListener(this);
+        addMouseListener(this);
+	this.connectorButton=button;
+    }
 
     public DragConnectorGlassPane(vxdDragIcon source) {
         this.source = source;
@@ -63,7 +79,9 @@ public class DragConnectorGlassPane extends JComponent
 
                 public void run() {
                     vxd.controller.addConnectorDrop(source, (vxdDragIcon) droptarget,
-						    source.element.getAttribute("Type").equals("CONNECTION")?vxdIconConnector.CONNECTION:vxdIconConnector.AGGREGATION);
+						   connectorButton.name.equals("Connection")?vxdIconConnector.CONNECTION:vxdIconConnector.AGGREGATION);
+	//					source.element.getAttribute("Type").equals("CONNECTION")?vxdIconConnector.CONNECTION:vxdIconConnector.AGGREGATION);
+
                 }
             };
             try {

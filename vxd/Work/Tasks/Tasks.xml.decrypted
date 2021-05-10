@@ -174,9 +174,7 @@
     <FlowData Order="0" Notes="Email a Patent and Copyright attorney to see where it leads" ExternalLinkURL="" Name="PatentCopyright" YPos="417" Value="" ID="1629114584" Visible="TRUE" XPos="249" ShellCommand="" />
   </FlowProcess>
   <FlowProcess ID="-970492872" Name="Monthly" Order="-4" Value="" Visible="TRUE" XPos="14" YPos="170" Notes="Monthly Tasks">
-    <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="445" YPos="175" Notes="Psychairatry / Psychology / Consuling">
-      <FlowData ID="-217541129" Name="Telemedicine" Order="0" Value="" Visible="TRUE" XPos="523" YPos="176" Notes="Get a Telemedicine Doctor" />
-    </FlowData>
+    <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="445" YPos="175" Notes="Psychairatry / Psychology / Consuling" />
     <FlowProcess Order="0" ExternalLinkURL="" Name="Rent" YPos="170" Value="" ID="-1847805042" Visible="TRUE" XPos="101" ShellCommand="java -cp C:\Users\mark\Downloads\openjdk-8u41-b04-windows-i586-14_jan_2020\java-se-8u41-ri\lib\tools.jar;.. vxd.vxd ./Work/RentFeb2021/RentFeb2021.xml" Notes="Pay Rent" />
     <AP Order="0" Notes="Pay Auto Insurance" ExternalLinkURL="" Name="AutoInsurance" YPos="176" Value="" ID="879940561" Visible="TRUE" XPos="233" ShellCommand="" />
     <Report Order="0" Notes="Audit Performed on 4 28 2021" ExternalLinkURL="" Name="Audit" YPos="175" Value="" ID="437048858" Visible="TRUE" XPos="378" ShellCommand="" />
@@ -197,7 +195,6 @@
     <FlowData Order="0" ExternalLinkURL="" Name="Shower" YPos="13" Value="" ID="1641100910" Visible="TRUE" XPos="143" ShellCommand="" Notes="Take a Shower" />
     <FlowData Order="0" ExternalLinkURL="" Name="Eat" YPos="13" Value="" ID="900820060" Visible="TRUE" XPos="204" ShellCommand="" Notes="Eat" />
   </FlowProcess>
-  <Mail Order="0" ExternalLinkURL="" Name="Recieve" YPos="543" Value="" ID="-270067465" Visible="TRUE" XPos="1213" ShellCommand="" Notes="Items I am to recieve that are pending reciept." />
   <CheckBoxList Order="0" ExternalLinkURL="" Name="BackLog" YPos="103" Value="" ID="-947933398" Visible="TRUE" XPos="739" ShellCommand="" Notes="Mark Brito&apos;s Task List">
     <Calendar Order="0" Notes="5-18 8am Complaint Cisco" ExternalLinkURL="" Name="5-18 8am" YPos="12" Value="" ID="345866744" Visible="TRUE" XPos="699" ShellCommand="" />
     <Calendar Order="0" Notes="5-19 11am Klearnow" ExternalLinkURL="" Name="5-19 11am" YPos="13" Value="" ID="1433241181" Visible="TRUE" XPos="781" ShellCommand="" />
@@ -212,18 +209,18 @@
     <AP Order="0" Notes="Get List of Home Rentals" ExternalLinkURL="" Name="HomeRental" YPos="141" Value="" ID="2092235914" Visible="TRUE" XPos="1159" ShellCommand="" />
     <Company Order="0" Notes="Go to Hospital for leg." ExternalLinkURL="" Name="Hospital" YPos="62" Value="" ID="1032069825" Visible="TRUE" XPos="1157" ShellCommand="" />
     <Calendar Order="0" Notes="Schedule mom for covid" ExternalLinkURL="" Name="COVID" YPos="56" Value="" ID="556929850" Visible="TRUE" XPos="995" ShellCommand="" />
-    <Finance Order="0" Notes="Get mom SNAP benefits" ExternalLinkURL="" Name="FoodCard" YPos="433" Value="" ID="664047180" Visible="TRUE" XPos="1101" ShellCommand="" />
+    <Finance Order="0" Notes="Get mom SNAP benefits" ExternalLinkURL="" Name="FoodCard" YPos="230" Value="" ID="664047180" Visible="TRUE" XPos="1073" ShellCommand="" />
     <DealValue Order="0" Notes="Get Wells Fargo online access" ExternalLinkURL="" Name="WellsOnline" YPos="227" Value="" ID="1934211650" Visible="TRUE" XPos="987" ShellCommand="" />
     <Connection Order="0" Notes="" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1077789871" Visible="TRUE" DestID="793175225" DestType="Finance" XPos="-1" SourceID="1118342344" ShellCommand="" />
   </Actor>
   <FlowOffPage Order="0" Notes="Losses (or soon to possibly lost)" ExternalLinkURL="" Name="Losses" YPos="671" Value="" ID="1063031189" Visible="TRUE" XPos="1019" ShellCommand="">
-    <Packaging Order="0" Notes="Retrieve items from SUV" ExternalLinkURL="" Name="SUVItems" YPos="765" Value="" ID="1623583392" Visible="TRUE" XPos="1024" ShellCommand="" />
+    <Packaging Order="0" Notes="Retrieve items from SUV" ExternalLinkURL="" Name="SUVItems" YPos="523" Value="" ID="1623583392" Visible="TRUE" XPos="944" ShellCommand="" />
     <Packaging Order="0" Notes="Retrieve items from RV" ExternalLinkURL="" Name="RVItems" YPos="576" Value="" ID="890218370" Visible="TRUE" XPos="1020" ShellCommand="" />
   </FlowOffPage>
   <FlowOffPage Order="0" Notes="Blocked Items" ExternalLinkURL="" Name="Blocked" YPos="673" Value="" ID="1524619149" Visible="TRUE" XPos="1090" ShellCommand="">
-    <Finance Order="0" ExternalLinkURL="" Name="TitleSUV" YPos="579" Value="" ID="1581092948" Visible="TRUE" XPos="1102" ShellCommand="" Notes="SUV Title" />
     <Finance Order="0" Notes="Contact Bill Jordan at 505 767-6227 when we have an address to mail a title." ExternalLinkURL="" Name="TitleForEquinox" YPos="509" Value="" ID="2043738958" Visible="TRUE" XPos="1104" ShellCommand="" />
     <Finance Order="0" Notes="Licensing, registration titling" ExternalLinkURL="" Name="DMV" YPos="761" Value="" ID="939426434" Visible="TRUE" XPos="1106" ShellCommand="" />
+    <Finance Order="0" Notes="Get title for acadia" ExternalLinkURL="" Name="TitleSUV" YPos="585" Value="" ID="1507635020" Visible="TRUE" XPos="1144" ShellCommand="" />
   </FlowOffPage>
   <FlowOffPage Order="0" Notes="Archived Items" ExternalLinkURL="" Name="Archive" YPos="672" Value="" ID="1501511332" Visible="TRUE" XPos="1164" ShellCommand="" />
   <FlowOffPage Order="0" Notes="VXD Bugs and Feature Requests" ExternalLinkURL="" Name="VXD" YPos="671" Value="" ID="424401137" Visible="TRUE" XPos="1223" ShellCommand="java -cp .. vxd.vxd Work\VXDTasks\VXDTasks.xml" />
@@ -267,10 +264,11 @@
       <FlowData Order="0" ExternalLinkURL="" Name="UnemploymentInsurance" YPos="521" Value="" ID="-1752280962" Visible="TRUE" XPos="834" ShellCommand="" Notes="File for UI Extended benefits" />
     </FlowProcess>
     <Finance Order="0" Notes="Get Birth Certificate" ExternalLinkURL="" Name="BirthCert" YPos="829" Value="" ID="1678955476" Visible="TRUE" XPos="803" ShellCommand="" />
+    <FlowData ID="-217541129" Name="Telemedicine" Order="0" Value="" Visible="TRUE" XPos="563" YPos="475" Notes="Get a Telemedicine Doctor" />
   </RadioButtonList>
   <DealValue Order="0" Notes="Add up budget" ExternalLinkURL="" Name="$145" YPos="793" Value="" ID="2004352608" Visible="TRUE" XPos="110" ShellCommand="">
     <AP Order="0" Notes="Laptop Adapter" ExternalLinkURL="" Name="LaptopAdapter" YPos="837" Value="65" ID="1832154817" Visible="TRUE" XPos="24" ShellCommand="" />
-    <AP Order="0" Notes="Food Cigs Drink" ExternalLinkURL="" Name="FoodDrinkCigs" YPos="775" Value="85" ID="861343078" Visible="TRUE" XPos="16" ShellCommand="" />
+    <AP Order="0" Notes="Food Cigs Drink" ExternalLinkURL="" Name="FoodDrinkCigs" YPos="764" Value="85" ID="861343078" Visible="TRUE" XPos="22" ShellCommand="" />
   </DealValue>
 </Tasx>
 

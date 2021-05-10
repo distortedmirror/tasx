@@ -753,7 +753,7 @@ public class vxdcontroller {
     }
 
     public void addConnectorStart(vxdJConnectorButton icon, int x, int y, vxdDragIcon target) {
-        vxd.frame.setGlassPane(new DragConnectorGlassPane(target));
+        vxd.frame.setGlassPane(new DragConnectorGlassPane(icon,target));
         vxd.frame.getGlassPane().setVisible(true);
     }
 

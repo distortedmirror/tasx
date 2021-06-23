@@ -87,6 +87,7 @@ public class vxdIconConnectionView extends JComponent
                 g.drawLine(pb.x, pb.y, p2.x, p2.y);
             }
         }
+	
     }
 
     public void update(Graphics g) {

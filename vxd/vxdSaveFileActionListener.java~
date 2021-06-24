@@ -57,6 +57,14 @@ public class vxdSaveFileActionListener implements ActionListener, Runnable {
 	    String filename=vxd.SAVEFILEDIR + vxd.controller.project.name +"/"+
 		vxd.controller.project.name+".png";
 	    ImageIO.write(image, "png", new File(filename));
+ByteArrayOutputStream baos = new ByteArrayOutputStream();
+try {
+    ImageIO.write(image, "png", baos);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+vxd.connectedIconsViewPNGBASE64HTMLDATAURL = "data:image/png;base64," +
+    java.util.Base64.getEncoder().encodeToString(baos.toByteArray());
 	} catch (IOException ex) {
 	    ;
 	}

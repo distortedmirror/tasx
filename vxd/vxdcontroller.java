@@ -161,7 +161,7 @@ public class vxdcontroller {
             }
         }
         SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
+            public void run(){
                 iconConnectionView.validateIconsAndConnectors();
                 vxd.controller.refreshXMLViews();
             }

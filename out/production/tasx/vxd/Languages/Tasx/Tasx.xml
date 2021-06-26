@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Language SYSTEM "Language.dtd">
+<Language Name="Tasx" StructureDTD="Language.dtd">
+    <Icons>
+        <Icon Name="Accounting" Image="Languages/Tasx/Images/Accounting.jpg"/>
+        <Icon Name="Actor" Image="Languages/Tasx/Images/Actor.jpg"/>
+        <Icon Name="BusinessUnit" Image="Languages/Tasx/Images/BusinessUnit.jpg"/>
+        <Icon Name="Commit" Image="Languages/Tasx/Images/Commit.jpg"/>
+        <Icon Name="CustomerService" Image="Languages/Tasx/Images/CustomerService.jpg"/>
+        <Icon Name="Delivery" Image="Languages/Tasx/Images/Delivery.jpg"/>
+        <Icon Name="Deal" Image="Languages/Tasx/Images/Deal.jpg"/>
+        <Icon Name="Management" Image="Languages/Tasx/Images/Management.jpg"/>
+        <Icon Name="Manufacturing" Image="Languages/Tasx/Images/Manufacturing.jpg"/>
+        <Icon Name="Marketing" Image="Languages/Tasx/Images/Marketing.jpg"/>
+        <Icon Name="Packaging" Image="Languages/Tasx/Images/Packaging.jpg"/>
+        <Icon Name="Group" Image="Languages/Tasx/Images/Group.jpg"/>
+        <Icon Name="Person" Image="Languages/Tasx/Images/Person.jpg"/>
+        <Icon Name="Personnel" Image="Languages/Tasx/Images/Personnel.jpg"/>
+        <Icon Name="Projection" Image="Languages/Tasx/Images/Projection.jpg"/>
+        <Icon Name="Purchasing" Image="Languages/Tasx/Images/Purchasing.jpg"/>
+        <Icon Name="QA" Image="Languages/Tasx/Images/QA.jpg"/>
+        <Icon Name="RandD" Image="Languages/Tasx/Images/RandD.jpg"/>
+        <Icon Name="Receiving" Image="Languages/Tasx/Images/Receiving.jpg"/>
+        <Icon Name="RunRate" Image="Languages/Tasx/Images/RunRate.jpg"/>
+        <Icon Name="Sales" Image="Languages/Tasx/Images/Sales.jpg"/>
+        <Icon Name="Shipping" Image="Languages/Tasx/Images/Shipping.jpg"/>
+        <Icon Name="Treasurer" Image="Languages/Tasx/Images/Treasurer.jpg"/>
+	<Icon Name="Product" Image="Languages/Tasx/Images/Product.jpg"/>
+        <Icon Name="Company" Image="Languages/Tasx/Images/Company.jpg"/>
+        <Icon Name="ProductFamily" Image="Languages/Tasx/Images/ProductFamily.jpg"/>
+        <Icon Name="ProductLine" Image="Languages/Tasx/Images/ProductLine.jpg"/>
+        <Icon Name="Warehouse" Image="Languages/Tasx/Images/Warehouse.jpg"/>
+        <Icon Name="Theater" Image="Languages/Tasx/Images/Theater.jpg"/>
+        <Icon Name="Address" Image="Languages/Tasx/Images/Address.jpg"/>
+        <Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
+        <Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.jpg"/>
+        <Icon Name="Queue" Image="Languages/Tasx/Images/Queue.jpg"/>
+        <Icon Name="Car" Image="Languages/Tasx/Images/Car.jpg"/>
+        <Icon Name="Bus" Image="Languages/Tasx/Images/Bus.jpg"/>
+	<Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.jpg"/>
+        <Icon Name="Document" Image="Languages/Tasx/Images/Document.jpg"/>
+        <Icon Name="DocumentBook" Image="Languages/Tasx/Images/DocumentBook.jpg"/>
+        <Icon Name="DocumentCollection" Image="Languages/Tasx/Images/DocumentCollection.jpg"/>
+        <Icon Name="News" Image="Languages/Tasx/Images/News.jpg"/>
+        <Icon Name="Mail" Image="Languages/Tasx/Images/Mail.jpg"/>
+        <Icon Name="Payroll" Image="Languages/Tasx/Images/Payroll.jpg"/>
+        <Icon Name="Finance" Image="Languages/Tasx/Images/Finance.jpg"/>
+        <Icon Name="AP" Image="Languages/Tasx/Images/AP.jpg"/>
+        <Icon Name="AR" Image="Languages/Tasx/Images/AR.jpg"/>
+        <Icon Name="Forecast" Image="Languages/Tasx/Images/Forecast.jpg"/>
+        <Icon Name="DealProbability" Image="Languages/Tasx/Images/DealProbability.jpg"/>
+        <Icon Name="DealStatus" Image="Languages/Tasx/Images/DealStatus.jpg"/>
+        <Icon Name="DealValue" Image="Languages/Tasx/Images/DealValue.jpg"/>
+        <Icon Name="Target" Image="Languages/Tasx/Images/Target.jpg"/>
+        <Icon Name="No" Image="Languages/Tasx/Images/No.jpg"/>
+        <Icon Name="YesCheckMark" Image="Languages/Tasx/Images/YesCheckMark.jpg"/>
+        <Icon Name="DiskStorage" Image="Languages/Tasx/Images/DiskStorage.jpg"/>
+        <Icon Name="InformationSystems" Image="Languages/Tasx/Images/InformationSystems.jpg"/>
+        <Icon Name="Interface" Image="Languages/Tasx/Images/Interface.jpg"/>
+        <Icon Name="Inventory" Image="Languages/Tasx/Images/Inventory.jpg"/>
+        <Icon Name="Status" Image="Languages/Tasx/Images/Status.jpg"/>
+        <Icon Name="Stop" Image="Languages/Tasx/Images/Stop.jpg"/>
+        <Icon Name="Supplier" Image="Languages/Tasx/Images/Supplier.jpg"/>
+        <Icon Name="Globe" Image="Languages/Tasx/Images/Globe.jpg"/>
+        <Icon Name="FiscalPeriod" Image="Languages/Tasx/Images/FiscalPeriod.jpg"/>
+        <Icon Name="FlowData" Image="Languages/Tasx/Images/FlowData.jpg"/>
+        <Icon Name="FlowDecision" Image="Languages/Tasx/Images/FlowDecision.jpg"/>
+        <Icon Name="FlowDocument" Image="Languages/Tasx/Images/FlowDocument.jpg"/>
+        <Icon Name="FlowMultiDecision" Image="Languages/Tasx/Images/FlowMultiDecision.jpg"/>
+        <Icon Name="FlowOffPage" Image="Languages/Tasx/Images/FlowOffPage.jpg"/>
+        <Icon Name="FlowOnPage" Image="Languages/Tasx/Images/FlowOnPage.jpg"/>
+        <Icon Name="FlowProcess" Image="Languages/Tasx/Images/FlowProcess.jpg"/>
+        <Icon Name="FlowReturn" Image="Languages/Tasx/Images/FlowReturn.jpg"/>
+        <Icon Name="FlowStoredData" Image="Languages/Tasx/Images/FlowStoredData.jpg"/>
+        <Icon Name="FlowTerminator" Image="Languages/Tasx/Images/FlowTerminator.jpg"/>
+        <Icon Name="FlowTransport" Image="Languages/Tasx/Images/FlowTransport.jpg"/>
+        <Icon Name="Component" Image="Languages/Tasx/Images/Component.jpg"/>
+        <Icon Name="If" Image="Languages/Tasx/Images/If.jpg"/>
+        <Icon Name="Else" Image="Languages/Tasx/Images/Else.jpg"/>
+        <Icon Name="EndIf" Image="Languages/Tasx/Images/EndIf.jpg"/>
+        <Icon Name="Timer" Image="Languages/Tasx/Images/Timer.jpg"/>
+        <Icon Name="Database" Image="Languages/Tasx/Images/Database.jpg"/>
+        <Icon Name="Datacolumn" Image="Languages/Tasx/Images/Datacolumn.jpg"/>
+        <Icon Name="Datacommand" Image="Languages/Tasx/Images/Datacommand.jpg"/>
+        <Icon Name="DataGrid" Image="Languages/Tasx/Images/DataGrid.jpg"/>
+        <Icon Name="DataList" Image="Languages/Tasx/Images/DataList.jpg"/>
+        <Icon Name="Dataset" Image="Languages/Tasx/Images/Dataset.jpg"/>
+        <Icon Name="Datatable" Image="Languages/Tasx/Images/Datatable.jpg"/>
+        <Icon Name="Dataview" Image="Languages/Tasx/Images/Dataview.jpg"/>
+        <Icon Name="SQL" Image="Languages/Tasx/Images/SQL.jpg"/>
+        <Icon Name="Workflow" Image="Languages/Tasx/Images/Workflow.jpg"/>
+        <Icon Name="Dashboard" Image="Languages/Tasx/Images/Dashboard.jpg"/>
+        <Icon Name="Form" Image="Languages/Tasx/Images/Form.jpg"/>
+	<Icon Name="View" Image="Languages/Tasx/Images/View.jpg"/>
+        <Icon Name="PlaceHolder" Image="Languages/Tasx/Images/PlaceHolder.jpg"/>
+        <Icon Name="AdRotator" Image="Languages/Tasx/Images/AdRotator.jpg"/>
+        <Icon Name="Button" Image="Languages/Tasx/Images/Button.jpg"/>
+        <Icon Name="Calendar" Image="Languages/Tasx/Images/Calendar.jpg"/>
+        <Icon Name="Chart" Image="Languages/Tasx/Images/Chart.jpg"/>
+        <Icon Name="CheckBox" Image="Languages/Tasx/Images/CheckBox.jpg"/>
+        <Icon Name="CheckBoxList" Image="Languages/Tasx/Images/CheckBoxList.jpg"/>
+        <Icon Name="ComboBox" Image="Languages/Tasx/Images/ComboBox.jpg"/>
+        <Icon Name="CustomValidator" Image="Languages/Tasx/Images/CustomValidator.jpg"/>
+        <Icon Name="RegularExpressionValidator" Image="Languages/Tasx/Images/RegularExpressionValidator.jpg"/>
+        <Icon Name="Repeater" Image="Languages/Tasx/Images/Repeater.jpg"/>
+        <Icon Name="Report" Image="Languages/Tasx/Images/Report.jpg"/>
+        <Icon Name="RequiredFieldValidator" Image="Languages/Tasx/Images/RequiredFieldValidator.jpg"/>
+        <Icon Name="FileUpload" Image="Languages/Tasx/Images/FileUpload.jpg"/>
+        <Icon Name="DropDownList" Image="Languages/Tasx/Images/DropDownList.jpg"/>
+        <Icon Name="CompareValidator" Image="Languages/Tasx/Images/CompareValidator.jpg"/>
+        <Icon Name="Control" Image="Languages/Tasx/Images/Control.jpg"/>
+        <Icon Name="Hidden" Image="Languages/Tasx/Images/Hidden.jpg"/>
+        <Icon Name="Href" Image="Languages/Tasx/Images/Href.jpg"/>
+        <Icon Name="HTML" Image="Languages/Tasx/Images/HTML.jpg"/>
+        <Icon Name="HTTP" Image="Languages/Tasx/Images/HTTP.jpg"/>
+        <Icon Name="HyperLink" Image="Languages/Tasx/Images/HyperLink.jpg"/>
+        <Icon Name="Image" Image="Languages/Tasx/Images/Image.jpg"/>
+        <Icon Name="ImageButton" Image="Languages/Tasx/Images/ImageButton.jpg"/>
+        <Icon Name="images" Image="Languages/Tasx/Images/images.jpg"/>
+        <Icon Name="Label" Image="Languages/Tasx/Images/Label.jpg"/>
+        <Icon Name="LinkButton" Image="Languages/Tasx/Images/LinkButton.jpg"/>
+        <Icon Name="ListBox" Image="Languages/Tasx/Images/ListBox.jpg"/>
+        <Icon Name="Literal" Image="Languages/Tasx/Images/Literal.jpg"/>
+        <Icon Name="Panel" Image="Languages/Tasx/Images/Panel.jpg"/>
+        <Icon Name="RadioButton" Image="Languages/Tasx/Images/RadioButton.jpg"/>
+        <Icon Name="RadioButtonList" Image="Languages/Tasx/Images/RadioButtonList.jpg"/>
+        <Icon Name="RangeValidator" Image="Languages/Tasx/Images/RangeValidator.jpg"/>
+        <Icon Name="Passowrd" Image="Languages/Tasx/Images/Passowrd.jpg"/>
+        <Icon Name="Submit" Image="Languages/Tasx/Images/Submit.jpg"/>
+        <Icon Name="Table" Image="Languages/Tasx/Images/Table.jpg"/>
+        <Icon Name="Text" Image="Languages/Tasx/Images/Text.jpg"/>
+        <Icon Name="TextArea" Image="Languages/Tasx/Images/TextArea.jpg"/>
+        <Icon Name="TextBox" Image="Languages/Tasx/Images/TextBox.jpg"/>
+        <Icon Name="ValidationSummary" Image="Languages/Tasx/Images/ValidationSummary.jpg"/>
+        <Icon Name="WebService" Image="Languages/Tasx/Images/WebService.jpg"/>
+        <Icon Name="Xml" Image="Languages/Tasx/Images/Xml.jpg"/>
+        <Icon Name="XmlElement" Image="Languages/Tasx/Images/XmlElement.jpg"/>
+    </Icons>
+    <Connectors>
+        <Connector Name="Connection" Image="Languages/Tasx/Images/Connection.jpg" Type="CONNECTION"/>
+        <Connector Name="Connections" Image="Languages/Tasx/Images/Connections.jpg" Type="AGGREGATION"/>
+    </Connectors>
+    <Editors>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Accounting"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Actor"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="AdRotator"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="AP"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="AR"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Bookings"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="BusinessUnit"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Button"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Calendar"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Chart"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="CheckBox"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="CheckBoxList"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ComboBox"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Commit"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Company"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="CompareValidator" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Component"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Control"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="CustomerService" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="CustomValidator" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Dashboard"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Database"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Datacolumn"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Datacommand"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DataGrid"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DataList"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Dataset"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Datatable"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Dataview"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Deal"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="DealProbability" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DealStatus"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DealValue"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="De-bookings"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DeBookings"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Delivery"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DiskStorage"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Distributor"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Document"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DocumentBook"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="DocumentCollection" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="DropDownList"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Else"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="EndIf"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FileUpload"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Finance"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FiscalPeriod"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowData"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowDecision"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowDocument"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="FlowMultiDecision" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowOffPage"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowOnPage"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowProcess"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowReturn"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowStoredData"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowTerminator"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="FlowTransport"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Forecast"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Form"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Globe"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Group"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Hidden"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Href"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="HTML"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="HTTP"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="HyperLink"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="If"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Image"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ImageButton"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="images"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="InformationSystems" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Interface"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Inventory"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Label"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="LinkButton"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ListBox"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Literal"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Mail"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Management"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Manufacturing"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Marketing"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="News"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="No"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Packaging"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Panel"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Passowrd"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Payroll"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Person"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Personnel"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="PlaceHolder"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Phone"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Product"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ProductFamily"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="ProductLine"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Projection"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Purchasing"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="QA"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Queue"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="RadioButton"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="RadioButtonList" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="RandD"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="RangeValidator"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Receiving"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="RegularExpressionValidator" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Repeater"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Report"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="RequiredFieldValidator" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="RunRate"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Sales"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Shipping"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="SQL"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Status"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Stop"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Submit"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Supplier"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Table"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Target"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Telcom"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Text"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="TextArea"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="TextBox"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Theater"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Timer"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Treasurer"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector"
+                ElementName="ValidationSummary" AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="View"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Warehouse"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="WebService"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Workflow"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Xml"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="XmlElement"
+                AttributeName="Variable" Type="PANEL"/>
+        <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="YesCheckMark"
+                AttributeName="Variable" Type="PANEL"/>
+
+    </Editors>
+</Language>

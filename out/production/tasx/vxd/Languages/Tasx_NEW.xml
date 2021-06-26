@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language xmlns="http://tempuri.org/Tasx.xsd" Name="Tasx" StructureDTD="Tasx">
+ <Icons>
+<Icon/>
+ </Icons>
+</Icons>
+ <Connectors>
+   <Connector Name="Connection" Image="Languages/Tasx/Images/Connection.gif" Type="CONNECTION"/>
+   <Connector Name="Connections" Image="Languages/Tasx/Images/Connections.gif" Type="CONNECTION"/>
+ </Connectors>
+ <Editors>
+  <Editor/>
+</Editors>
+</Language>

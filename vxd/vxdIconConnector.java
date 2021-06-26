@@ -5,6 +5,7 @@ import org.w3c.dom.*;
 import javax.swing.*;
 import javax.swing.tree.TreePath;
 import java.awt.event.*;
+import java.util.Vector;
 
 import vxd.vxd;
 import vxd.vxdDragIcon;
@@ -83,10 +84,8 @@ public class vxdIconConnector implements ActionListener {
         } else if(e.getActionCommand().equals("SELECTCONNECTED")) {
 	    String destID=element.getAttribute("DestID");
 	    if(destID!=null){
-		vxdDragIcon selectedDragIcon = vxd.controller.iconConnectionView.getDragIconByID(destID);
-		Element connectedNode = selectedDragIcon.element;
-		vxd.controller.selectedNode = new TreePath(connectedNode);
-		vxd.controller.tree.setSelectionPath(new TreePath(connectedNode));
+		    vxdDragIcon selectedDragIcon = vxd.controller.iconConnectionView.getDragIconByID(destID);
+            selectedDragIcon.mousePressed(null);;
 	    }
 	} else if (e.getActionCommand().equals("DELETE")) {
             element.getParentNode().removeChild(element);

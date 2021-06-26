@@ -137,10 +137,13 @@ public class vxdDragIcon extends JComponent
     }
 
     public void mousePressed(MouseEvent e) {
-        vxd.controller.DEBUG_STACK_TRACE(e);
-        if (e.getButton() == MouseEvent.BUTTON2 ||
-                e.getButton() == MouseEvent.BUTTON3)
-            return;
+        if(e!=null) {
+            vxd.controller.DEBUG_STACK_TRACE(e);
+            if (e.getButton() == MouseEvent.BUTTON2 ||
+                    e.getButton() == MouseEvent.BUTTON3)
+                return;
+            dragStart = e.getPoint();
+        }
         vxd.controller.iconConnectionView.remove(this);
         vxd.controller.iconConnectionView.add(this, 0);
         Element root = (Element) vxd.controller.tree.getModel().getRoot();
@@ -160,7 +163,6 @@ public class vxdDragIcon extends JComponent
             objs[j++] = v.elementAt(i);
         TreePath path = new TreePath(objs);
         vxd.controller.selectedNode = path;
-        dragStart = e.getPoint();
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 vxd.controller.refreshXMLViews();

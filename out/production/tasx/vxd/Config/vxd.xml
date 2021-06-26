@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vxd xmlns="http://tempuri.org/vxd.xsd" title="Tasx" xsize="1600" ysize="1000"
+     xiconsize="20" yiconsize="20" iconsperrow="42" iconborder="1" xdragsize="50"
+     ydragsize="60" savefiledir="Work/" deploymentdir="Deployments/"
+     exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
+     splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
+     browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"'
+     browserLinux="/usr/bin/firefox"
+     editorWindows="notepad"
+     editorLinux="/usr/bin/xemacs"
+     fileManagerWindows="c:\Windows\explorer.exe"
+     fileManagerLinux="/usr/bin/xfe"
+  debugdecryption="false">
+    <toolbar>
+        <toolbarbutton image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List (XML,DTD,XSL)"
+                       command="NEWDTD" enabled="FALSE"/>
+        <toolbarbutton image="Images/newdtd.jpg" text="New DTD (Language Structure)" command="NEWDTD" enabled="FALSE"/>
+        <toolbarbutton image="Images/newlang.jpg" text="New XSL (Program Generator)" command="NEWXSL" enabled="FALSE"/>
+        <toolbarbutton image="Images/newlang.jpg" text="New Deployer (Installer)" command="NEWDEPLOYER"
+                       enabled="FALSE"/>
+        <toolbarbutton image="Images/newlang.jpg" text="New Designer (Menu Layout)" command="NEWDESIGNER"
+                       enabled="FALSE"/>
+        <toolbarbutton image="Images/newlang.jpg" text="New Designer (Menu Layout)" command="NEWDESIGNER"
+                       enabled="FALSE"/>
+        <toolbarbutton image="Images/new.jpg" text="New" command="NEWXML" enabled="TRUE"/>
+        <toolbarbutton image="Images/open.jpg" text="Open" command="OPEN" enabled="TRUE"/>
+        <toolbarbutton image="Images/save.jpg" text="Save" command="SAVE" enabled="TRUE"/>
+        <toolbarbutton image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+        <toolbarbutton image="Images/image.jpg" text="Global Images" command="[FILEMANAGER] Images\"
+                       enabled="TRUE"/>
+        <toolbarbutton image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
+                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
+        <toolbarbutton image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
+                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
+        <toolbarbutton image="Images/images.jpg" text="Visual Language Images"
+                       command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
+        <toolbarbutton image="Images/Translator.jpg" text="Visual Language Translator (XSL)"
+                       command="[EDITOR] Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
+        <toolbarbutton image="Images/ProgramXSL.jpg" text="Visual Program Translator (XSL)"
+                       command="[EDITOR] Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
+        <toolbarbutton image="Images/ProgramXSLT.jpg" text="Visual Program Translation Output (XSLT)"
+                       command="[EDITOR] Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
+	<toolbarbutton image="Images/VisualProgramFiles.jpg" text="Visual Program Files (XML,XSL,XSLT,Images,etc.)"
+                      command="[FILEMANAGER] Work\[PROJECT]\" enabled="TRUE"/>
+        <toolbarbutton image="Images/images.jpg" text="Visual Program Images"
+                      command="[FILEMANAGER] Work\[PROJECT]\Images\" enabled="TRUE"/>
+        <toolbarbutton image="Images/exit.jpg" text="Exit Program" command="EXIT" enabled="TRUE"/>
+        <toolbarbutton image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
+    </toolbar>
+    <menus>
+        <menu name="File" letter="F">
+            <menuitem image="Images/new.jpg" text="New" command="NEWXML" enabled="TRUE"/>
+            <menuitem image="Images/open.jpg" text="Open" command="OPEN" enabled="TRUE"/>
+            <menuitem image="Images/save.jpg" text="Save" command="SAVE" enabled="TRUE"/>
+            <menuitem image="Images/exit.jpg" text="Exit Program" command="EXIT" enabled="TRUE"/>
+            <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
+        </menu>
+        <menu name="Design" letter="D">
+            <menuitem image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+            <menuitem image="Images/image.jpg" text="Images" command="[FILEMANAGER] Images\" enabled="TRUE"/>
+            <menuitem image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
+                      command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
+            <menuitem image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
+                      command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
+            <menuitem image="Images/images.jpg" text="Visual Language Images"
+                      command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
+            <menuitem image="Images/Translator.jpg" text="Visual Language Translator (XSL)"
+                      command="[EDITOR] Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
+            <menuitem image="Images/ProgramXSL.jpg" text="Visual Program Translator (XSL)"
+                      command="[EDITOR] Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
+            <menuitem image="Images/ProgramXSLT.jpg" text="Visual Program Translation Output (XSLT)"
+                      command="[EDITOR] Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>
+	    <menuitem image="Images/VisualProgramFiles.jpg" text="Visual Program Files (XML,XSL,XSLT,Images,etc.)"
+                      command="[FILEMANAGER] Work\[PROJECT]\" enabled="TRUE"/>
+            <menuitem image="Images/images.jpg" text="Visual Program Images"
+                      command="[FILEMANAGER] Work\[PROJECT]\Images\" enabled="TRUE"/>
+            <menuitem image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List"
+                      command="..\XMLEditor\bin\Debug\XMLEditor.exe Config\vxd.xml" enabled="FALSE"/>
+            <menuitem image="Images/newdtd.jpg" text="New DTD (Language Structure)" command="NEWDTD" enabled="FALSE"/>
+            <menuitem image="Images/newlang.jpg" text="New XSL (Program Generator)" command="NEWXSL" enabled="FALSE"/>
+            <menuitem image="Images/newlang.jpg" text="New Deployer (Installer)" command="NEWDEPLOYER" enabled="FALSE"/>
+            <menuitem image="Images/newlang.jpg" text="New Designer (Menu Layout)" command="NEWDESIGNER"
+                      enabled="FALSE"/>
+        </menu>
+    </menus>
+    <languages>
+        <language name="VisualWeb" language="VisualWeb"
+                  configfile="Languages/VisualWeb/VisualWeb.xml"
+                  enabled="TRUE"/>
+        <language name="Tasx" language="Tasx"
+                  configfile="Languages/Tasx/Tasx.xml"
+                  enabled="TRUE"/>
+    </languages>
+    <translators>
+        <translator name="VisualWebJavaServlet" translator="VisualWebJavaServlet"
+                    configfile="Translators/VisualWebJavaServlet/VisualWebJavaServlet.xml"
+                    definitionfile="Translators/VisualWebJavaServlet/VisualWebJavaServlet.xsl"
+                    supportedlanguages="VisualWeb" enabled="TRUE"/>
+        <translator name="TasxToHTML5" translator="TasxToHTML5"
+                    configfile="Translators/TasxToHTML5/TasxToHTML5.xml"
+                    definitionfile="Translators/TasxToHTML5/TasxToHTML5.xsl"
+                    supportedlanguages="Tasx,VisualWeb" enabled="TRUE"/>
+    </translators>
+    <platforms>
+        <platform name="Linux Apache HTML"
+                  configfile="Platforms/Tomcat403/Tomcat403.xml" supportedtranslators="TasxToHTML5"
+                  defintionfile="Platforms/Tomcat403/Tomcat403.dtd" platform="Apache" enabled="TRUE"/>
+        <platform name="Linux Filesystem"
+                  configfile="Platforms/Tomcat403/Tomcat403.xml" supportedtranslators="TasxToHTML5,VisualWebJavaServlet"
+                  defintionfile="Platforms/Tomcat403/Tomcat403.dtd" platform="Linux" enabled="TRUE"/>
+        <platform name="Windows Filesystem"
+                  configfile="Platforms/Tomcat403/Tomcat403.xml" supportedtranslators="TasxToHTML5"
+                  defintionfile="Platforms/Tomcat403/Tomcat403.dtd" platform="Tomcat403" enabled="TRUE"/>
+
+    </platforms>
+</vxd>

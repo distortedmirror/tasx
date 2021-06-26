@@ -48,9 +48,10 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    } else {
 		file = new File(vxd.mainLoadFile);
 	    }
+	    int filelength=(int)file.length();
 	    FileInputStream rdr = new FileInputStream(file);
 	    DataInputStream dta = new DataInputStream(rdr);
-	    byte[] filedata = new byte[(int) file.length()];
+	    byte[] filedata = new byte[(int) filelength];
 	    dta.readFully(filedata);
 	    String serverxml = new String(filedata);
 	    rdr.close();
@@ -58,7 +59,7 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    if (!loadUnencrypted) {
 		int iter = 0;
 		int accum = 0;
-		for (int di = 0; di < file.length(); ++di) {
+		for (int di = 0; di < filelength; ++di) {
 		    accum += (int) passwdString.charAt(iter++ % passwdString.length());
 		    filedata[di] ^= (int) passwdString.charAt(iter % passwdString.length());
 		    filedata[di] -= accum;
@@ -71,7 +72,7 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    }
 	    FileOutputStream fcrypt = new FileOutputStream(file.getAbsolutePath() + ".decrypted");
 	    ByteArrayOutputStream outcrypt = new ByteArrayOutputStream();
-	    outcrypt.write(filedata, 0, (int) file.length());
+	    outcrypt.write(filedata, 0, (int) filelength);
 	    outcrypt.writeTo(fcrypt);
 	    outcrypt.flush();
 	    outcrypt.close();

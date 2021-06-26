@@ -37,6 +37,7 @@ public class vxdcontroller {
     public static final String LANGUAGEDIR = "Languages/";
     public static final String TRANSLATORDIR = "Translators/";
     public static int IDCOUNT = 0;
+    public boolean completelyLoaded=true;
     public boolean loadingFile = false;
     public Object iconLoadedElementSync = new Object();
     public vxdproject project;
@@ -65,7 +66,7 @@ public class vxdcontroller {
         initvxdcontroller(project, true, null, null);
     }
 
-    public void initvxdcontroller(vxdproject project, boolean initproj, Element rootElement, Document loadedDoc) {
+    public void initvxdcontroller(vxdproject project, boolean initproj, Element rootElement, Document loadedDoc){
 	vxd.controller=this;
 	vxd.project = project;
         this.project = project;
@@ -93,7 +94,8 @@ public class vxdcontroller {
         }
     }
 
-    public void initOpenedXML(Document openedDoc) {
+    public void initOpenedXML(Document openedDoc){
+        vxd.controller.completelyLoaded=false;
         configOpenedXML(openedDoc.getDocumentElement(), iconConnectionView);
     }
 
@@ -162,6 +164,8 @@ public class vxdcontroller {
         }
         SwingUtilities.invokeLater(new Runnable() {
             public void run(){
+                vxd.controller.completelyLoaded =true;
+                vxd.controller.selectedNode = new TreePath(vxd.controller.project.programXML.getDocumentElement());
                 iconConnectionView.validateIconsAndConnectors();
                 vxd.controller.refreshXMLViews();
             }
@@ -955,6 +959,8 @@ public class vxdcontroller {
 
     public void refreshXMLViews() {
         try {
+            if(!vxd.controller.completelyLoaded)
+                return;
             iconConnectionView.validateIconsAndConnectors();
             XmlDocument xdoc = (XmlDocument) project.programXML;
             StringWriter stwr = new StringWriter();

@@ -49,6 +49,8 @@ public class XMLTreeModel implements TreeModel, TreeSelectionListener {
     }
 
     public void valueForPathChanged(TreePath path, Object newvalue) {
+        if(!vxd.controller.completelyLoaded)
+            return;;
         Enumeration e = listeners.elements();
         TreeModelEvent evt = new TreeModelEvent(this,
                 new Object[]{root});
@@ -68,6 +70,8 @@ public class XMLTreeModel implements TreeModel, TreeSelectionListener {
     }
 
     public void valueChanged(TreeSelectionEvent e) {
+        if(!vxd.controller.completelyLoaded)
+            return;;
         vxd.controller.selectedNode = e.getPath();
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

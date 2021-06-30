@@ -119,7 +119,7 @@ public class DeploymentActionEventHandler implements ActionListener
 				PrintWriter filewr=new PrintWriter(new FileWriter(codefile));
 				filewr.print(filecode);
 				filewr.close();
-				com.sun.tools.javac.Main.compile(new String[]{filename});
+				////com.sun.tools.javac.Main.compile(new String[]{filename});
 				if(idx2==code.length())
 				    break;
 				idx=idx2+1;

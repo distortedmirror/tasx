@@ -10,8 +10,6 @@
       <excludeFolder url="file://$MODULE_DIR$/javax" />
       <excludeFolder url="file://$MODULE_DIR$/META-INF" />
       <excludeFolder url="file://$MODULE_DIR$/vxd/Work" />
-      <excludeFolder url="file://$MODULE_DIR$/vxd/Translators" />
-      <excludeFolder url="file://$MODULE_DIR$/vxd/Platforms" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

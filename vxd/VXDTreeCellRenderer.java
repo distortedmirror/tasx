@@ -18,6 +18,8 @@ public class VXDTreeCellRenderer extends DefaultTreeCellRenderer {
     public Component getTreeCellRendererComponent(JTree tree, Object value,
 						  boolean sel, boolean expanded, boolean leaf, int row,
 						  boolean hasFocus) {
+    	if(!vxd.controller.completelyLoaded)
+			return this;
 	Component comp=super.getTreeCellRendererComponent(tree,value,sel,expanded,leaf,row,hasFocus);
 	Element destelement=null;
 	try{

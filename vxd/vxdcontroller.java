@@ -164,7 +164,10 @@ public class vxdcontroller {
         }
         SwingUtilities.invokeLater(new Runnable() {
             public void run(){
+                if(vxd.controller.completelyLoaded == true)
+                    return;
                 vxd.controller.completelyLoaded =true;
+                System.out.println("Loaded XML");
                 vxd.controller.selectedNode = new TreePath(vxd.controller.project.programXML.getDocumentElement());
                 iconConnectionView.validateIconsAndConnectors();
                 vxd.controller.refreshXMLViews();
@@ -401,6 +404,8 @@ public class vxdcontroller {
     }
 
     public void layoutPropertyView(String name, Element element) {
+        if(!vxd.controller.completelyLoaded)
+            return;
         String elementID = element.getAttribute("ID");
         Element root = project.languageElements.getDocumentElement();
         NodeList edtrs = root.getElementsByTagName("Editor");

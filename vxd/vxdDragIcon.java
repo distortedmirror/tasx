@@ -168,6 +168,7 @@ public class vxdDragIcon extends JComponent
                 vxd.controller.refreshXMLViews();
             }
         });
+        vxd.controller.statusText.setText(element.toString());
     }
 
     public void mouseDragged(MouseEvent e) {

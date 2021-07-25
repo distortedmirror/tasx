@@ -28,6 +28,7 @@ public class vxdDragIcon extends JComponent
     public Image overlay = null;
     public Element element;
     public Point dragStart = null;
+    public String prevName = "";
 
     public vxdDragIcon(vxdJButton button, int x, int y, Element e) {
         this.setElement(e);
@@ -67,15 +68,24 @@ public class vxdDragIcon extends JComponent
         this.element = e;
         String name = null;
         if (element != null)
-            name = element.getAttribute("Name");
+            this.prevName = name = element.getAttribute("Name");
         if (name != null) {
-            Image img = Toolkit.getDefaultToolkit().
-                    getImage("Work/" + vxd.controller.project.name + "/Images/" + name + ".jpg");
             try {
+                if(!(new java.io.File("Work/" + vxd.controller.project.name + "/Images/" + name + ".jpg")).exists()){
+                    this.overlay=null;
+                    this.overlayicon=null;
+                    repaint();
+                    return;
+                }
+                Image img = Toolkit.getDefaultToolkit().
+                    getImage("Work/" + vxd.controller.project.name + "/Images/" + name + ".jpg");
                 MediaTracker mt = new MediaTracker(vxd.frame);
                 mt.addImage(img, 0);
                 mt.waitForAll();
                 if ((mt.statusAll(false) & MediaTracker.ERRORED) != 0) {
+                    this.overlay=null;
+                    this.overlayicon=null;
+                    repaint();
                     return;
                 }
                 ImageFilter transparency = new BlackToTransparentFilter();
@@ -87,6 +97,9 @@ public class vxdDragIcon extends JComponent
                 mta.addImage(smallimg, 0);
                 mta.waitForAll();
                 if ((mta.statusAll(false) & MediaTracker.ERRORED) != 0) {
+                    this.overlay=null;
+                    this.overlayicon=null;
+                    repaint();
                     return;
                 }
                 this.overlay = smallimg;
@@ -95,12 +108,17 @@ public class vxdDragIcon extends JComponent
                 mtb.addImage(overlayiconimg, 0);
                 mtb.waitForAll();
                 if ((mtb.statusAll(false) & MediaTracker.ERRORED) != 0) {
+                    this.overlay=null;
+                    this.overlayicon=null;
+                    repaint();
                     return;
                 }
                 this.overlayicon = new ImageIcon(overlayiconimg);
                 this.repaint();
             } catch (Exception emt) {
-                ;
+                this.overlay=null;
+                this.overlayicon=null;
+                repaint();
             }
         }
     }
@@ -132,6 +150,9 @@ public class vxdDragIcon extends JComponent
             if (tttip != null && tttip.length() > 0) {
                 setToolTipText(tttip);
             }
+        }
+        if(!element.getAttribute("Name").equals(prevName)){
+            this.setElement(this.element);
         }
     }
 

@@ -38,7 +38,7 @@ public class vxd {
     public static String DEPLOYMENTDIR = null;
     public static Document config;
     public static String title;
-    public static String connectedIconsViewPNGBASE64HTMLDATAURL="";
+    public static String connectedIconsViewPNGBASE64HTMLDATAURL = "";
     public static int XSIZE;
     public static int YSIZE;
     public static int iconsperrow;
@@ -53,6 +53,7 @@ public class vxd {
     public static JDialog topDialog;
     public static JTextField textField;
     public static JTextField passwdtextField;
+    public static JComboBox changeElementField;
     public static JComboBox languageCombo;
     public static JComboBox translatorCombo;
     public static JComboBox deployerCombo;
@@ -66,6 +67,9 @@ public class vxd {
     public static ActionListener mainMenuOpenListener;
     public static JMenuItem mainMenuItemOpen;
     public static String mainLoadFile = null;
+    public static Element changeElementElement = null;
+    public static vxdDragIcon changeElementDragIcon = null;
+    public static Element changeElementReplacement = null;
 
     public static void main(String[] args) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -509,7 +513,7 @@ public class vxd {
                     btnpanel.setLayout(new FlowLayout());
                     JButton okbtn = new JButton("OK");
 
-                    okbtn.addActionListener(new vxdOpenFileActionListener(fc.getSelectedFile(),builder));
+                    okbtn.addActionListener(new vxdOpenFileActionListener(fc.getSelectedFile(), builder));
                     JButton cancelbtn = new JButton("Cancel");
                     cancelbtn.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
@@ -563,21 +567,21 @@ public class vxd {
                 btnpanel.setLayout(new FlowLayout());
                 JButton okbtn = new JButton("OK");
                 okbtn.addActionListener(new vxdSaveFileActionListener());
-		JButton cancelbtn = new JButton("Cancel");
-		cancelbtn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			    topDialog.setVisible(false);
-			    topDialog.dispose();
-			    topDialog = null;
-			}
-		    });
+                JButton cancelbtn = new JButton("Cancel");
+                cancelbtn.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        topDialog.setVisible(false);
+                        topDialog.dispose();
+                        topDialog = null;
+                    }
+                });
                 passwd.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-			    topDialog.setVisible(false);
-			    topDialog.dispose();
-			    topDialog = null;
-			}
-		    });
+                    public void windowClosing(WindowEvent e) {
+                        topDialog.setVisible(false);
+                        topDialog.dispose();
+                        topDialog = null;
+                    }
+                });
                 passwd.getContentPane().setLayout(new GridLayout(4, 1));
                 passwd.getContentPane().add(passwdpanel);
                 passwd.getContentPane().add(new JPanel());
@@ -593,23 +597,23 @@ public class vxd {
                     System.exit(0);
             } else {
                 try {
-		    String os=System.getProperty("os.name").startsWith("Windows")?"Windows":"Linux";
-		    String separator=System.getProperty("os.name").startsWith("Windows")?"\\":"/";
-		    String browser=vxd.config.getDocumentElement().getAttribute("browser"+os);
-		    String editor=vxd.config.getDocumentElement().getAttribute("editor"+os);
-		    String fileManager=vxd.config.getDocumentElement().getAttribute("fileManager"+os);
+                    String os = System.getProperty("os.name").startsWith("Windows") ? "Windows" : "Linux";
+                    String separator = System.getProperty("os.name").startsWith("Windows") ? "\\" : "/";
+                    String browser = vxd.config.getDocumentElement().getAttribute("browser" + os);
+                    String editor = vxd.config.getDocumentElement().getAttribute("editor" + os);
+                    String fileManager = vxd.config.getDocumentElement().getAttribute("fileManager" + os);
                     java.lang.Runtime.getRuntime().exec(e.getActionCommand().
-							replace("\\",separator).
-							replace("\\",separator).
-							replace("[LANGUAGE]", vxd.project.language).
-							replace("[LANGUAGE]", vxd.project.language).
-							replace("[TRANSLATOR]", vxd.project.translator).
-							replace("[TRANSLATOR]", vxd.project.translator).
-							replace("[PROJECT]",vxd.project.name).
-							replace("[PROJECT]",vxd.project.name).
-							replace("[BROWSER]",browser).
-							replace("[EDITOR]",editor).
-							replace("[FILEMANAGER]",fileManager));
+                            replace("\\", separator).
+                            replace("\\", separator).
+                            replace("[LANGUAGE]", vxd.project.language).
+                            replace("[LANGUAGE]", vxd.project.language).
+                            replace("[TRANSLATOR]", vxd.project.translator).
+                            replace("[TRANSLATOR]", vxd.project.translator).
+                            replace("[PROJECT]", vxd.project.name).
+                            replace("[PROJECT]", vxd.project.name).
+                            replace("[BROWSER]", browser).
+                            replace("[EDITOR]", editor).
+                            replace("[FILEMANAGER]", fileManager));
                 } catch (Exception re) {
                     JOptionPane.showMessageDialog(vxd.frame, "Error: " + re.getMessage());
                 }

@@ -1317,6 +1317,18 @@ public class vxdcontroller {
         vxd.frame.getContentPane().validate();
     }
 
+    public void copyAttributes(Element from, Element to)
+    {
+        NamedNodeMap attributes = from.getAttributes();
+        for (int i = 0; i < attributes.getLength(); i++)
+        {
+            try {
+                Attr node = (Attr) attributes.item(i);
+                to.setAttributeNode((Attr) node.cloneNode(false));
+            }catch(Exception e){;}
+        }
+    }
+
     public void addToolBar() {
         DocumentBuilderFactory factory = DocumentBuilderFactoryImpl.newInstance();
         factory.setValidating(true);

@@ -53,6 +53,7 @@ public class vxd {
     public static JDialog topDialog;
     public static JTextField textField;
     public static JTextField passwdtextField;
+    public static String mainPassword = "";
     public static JComboBox changeElementField;
     public static JComboBox languageCombo;
     public static JComboBox translatorCombo;
@@ -554,7 +555,7 @@ public class vxd {
                 passwdlabel.setHorizontalAlignment(JLabel.CENTER);
                 passwdlabel.setVerticalAlignment(JLabel.CENTER);
                 JPasswordField passwdtextfield = new JPasswordField();
-                passwdtextfield.setText("");
+                passwdtextfield.setText(vxd.mainPassword);
                 passwdtextfield.setEchoChar('*');
                 vxd.passwdtextField = passwdtextfield;
                 passwdtextfield.setColumns(15);

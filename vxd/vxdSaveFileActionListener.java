@@ -35,7 +35,7 @@ public class vxdSaveFileActionListener implements ActionListener, Runnable {
 	    JOptionPane.showMessageDialog(vxd.frame,
 					  "The Password Cannot Be Blank");
 	} else {
-	    this.passwdString = vxd.passwdtextField.getText();
+	    this.passwdString = vxd.mainPassword = vxd.passwdtextField.getText();
 	    vxd.topDialog.setVisible(false);
 	    vxd.topDialog.dispose();
 	    vxd.topDialog = null;

@@ -96,6 +96,8 @@ public class vxd {
             vxd.translators = root.getElementsByTagName("translator");
             vxd.platforms = root.getElementsByTagName("platform");
 
+            //MultiLineToolTipUI.installUI();
+
             menuBar = new JMenuBar();
             MenuItemActionListener listener = new MenuItemActionListener();
             NodeList menus = root.getElementsByTagName("menu");

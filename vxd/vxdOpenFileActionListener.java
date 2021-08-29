@@ -36,7 +36,7 @@ public class vxdOpenFileActionListener implements ActionListener {
 	} else {
 	    loadUnencrypted = false;
 	}
-	String passwdString = vxd.mainPassword = vxd.passwdtextField.getText();
+	String passwdString /*= vxd.mainPassword */= vxd.passwdtextField.getText();
 	vxd.topDialog.setVisible(false);
 	vxd.topDialog.dispose();
 	vxd.topDialog = null;

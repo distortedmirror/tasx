@@ -6,13 +6,14 @@
     &lt;head&gt;
       &lt;style type=&quot;text/css&quot;&gt;
       div {width:50px;height:60px;}
-p{display:block;position:fixed;x:0;y:0;width:100%;height:100%;overflow:auto;}
+.divMain{display:block;position:fixed;x:0;y:0;width:100%;height:100%;overflow:auto;}
       &lt;/style&gt;
     &lt;/head&gt;
     &lt;body&gt;
-&lt;p&gt;
-        &lt;img style="position:fixed;left:0;top:0;" src=&quot;Tasks.png&quot;/&gt;
-        &lt;span style="position:absolute;display:block;left:0;top:0;width:100%;"&gt;<xsl:apply-templates select="*"></xsl:apply-templates>&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;divMain&quot;&gt;
+        &lt;img src=&quot;Tasks.png&quot;/&gt;
+        &lt;span style="position:absolute;display:block;left:0;top:0;width:100%;"&gt;<xsl:apply-templates select="*"></xsl:apply-templates>&lt;/span&gt;
+&lt;/div&gt;
 
     &lt;/body&gt;
 &lt;/html&gt;

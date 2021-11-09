@@ -50,7 +50,8 @@ public class vxdIconConnector implements ActionListener {
         vxd.controller.DEBUG_STACK_TRACE(e);
         if (e.getActionCommand().equals("OPEN")) {
             try {
-		String os=System.getProperty("os.name").startsWith("Windows")?"Windows":"Linux";
+                String os = System.getProperty("os.name").startsWith("Windows") ? "Windows" : System.getProperty("os.name").startsWith("Mac") ? "Mac" : "Linux";
+
 		String separator=System.getProperty("os.name").startsWith("Windows")?"\\":"/";
 		String browser=vxd.config.getDocumentElement().getAttribute("browser"+os);
 		String editor=vxd.config.getDocumentElement().getAttribute("editor"+os);

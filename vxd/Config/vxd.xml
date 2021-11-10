@@ -9,7 +9,7 @@
      browserMac="/Applications/Firefox.app/Contents/MacOS/firefox"
      editorWindows="notepad"
      editorLinux="/usr/bin/xemacs"
-     editorMac="open"
+     editorMac="open -b com.apple.TextEdit"
      fileManagerWindows="c:\Windows\explorer.exe"
      fileManagerLinux="/usr/bin/xfe"
      fileManagerMac="open"

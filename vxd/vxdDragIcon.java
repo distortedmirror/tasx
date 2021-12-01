@@ -387,7 +387,34 @@ public class vxdDragIcon extends JComponent
                 JLabel changelabel = new JLabel("Choose Element to Change To");
                 changelabel.setHorizontalAlignment(JLabel.CENTER);
                 changelabel.setVerticalAlignment(JLabel.CENTER);
-                JComboBox selectElement = new JComboBox();
+                JComboBox selectElement = new JComboBox(){
+                    @Override public void addItem(Object obj){
+                        int count = getItemCount();
+                        String toAdd = (String) obj;
+
+                        java.util.List<String> items = new ArrayList<String>();
+                        for(int i = 0; i < count; i++){
+                            items.add((String)getItemAt(i));
+                        }
+
+                        if(items.size() == 0){
+                            super.addItem(toAdd);
+                            return;
+                        }else{
+                            if(toAdd.compareTo(items.get(0)) <= 0){
+                                insertItemAt(toAdd, 0);
+                            }else{
+                                int lastIndexOfHigherNum = 0;
+                                for(int i = 0; i < count; i++){
+                                    if(toAdd.compareTo(items.get(i)) > 0){
+                                        lastIndexOfHigherNum = i;
+                                    }
+                                }
+                                insertItemAt(toAdd, lastIndexOfHigherNum+1);
+                            }
+                        }
+                    }
+                };
                 Element root = vxd.project.languageElements.getDocumentElement();
                 NodeList icons = root.getElementsByTagName("Icon");
                 for (int i = 0; i < icons.getLength(); ++i) {

@@ -1,3 +1,3 @@
-export DISPLAY=:1
+#export DISPLAY=:1
 cd vxd
 . start.sh

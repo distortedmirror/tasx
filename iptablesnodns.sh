@@ -5,6 +5,7 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -m state --state INVALID -j DROP
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A INPUT -s 192.168.42.129 -j ACCEPT
+iptables -A INPUT -s  webstore.westus.cloudapp.azure.com -j ACCEPT
 iptables -A INPUT -j DROP
 
 iptables -A OUTPUT -p tcp -d github.com --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
@@ -16,4 +17,5 @@ iptables -A OUTPUT -p tcp -m tcp --dport 22 -j ACCEPT
 #iptables -A OUTPUT -p tcp -m tcp --dport 53 -j ACCEPT
 #iptables -A OUTPUT -p udp -m udp --dport 53 -j ACCEPT
 iptables -A OUTPUT -d 192.168.42.129 -j ACCEPT
+iptables -A OUTPUT -d webstore.westus.cloudapp.azure.com -j ACCEPT
 iptables -A OUTPUT -j DROP

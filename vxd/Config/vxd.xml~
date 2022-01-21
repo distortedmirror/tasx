@@ -6,10 +6,13 @@
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
      browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"'
      browserLinux="/usr/bin/firefox"
+     browserMac="/Applications/Firefox.app/Contents/MacOS/firefox"
      editorWindows="notepad"
      editorLinux="/usr/bin/xemacs"
+     editorMac="open -b com.apple.TextEdit"
      fileManagerWindows="c:\Windows\explorer.exe"
      fileManagerLinux="/usr/bin/xfe"
+     fileManagerMac="open"
   debugdecryption="false">
     <toolbar>
         <toolbarbutton image="Images/VXDIcon.jpg" text="Auto Generate Language from Image List (XML,DTD,XSL)"

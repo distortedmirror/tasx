@@ -5,7 +5,7 @@
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
      browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"'
-     browserLinux="/usr/bin/firefox"
+     browserLinux="/usr/bin/chromium"
      browserMac="/Applications/Firefox.app/Contents/MacOS/firefox"
      editorWindows="notepad"
      editorLinux="/usr/bin/xemacs"

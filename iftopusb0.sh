@@ -1,1 +1,1 @@
-iftop -i usb0
+iftop -i lo

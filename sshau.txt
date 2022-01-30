@@ -1,0 +1,19 @@
+Free SSH Australia 1
+Congratulation! Your SSH Account successfully created!
+Username:
+markbrito-vpnjantit.com
+Password:
+markbrito1234 Edit Password
+Expiration Date:
+2022-01-22 / 08:12:21
+Location:
+Australia
+Max Login:
+2 Devices
+Active Period:
+5 Days
+SSH Server:
+au1.vpnjantit.com Show IP
+SSH Port:
+22 (OpenSSH)
+80,444-SSL (Dropbear) Check port

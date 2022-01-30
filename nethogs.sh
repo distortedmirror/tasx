@@ -1,1 +1,1 @@
-nethogs
+nethogs -a

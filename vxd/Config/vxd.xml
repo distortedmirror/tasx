@@ -28,7 +28,7 @@
         <toolbarbutton image="Images/new.jpg" text="New" command="NEWXML" enabled="TRUE"/>
         <toolbarbutton image="Images/open.jpg" text="Open" command="OPEN" enabled="TRUE"/>
         <toolbarbutton image="Images/save.jpg" text="Save" command="SAVE" enabled="TRUE"/>
-        <toolbarbutton image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+        <toolbarbutton image="Images/configuration.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
         <toolbarbutton image="Images/image.jpg" text="Global Images" command="[FILEMANAGER] Images\"
                        enabled="TRUE"/>
         <toolbarbutton image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
@@ -59,7 +59,7 @@
             <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
         </menu>
         <menu name="Design" letter="D">
-            <menuitem image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+            <menuitem image="Images/configuration.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
             <menuitem image="Images/image.jpg" text="Images" command="[FILEMANAGER] Images\" enabled="TRUE"/>
             <menuitem image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>

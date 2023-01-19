@@ -35,7 +35,7 @@
         <Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
         <Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.jpg"/>
         <Icon Name="Queue" Image="Languages/Tasx/Images/Queue.jpg"/>
-        <Icon Name="Car" Image="Languages/Tasx/Images/Car.jpg"/>
+        <Icon Name="Car" Image="Languages/Tasx/Images/Car.png"/>
         <Icon Name="Bus" Image="Languages/Tasx/Images/Bus.jpg"/>
 	<Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.jpg"/>
         <Icon Name="Document" Image="Languages/Tasx/Images/Document.jpg"/>

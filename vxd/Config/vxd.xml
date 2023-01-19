@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vxd xmlns="http://tempuri.org/vxd.xsd" title="Tasx" xsize="1600" ysize="1200"
-     xiconsize="30" yiconsize="30" iconsperrow="42" iconborder="1" xdragsize="50"
-     ydragsize="60" savefiledir="Work/" deploymentdir="Deployments/"
+     xiconsize="33" yiconsize="40" iconsperrow="35" iconborder="1" xdragsize="100"
+     ydragsize="120" savefiledir="Work/" deploymentdir="Deployments/"
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
      browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"'

@@ -25,10 +25,10 @@
                        enabled="FALSE"/>
         <toolbarbutton image="Images/newlang.jpg" text="New Designer (Menu Layout)" command="NEWDESIGNER"
                        enabled="FALSE"/>
-        <toolbarbutton image="Images/new.jpg" text="New" command="NEWXML" enabled="TRUE"/>
-        <toolbarbutton image="Images/open.jpg" text="Open" command="OPEN" enabled="TRUE"/>
-        <toolbarbutton image="Images/save.jpg" text="Save" command="SAVE" enabled="TRUE"/>
-        <toolbarbutton image="Images/configuration.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+        <toolbarbutton image="Images/new.png" text="New" command="NEWXML" enabled="TRUE"/>
+        <toolbarbutton image="Images/open.png" text="Open" command="OPEN" enabled="TRUE"/>
+        <toolbarbutton image="Images/save.png" text="Save" command="SAVE" enabled="TRUE"/>
+        <toolbarbutton image="Images/configuration.png" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
         <toolbarbutton image="Images/image.jpg" text="Global Images" command="[FILEMANAGER] Images\"
                        enabled="TRUE"/>
         <toolbarbutton image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
@@ -52,14 +52,14 @@
     </toolbar>
     <menus>
         <menu name="File" letter="F">
-            <menuitem image="Images/new.jpg" text="New" command="NEWXML" enabled="TRUE"/>
-            <menuitem image="Images/open.jpg" text="Open" command="OPEN" enabled="TRUE"/>
-            <menuitem image="Images/save.jpg" text="Save" command="SAVE" enabled="TRUE"/>
+            <menuitem image="Images/new.png" text="New" command="NEWXML" enabled="TRUE"/>
+            <menuitem image="Images/open.png" text="Open" command="OPEN" enabled="TRUE"/>
+            <menuitem image="Images/save.png" text="Save" command="SAVE" enabled="TRUE"/>
             <menuitem image="Images/exit.jpg" text="Exit Program" command="EXIT" enabled="TRUE"/>
             <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
         </menu>
         <menu name="Design" letter="D">
-            <menuitem image="Images/configuration.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+            <menuitem image="Images/configuration.png" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
             <menuitem image="Images/image.jpg" text="Images" command="[FILEMANAGER] Images\" enabled="TRUE"/>
             <menuitem image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>

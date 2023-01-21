@@ -47,7 +47,7 @@
                       command="[FILEMANAGER] Work\[PROJECT]\" enabled="TRUE"/>
         <toolbarbutton image="Images/images.jpg" text="Visual Program Images"
                       command="[FILEMANAGER] Work\[PROJECT]\Images\" enabled="TRUE"/>
-        <toolbarbutton image="Images/exit.jpg" text="Exit Program" command="EXIT" enabled="TRUE"/>
+        <toolbarbutton image="Images/exit.png" text="Exit Program" command="EXIT" enabled="TRUE"/>
         <toolbarbutton image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
     </toolbar>
     <menus>
@@ -55,7 +55,7 @@
             <menuitem image="Images/new.png" text="New" command="NEWXML" enabled="TRUE"/>
             <menuitem image="Images/open.png" text="Open" command="OPEN" enabled="TRUE"/>
             <menuitem image="Images/save.png" text="Save" command="SAVE" enabled="TRUE"/>
-            <menuitem image="Images/exit.jpg" text="Exit Program" command="EXIT" enabled="TRUE"/>
+            <menuitem image="Images/exit.png" text="Exit Program" command="EXIT" enabled="TRUE"/>
             <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
         </menu>
         <menu name="Design" letter="D">

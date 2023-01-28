@@ -31,7 +31,7 @@
         <toolbarbutton image="Images/configuration.png" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
         <toolbarbutton image="Images/image.png" text="Global Images" command="[FILEMANAGER] Images\"
                        enabled="TRUE"/>
-        <toolbarbutton image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
+        <toolbarbutton image="Images/VisualLanguageElementsXML.png" text="Visual Language Elements (XML)"
                        command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
         <toolbarbutton image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
                        command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
@@ -61,7 +61,7 @@
         <menu name="Design" letter="D">
             <menuitem image="Images/configuration.png" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
             <menuitem image="Images/image.png" text="Global Images" command="[FILEMANAGER] Images\" enabled="TRUE"/>
-            <menuitem image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
+            <menuitem image="Images/VisualLanguageElementsXML.png" text="Visual Language Elements (XML)"
                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
             <menuitem image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>

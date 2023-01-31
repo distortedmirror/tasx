@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vxd xmlns="http://tempuri.org/vxd.xsd" title="Tasx" xsize="1600" ysize="1200"
-     xiconsize="20" yiconsize="20" iconsperrow="42" iconborder="1" xdragsize="50"
-     ydragsize="60" savefiledir="Work/" deploymentdir="Deployments/"
+     xiconsize="33" yiconsize="40" iconsperrow="35" iconborder="1" xdragsize="100"
+     ydragsize="120" savefiledir="Work/" deploymentdir="Deployments/"
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
      browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"'
-     browserLinux="/usr/bin/chromium"
+     browserLinux="/usr/bin/google-chrome"
      browserMac="/Applications/Firefox.app/Contents/MacOS/firefox"
      editorWindows="notepad"
      editorLinux="/usr/bin/xemacs"
@@ -25,15 +25,15 @@
                        enabled="FALSE"/>
         <toolbarbutton image="Images/newlang.jpg" text="New Designer (Menu Layout)" command="NEWDESIGNER"
                        enabled="FALSE"/>
-        <toolbarbutton image="Images/new.jpg" text="New" command="NEWXML" enabled="TRUE"/>
-        <toolbarbutton image="Images/open.jpg" text="Open" command="OPEN" enabled="TRUE"/>
-        <toolbarbutton image="Images/save.jpg" text="Save" command="SAVE" enabled="TRUE"/>
-        <toolbarbutton image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
-        <toolbarbutton image="Images/image.jpg" text="Global Images" command="[FILEMANAGER] Images\"
+        <toolbarbutton image="Images/new.png" text="New" command="NEWXML" enabled="TRUE"/>
+        <toolbarbutton image="Images/open.png" text="Open" command="OPEN" enabled="TRUE"/>
+        <toolbarbutton image="Images/save.png" text="Save" command="SAVE" enabled="TRUE"/>
+        <toolbarbutton image="Images/configuration.png" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+        <toolbarbutton image="Images/image.png" text="Global Images" command="[FILEMANAGER] Images\"
                        enabled="TRUE"/>
-        <toolbarbutton image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
+        <toolbarbutton image="Images/VisualLanguageElementsXML.png" text="Visual Language Elements (XML)"
                        command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
-        <toolbarbutton image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
+        <toolbarbutton image="Images/VisualLanguageStructureDTD.png" text="Visual Language Structure (DTD)"
                        command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
         <toolbarbutton image="Images/images.jpg" text="Visual Language Images"
                        command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
@@ -47,23 +47,23 @@
                       command="[FILEMANAGER] Work\[PROJECT]\" enabled="TRUE"/>
         <toolbarbutton image="Images/images.jpg" text="Visual Program Images"
                       command="[FILEMANAGER] Work\[PROJECT]\Images\" enabled="TRUE"/>
-        <toolbarbutton image="Images/exit.jpg" text="Exit Program" command="EXIT" enabled="TRUE"/>
+        <toolbarbutton image="Images/exit.png" text="Exit Program" command="EXIT" enabled="TRUE"/>
         <toolbarbutton image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
     </toolbar>
     <menus>
         <menu name="File" letter="F">
-            <menuitem image="Images/new.jpg" text="New" command="NEWXML" enabled="TRUE"/>
-            <menuitem image="Images/open.jpg" text="Open" command="OPEN" enabled="TRUE"/>
-            <menuitem image="Images/save.jpg" text="Save" command="SAVE" enabled="TRUE"/>
-            <menuitem image="Images/exit.jpg" text="Exit Program" command="EXIT" enabled="TRUE"/>
+            <menuitem image="Images/new.png" text="New" command="NEWXML" enabled="TRUE"/>
+            <menuitem image="Images/open.png" text="Open" command="OPEN" enabled="TRUE"/>
+            <menuitem image="Images/save.png" text="Save" command="SAVE" enabled="TRUE"/>
+            <menuitem image="Images/exit.png" text="Exit Program" command="EXIT" enabled="TRUE"/>
             <menuitem image="Images/help.jpg" text="Help" command="HELP" enabled="TRUE"/>
         </menu>
         <menu name="Design" letter="D">
-            <menuitem image="Images/VXD.jpg" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
-            <menuitem image="Images/image.jpg" text="Images" command="[FILEMANAGER] Images\" enabled="TRUE"/>
-            <menuitem image="Images/ImageButton.jpg" text="Visual Language Elements (XML)"
+            <menuitem image="Images/configuration.png" text="Configuration (XML)" command="[EDITOR] Config\vxd.xml" enabled="TRUE"/>
+            <menuitem image="Images/image.png" text="Global Images" command="[FILEMANAGER] Images\" enabled="TRUE"/>
+            <menuitem image="Images/VisualLanguageElementsXML.png" text="Visual Language Elements (XML)"
                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].xml" enabled="TRUE"/>
-            <menuitem image="Images/Workflow.jpg" text="Visual Language Structure (DTD)"
+            <menuitem image="Images/VisualLanguageStructureDTD.png" text="Visual Language Structure (DTD)"
                       command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
             <menuitem image="Images/images.jpg" text="Visual Language Images"
                       command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>

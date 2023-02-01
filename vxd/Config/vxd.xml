@@ -39,7 +39,7 @@
                        command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
         <toolbarbutton image="Images/VisualLanguageTranslatorXSL.png" text="Visual Language Translator (XSL)"
                        command="[EDITOR] Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
-        <toolbarbutton image="Images/ProgramXSL.jpg" text="Visual Program Translator (XSL)"
+        <toolbarbutton image="Images/VisualProgramTranslatorXSL.png" text="Visual Program Translator (XSL)"
                        command="[EDITOR] Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
         <toolbarbutton image="Images/ProgramXSLT.jpg" text="Visual Program Translation Output (XSLT)"
                        command="[EDITOR] Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>

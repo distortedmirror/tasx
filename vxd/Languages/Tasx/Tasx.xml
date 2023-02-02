@@ -2,7 +2,7 @@
 <!DOCTYPE Language SYSTEM "Language.dtd">
 <Language Name="Tasx" StructureDTD="Language.dtd">
     <Icons>
-        <Icon Name="Accounting" Image="Languages/Tasx/Images/Accounting.jpg"/>
+        <Icon Name="Accounting" Image="Languages/Tasx/Images/Accounting.png"/>
         <Icon Name="Actor" Image="Languages/Tasx/Images/Actor.jpg"/>
         <Icon Name="BusinessUnit" Image="Languages/Tasx/Images/BusinessUnit.jpg"/>
         <Icon Name="Commit" Image="Languages/Tasx/Images/Commit.jpg"/>

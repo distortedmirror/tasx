@@ -8,7 +8,7 @@
         <Icon Name="Commit" Image="Languages/Tasx/Images/Commit.jpg"/>
         <Icon Name="CustomerService" Image="Languages/Tasx/Images/CustomerService.jpg"/>
         <Icon Name="Delivery" Image="Languages/Tasx/Images/Delivery.jpg"/>
-        <Icon Name="Deal" Image="Languages/Tasx/Images/Deal.jpg"/>
+        <Icon Name="Deal" Image="Languages/Tasx/Images/Deal.png"/>
         <Icon Name="Management" Image="Languages/Tasx/Images/Management.jpg"/>
         <Icon Name="Manufacturing" Image="Languages/Tasx/Images/Manufacturing.jpg"/>
         <Icon Name="Marketing" Image="Languages/Tasx/Images/Marketing.jpg"/>
@@ -35,7 +35,7 @@
         <Icon Name="Phone" Image="Languages/Tasx/Images/Phone.jpg"/>
         <Icon Name="Telcom" Image="Languages/Tasx/Images/Telcom.jpg"/>
         <Icon Name="Queue" Image="Languages/Tasx/Images/Queue.jpg"/>
-        <Icon Name="Car" Image="Languages/Tasx/Images/Car.jpg"/>
+        <Icon Name="Car" Image="Languages/Tasx/Images/Car.png"/>
         <Icon Name="Bus" Image="Languages/Tasx/Images/Bus.jpg"/>
 	<Icon Name="Distributor" Image="Languages/Tasx/Images/Distributor.jpg"/>
         <Icon Name="Document" Image="Languages/Tasx/Images/Document.jpg"/>
@@ -138,7 +138,7 @@
     </Icons>
     <Connectors>
         <Connector Name="Connection" Image="Languages/Tasx/Images/Connection.jpg" Type="CONNECTION"/>
-        <Connector Name="Connection" Image="Languages/Tasx/Images/Connections.jpg" Type="REPARENT"/>
+        <Connector Name="Connections" Image="Languages/Tasx/Images/Connections.jpg" Type="AGGREGATION"/>
     </Connectors>
     <Editors>
         <Editor Name="VariableSelector" Class="vxd.Languages.Tasx.Editors.VariableSelector" ElementName="Accounting"

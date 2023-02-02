@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vxd xmlns="http://tempuri.org/vxd.xsd" title="Tasx" xsize="1600" ysize="1200"
+<vxd xmlns="http://tempuri.org/vxd.xsd" title="Tasx" xsize="800" ysize="600"
      xiconsize="33" yiconsize="40" iconsperrow="35" iconborder="1" xdragsize="100"
      ydragsize="120" savefiledir="Work/" deploymentdir="Deployments/"
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"

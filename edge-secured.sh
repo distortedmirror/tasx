@@ -1,1 +1,3 @@
-firejail microsoft-edge --user-data-dir=/home/mark/Edge --no-proxy-server --inprivate --password-store=gnome --no-remote --disable-web-security --aloww-cross-origin-auth-prompt --allow-external-pages --allow-failed-policy-fetch-for-test --allow-file-access-from-files --allow-insecure-localhost --ignore-certificate-errors-spki-list --unsafely-treat-insecure-origin-as-secure --aggressive-cache-discard --cors-exempt-headers --incognito --media-cache-size=1 --disk-cache-size=1 --dark-mode-settings --dbus-stub
+# proxychains4 
+export SSLKEYLOGILE=
+firejail microsoft-edge --no-remote 

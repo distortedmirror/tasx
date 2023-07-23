@@ -155,88 +155,121 @@
 <!ELEMENT YesCheckMark (Accounting| Actor| AdRotator| AP| AR| Bookings| BusinessUnit| Button| Calendar| Chart| CheckBox| CheckBoxList| ComboBox| Commit| Company| Address| Car| Bus| CompareValidator| Component| Connection| Connections| Control| CustomerService| CustomValidator| Dashboard| Database| Datacolumn| Datacommand| DataGrid| DataList| Dataset| Datatable| Dataview| Deal| DealProbability| DealStatus| DealValue| Debookings| DeBookings| Delivery| DiskStorage| Distributor| Document| DocumentBook| DocumentCollection| DropDownList| Else| EndIf| exit| FileUpload| Finance| FiscalPeriod| FlowData| FlowDecision| FlowDocument| FlowMultiDecision| FlowOffPage| FlowOnPage| FlowProcess| FlowReturn| FlowStoredData| FlowTerminator| FlowTransport| Forecast| Form| Globe| Group| Help| Hidden| Href| HTML| HTTP| HyperLink| If| Image| ImageButton| images| InformationSystems| Interface| Inventory| Label| LinkButton| list| ListBox| Literal| Mail| Management| Manufacturing| Marketing| new| newdtd| newlang| News| No| open| out| outconnection| Packaging| Panel| Passowrd| Payroll| Person| Personnel| Phone| PlaceHolder| Product| ProductFamily| ProductLine| Projection| Purchasing| QA| Queue| RadioButton| RadioButtonList| RandD| RangeValidator| Receiving| RegularExpressionValidator| Repeater| Report| RequiredFieldValidator| RunRate| Sales| save| Shipping| splash| SQL| Status| Stop| Submit| Supplier| Table| tail| Target| Telcom| Text| TextArea| TextBox| Theater| Timer| Treasurer| uniq| ValidationSummary| View| VXDIcon| Warehouse| WebService| Workflow| Xml| XmlElement| YesCheckMark )*><!ATTLIST YesCheckMark Name CDATA "YesCheckMark" ID CDATA #IMPLIED  XPos CDATA #IMPLIED YPos CDATA #IMPLIED        Order CDATA "0"        Visible (TRUE|FALSE) "TRUE"                        Value CDATA #IMPLIED ShellCommand CDATA #IMPLIED  ExternalLinkURL CDATA #IMPLIED  Notes CDATA #IMPLIED>
 ]>
 
-<Tasx Build="Debug" ID="352171275" Language="Tasx" Name="Tasx" Order="0" Package="Tasks" Platform="Tomcat403" Port="80" TextNote="" Title="Tasks" Translator="TasxToHTML5" URI="/Tasks" Value="" Visible="TRUE" XPos="-1" YPos="-1" ExternalLinkURL="" Notes="">
-  <FlowProcess ID="1399269947" Name="Weekly" Order="-5" Value="" Visible="TRUE" XPos="13" YPos="93" Notes="Weekly Tasks">
-    <FlowData ID="-933610391" Name="Clean" Order="0" Value="" Visible="TRUE" XPos="81" YPos="93" Notes="Clean my living space." />
-    <FlowData Order="0" Notes="Wash my laundry." ExternalLinkURL="" Name="Laundry" YPos="92" Value="" ID="185062782" Visible="TRUE" XPos="142" ShellCommand="" />
-    <Globe Order="0" Notes="Go to Church" ExternalLinkURL="" Name="Church" YPos="92" Value="" ID="761829150" Visible="TRUE" XPos="205" ShellCommand="" />
-  </FlowProcess>
-  <FlowProcess ID="-970492872" Name="Monthly" Order="-4" Value="" Visible="TRUE" XPos="14" YPos="170" Notes="Monthly Tasks">
-    <DiskStorage Order="0" Notes="CA EBT /  Tracy Interfaith Ministries" ExternalLinkURL="https://mail.google.com/mail/u/0/#inbox/FMfcgzGkZkPLLBMjpNlwLvKwZJGBZjWR?compose=CrpPbDzHxtzrSmQpnnnNrjFkRWKnjfcSTMBTrknQsGGcLfrlzKBMzclRzZNCtcDdtpfRnnJbkKbNfNLLXNpg" Name="Food" YPos="167" Value="" ID="807018447" Visible="TRUE" XPos="322" ShellCommand="" />
-    <AR Order="0" Notes="$2120.80" ExternalLinkURL="" Name="SSA" YPos="175" Value="" ID="1777053657" Visible="TRUE" XPos="84" ShellCommand="">
-      <AP Order="0" ExternalLinkURL="" Name="Rent" YPos="173" Value="" ID="-1847805042" Visible="TRUE" XPos="148" ShellCommand="" Notes="$850 - Pay Rent" />
-      <AP Order="0" Notes="$25.59" ExternalLinkURL="" Name="OnStar" YPos="103" Value="" ID="186657028" Visible="TRUE" XPos="277" ShellCommand="" />
-      <AP Order="0" Notes="$300" ExternalLinkURL="" Name="Seltzer" YPos="171" Value="" ID="1622462960" Visible="TRUE" XPos="208" ShellCommand="" />
-      <AP Order="0" Notes="$65.00" ExternalLinkURL="" Name="AT&amp;T" YPos="172" Value="" ID="1553747262" Visible="TRUE" XPos="264" ShellCommand="" />
-    </AR>
-    <Product Order="0" Notes="$100 TP, other random items." ExternalLinkURL="" Name="Misc." YPos="165" Value="" ID="1304509444" Visible="TRUE" XPos="377" ShellCommand="" />
-    <Forecast Order="0" Notes="What&apos;s left over after bills: $556" ExternalLinkURL="" Name="Save" YPos="230" Value="" ID="1436236940" Visible="TRUE" XPos="489" ShellCommand="" />
-    <AP Order="0" Notes="Bills total: $1373" ExternalLinkURL="" Name="Bills" YPos="171" Value="" ID="2487502" Visible="TRUE" XPos="487" ShellCommand="" />
-    <AP Order="0" Notes="Life Insurance for mom: $111" ExternalLinkURL="" Name="LifeInsurance" YPos="102" Value="" ID="540951911" Visible="TRUE" XPos="336" ShellCommand="" />
-    <AP Order="0" Notes="$276 Pay Dairyland Auto Insurance" ExternalLinkURL="" Name="AutoInsurance" YPos="101" Value="" ID="33918109" Visible="TRUE" XPos="395" ShellCommand="" />
-    <DiskStorage Order="0" Notes="Elliquis" ExternalLinkURL="" Name="Elliquis" YPos="165" Value="" ID="2037839604" Visible="TRUE" XPos="427" ShellCommand="" />
-  </FlowProcess>
-  <FlowProcess ID="-161933666" Name="Quarterly" Order="0" Value="" Visible="TRUE" XPos="17" YPos="246" Notes="Quarterly Tasks">
-    <Calendar Order="0" Notes="Schedule a Dentist" ExternalLinkURL="https://www.google.com/maps/place/TruCare+Dental/@35.0965298,-106.55004,17z/data=!4m5!3m4!1s0x87220abc6e84e51f:0xfe01ad211d6c8fb9!8m2!3d35.0965298!4d-106.55004" Name="Dentist" YPos="247" Value="" ID="752053576" Visible="TRUE" XPos="90" ShellCommand="" />
-    <Accounting Order="0" Notes="Check Credit Report" ExternalLinkURL="" Name="CreditReport" YPos="250" Value="" ID="678264940" Visible="TRUE" XPos="347" ShellCommand="" />
-    <Calendar Order="0" Notes="See Doctor and take labs quarterly." ExternalLinkURL="" Name="Doctor" YPos="247" Value="" ID="805297399" Visible="TRUE" XPos="161" ShellCommand="" />
-    <AP Order="0" Notes="$20 - Get haircut" ExternalLinkURL="" Name="HairCut" YPos="250" Value="" ID="315326675" Visible="TRUE" XPos="225" ShellCommand="" />
-    <FlowData ID="2005883731" Name="Psych" Order="0" Value="" Visible="TRUE" XPos="286" YPos="249" Notes="Psychairatry / Psychology / Consuling" />
-    <Car Order="0" Notes="Automobile Maintainance" ExternalLinkURL="" Name="Car" YPos="315" Value="" ID="1060360105" Visible="TRUE" XPos="347" ShellCommand="">
-      <DiskStorage Order="0" Notes="$60 Oil Change" ExternalLinkURL="" Name="Oil" YPos="319" Value="" ID="731861943" Visible="TRUE" XPos="420" ShellCommand="" />
-    </Car>
-  </FlowProcess>
-  <FlowProcess Order="0" ExternalLinkURL="" Name="Daily" YPos="9" Value="" ID="1739124319" Visible="TRUE" XPos="13" ShellCommand="" Notes="Daily Tasks">
-    <FlowData Order="0" ExternalLinkURL="" Name="Brush" YPos="12" Value="" ID="-1384518374" Visible="TRUE" XPos="85" ShellCommand="" Notes="Brush My Teeth" />
-    <FlowData Order="0" ExternalLinkURL="" Name="Shower" YPos="13" Value="" ID="1641100910" Visible="TRUE" XPos="143" ShellCommand="" Notes="Take a Shower" />
-    <FlowData Order="0" ExternalLinkURL="" Name="Eat" YPos="13" Value="" ID="900820060" Visible="TRUE" XPos="204" ShellCommand="" Notes="Eat" />
-    <Shipping Order="0" Notes="Exercise" ExternalLinkURL="" Name="Exercise" YPos="15" Value="" ID="730841388" Visible="TRUE" XPos="264" ShellCommand="">
-      <Treasurer Order="0" Notes="Situps" ExternalLinkURL="" Name="Situps" YPos="36" Value="" ID="1088731497" Visible="TRUE" XPos="379" ShellCommand="" />
-      <Person Order="0" Notes="Pushups" ExternalLinkURL="" Name="Pushups" YPos="25" Value="" ID="1821560229" Visible="TRUE" XPos="321" ShellCommand="" />
-    </Shipping>
-  </FlowProcess>
-  <CheckBoxList Order="0" ExternalLinkURL="" Name="BackLog" YPos="27" Value="" ID="-947933398" Visible="TRUE" XPos="593" ShellCommand="" Notes="Backlogged Task List">
-    <AP Order="0" Notes="Need a job first - Start paying off some of the debt on my credit report. See Transunion credit report." ExternalLinkURL="" Name="Credit" YPos="37" Value="" ID="239951559" Visible="TRUE" XPos="675" ShellCommand="" />
-    <AR Order="0" Notes="Get unclaimed Western Union." ExternalLinkURL="" Name="WesternUnion" YPos="112" Value="" ID="115395715" Visible="TRUE" XPos="674" ShellCommand="" />
-  </CheckBoxList>
-  <FlowOffPage Order="0" Notes="Blocked Items" ExternalLinkURL="" Name="Blocked" YPos="283" Value="" ID="1524619149" Visible="TRUE" XPos="936" ShellCommand="" />
-  <Mail Order="0" Notes="Incoming items I am to receive." ExternalLinkURL="" Name="Receive" YPos="313" Value="" ID="873949050" Visible="TRUE" XPos="631" ShellCommand="" />
-  <Actor Order="0" Notes="Mark&apos;s Tasks" ExternalLinkURL="" Name="Mark" YPos="673" Value="" ID="242935934" Visible="TRUE" XPos="621" ShellCommand="">
-    <Calendar Order="0" Notes="Main Calendar - Open externalURL to see Google Calendar." ExternalLinkURL="https://calendar.google.com/calendar/u/0/r" Name="Calendar" YPos="449" Value="" ID="1859827893" Visible="TRUE" XPos="277" ShellCommand="" />
-    <Shipping Order="0" Notes="Actions to Perform." ExternalLinkURL="" Name="Actions" YPos="694" Value="" ID="1036168975" Visible="TRUE" XPos="489" ShellCommand="">
-      <FlowProcess ID="1283116734" Name="Work" Order="0" Value="" Visible="TRUE" XPos="553" YPos="767" Notes="Work / Gigs" />
-      <Queue Order="0" Notes="" ExternalLinkURL="" Name="Priority" YPos="772" Value="" ID="184241192" Visible="TRUE" XPos="326" ShellCommand="">
-        <DocumentBook Order="0" Notes="Documents to be printed." ExternalLinkURL="" Name="Print" YPos="761" Value="" ID="409903121" Visible="TRUE" XPos="17" ShellCommand="">
-          <Document Order="0" Notes="Print business cards and scissor. add iPhone and Android to my business card and logos." ExternalLinkURL="" Name="Cards" YPos="847" Value="" ID="1753728498" Visible="TRUE" XPos="86" ShellCommand="" />
-        </DocumentBook>
-      </Queue>
-    </Shipping>
-    <Actor Order="0" Notes="Tasks for mom" ExternalLinkURL="" Name="Mom" YPos="707" Value="" ID="1246445481" Visible="TRUE" XPos="710" ShellCommand="" />
+<Tasx TextNote="" Name="Tasx" ExternalLinkURL="" Visible="TRUE" Title="SonicBloomApp" Translator="TasxToHTML5" ShellCommand="" URI="/SonicBloomApp" ID="1636299401" Port="80" XPos="-1" Language="Tasx" Package="SonicBloomApp" Notes="SonicBloomApp Organization" YPos="-1" Build="Debug" Value="" Platform="Linux" Order="0">
+  <Company Order="0" Notes="SonicBloomApp Organization" ExternalLinkURL="https://github.com/SonicBloomApp" Name="SonicBloomApp" YPos="15" Value="" ID="1692058861" Visible="TRUE" XPos="535" ShellCommand="">
+    <Management Order="0" Notes="Projects" ExternalLinkURL="https://github.com/orgs/SonicBloomApp/projects" Name="Projects" YPos="95" Value="" ID="1708125583" Visible="TRUE" XPos="537" ShellCommand="">
+      <images Order="0" Notes="Design Work" ExternalLinkURL="https://github.com/orgs/SonicBloomApp/projects/1" Name="Design" YPos="57" Value="" ID="668653139" Visible="TRUE" XPos="407" ShellCommand="">
+        <Image Order="0" Notes="Provide Icon" ExternalLinkURL="" Name="Icon" YPos="60" Value="" ID="696680128" Visible="TRUE" XPos="326" ShellCommand="" />
+        <HyperLink Order="0" Notes="Provide Styles, Fonts and Colors" ExternalLinkURL="" Name="Styles" YPos="139" Value="" ID="1610944790" Visible="TRUE" XPos="327" ShellCommand="">
+          <Connection Order="0" Notes="" ExternalLinkURL="" Name="SubmitStylesToConversionProcess" YPos="-1" Value="" ID="914868240" Visible="TRUE" DestID="1481269166" DestType="Dashboard" XPos="-1" SourceID="1610944790" ShellCommand="" />
+        </HyperLink>
+        <Connection Order="0" Notes="" ExternalLinkURL="" Name="CanvaDesignConversionToHTMLSVG" YPos="-1" Value="" ID="1854236338" Visible="TRUE" DestID="1481269166" DestType="Dashboard" XPos="-1" SourceID="668653139" ShellCommand="" />
+      </images>
+      <InformationSystems Order="0" Notes="Linux Server on Akamai" ExternalLinkURL="https://mark.college/MusicApp" Name="Server" YPos="137" Value="" ID="1432039673" Visible="TRUE" XPos="678" ShellCommand="">
+        <Finance Order="0" Notes="Acqure SSL Certificate at https://certbot.eff.org/ and sc4ipt the update." ExternalLinkURL="https://certbot.eff.org/" Name="SSL" YPos="111" Value="" ID="54533220" Visible="TRUE" XPos="839" ShellCommand="">
+          <Connection Order="0" Notes="" ExternalLinkURL="" Name="ChangeURLToNewDomain" YPos="-1" Value="" ID="1730773695" Visible="TRUE" DestID="734278595" DestType="Href" XPos="-1" SourceID="54533220" ShellCommand="" />
+        </Finance>
+        <Href Order="0" Notes="Change Domain and URL" ExternalLinkURL="" Name="URL" YPos="18" Value="" ID="734278595" Visible="TRUE" XPos="837" ShellCommand="" />
+        <Theater Order="0" Notes="Acquire Akamai Linode Server Hosting ($0+/mo free startup program)" ExternalLinkURL="https://www.linode.com/lp/free-credit-100/" Name="Akamai" YPos="367" Value="" ID="1710468131" Visible="TRUE" XPos="502" ShellCommand="" />
+        <Theater Order="0" Notes="Acquire Domain www.[SonicBloomApp].com at Google Domains ($10+/year)" ExternalLinkURL="https://domains.google/tld/security/" Name="Domain" YPos="449" Value="" ID="524313302" Visible="TRUE" XPos="506" ShellCommand="">
+          <Connection Order="0" Notes="" ExternalLinkURL="" Name="AcquireCertificate" YPos="-1" Value="" ID="618477344" Visible="TRUE" DestID="54533220" DestType="Finance" XPos="-1" SourceID="524313302" ShellCommand="" />
+        </Theater>
+        <Database Order="0" Notes="Install Oracle Database" ExternalLinkURL="bttps://www.oracle.com/" Name="Oracle" YPos="193" Value="" ID="585279025" Visible="TRUE" XPos="843" ShellCommand="">
+          <WebService Order="0" Notes="Scaffold Web Services that Serve the App and Accesses the Oracle Database and File System" ExternalLinkURL="" Name="WebServices" YPos="297" Value="" ID="656513655" Visible="TRUE" XPos="844" ShellCommand="">
+            <Connection Order="0" Notes="App Web Services" ExternalLinkURL="" Name="WebServices" YPos="-1" Value="" ID="718956061" Visible="TRUE" DestID="452586353" DestType="Dashboard" XPos="-1" SourceID="656513655" ShellCommand="" />
+            <Form Order="0" Notes="Portal for managing audio, viewing statistics and system management." ExternalLinkURL="" Name="Portal" YPos="408" Value="" ID="104641719" Visible="TRUE" XPos="847" ShellCommand="" />
+            <Connection Order="0" Notes="Audio Management" ExternalLinkURL="" Name="AudioManagement" YPos="-1" Value="" ID="134406061" Visible="TRUE" DestID="1025891750" DestType="DiskStorage" XPos="-1" SourceID="656513655" ShellCommand="" />
+          </WebService>
+          <Dataset Order="0" Notes="Design Database Schema and Implement Stored Procedure API" ExternalLinkURL="" Name="Database" YPos="174" Value="" ID="1408823297" Visible="TRUE" XPos="934" ShellCommand="">
+            <DiskStorage Order="0" Notes="Setup Backup and Restore and Disaster Recovery Implementation" ExternalLinkURL="" Name="Backup" YPos="154" Value="" ID="1229857917" Visible="TRUE" XPos="1018" ShellCommand="" />
+            <Chart Order="0" Notes="Quick One Day Charting and Reporting" ExternalLinkURL="" Name="ChartReport" YPos="80" Value="" ID="1563196817" Visible="TRUE" XPos="1016" ShellCommand="" />
+            <Stop Order="0" Notes="Configure Security" ExternalLinkURL="" Name="Security" YPos="240" Value="" ID="1913135888" Visible="TRUE" XPos="1023" ShellCommand="" />
+            <Projection Order="0" Notes="Financial Reporting" ExternalLinkURL="" Name="FinancialReporing" YPos="70" Value="" ID="1856815549" Visible="TRUE" XPos="937" ShellCommand="" />
+          </Dataset>
+        </Database>
+        <DiskStorage Order="0" Notes="Services that serve the audio" ExternalLinkURL="" Name="AudioStore" YPos="272" Value="" ID="1025891750" Visible="TRUE" XPos="734" ShellCommand="">
+          <Connection Order="0" Notes="" ExternalLinkURL="" Name="AudioStreamingOrFileHosting" YPos="-1" Value="" ID="1538649229" Visible="TRUE" DestID="452586353" DestType="Dashboard" XPos="-1" SourceID="1025891750" ShellCommand="" />
+        </DiskStorage>
+        <Stop Order="0" Notes="Security Hardening" ExternalLinkURL="" Name="Security" YPos="36" Value="" ID="318519642" Visible="TRUE" XPos="677" ShellCommand="" />
+        <DiskStorage Order="0" Notes="Disaster Recovery Implementation" ExternalLinkURL="" Name="Backup" YPos="67" Value="" ID="2059623891" Visible="TRUE" XPos="754" ShellCommand="" />
+      </InformationSystems>
+      <Dashboard Order="0" Notes="SonicBloomApp Development" ExternalLinkURL="" Name="App" YPos="364" Value="" ID="452586353" Visible="TRUE" XPos="680" ShellCommand="">
+        <Dashboard Order="0" Notes="Process to Quickly or Automatically Convert Canva Designs to a form that I can turn in to both an Android and iPhone App quickly, easily and reliably." ExternalLinkURL="" Name="HTMLSVGConversion" YPos="206" Value="" ID="1481269166" Visible="TRUE" XPos="566" ShellCommand="" />
+        <Dashboard Order="0" Notes="iPhone Frame that Wraps the HTML / SVG / CSS / JavaScript view in an iPhone iP App. (Called Bubbling or Capturing)" ExternalLinkURL="" Name="iPhoneShell" YPos="478" Value="" ID="899555636" Visible="TRUE" XPos="592" ShellCommand="">
+          <DealValue Order="0" Notes="Ads Revenue Component" ExternalLinkURL="" Name="AdsRevenue" YPos="573" Value="" ID="111100594" Visible="TRUE" XPos="545" ShellCommand="">
+            <Connection Order="0" Notes="" ExternalLinkURL="" Name="Revenue" YPos="-1" Value="" ID="1862569746" Visible="TRUE" DestID="1486347035" DestType="Actor" XPos="-1" SourceID="111100594" ShellCommand="" />
+          </DealValue>
+        </Dashboard>
+        <Dashboard Order="0" Notes="Android Frame that Wraps the HTML / SVG / CSS / JavaScript view in an Android App. (Called Bubbling or Capturing)" ExternalLinkURL="" Name="AndroidShell" YPos="476" Value="" ID="1310284081" Visible="TRUE" XPos="776" ShellCommand="">
+          <DealValue Order="0" Notes="Ads Revenue Component" ExternalLinkURL="" Name="AdsRevenue" YPos="571" Value="" ID="1458921527" Visible="TRUE" XPos="760" ShellCommand="">
+            <Connection Order="0" Notes="" ExternalLinkURL="" Name="Revenue" YPos="-1" Value="" ID="999465716" Visible="TRUE" DestID="1450822745" DestType="DealValue" XPos="-1" SourceID="1458921527" ShellCommand="" />
+          </DealValue>
+        </Dashboard>
+        <Dashboard Order="0" Notes="Progressive Web App (Web Page that allows you to install it as an app and works offlline and updates periodically)" ExternalLinkURL="" Name="PWA" YPos="474" Value="" ID="1606922248" Visible="TRUE" XPos="688" ShellCommand="">
+          <DealValue Order="0" Notes="Ads Revenue Component" ExternalLinkURL="" Name="AdsRevenue" YPos="571" Value="" ID="1450822745" Visible="TRUE" XPos="661" ShellCommand="">
+            <Connection Order="0" Notes="" ExternalLinkURL="" Name="Revenue" YPos="-1" Value="" ID="1203079485" Visible="TRUE" DestID="111100594" DestType="DealValue" XPos="-1" SourceID="1450822745" ShellCommand="" />
+          </DealValue>
+        </Dashboard>
+      </Dashboard>
+    </Management>
+  </Company>
+  <Actor Order="0" Notes="Jennifer - Executive / Graphics Designer" ExternalLinkURL="" Name="Jennifer" YPos="411" Value="" ID="1486347035" Visible="TRUE" XPos="142" ShellCommand="">
+    <Theater Order="0" Notes="Your IP Address" ExternalLinkURL="https://www.iplocation.net/find-ip-address" Name="IP" YPos="212" Value="" ID="361467520" Visible="TRUE" XPos="408" ShellCommand="">
+      <Connection Order="0" Notes="" ExternalLinkURL="" Name="SendYourIPAddressToMePeriodically" YPos="-1" Value="" ID="1754786190" Visible="TRUE" DestID="1432039673" DestType="InformationSystems" XPos="-1" SourceID="361467520" ShellCommand="" />
+    </Theater>
+    <Forecast Order="0" Notes="Look at Akamai&apos;s Startup Program " ExternalLinkURL="https://www.linode.com/linode-for-startups/" Name="Akamai" YPos="339" Value="" ID="1600940238" Visible="TRUE" XPos="333" ShellCommand="">
+      <Connection Order="0" Notes="" ExternalLinkURL="" Name="AquireAkamaiHosting" YPos="-1" Value="" ID="509160318" Visible="TRUE" DestID="1710468131" DestType="Theater" XPos="-1" SourceID="1600940238" ShellCommand="" />
+      <AR Order="0" Notes="Look into Akamai free $100  credit" ExternalLinkURL="https://www.linode.com/lp/free-credit-100/" Name="Akamai" YPos="434" Value="" ID="129663308" Visible="TRUE" XPos="334" ShellCommand="">
+        <Connection Order="0" Notes="" ExternalLinkURL="" Name="Save100DollarsOnAkamaiHosting" YPos="-1" Value="" ID="1857181761" Visible="TRUE" DestID="1710468131" DestType="Theater" XPos="-1" SourceID="129663308" ShellCommand="" />
+      </AR>
+    </Forecast>
+    <AP Order="0" Notes="$10+ / Year for Domain" ExternalLinkURL="https://domains.google/tld/security/" Name="Domain" YPos="514" Value="" ID="1670261608" Visible="TRUE" XPos="336" ShellCommand="">
+      <Connection Order="0" Notes="" ExternalLinkURL="" Name="AcquireDomain" YPos="-1" Value="" ID="616380769" Visible="TRUE" DestID="524313302" DestType="Theater" XPos="-1" SourceID="1670261608" ShellCommand="" />
+    </AP>
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="DesignWork" YPos="-1" Value="" ID="1336621628" Visible="TRUE" DestID="668653139" DestType="images" XPos="-1" SourceID="1486347035" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="Icon" YPos="-1" Value="" ID="2123380195" Visible="TRUE" DestID="696680128" DestType="Image" XPos="-1" SourceID="1486347035" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="Styles" YPos="-1" Value="" ID="433118677" Visible="TRUE" DestID="1610944790" DestType="HyperLink" XPos="-1" SourceID="1486347035" ShellCommand="" />
+    <Mail Order="0" Notes="Email Mark at mark.brito@gmail.com or Text Mark to 424-581-8016 the name of your Github Account." ExternalLinkURL="" Name="GitHub" YPos="141" Value="" ID="2014749491" Visible="TRUE" XPos="408" ShellCommand="">
+      <Connection Order="0" Notes="Grant Jennifer Access to GitHub for Project Management, to view how many hours I am working, and to view when I check in source code." ExternalLinkURL="" Name="GrantAccessToProjectsAndSourceCode" YPos="-1" Value="" ID="195299692" Visible="TRUE" DestID="1708125583" DestType="Management" XPos="-1" SourceID="2014749491" ShellCommand="" />
+    </Mail>
+    <Image Order="0" Notes="Send me your picture so I can put it in this diagram. (Optional)" ExternalLinkURL="" Name="Picture" YPos="267" Value="" ID="1015618626" Visible="TRUE" XPos="138" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="ManageSystem" YPos="-1" Value="" ID="1078480234" Visible="TRUE" DestID="104641719" DestType="Form" XPos="-1" SourceID="1486347035" ShellCommand="" />
+    <Delivery Order="0" Notes="Deliver Music" ExternalLinkURL="" Name="Music" YPos="285" Value="" ID="264191934" Visible="TRUE" XPos="409" ShellCommand="">
+      <Connection Order="0" Notes="Deliver a few Music Samples" ExternalLinkURL="" Name="DeliverMusicSamples" YPos="-1" Value="" ID="281510374" Visible="TRUE" DestID="68912623" DestType="Actor" XPos="-1" SourceID="264191934" ShellCommand="" />
+    </Delivery>
+    <Connection Order="0" Notes="Sign Contract and Deliver to Mark" ExternalLinkURL="" Name="SignContract" YPos="-1" Value="" ID="1017086742" Visible="TRUE" DestID="493047884" DestType="Deal" XPos="-1" SourceID="1486347035" ShellCommand="" />
+    <Connection Order="0" Notes="Sign Purchase Order" ExternalLinkURL="" Name="SignPurchaseOrder" YPos="-1" Value="" ID="185033135" Visible="TRUE" DestID="294071086" DestType="Payroll" XPos="-1" SourceID="1486347035" ShellCommand="" />
+    <Connection Order="0" Notes="Review and Approve Specifications" ExternalLinkURL="" Name="ApproveSpecifications" YPos="-1" Value="" ID="860969879" Visible="TRUE" DestID="1495409353" DestType="YesCheckMark" XPos="-1" SourceID="1486347035" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="SendCheckToMark" YPos="-1" Value="" ID="61675955" Visible="TRUE" DestID="354465266" DestType="Mail" XPos="-1" SourceID="1486347035" ShellCommand="" />
   </Actor>
-  <Report Order="0" Notes="Balance Audit Values" ExternalLinkURL="" Name="Audit" YPos="329" Value="" ID="1744024678" Visible="TRUE" XPos="16" ShellCommand="">
-    <Report Order="0" Notes="12/6/2021 $1154.47" ExternalLinkURL="" Name="WellsFargoMomChecking" YPos="330" Value="" ID="589087965" Visible="TRUE" XPos="91" ShellCommand="" />
-    <Report Order="0" Notes="1/22/2022 $53.69 $291.97 $3,901.10" ExternalLinkURL="" Name="TechCU" YPos="327" Value="" ID="1177628804" Visible="TRUE" XPos="155" ShellCommand="" />
-  </Report>
-  <Workflow Order="0" Notes="VXD" ExternalLinkURL="" Name="VXD" YPos="848" Value="" ID="1426228520" Visible="TRUE" XPos="1203" ShellCommand="">
-    <images Order="0" Notes="Add icons you want to be added to Tasx." ExternalLinkURL="" Name="Icons" YPos="970" Value="" ID="1878724258" Visible="TRUE" XPos="1228" ShellCommand="">
-      <DocumentCollection Order="0" Notes="" ExternalLinkURL="" Name="Fax" YPos="1043" Value="" ID="415910559" Visible="TRUE" XPos="1238" ShellCommand="" />
-      <No Order="0" Notes="Icons to remove." ExternalLinkURL="" Name="Remove" YPos="1043" Value="" ID="1054591442" Visible="TRUE" XPos="1304" ShellCommand="">
-        <XmlElement Order="0" Notes="Remove XmlElement Icon." ExternalLinkURL="" Name="XmlElement" YPos="1115" Value="" ID="1053235139" Visible="TRUE" XPos="1350" ShellCommand="" />
-      </No>
-      <Mail Order="0" Notes="Email" ExternalLinkURL="" Name="Email" YPos="1046" Value="" ID="1049584085" Visible="TRUE" XPos="1108" ShellCommand="" />
-      <Phone Order="0" Notes="Smartphone" ExternalLinkURL="" Name="Smartphone" YPos="1040" Value="" ID="1913470108" Visible="TRUE" XPos="1178" ShellCommand="" />
-    </images>
-    <Button Order="0" Notes="Modify VXD tooltips to add button to open external link on tooltip." ExternalLinkURL="" Name="VXD" YPos="942" Value="" ID="1504508030" Visible="TRUE" XPos="1157" ShellCommand="" />
-    <Mail Order="0" Notes="Add feature to generate html diagram and email to address entered with default address from configuration." ExternalLinkURL="" Name="Email" YPos="949" Value="" ID="2146906336" Visible="TRUE" XPos="1078" ShellCommand="" />
-    <No Order="0" Notes="Fix bug where you make a root element a child of a lower sibling.  It destroys the tree." ExternalLinkURL="" Name="Bug" YPos="937" Value="" ID="541295002" Visible="TRUE" XPos="1289" ShellCommand="" />
-    <Workflow Order="0" Notes="Modify VXD so that it can edit it&apos;s own configuration." ExternalLinkURL="" Name="VXD" YPos="941" Value="" ID="870648352" Visible="TRUE" XPos="1346" ShellCommand="" />
-    <Workflow Order="0" Notes=" vxd on generate output open dialog that says where it is and has button to open in browser, explorer or open in editor " ExternalLinkURL="" Name="VXD" YPos="941" Value="" ID="365574622" Visible="TRUE" XPos="1411" ShellCommand="" />
-    <DiskStorage Order="0" Notes="Make a JAR release of VXD." ExternalLinkURL="" Name="VXD" YPos="946" Value="" ID="1346875449" Visible="TRUE" XPos="1010" ShellCommand="" />
-    <No Order="0" Notes="Fix bug where you link an element to itself as a parent or a reference." ExternalLinkURL="" Name="Bug" YPos="857" Value="" ID="682459758" Visible="TRUE" XPos="1288" ShellCommand="" />
-    <Stop Order="0" Notes="Encrypt the HTML generation with the same password." ExternalLinkURL="" Name="Encryption" YPos="1038" Value="" ID="1210018014" Visible="TRUE" XPos="1041" ShellCommand="" />
-    <images Order="0" Notes="Add screen shots and a main description to the VXD Github repo." ExternalLinkURL="" Name="Github" YPos="856" Value="" ID="1505246265" Visible="TRUE" XPos="1120" ShellCommand="" />
-    <TextBox Order="0" Notes="On generated HTML, set tooltip max width to wrap." ExternalLinkURL="" Name="Tooltip" YPos="856" Value="" ID="1608653267" Visible="TRUE" XPos="1049" ShellCommand="" />
-  </Workflow>
-  <Stop Order="0" Notes="Items I am waiting for something on." ExternalLinkURL="" Name="Waiting" YPos="947" Value="" ID="1079191413" Visible="TRUE" XPos="874" ShellCommand="" />
+  <Actor Order="0" Notes="Mark Brito (mark.brito@gmail.com) - Architect / Engineer" ExternalLinkURL="https://www.linkedin.com/in/markbrito" Name="Mark" YPos="418" Value="" ID="68912623" Visible="TRUE" XPos="987" ShellCommand="">
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="EngineerServer" YPos="-1" Value="" ID="261694370" Visible="TRUE" DestID="1432039673" DestType="InformationSystems" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="ConfigureSSLCertificate" YPos="-1" Value="" ID="979148314" Visible="TRUE" DestID="54533220" DestType="Finance" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="ChangeURLToNewDomain" YPos="-1" Value="" ID="672641070" Visible="TRUE" DestID="734278595" DestType="Href" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="1622079730" Visible="TRUE" DestID="585279025" DestType="Database" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="ScaffoldWebServices" YPos="-1" Value="" ID="1905637392" Visible="TRUE" DestID="656513655" DestType="WebService" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="ImplementAudioStorageOrStreamingServices" YPos="-1" Value="" ID="1951916140" Visible="TRUE" DestID="1025891750" DestType="DiskStorage" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="Impelement Audio and System Management System" ExternalLinkURL="" Name="ImplementManagementSystem" YPos="-1" Value="" ID="1694440221" Visible="TRUE" DestID="104641719" DestType="Form" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="DevelopApps" YPos="-1" Value="" ID="568498992" Visible="TRUE" DestID="452586353" DestType="Dashboard" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="Sign and Deliver W-9 to Jennifer" ExternalLinkURL="" Name="Connection" YPos="-1" Value="" ID="165870961" Visible="TRUE" DestID="2103812688" DestType="Document" XPos="-1" SourceID="68912623" ShellCommand="" />
+    <Connection Order="0" Notes="Specifications Written for Approval" ExternalLinkURL="" Name="SpecificationsWritten" YPos="-1" Value="" ID="558467211" Visible="TRUE" DestID="1348564222" DestType="DocumentCollection" XPos="-1" SourceID="68912623" ShellCommand="" />
+  </Actor>
+  <Deal Order="0" Notes="SignContract" ExternalLinkURL="" Name="SignContract" YPos="651" Value="" ID="493047884" Visible="TRUE" XPos="551" ShellCommand="">
+    <Connection Order="0" Notes="Deliver Signed Contract to Mark" ExternalLinkURL="" Name="DeliverSignedContract" YPos="-1" Value="" ID="600203035" Visible="TRUE" DestID="68912623" DestType="Actor" XPos="-1" SourceID="493047884" ShellCommand="" />
+  </Deal>
+  <Document Order="0" Notes="Deliver Signed W-9" ExternalLinkURL="" Name="W-9" YPos="649" Value="" ID="2103812688" Visible="TRUE" XPos="636" ShellCommand="">
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="DeliverSignedW9" YPos="-1" Value="" ID="1371757916" Visible="TRUE" DestID="1486347035" DestType="Actor" XPos="-1" SourceID="2103812688" ShellCommand="" />
+  </Document>
+  <Payroll Order="0" Notes="Purchase Order with Key Deliverables as Line Items" ExternalLinkURL="" Name="PurchaseOrder" YPos="658" Value="" ID="294071086" Visible="TRUE" XPos="460" ShellCommand="">
+    <Connection Order="0" Notes="Deliver Signed Purchase Order to Mark" ExternalLinkURL="" Name="DeliverPurchaseOrder" YPos="-1" Value="" ID="493712087" Visible="TRUE" DestID="68912623" DestType="Actor" XPos="-1" SourceID="294071086" ShellCommand="" />
+    <DocumentCollection Order="0" Notes="Attachment to Purchase Order - Specifications" ExternalLinkURL="" Name="Specifications" YPos="657" Value="" ID="1348564222" Visible="TRUE" XPos="367" ShellCommand="">
+      <Connection Order="0" Notes="Specifications Delivered for Approval" ExternalLinkURL="" Name="SpecificationsDelivered" YPos="-1" Value="" ID="1684164132" Visible="TRUE" DestID="1486347035" DestType="Actor" XPos="-1" SourceID="1348564222" ShellCommand="" />
+      <YesCheckMark Order="0" Notes="Specifications Approved" ExternalLinkURL="" Name="Approval" YPos="563" Value="" ID="1495409353" Visible="TRUE" XPos="408" ShellCommand="" />
+    </DocumentCollection>
+  </Payroll>
+  <Mail Order="0" Notes="Mail Retainer Fee of $100 to: PO Box 752, Tracy, CA 95378" ExternalLinkURL="" Name="MailRetainer" YPos="553" Value="" ID="354465266" Visible="TRUE" XPos="214" ShellCommand="">
+    <Payroll Order="0" Notes="Check for $100 payable to Mark Brito" ExternalLinkURL="" Name="Check" YPos="622" Value="" ID="245165661" Visible="TRUE" XPos="263" ShellCommand="" />
+    <Connection Order="0" Notes="" ExternalLinkURL="" Name="CheckDelivered" YPos="-1" Value="" ID="1610678229" Visible="TRUE" DestID="68912623" DestType="Actor" XPos="-1" SourceID="354465266" ShellCommand="" />
+  </Mail>
 </Tasx>
 

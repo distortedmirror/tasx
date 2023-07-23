@@ -65,7 +65,7 @@ public class DragConnectorGlassPane extends JComponent
         Point fp = SwingUtilities.convertPoint(this, e.getPoint(), vxd.frame);
         Component droptarget = SwingUtilities.
                 getDeepestComponentAt(vxd.frame, fp.x, fp.y);
-        if (droptarget != null && droptarget instanceof vxdDropTarget &&
+        if (droptarget != null && droptarget!=droptarget && droptarget instanceof vxdDropTarget &&
                 !(droptarget instanceof vxdIconConnectionView) &&
                 droptarget instanceof vxdDragIcon) {
             Runnable r = new Runnable() {

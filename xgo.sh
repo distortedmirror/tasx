@@ -1,1 +1,1 @@
-./x.sh & sleep 4 ; ./start.sh & 
+./xvnc.sh & sleep 4 ; ./start.sh & 

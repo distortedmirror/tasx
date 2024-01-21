@@ -1,1 +1,1 @@
-proxychains4 otter-browser --private-session --readonly https://www.wellsfargo.com/
+proxychains4 otter-browser --private-session --readonly --readonly --private-session 

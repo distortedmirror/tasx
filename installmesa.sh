@@ -1,9 +1,9 @@
-yes |pkg install glu
-yes |pkg install mesa
-yes |pkg install mesa-demos
-yes |pkg install mesa-dev
-yes |pkg install mesa-vulkan-icd-freedreno
-yes |pkg install mesa-vulkan-icd-freedreno-dri3
-yes |pkg install mesa-vulkan-icd-swrast
-yes |pkg install osmesa
-yes |pkg install osmesa-demos
+yes|apt install mesa
+yes|apt install mesa-dev
+yes|apt install mesa-vulkan-icd-freedreno
+yes|apt install mesa-vulkan-icd-freedreno-dri3
+yes|apt install mesa-vulkan-icd-swrast
+yes|apt install osmesa
+yes|apt install glu
+yes|apt install mesa-demos
+yes|apt install osmesa-demos

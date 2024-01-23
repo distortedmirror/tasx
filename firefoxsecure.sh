@@ -1,1 +1,1 @@
-alias firefox="firefox --no-remote" 
+firefox --no-remote

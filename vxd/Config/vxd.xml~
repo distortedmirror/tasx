@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vxd xmlns="http://tempuri.org/vxd.xsd" title="Tasx" xsize="1600" ysize="1200"
-     xiconsize="33" yiconsize="40" iconsperrow="35" iconborder="1" xdragsize="100"
-     ydragsize="120" savefiledir="Work/" deploymentdir="Deployments/"
+<vxd xmlns="http://tempuri.org/vxd.xsd" title="Tasx" xsize="1280" ysize="1024"
+     xiconsize="25" yiconsize="30" iconsperrow="40" iconborder="1" xdragsize="50"
+     ydragsize="60" savefiledir="Work/" deploymentdir="Deployments/"
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
      browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"'
@@ -37,9 +37,9 @@
                        command="[EDITOR] Languages\[LANGUAGE]\[LANGUAGE].dtd" enabled="TRUE"/>
         <toolbarbutton image="Images/images.jpg" text="Visual Language Images"
                        command="[FILEMANAGER] Languages\[LANGUAGE]\Images\" enabled="TRUE"/>
-        <toolbarbutton image="Images/Translator.jpg" text="Visual Language Translator (XSL)"
+        <toolbarbutton image="Images/VisualLanguageTranslatorXSL.png" text="Visual Language Translator (XSL)"
                        command="[EDITOR] Translators\[TRANSLATOR]\[TRANSLATOR].xsl" enabled="TRUE"/>
-        <toolbarbutton image="Images/ProgramXSL.jpg" text="Visual Program Translator (XSL)"
+        <toolbarbutton image="Images/VisualProgramTranslatorXSL.png" text="Visual Program Translator (XSL)"
                        command="[EDITOR] Work\[PROJECT]\[PROJECT].xsl" enabled="TRUE"/>
         <toolbarbutton image="Images/ProgramXSLT.jpg" text="Visual Program Translation Output (XSLT)"
                        command="[EDITOR] Work\[PROJECT]\[PROJECT].xslt" enabled="TRUE"/>

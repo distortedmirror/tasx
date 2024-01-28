@@ -11,7 +11,7 @@
      editorLinux="/usr/bin/xemacs"
      editorMac="open -b com.apple.TextEdit"
      fileManagerWindows="c:\Windows\explorer.exe"
-     fileManagerLinux="/usr/bin/xfe"
+     fileManagerLinux="~/..x/usr/bin/pcmanfm"
      fileManagerMac="open"
   debugdecryption="false">
     <toolbar>

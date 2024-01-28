@@ -1,1 +1,1 @@
-otter-browser --private-session --readonly --private-session 
+otter-browser --readonly --private-session

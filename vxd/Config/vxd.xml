@@ -6,7 +6,7 @@
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
      browserWindows="C:\Program Files\Mozilla Firefox\firefox.exe"
      browserLinux="/data/data/com.termux/files/usr/bin/otter-browser"
-	editorLinux="/data/data/com.termux/files/usr/bin/xemacs"
+	editorLinux="/data/data/com.termux/files/usr/bin/leafpad"
      editorMac="open -b com.apple.TextEdit"
      fileManagerWindows="c:\Windows\explorer.exe"
      fileManagerLinux="/data/data/com.termux/files/usr/bin/pcmanfm"

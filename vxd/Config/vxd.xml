@@ -4,11 +4,12 @@
      ydragsize="60" savefiledir="Work/" deploymentdir="Deployments/"
      exitstring="Are You Sure You Want to Exit?" exittitle="Exit Program"
      splashimage="Images/splash.jpg" iconimage="Images/VXD.jpg"
-     browserWindows='"C:\Program Files\Mozilla Firefox\firefox.exe"
-     browserLinux="/data/data/com.termux/files/usr/bin/xemacs"
-;     editorMac="open -b com.apple.TextEdit"
+     browserWindows="C:\Program Files\Mozilla Firefox\firefox.exe"
+     browserLinux="/data/data/com.termux/files/usr/bin/otter-browser"
+	editorLinux="/data/data/com.termux/files/usr/bin/xemacs"
+     editorMac="open -b com.apple.TextEdit"
      fileManagerWindows="c:\Windows\explorer.exe"
-     fileManagerLinux="~/../usr/bin/pcmanfm"
+     fileManagerLinux="/data/data/com.termux/files/usr/bin/pcmanfm"
      fileManagerMac="open"
   debugdecryption="false">
     <toolbar>

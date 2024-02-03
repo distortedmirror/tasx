@@ -90,7 +90,13 @@ public class vxdOpenFileActionListener implements ActionListener {
 	    }
 	    File f = new File(file.getAbsolutePath() + ".decrypted");
 	    file = f;
-	    Document loadeddoc = (Document) this.builder.parse(f);
+	    Document loadeddoc;
+	try {
+	   	loadeddoc = (Document) this.builder.parse(f);
+	} catch(org.xml.sax.SAXParseException spe){
+		JOptionPane.showMessageDialog(vxd.frame,"Password Incorrect or Corrupt File.");
+		return;
+	}
 	    Document xdoc = new XmlDocument();
 	    Element root = loadeddoc.getDocumentElement();
 	    Document programDoc = xdoc;
